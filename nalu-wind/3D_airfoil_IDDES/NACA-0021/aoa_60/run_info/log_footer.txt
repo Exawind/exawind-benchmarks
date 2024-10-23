@@ -1,0 +1,168 @@
+Time Step Count: 100 Current Time: 0.04
+ dtN: 0.0004 dtNm1: 0.0004 gammas: 1.5 -2 0.5
+ Max Courant: 145.238 Max Reynolds: 1.48259e+06 (realm_1)
+   Realm Nonlinear Iteration: 1/1
+
+realm_1::advance_time_step() 
+NLI    Name           Linear Iter      Linear Res     NLinear Res    Scaled NLR
+---    ----           -----------      ----------     -----------    ----------
+1/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X          7         0.0247786        1.93183             1
+        MomentumEQS_Y          7         0.0229679        2.48762             1
+        MomentumEQS_Z         11       0.000155247     0.00835196             1
+        MomentumEQS           25         0.0337865        3.14965             1
+        ContinuityEQS         20        0.00257292        0.15645             1
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS  11       0.000435071      0.0192677             1
+        SpecDissRateEQS        6           2.51448        159.106             1
+2/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X         11       0.000506326      0.0360047     0.0186376
+        MomentumEQS_Y         10       0.000999923      0.0431489     0.0173455
+        MomentumEQS_Z         12       4.72156e-05      0.0042055      0.503534
+        MomentumEQS           33         0.0011218      0.0563547     0.0178924
+        ContinuityEQS         18        0.00361364       0.176376       1.12736
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS  11       0.000243218      0.0111841      0.580458
+        SpecDissRateEQS       10         0.0226175        1.27019    0.00798327
+3/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X         11       0.000389938      0.0145092     0.0075106
+        MomentumEQS_Y         11       0.000295711      0.0133504    0.00536672
+        MomentumEQS_Z         12       3.42214e-05     0.00232741      0.278666
+        MomentumEQS           34       0.000490579      0.0198536    0.00630344
+        ContinuityEQS         19        0.00282293       0.140579      0.898559
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS  11       0.000165576     0.00826987      0.429209
+        SpecDissRateEQS       11        0.00722304       0.355036    0.00223144
+4/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X         12       0.000124169     0.00945356    0.00489357
+        MomentumEQS_Y         11       0.000211821     0.00809017    0.00325217
+        MomentumEQS_Z         12       2.51284e-05     0.00136441      0.163364
+        MomentumEQS           35       0.000246815      0.0125173    0.00397418
+        ContinuityEQS         19        0.00156935       0.102633      0.656011
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS  11       0.000126925     0.00719319      0.373329
+        SpecDissRateEQS       11        0.00639953       0.326633    0.00205292
+Mass Balance Review:
+Density accumulation: 0
+Integrated inflow:    -40846.82031207938
+Integrated open:      40846.82030655812
+Total mass closure:   -5.521258572116494e-06
+Filter Size 0.04039999999999998
+Realm shall provide output files at : currentTime/timeStepCount: 0.03999999999999998/100 (realm_1)
+Mean System Norm: 0.09421519302944346 100 0.04
+WallClockTime: 100 Pre: 0.000581026 NLI: 3.05695 Post: 0.12911 Total: 3.18665
+*******************************************************
+Simulation Shall Complete: time/timestep: 0.04/100
+*******************************************************
+
+-------------------------------- 
+Begin Timer Overview for Realm: realm_1
+-------------------------------- 
+Timing for Eq: myNDTW
+             init --   	avg: 0.0147105 	min: 0.013077 	max: 0.0159829
+         assemble --   	avg: 0.0166624 	min: 0.0140791 	max: 0.021121
+    load_complete --   	avg: 0.0291696 	min: 0.024637 	max: 0.031363
+            solve --   	avg: 0.283691 	min: 0.282778 	max: 0.284872
+    precond setup --   	avg: 0.287734 	min: 0.286713 	max: 0.288351
+             misc --   	avg: 0.00255033 	min: 0.00207305 	max: 0.00312591
+linear iterations --  	avg: 21 	min: 21 	max: 21
+Timing for Eq: myLowMach
+             init --   	avg: 1.41437e-06 	min: 0 	max: 5.00679e-06
+         assemble --   	avg: 0 	min: 0 	max: 0
+    load_complete --   	avg: 0 	min: 0 	max: 0
+            solve --   	avg: 0 	min: 0 	max: 0
+    precond setup --   	avg: 0 	min: 0 	max: 0
+             misc --   	avg: 0 	min: 0 	max: 0
+Timing for Eq: MomentumEQS
+             init --   	avg: 0.0132437 	min: 0.012378 	max: 0.0144911
+         assemble --   	avg: 7.78409 	min: 6.73228 	max: 10.2974
+    load_complete --   	avg: 9.46908 	min: 7.22242 	max: 10.4542
+            solve --   	avg: 27.9856 	min: 27.8915 	max: 28.0678
+    precond setup --   	avg: 8.55538e-05 	min: 3.83854e-05 	max: 0.000181437
+             misc --   	avg: 8.38588 	min: 8.15923 	max: 8.53918
+linear iterations --  	avg: 33.215 	min: 18 	max: 45
+Timing for Eq: ContinuityEQS
+             init --   	avg: 0.0128572 	min: 0.0125709 	max: 0.01384
+         assemble --   	avg: 9.37027 	min: 8.83688 	max: 10.5716
+    load_complete --   	avg: 7.21124 	min: 6.17373 	max: 7.71598
+            solve --   	avg: 93.1674 	min: 93.0504 	max: 93.2853
+    precond setup --   	avg: 76.8389 	min: 76.7873 	max: 76.8805
+             misc --   	avg: 11.1428 	min: 11.0262 	max: 11.3213
+linear iterations --  	avg: 19.0225 	min: 15 	max: 23
+Timing for Eq: mySST
+             init --   	avg: 2.70953e-06 	min: 9.53674e-07 	max: 1.00136e-05
+         assemble --   	avg: 0 	min: 0 	max: 0
+    load_complete --   	avg: 0 	min: 0 	max: 0
+            solve --   	avg: 0 	min: 0 	max: 0
+    precond setup --   	avg: 0 	min: 0 	max: 0
+             misc --   	avg: 0 	min: 0 	max: 0
+Timing for Eq: TurbKineticEnergyEQS
+             init --   	avg: 0.012701 	min: 0.0122199 	max: 0.0136309
+         assemble --   	avg: 7.08708 	min: 6.07029 	max: 8.64615
+    load_complete --   	avg: 7.34764 	min: 5.86826 	max: 7.98936
+            solve --   	avg: 11.6948 	min: 11.5597 	max: 11.7962
+    precond setup --   	avg: 0.730199 	min: 0.689766 	max: 0.78702
+             misc --   	avg: 5.65144 	min: 5.53616 	max: 5.80432
+linear iterations --  	avg: 12.2925 	min: 10 	max: 19
+Timing for Eq: SpecDissRateEQS
+             init --   	avg: 0.013611 	min: 0.013139 	max: 0.0145051
+         assemble --   	avg: 5.71289 	min: 5.01648 	max: 7.43529
+    load_complete --   	avg: 7.53986 	min: 5.91014 	max: 8.23427
+            solve --   	avg: 10.2077 	min: 10.0689 	max: 10.3156
+    precond setup --   	avg: 0.685522 	min: 0.648247 	max: 0.743899
+             misc --   	avg: 5.64983 	min: 5.5404 	max: 5.77712
+linear iterations --  	avg: 10.4325 	min: 5 	max: 20
+Timing for IO: 
+   io create mesh --   	avg: 0.00767105 	min: 0.00626397 	max: 0.00879693
+ io output fields --   	avg: 0.425013 	min: 0.34329 	max: 0.540048
+ io populate mesh --   	avg: 0.258714 	min: 0.253635 	max: 0.267436
+ io populate fd   --   	avg: 0.0907486 	min: 0.087939 	max: 0.0918272
+Timing for property evaluation:         
+            props --   	avg: 0.0554117 	min: 0.0368438 	max: 0.0870745
+Timing for Edge: 
+    edge creation --   	avg: 0.320803 	min: 0.318966 	max: 0.321792
+Timing for Periodic: 
+           search --   	avg: 0.00610774 	min: 0.00559807 	max: 0.0070219
+Timing for skin_mesh :    
+        skin_mesh --   	avg: 0.0247647 	min: 0.0242782 	max: 0.0250719
+
+Timing for Simulation: nprocs= 384
+           main() --   	avg: 322.935 	min: 322.934 	max: 322.937
+Memory Overview: 
+nalu memory: total (over all cores) current/high-water mark=       157.388 G      157.489 G
+nalu memory:   min (over all cores) current/high-water mark=       387.238 M      387.238 M
+nalu memory:   max (over all cores) current/high-water mark=       490.281 M      490.336 M
+Min High-water memory usage 387.2 MB
+Avg High-water memory usage 420.0 MB
+Max High-water memory usage 490.3 MB
+
+Min Available memory per processor 2469.5 MB
+Avg Available memory per processor 2469.5 MB
+Max Available memory per processor 2469.5 MB
+
+Min No-output time 322.3960 sec
+Avg No-output time 322.5111 sec
+Max No-output time 322.5945 sec
+
+STKPERF: Total Time: 322.936
+
+STKPERF: Current memory: 416894976 (397.6 M)
+STKPERF: Memory high water: 416894976 (397.6 M)
+                                                     CPU Time              CPU Time              CPU Time              Wall Time             Wall Time             Wall Time
+                 Timer                   Count   Sum (% of System)     Min (% of System)     Max (% of System)     Sum (% of System)     Min (% of System)     Max (% of System)
+---------------------------------------- ----- --------------------- --------------------- --------------------- --------------------- --------------------- ---------------------
+Nalu                                       384 34:16:06.314 (100.0%) 00:00:00.000  (0.00%) 00:05:21.456 (0.261%) 34:26:53.813 (100.0%) 00:00:00.000  (0.00%) 00:05:22.955 (0.260%)
+  CreateEdges                              384 00:02:02.406 (0.099%) 00:00:00.316 (<0.01%) 00:00:00.320 (<0.01%) 00:02:03.196 (0.099%) 00:00:00.319 (<0.01%) 00:00:00.322 (<0.01%)
+  Output                                 77568 00:01:44.411 (0.085%) 00:00:00.198 (<0.01%) 00:00:00.315 (<0.01%) 00:02:43.268 (0.132%) 00:00:00.343 (<0.01%) 00:00:00.540 (<0.01%)
+
+Took 0.0054 seconds to generate the table above.
+=====================================================================================
+
+                       TimeMonitor results over 384 processors
+
+Timer Name    MinOverProcs    MeanOverProcs    MaxOverProcs    MeanOverCallCounts    
+=====================================================================================

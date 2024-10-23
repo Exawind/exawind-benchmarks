@@ -1,0 +1,26 @@
+Initializing AMReX (24.09-6-gde4dc974dda7)...
+MPI initialized with 288 MPI processes
+MPI initialized with thread support level 0
+AMReX (24.09-6-gde4dc974dda7) initialized
+==============================================================================
+                AMR-Wind (https://github.com/exawind/amr-wind)
+
+  AMR-Wind version :: v3.1.4-18-g8bad127f
+  AMR-Wind Git SHA :: 8bad127f62cf2fd2f0d0ae16f2df47fdd0d069f8
+  AMReX version    :: 24.09-6-gde4dc974dda7
+
+  Exec. time       :: Fri Oct 18 09:58:56 2024
+  Build time       :: Sep 28 2024 10:55:52
+  C++ compiler     :: IntelLLVM 2023.2.0
+
+  MPI              :: ON    (Num. ranks = 288)
+  GPU              :: OFF
+  OpenMP           :: OFF
+
+  Enabled third-party libraries: 
+    NetCDF    4.9.2
+    HYPRE     2.31.0
+
+           This software is released under the BSD 3-clause license.           
+ See https://github.com/Exawind/amr-wind/blob/development/LICENSE for details. 
+------------------------------------------------------------------------------

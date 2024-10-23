@@ -1,0 +1,11 @@
+# Loading environment
+module purge
+export SPACK_MANAGER=/scratch/sbidadi/gbetrie/exawind-manager
+source ${SPACK_MANAGER}/start.sh
+spack-start
+module restore && module swap PrgEnv-cray PrgEnv-intel
+quick-activate /scratch/sbidadi/gbetrie/exawind-manager/environments/exawind-kestrel
+spack load exawind
+
+# Run command
+srun -u -N4 -n384 --ntasks-per-node=96 naluX -i naca0021_aoa30.yaml

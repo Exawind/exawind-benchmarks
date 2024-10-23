@@ -1,6 +1,6 @@
+<!-- This file is automatically compiled into the website. Begin headings with ## (or lower), not #, to avoid breaking the website heading hierarchy. -->
 
-
-# NREL Phase VI Rotor
+## NREL Phase VI Turbine
 
 ExaWind simulations are performed for NREL’s Unsteady Aerodynamics Experiment Phase VI rotor[^1]. The experimental conditions are summarized below:
 

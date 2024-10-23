@@ -1,3 +1,0 @@
-IOSS: Input database contains 8-byte integers. Setting Ioss to use 8-byte integers.
-
-IOSS: Using decomposition method 'RCB' for 112,464 elements on 26 mpi ranks.

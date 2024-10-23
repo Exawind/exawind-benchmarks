@@ -1,4 +1,8 @@
-# exawind-benchmarks
-Benchmark cases for packages within the ExaWind suite, including setup and performance documentation
-
+# ExaWind Benchmarks
 These are reference problems used to evaluate and compare the performance of ExaWind. These benchmarks have been chosen to represent the various capabilities within the ExaWind software stack, featuring cases for each individual solver (AMR-Wind and Nalu-Wind) and the overset hybrid solver. By providing up-to-date examples in an applied context, they also serve as a starting point for researchers setting up similar simulations.
+
+This repository is intended to become a nexus for collaborating among
+research groups, providing a reference frame for other code capabilities,
+and hosting external contributions.
+
+Benchmark problems are grouped by the program used to perform the simulation. For each problem included in the repository, the files required to run the case are included in an input_files directory, information about the latest run is contained in a run_info directory, and output data is compiled in a performance directory. Run information primarily includes the headers of log files, which capture the git hash/version recently used to run each specific example, and the footers of log files, which display profiling data and the number of time steps taken. Performance broadly includes both measured results from the simulation, such as physical quantities of interest, and computational timing information. README files provide synopses of each case and the resources used.

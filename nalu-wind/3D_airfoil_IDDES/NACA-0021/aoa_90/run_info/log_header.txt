@@ -1,0 +1,276 @@
+#################### INPUT FILE START ####################
+Simulations:
+  - name: sim1
+    optimizer: opt1
+    time_integrator: ti_1
+hypre_config:
+  umpire_device_pool_mbs: 4096
+  use_vendor_spgemm: 1
+  use_vendor_spmv: 0
+  use_vendor_sptrans: 0
+linear_solvers:
+  - name: solve_mom
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 1000
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    segregated_solver: yes
+    hypre_cfg_file: /projects/hfm/sbidadi/nrel_phase_vi/input_files/hypre_file.yaml
+    hypre_cfg_node: hypre_simple_precon
+  - name: solve_scalar
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 1000
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    hypre_cfg_file: /projects/hfm/sbidadi/nrel_phase_vi/input_files/hypre_file.yaml
+    hypre_cfg_node: hypre_simple_precon
+  - name: solve_elliptic
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 1000
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    hypre_cfg_file: /projects/hfm/sbidadi/nrel_phase_vi/input_files/hypre_file.yaml
+    hypre_cfg_node: hypre_elliptic
+Time_Integrators:
+  - StandardTimeIntegrator:
+      name: ti_1
+      realms:
+        - realm_1
+      second_order_accuracy: true
+      start_time: 0
+      termination_step_count: 100
+      time_step: 4.0e-4
+      time_step_count: 0
+      time_stepping_type: fixed
+realms:
+  - automatic_decomposition_type: rcb
+    rebalance_mesh: yes
+    stk_rebalance_method: parmetis
+    check_jacobians: true
+    boundary_conditions:
+      - target_name: wing
+        wall_boundary_condition: bc_wing
+        wall_user_data:
+          turbulent_ke: 0.0
+          use_wall_function: false
+          velocity:
+            - 0
+            - 0
+            - 0
+      - target_name: wing-pp
+        wall_boundary_condition: bc_wing_pp
+        wall_user_data:
+          turbulent_ke: 0.0
+          use_wall_function: false
+          velocity:
+            - 0
+            - 0
+            - 0
+      - inflow_boundary_condition: bc_inflow
+        inflow_user_data:
+          specific_dissipation_rate: 919.3455
+          turbulent_ke: 0.0010422
+          velocity:
+            - 75.0
+            - 0.0
+            - 0.0
+        target_name: inlet
+      - open_boundary_condition: bc_open
+        open_user_data:
+          pressure: 0.0
+          specific_dissipation_rate: 919.3455
+          turbulent_ke: 0.0010422
+          velocity:
+            - 0.0
+            - 0.0
+            - 0.0
+        target_name: outlet
+      - periodic_boundary_condition: bc_front_back
+        periodic_user_data:
+          search_tolerance: 0.0001
+        target_name:
+          - front
+          - back
+    check_for_missing_bcs: true
+    equation_systems:
+      max_iterations: 4
+      name: theEqSys
+      solver_system_specification:
+        velocity: solve_mom
+        turbulent_ke: solve_scalar
+        specific_dissipation_rate: solve_scalar
+        pressure: solve_elliptic
+        ndtw: solve_elliptic
+      systems:
+        - WallDistance:
+            convergence_tolerance: 1.0e-08
+            max_iterations: 1
+            name: myNDTW
+        - LowMachEOM:
+            convergence_tolerance: 1.0e-08
+            max_iterations: 1
+            name: myLowMach
+        - ShearStressTransport:
+            convergence_tolerance: 1.0e-08
+            max_iterations: 1
+            name: mySST
+    initial_conditions:
+      - constant: ic_1
+        target_name: fluid-hex
+        value:
+          pressure: 0
+          specific_dissipation_rate: 919.3455
+          turbulent_ke: 0.0010422
+          velocity:
+            - 50.0
+            - 0.0
+            - 0.0
+    material_properties:
+      specifications:
+        - name: density
+          type: constant
+          value: 1.2
+        - name: viscosity
+          type: constant
+          value: 2.22e-4
+      target_name: fluid-hex
+    mesh: /scratch/sbidadi/naca_airfoil_test/mesh/naca0021_aoa_90.exo
+    name: realm_1
+    output:
+      output_data_base_name: results/naca_0021_90_iddes.e
+      output_frequency: 100
+      output_node_set: false
+      output_variables:
+        - velocity
+        - density
+        - pressure
+        - pressure_force
+        - viscous_force
+        - tau_wall_vector
+        - tau_wall
+        - turbulent_ke
+        - specific_dissipation_rate
+        - minimum_distance_to_wall
+        - sst_f_one_blending
+        - turbulent_viscosity
+        - element_courant
+        - q_criterion
+        - vorticity
+        - assembled_area_force_moment
+    post_processing:
+      - frequency: 1
+        output_file_name: pp_naca_0021_90.dat
+        parameters:
+          - 0
+          - 0
+        physics: surface_force_and_moment
+        target_name:
+          - wing-pp
+        type: surface
+      - frequency: 1
+        output_file_name: naca_0021_90.dat
+        parameters:
+          - 0
+          - 0
+        physics: surface_force_and_moment
+        target_name:
+          - wing
+          - wing-pp
+        type: surface
+    restart:
+      restart_data_base_name: restart/naca_0021_90.rst
+      restart_frequency: 500
+    solution_options:
+      name: myOptions
+      options:
+        - hybrid_factor:
+            specific_dissipation_rate: 1.0
+            turbulent_ke: 1.0
+            velocity: 1.0
+        - alpha_upw:
+            specific_dissipation_rate: 1.0
+            turbulent_ke: 1.0
+            velocity: 1.0
+        - upw_factor:
+            specific_dissipation_rate: 0.0
+            turbulent_ke: 0.0
+            velocity: 1.0
+        - limiter:
+            pressure: true
+            velocity: true
+            turbulent_ke: true
+            specific_dissipation_rate: true
+        - noc_correction:
+            pressure: true
+        - projected_nodal_gradient:
+            ndtw: element
+            pressure: element
+            specific_dissipation_rate: element
+            turbulent_ke: element
+            velocity: element
+        - relaxation_factor:
+            pressure: 0.3
+            specific_dissipation_rate: 0.7
+            turbulent_ke: 0.7
+            velocity: 0.7
+        - turbulence_model_constants:
+            SDRWallFactor: 0.625
+      projected_timescale_type: momentum_diag_inv
+      turbulence_model: sst_iddes
+    turbulence_averaging:
+      specifications:
+        - compute_q_criterion: true
+          compute_vorticity: true
+          name: one
+          target_name:
+            - fluid-hex
+      time_filter_interval: 100000.0
+    use_edges: true
+#################### INPUT FILE END   ####################
+===============================================================================
+                                  Nalu-Wind                                    
+       An incompressible, turbulent computational fluid dynamics solver        
+                  for wind turbine and wind farm simulations                   
+===============================================================================
+
+   Nalu-Wind Version: v1.2.0
+   Nalu-Wind GIT Commit SHA: 4faf299bb78c424661cc001240130713365d5305
+   Trilinos Version: 15.1.1
+
+   TPLs: Boost, HDF5, netCDF, STK, Trilinos, yaml-cpp and zlib   
+   Optional TPLs enabled: OpenFAST, Hypre, TIOGA
+   Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC   
+   (NTESS), National Renewable Energy Laboratory, University of Texas Austin,  
+    Northwest Research Associates. Under the terms of Contract DE-NA0003525    
+    with NTESS, the U.S. Government retains certain rights in this software.   
+                                                                               
+           This software is released under the BSD 3-clause license.           
+   See LICENSE file at https://github.com/exawind/nalu-wind for more details.  
+-------------------------------------------------------------------------------

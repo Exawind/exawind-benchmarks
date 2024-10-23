@@ -1,0 +1,127 @@
+Time Step Count: 8640 Current Time: 3.33792
+ dtN: 0.00028975 dtNm1: 0.00028975 gammas: 1.5 -2 0.5
+ DualNodalVolume min: 2.25712e-14 max: 0.000220924 total: 86.3119
+ Max Courant: 443.494 Max Reynolds: 309723 (realm_1)
+realm_1::advance_time_step() 
+NLI    Name           Linear Iter      Linear Res     NLinear Res    Scaled NLR
+---    ----           -----------      ----------     -----------    ----------
+1/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X          4       4.19202e-06     0.00012099             1
+        MomentumEQS_Y          5       3.64562e-06     0.00043813             1
+        MomentumEQS_Z          3       0.000150277     0.00620542             1
+        MomentumEQS           12        0.00015038     0.00622205             1
+        ContinuityEQS         13       9.35225e-06     0.00019762             1
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS   4       2.67607e-06    8.06488e-05             1
+        SpecDissRateEQS        2         0.0966142        46.2141             1
+2/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X          5       4.22983e-07    1.22952e-05      0.101622
+        MomentumEQS_Y          6       4.79412e-07    1.68248e-05     0.0384013
+        MomentumEQS_Z          6       7.39425e-07     1.6258e-05    0.00261997
+        MomentumEQS           17       9.77497e-07    2.64305e-05    0.00424787
+        ContinuityEQS         13       3.78078e-06     0.00016332      0.826434
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS   5        1.4093e-07    1.11781e-05      0.138602
+        SpecDissRateEQS        2         0.0672989        4.17455     0.0903307
+3/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X          6       4.74843e-08    3.14572e-06     0.0259999
+        MomentumEQS_Y          7       8.03479e-08    4.07105e-06    0.00929187
+        MomentumEQS_Z          7       1.26086e-07    4.22545e-06   0.000680929
+        MomentumEQS           20        1.5687e-07    6.65758e-06       0.00107
+        ContinuityEQS         13       3.73944e-06    0.000123781      0.626361
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS   5       7.38876e-08    3.31621e-06     0.0411191
+        SpecDissRateEQS        3        0.00105581       0.281488    0.00609095
+4/4    Equation System Iteration
+ 1/1      myLowMach
+        MomentumEQS_X          6       3.41095e-08    1.60784e-06     0.0132891
+        MomentumEQS_Y          7       4.85514e-08    1.95166e-06    0.00445452
+        MomentumEQS_Z          7        8.1586e-08    1.94961e-06   0.000314178
+        MomentumEQS           20       1.00881e-07    3.19297e-06   0.000513171
+        ContinuityEQS         13       3.04499e-06    9.07254e-05       0.45909
+ 1/1ShearStressTransportWrap
+        TurbKineticEnergyEQS   5       4.26797e-08    1.27052e-06     0.0157538
+        SpecDissRateEQS        3       0.000459411      0.0197032   0.000426347
+Mass Balance Review:
+Density accumulation: 0
+Integrated inflow:    0
+Integrated open:      0
+Total mass closure:   0
+Realm shall provide output files at : currentTime/timeStepCount: 3.3379199999994/8640 (realm_1)
+Realm shall provide restart files at: currentTime/timeStepCount: 3.3379199999994/8640 (realm_1)
+Mean System Norm: 0.003959684436839856 8640 3.33792
+
+-------------------------------- 
+Begin Timer Overview for Realm: realm_1
+-------------------------------- 
+Timing for Eq: myNDTW
+             init --   	avg: 0.0315379 	min: 0.027262 	max: 0.0415175
+         assemble --   	avg: 0 	min: 0 	max: 0
+    load_complete --   	avg: 0 	min: 0 	max: 0
+            solve --   	avg: 0 	min: 0 	max: 0
+    precond setup --   	avg: 0 	min: 0 	max: 0
+             misc --   	avg: 0 	min: 0 	max: 0
+Timing for Eq: myLowMach
+             init --   	avg: 0.00340477 	min: 0.00202799 	max: 0.00677824
+         assemble --   	avg: 0 	min: 0 	max: 0
+    load_complete --   	avg: 0 	min: 0 	max: 0
+            solve --   	avg: 0 	min: 0 	max: 0
+    precond setup --   	avg: 0 	min: 0 	max: 0
+             misc --   	avg: 0 	min: 0 	max: 0
+Timing for Eq: MomentumEQS
+             init --   	avg: 0.0254979 	min: 0.0215948 	max: 0.0325091
+         assemble --   	avg: 586.345 	min: 423.123 	max: 843.814
+    load_complete --   	avg: 860.562 	min: 662.832 	max: 940.125
+            solve --   	avg: 1143.06 	min: 1137.66 	max: 1148.42
+    precond setup --   	avg: 0.00341963 	min: 0.00151086 	max: 0.0108144
+             misc --   	avg: 313.954 	min: 254.456 	max: 438.299
+linear iterations --  	avg: 17.123 	min: 10 	max: 21
+Timing for Eq: ContinuityEQS
+             init --   	avg: 0.0200949 	min: 0.0176733 	max: 0.0272331
+         assemble --   	avg: 465.63 	min: 387.261 	max: 600.767
+    load_complete --   	avg: 450.608 	min: 406.518 	max: 471.61
+            solve --   	avg: 4315.35 	min: 4308.24 	max: 4324.14
+    precond setup --   	avg: 6598.99 	min: 6594.9 	max: 6602.38
+             misc --   	avg: 400.817 	min: 308.576 	max: 507.457
+linear iterations --  	avg: 13.2971 	min: 11 	max: 15
+Timing for Eq: mySST
+             init --   	avg: 0.00173746 	min: 0.000880957 	max: 0.00448155
+         assemble --   	avg: 0 	min: 0 	max: 0
+    load_complete --   	avg: 0 	min: 0 	max: 0
+            solve --   	avg: 0 	min: 0 	max: 0
+    precond setup --   	avg: 0 	min: 0 	max: 0
+             misc --   	avg: 0 	min: 0 	max: 0
+Timing for Eq: TurbKineticEnergyEQS
+             init --   	avg: 0.0221097 	min: 0.0196104 	max: 0.030448
+         assemble --   	avg: 336.147 	min: 291.633 	max: 395.552
+    load_complete --   	avg: 437.556 	min: 375.685 	max: 481.095
+            solve --   	avg: 348.297 	min: 342.305 	max: 355.808
+    precond setup --   	avg: 60.0607 	min: 56.2924 	max: 62.721
+             misc --   	avg: 172.635 	min: 136.918 	max: 242.338
+linear iterations --  	avg: 5.09128 	min: 4 	max: 6
+Timing for Eq: SpecDissRateEQS
+             init --   	avg: 0.0223831 	min: 0.01969 	max: 0.0327191
+         assemble --   	avg: 338.731 	min: 291.683 	max: 422.719
+    load_complete --   	avg: 446.75 	min: 362.76 	max: 492.005
+            solve --   	avg: 211.631 	min: 205.199 	max: 221.075
+    precond setup --   	avg: 59.9651 	min: 56.3379 	max: 62.6325
+             misc --   	avg: 205.676 	min: 132.824 	max: 237.066
+linear iterations --  	avg: 2.2862 	min: 2 	max: 4
+Timing for IO: 
+   io create mesh --   	avg: 70.5686 	min: 1.82231 	max: 70.7348
+ io output fields --   	avg: 131.772 	min: 130.123 	max: 269.145
+ io populate mesh --   	avg: 0.186063 	min: 0.178902 	max: 0.202178
+ io populate fd   --   	avg: 0.0189964 	min: 0.018435 	max: 0.0195999
+Timing for property evaluation:         
+            props --   	avg: 2.42567 	min: 2.0844 	max: 3.15527
+Timing for Edge: 
+    edge creation --   	avg: 0.377056 	min: 0.37591 	max: 0.377851
+Timing for Overset:
+     connectivity --  	avg: 0.00753942 	min: 0.00748301 	max: 0.007581
+     field update --  	avg: 0 	min: 0 	max: 0
+Timing for skin_mesh :    
+        skin_mesh --   	avg: 0 	min: 0 	max: 0
+
