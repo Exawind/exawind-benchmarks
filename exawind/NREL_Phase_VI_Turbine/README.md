@@ -10,14 +10,12 @@ ExaWind simulations are performed for NREL’s Unsteady Aerodynamics Experiment 
 - Blade section: single airfoil, S809, from r/R=0.25 
 - Nonlinear twist with blade tip pitch of 3deg
 - Pitch and twist axis at 0.3c
-- Maximum Reynolds number on the blade section: around 1 million
 
 # Simulation Setup
-- Turbulence / Transition model: SST-2003 with the 1-eq Gamma transition model
 - ExaWind driver version: [a38a4d5f96e4d3b42b52f41280e2d8d28c57ef25]( https://github.com/Exawind/exawind-driver/commit/a38a4d5f96e4d3b42b52f41280e2d8d28c57ef25)
 - Nalu-Wind version: [f3cecafbdc05e61d0550ff41a30307425ef8197b](https://github.com/Exawind/nalu-wind/commit/f3cecafbdc05e61d0550ff41a30307425ef8197b)
+   - Turbulence / Transition model: SST-2003 with the 1-eq Gamma transition model
 - AMR-Wind version: [8bad127f62cf2fd2f0d0ae16f2df47fdd0d069f8]( https://github.com/Exawind/amr-wind/commit/8bad127f62cf2fd2f0d0ae16f2df47fdd0d069f8)  
-
 
 # Freestream conditions
 
@@ -35,11 +33,11 @@ The tunnel’s turbulence intensity was reported to be below 0.5%, but the preci
 
 # CFD mesh generation
 
-The near-body Nalu-Wind mesh was created using Pointwise from the CAD model. The two blades are connected with a cylinder at the center, while other components such as the spinner or tower were not included in the CFD model.
+The near-body, Nalu-Wind mesh was created using Pointwise from the CAD model. The two blades are connected with a cylinder at the center, while other components such as the spinner or tower were not included in the CFD model.
 - Mesh topology: O-O typed structured mesh
 - 500 points in the chordwise direction
 - Initial wall normal spacing: 5e-6m
-- Size of the overset boundaries: 1.5m
+- Size of the overset boundaries: 1.5m from the blade surface
 - Wall normal growth rate: 1.15 
 - Total cell counts: 23,192,978
 
@@ -54,16 +52,24 @@ AMR-Wind mesh is generated using the built-in capability of AMR-Wind. Off-body m
 
 # Results
 
-The rotor simulations are performed in the four sequential stages as below
-- Rev. 1 and 2: 0.25deg
-- Rev. 3 and 4: 0.125deg
-- Rev. 5 and 6: 0.0625 deg
-- Rev. 7 and 8: 0.03125 deg 
+The rotor simulations are performed in four sequential stages as follows:
 
-This is particulary important for the wind speed of 15m/s, which has the sectional angle of attac distribution between 15 and 35 deg with massively separated flow
+- Rev. 1 and 2: 0.25°
+- Rev. 3 and 4: 0.125°
+- Rev. 5 and 6: 0.0625°
+- Rev. 7 and 8: 0.03125°
 
-The figure compares the rotor performance at 7m/s and 15m/s, thrust and torque against the experimental data and available numerical results. 
+This approach was particularly important for a wind speed of 15 m/s, which exhibits highly separated flow, with the sectional angle of attack distribution ranging between 15° and 35°.
 
-<img src="figs/pPhaseVi.png" alt="Cf" width="1000">
+The figure below compares the rotor performance (thrust and torque) against experimental data and available numerical results.
+<img src="fig/PhaseVi.png" alt="Cf" width="1000">
+
+For the thrust, the transition simulations predict slightly higher values than the fully turbulent simulations, although the differences are minor. For the torque, both fully turbulent and transition simulation results fall within the standard deviation of the experimental measurements. At 7 m/s, the transition simulation predicts slightly higher torque than the fully turbulent simulations due to lower drag from more laminar flow. On the other hand, at 15 m/s, the fully turbulent simulations predict higher torque. This could be attributed to higher turbulent eddy viscosity, resulting in more attached flow on the blade section. Overall, both fully turbulent and transition simulations provide reasonable predictions.
+
+
+The simulations were performed using 1,440 cores on NREL's Kestrel HPC cluster, 1152 for Nalu-Wind, and 288 for AMR-Wind. The simulations took approximately 55 hours. Nalu-Wind used four Picard iterations.
+
+
+
 
 
