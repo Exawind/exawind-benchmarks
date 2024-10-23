@@ -1,0 +1,163 @@
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
+#            SIMULATION STOP            #
+#.......................................#
+time.stop_time               =   -1     # Max (simulated) time to evolve
+time.max_step                =   -1     # Max number of time steps
+
+
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
+#         TIME STEP COMPUTATION         #
+#.......................................#
+time.fixed_dt         =   0.000144875      # Use this constant dt if > 0
+time.cfl              =   1.0       # CFL factor
+
+
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
+#            INPUT AND OUTPUT           #
+#.......................................#
+io.restart_file = chk08640
+io.KE_int = -1
+io.line_plot_int = -1
+io.derived_outputs = q_criterion
+io.outputs = wall_dist density p velocity_mueff sdr tke mu_turb wall_dist vorticity omega_src shear_prod dissipation sdr_dissipation
+time.plot_interval            =  11520        # Steps between plot files
+time.checkpoint_interval      =  11520       # Steps between checkpoint files
+incflo.initial_iterations = 3
+
+##--------------------------------------#
+###          POST PROCESSING             # 
+###--------------------------------------#
+#incflo.post_processing = sampling_plane sampling_line
+#
+## ---- On a plane ----
+## --------------------
+## Frequency of output for the data
+#sampling_plane.output_frequency = 1 
+#
+## Type of probes to output 
+#sampling_plane.labels = p_yz #YZ planes at different streamwise locations
+#
+## # Fields to output
+#sampling_plane.fields = velocity tke
+#
+#sampling_plane.p_yz.type = PlaneSampler
+#sampling_plane.p_yz.axis1 = 0.0 35.0 0.0 
+#sampling_plane.p_yz.axis2 = 0.0 0.0 35.0
+#sampling_plane.p_yz.origin = 0.0 -17.5 -17.5
+#sampling_plane.p_yz.num_points = 88 88
+#sampling_plane.p_yz.normal = 1.0 0.0 0.0 
+#sampling_plane.p_yz.offsets = 10.0 20.0 30.0 50.0 70.0 100.0 140.0
+#
+## --- On a line ---
+## -----------------
+#sampling_line.output_frequency = 1
+#sampling_line.labels = line1
+#sampling_line.fields = velocity tke
+#sampling_line.output_format = netcdf
+#
+## sampling along a line
+#sampling_line.line1.type = LineSampler
+#sampling_line.line1.num_points = 128
+#sampling_line.line1.start = -100.0 0.0 0.0
+#sampling_line.line1.end = 150.0 0.0 0.0
+
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
+#               PHYSICS                 #
+#.......................................#
+#incflo.gravity        =  0.0  0.0 -9.81  # Gravitational force (3D)
+incflo.density        =  1.246           # Reference density
+incflo.velocity = 15.0 0.0 0.0
+incflo.use_godunov = 1
+incflo.godunov_type = "weno_z"
+
+transport.viscosity = 1.769e-5
+transport.laminar_prandtl = 0.7
+transport.turbulent_prandtl = 0.3333
+turbulence.model = KOmegaSST
+TKE.source_terms = KwSSTSrc
+SDR.source_terms = SDRSrc
+
+incflo.physics = FreeStream
+
+FreeStream.velocity_type = ConstValue
+ConstValue.velocity.value = 15.0 0.0 0.0
+
+FreeStream.tke_type = ConstValue
+ConstValue.tke.value = 0.033750
+FreeStream.sdr_type = ConstValue
+ConstValue.sdr.value = 245.071186
+
+FreeStream.fields = wall_dist
+FreeStream.wall_dist_type = ConstValue
+ConstValue.wall_dist.value = 8.0
+
+
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
+#        ADAPTIVE MESH REFINEMENT       #
+#.......................................#
+amr.n_cell              = 320 256 256 # Grid cells at coarsest AMRlevel
+amr.max_level           = 4           # Max AMR level in hierarchy
+tagging.labels = static
+tagging.static.static_refinement_def = static_box.txt
+tagging.static.type = CartBoxRefinement
+
+
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
+#              GEOMETRY                 #
+#.......................................#
+geometry.prob_lo        =    -100.0        -100.0      -100.0  # Lo corner coordinates
+geometry.prob_hi        =     150.0         100.0       100.0  # Hi corner coordinates
+geometry.is_periodic    =   0   0   0   # Periodicity x y z (0/1)
+
+
+#---------------------------------------#
+##            BOUNDARY CONDITIONS       #
+#---------------------------------------#
+xlo.type = "mass_inflow"
+xlo.density = 1.246
+xlo.velocity = 15.0 0.0 0.0
+xlo.tke = 0.033750
+xlo.sdr = 245.071186
+xhi.type = "pressure_outflow"
+ylo.type = "slip_wall"
+yhi.type = "slip_wall"
+zlo.type =   "slip_wall"
+zhi.type =   "slip_wall"
+incflo.verbose =   0
+
+
+#-----------------------------------------#
+#           LINEAR SOLVER                 #
+#-----------------------------------------#
+amrex.abort_on_out_of_gpu_memory = 1
+amrex.the_arena_is_managed = 1
+amrex.fpe_trap_invalid  =   1           # Trap NaNs
+amrex.throw_exception = 1
+amrex.signal_handling = 0
+
+nodal_proj.verbose = 0
+nodal_proj.mg_rtol = 1.0e-7
+nodal_proj.mg_atol = 1.0e-10
+nodal_proj.num_pre_smooth = 10
+nodal_proj.num_post_smooth = 10
+nodal_proj.bottom_rtol = 1.0e-9
+nodal_proj.bottom_atol = 1.0e-12
+##
+mac_proj.verbose=0
+mac_proj.max_coarsening_level = 0
+mac_proj.do_nsolve = true
+mac_proj.bottom_verbose  = 0
+mac_proj.bottom_solver = hypre
+mac_proj.mg_rtol = 1.0e-6
+mac_proj.mg_atol = 1.0e-10
+mac_proj.bottom_rtol = 1.0e-11
+mac_proj.bottom_atol = 1.0e-12
+##
+diffusion.verbose=0
+diffusion.do_agglomeration = false
+diffusion.do_nsolve = true
+##
+velocity_diffusion.verbose=0
+velocity_diffusion.use_tensor_operator = false
+velocity_diffusion.use_segregated_operator = true
+##

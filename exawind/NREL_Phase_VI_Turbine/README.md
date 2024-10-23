@@ -61,15 +61,12 @@ The rotor simulations are performed in four sequential stages as follows:
 
 This approach was particularly important for a wind speed of 15 m/s, which exhibits highly separated flow, with the sectional angle of attack distribution ranging between 15° and 35°.
 
-The figure below compares the rotor performance (thrust and torque) against experimental data and available numerical results.
+The figure below compares the rotor performance (thrust and torque) against experimental data and available numerical results. For the Nalu-Wind results, the rotor performance was averaged over the last one revolution.
+
 <img src="fig/PhaseVi.png" alt="Cf" width="1000">
 
 For the thrust, the transition simulations predict slightly higher values than the fully turbulent simulations, although the differences are minor. For the torque, both fully turbulent and transition simulation results fall within the standard deviation of the experimental measurements. At 7 m/s, the transition simulation predicts slightly higher torque than the fully turbulent simulations due to lower drag from more laminar flow. On the other hand, at 15 m/s, the fully turbulent simulations predict higher torque. This could be attributed to higher turbulent eddy viscosity, resulting in more attached flow on the blade section. Overall, both fully turbulent and transition simulations provide reasonable predictions.
 
-
-The simulations were performed using 1,440 cores on NREL's Kestrel HPC cluster, 1152 for Nalu-Wind, and 288 for AMR-Wind. The simulations took approximately 55 hours. Nalu-Wind used four Picard iterations.
-
-
-
+The simulations were performed using 1,440 cores on NREL's Kestrel HPC cluster, 1152 cores for Nalu-Wind, and 288 cores for AMR-Wind. The simulations took approximately 55 hours for the transition simulations. Nalu-Wind used four Picard iterations.
 
 
