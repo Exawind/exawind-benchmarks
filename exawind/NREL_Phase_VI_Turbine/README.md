@@ -11,13 +11,13 @@ ExaWind simulations are performed for NREL’s Unsteady Aerodynamics Experiment 
 - Nonlinear twist with blade tip pitch of 3deg
 - Pitch and twist axis at 0.3c
 
-# Simulation Setup
+## Simulation Setup
 - ExaWind driver version: [a38a4d5f96e4d3b42b52f41280e2d8d28c57ef25]( https://github.com/Exawind/exawind-driver/commit/a38a4d5f96e4d3b42b52f41280e2d8d28c57ef25)
 - Nalu-Wind version: [f3cecafbdc05e61d0550ff41a30307425ef8197b](https://github.com/Exawind/nalu-wind/commit/f3cecafbdc05e61d0550ff41a30307425ef8197b)
    - Turbulence / Transition model: SST-2003 with the 1-eq Gamma transition model
 - AMR-Wind version: [8bad127f62cf2fd2f0d0ae16f2df47fdd0d069f8]( https://github.com/Exawind/amr-wind/commit/8bad127f62cf2fd2f0d0ae16f2df47fdd0d069f8)  
 
-# Freestream conditions
+## Freestream conditions
 
 Simulations are performed for both fully turbulent and laminar-turbulent transition conditions at two wind speeds: 7 m/s and 15 m/s, which represent speeds below and above the rated wind speed, respectively.
 
@@ -31,7 +31,7 @@ The tunnel’s turbulence intensity was reported to be below 0.5%, but the preci
     - U<sub>∞</sub>=15.0m/s, ρ=1.246kg/m<sup>3</sup>, µ<sub>t</sub>/µ=9.7
     - k<sub>∞</sub>=0.033750, ω<sub>∞</sub>=245.071186
 
-# CFD mesh generation
+## CFD mesh generation
 
 The near-body, Nalu-Wind mesh was created using Pointwise from the CAD model. The two blades are connected with a cylinder at the center, while other components such as the spinner or tower were not included in the CFD model.
 - Mesh topology: O-O typed structured mesh
@@ -50,7 +50,7 @@ AMR-Wind mesh is generated using the built-in capability of AMR-Wind. Off-body m
    - See detail ranges of the mesh refinement in “static_box.txt”
 - Total cell counts: 45,527,040
 
-# Results
+## Results
 
 The rotor simulations are performed in four sequential stages as follows:
 
@@ -67,6 +67,7 @@ For the thrust, the transition simulations predict slightly higher values than t
 
 The simulations were performed using 1,440 cores on NREL's Kestrel HPC cluster, 1152 cores for Nalu-Wind, and 288 cores for AMR-Wind. The simulations took approximately 55 hours for the transition simulations. Nalu-Wind used four Picard iterations.
 
-[^1] M. H. Hand et al, "Unsteady Aerodynamics Experiment Phase VI: Wind Tunnel Test Configurations and Available Data Campaigns," NREL/TP-500-29955, 2001.
-[^2] Sørensen, CFD Modelling of Laminar-turbulent Transition for Airfoils and Rotors Using the Gamm-Re Model, Wind Energ. 2009; 12:715–733.
+## Results
+[^1]: M. H. Hand et al, "Unsteady Aerodynamics Experiment Phase VI: Wind Tunnel Test Configurations and Available Data Campaigns," NREL/TP-500-29955, 2001.
+[^2]: Sørensen, "CFD Modelling of Laminar-turbulent Transition for Airfoils and Rotors Using the Gamm-Re Model," Wind Energ. 12:715–733, 2009.
 
