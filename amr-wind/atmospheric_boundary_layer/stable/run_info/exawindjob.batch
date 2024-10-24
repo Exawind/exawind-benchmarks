@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --job-name=ablbenchmark
+#SBATCH --account=extremedata
+#SBATCH --time=00:20:00
+#SBATCH --nodes=20
+#SBATCH --ntasks-per-node=104
+#SBATCH --output=out.%x_%j
+#SBATCH --partition=standard
+#SBATCH --exclusive
+#SBATCH --mail-user=pmohan@nrel.gov
+#SBATCH --mail-type=BEGIN,END,FAIL
+
+#Per: https://nrel.github.io/HPC/Documentation/Systems/Kestrel/Running/performancerecs/#mpi
+export MPICH_SHARED_MEM_COLL_OPT=mpi_bcast,mpi_barrier
+export MPICH_COLL_OPT_OFF=mpi_allreduce
+
+module load PrgEnv-intel
+module load cray-python
+export EXAWIND_MANAGER=/home/pmohan/exawind/exawind-manager
+source ${EXAWIND_MANAGER}/start.sh
+spack-start
+quick-activate ${EXAWIND_MANAGER}/environments/amr-wind
+spack load amr-wind
+aw_exec="$(spack location -i amr-wind)/bin/amr_wind"
+
+BINDW='--cpu_bind=map_cpu:0,52,13,65,26,78,39,91,1,53,14,66,27,79,40,92,2,54,15,67,28,80,41,93,3,55,16,68,29,81,42,94,4,56,17,69,30,82,43,95,5,57,18,70,31,83,44,96,6,58,19,71,32,84,45,97,7,59,20,72,33,85,46,98,8,60,21,73,34,86,47,99,9,61,22,74,35,87,48,100,10,62,23,75,36,88,49,101,11,63,24,76,37,89,50,102,12,64,25,77,38,90,51,103'
+
+srun --distribution=block:cyclic $BINDW ${aw_exec} abl_stable.inp

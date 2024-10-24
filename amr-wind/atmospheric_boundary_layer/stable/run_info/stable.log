@@ -1,0 +1,1965 @@
+
+Lmod is automatically replacing "gcc-native/12.1" with "intel/2023.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-gnu/8.5.0" with "PrgEnv-intel/8.5.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/23.12.5     2) cray-mpich/8.1.28
+
++ spack env activate -p -d /home/pmohan/exawind/exawind-manager/environments/amr-wind
+==============================================================================
+                AMR-Wind (https://github.com/exawind/amr-wind)
+
+  AMR-Wind version :: v3.1.5-11-g32811b18
+  AMR-Wind Git SHA :: 32811b18af31e7b54f7e5cb23c6ead424f21f1f0
+  AMReX version    :: 24.09-45-g6d9c25b989f1
+
+  Exec. time       :: Wed Oct 23 15:08:43 2024
+  Build time       :: Oct 14 2024 08:26:23
+  C++ compiler     :: IntelLLVM 2023.2.0
+
+  MPI              :: ON    (Num. ranks = 2080)
+  GPU              :: OFF
+  OpenMP           :: OFF
+
+  Enabled third-party libraries: 
+    NetCDF    4.9.2
+    HYPRE     2.31.0
+
+           This software is released under the BSD 3-clause license.           
+ See https://github.com/Exawind/amr-wind/blob/development/LICENSE for details. 
+------------------------------------------------------------------------------
+
+Initializing AMReX (24.09-45-g6d9c25b989f1)...
+MPI initialized with 2080 MPI processes
+MPI initialized with thread support level 0
+AMReX (24.09-45-g6d9c25b989f1) initialized
+Initializing AMR-Wind ...
+Initializing boundary conditions for velocity_mueff
+Initializing boundary conditions for velocity
+Initializing boundary conditions for density
+Initializing boundary conditions for p
+Initializing boundary conditions for velocity_src_term
+Initializing boundary conditions for gp
+Creating PDESystem instance: ICNS-Godunov
+ABLWallFunction: log_law_height not specified for ABL physics. Assuming log_law_height = first cell height
+ABLWallFunction: Surface temperature heating/cooling start time (surface_temp_rate_tstart) not found for ABL. Assuming zero.0
+Initializing boundary conditions for temperature_mueff
+Initializing boundary conditions for temperature
+Initializing boundary conditions for temperature_src_term
+Creating PDESystem instance: Temperature-Godunov
+Creating ABLStatsBase instance: precursor
+Creating Physics instance: ABL
+Initializing boundary conditions for mu_turb
+Creating TurbulenceModel instance: Smagorinsky-ConstTransport
+Creating PostProcessBase instance: Sampling
+Initializing I/O manager
+Creating mesh... done
+Grid summary: 
+  Level 0   4096 grids  134217728 cells  100 % of domain
+            smallest grid: 32 x 32 x 32  biggest grid: 32 x 32 x 32
+
+Shear Stress model: moeng
+Heat Flux model: moeng
+Creating MomentumSource instance: BoussinesqBuoyancy
+Creating MomentumSource instance: CoriolisForcing
+Geostrophic forcing: Coriolis factor = 0.000139
+Creating MomentumSource instance: GeostrophicForcing
+Creating SamplerBase instance: PlaneSampler
+WARNING: Sampling: netcdf output will negatively impact performance
+Begin initial projection
+  Nodal_projection               0                     0                     0
+Completed initial projection
+
+Begin initial pressure iterations. Num. iters = 3
+dt: 0.0625
+CFL: 0.64 (conv: 0.64 diff: 0 src: 0 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 7          0.0114217453       1.649899381e-09
+  temperature_solve              2           0.134353045       3.044669938e-08
+  velocity_solve                 2          0.2917201381       3.738355225e-08
+  Nodal_projection               4         0.02678201691       5.401395393e-09
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4         0.01135180458        3.09928921e-09
+  temperature_solve              2          0.1343530448       3.044669938e-08
+  velocity_solve                 2          0.2917201386       3.738355403e-08
+  Nodal_projection               2        0.004130812515       8.617096814e-09
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4         0.01162663644       3.169112085e-09
+  temperature_solve              2          0.1343530447       3.044669938e-08
+  velocity_solve                 2          0.2917201391       3.738355403e-08
+  Nodal_projection               2        0.002445139686         2.2460868e-09
+Completed initial pressure iterations
+
+Writing plot file       plt00000 at time 0
+Writing checkpoint file chk00000 at time 0
+Initialization successful. Time elapsed = 9.206823118
+
+Begin simulation: 
+  Run until 36000 sec. or 100 timesteps
+  Fixed timestepping with dt = 0.0625; max. CFL from inputs = 0.95
+
+==============================================================================
+Step: 1 dt: 0.0625 Time: 0 to 0.0625
+CFL: 0.640782 (conv: 0.64 diff: 0 src: 0.0223902 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4         0.01176464918       3.372156803e-09
+  temperature_solve              2          0.1343530447       3.044664254e-08
+  velocity_solve                 2          0.2917201395       3.738355403e-08
+  Nodal_projection               4         0.02678204473       5.401369294e-09
+
+WallClockTime: 1 Pre: 0.192 Solve: 1.291 Post: 0.00964 Total: 1.493
+Solve time per cell: 2.001e-05
+
+==============================================================================
+Step: 2 dt: 0.0625 Time: 0.0625 to 0.125
+CFL: 0.640843 (conv: 0.640078 diff: 0 src: 0.0221518 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4         0.01443663747       4.738908923e-09
+  temperature_solve              2          0.1170517243       2.740330274e-08
+  velocity_solve                 2          0.2602283571       3.497487455e-08
+  Nodal_projection               4         0.02678204565       5.401405455e-09
+
+WallClockTime: 2 Pre: 0.00149 Solve: 1.281 Post: 0.0418 Total: 1.324
+Solve time per cell: 1.985e-05
+
+==============================================================================
+Step: 3 dt: 0.0625 Time: 0.125 to 0.1875
+CFL: 0.64088 (conv: 0.640166 diff: 0 src: 0.0213917 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4         0.02135684007        6.09115716e-09
+  temperature_solve              2          0.1071640665       2.517674602e-08
+  velocity_solve                 2          0.2333416165       3.258886849e-08
+  Nodal_projection               4         0.02678204572       5.401294566e-09
+
+WallClockTime: 3 Pre: 0.00702 Solve: 1.416 Post: 0.0455 Total: 1.468
+Solve time per cell: 2.194e-05
+
+==============================================================================
+Step: 4 dt: 0.0625 Time: 0.1875 to 0.25
+CFL: 0.640917 (conv: 0.640261 diff: 0 src: 0.0204974 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4         0.02732910465       8.102308012e-09
+  temperature_solve              2         0.09927795638       2.303363544e-08
+  velocity_solve                 2          0.2102023999       3.027758311e-08
+  Nodal_projection               4         0.02678204583       5.401052196e-09
+
+WallClockTime: 4 Pre: 0.00729 Solve: 1.208 Post: 0.0101 Total: 1.226
+Solve time per cell: 1.873e-05
+
+==============================================================================
+Step: 5 dt: 0.0625 Time: 0.25 to 0.3125
+CFL: 0.640977 (conv: 0.640331 diff: 0 src: 0.020343 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0326634644       6.135001322e-10
+  temperature_solve              2          0.0934669115       2.203137228e-08
+  velocity_solve                 2          0.1901380017        2.80850152e-08
+  Nodal_projection               4         0.02678204587       5.400788825e-09
+
+WallClockTime: 5 Pre: 0.00354 Solve: 4.209 Post: 0.0129 Total: 4.226
+Solve time per cell: 6.524e-05
+
+==============================================================================
+Step: 6 dt: 0.0625 Time: 0.3125 to 0.375
+CFL: 0.641053 (conv: 0.640408 diff: 0 src: 0.0203334 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04070994865       6.733647346e-10
+  temperature_solve              2         0.09307554951       2.105116437e-08
+  velocity_solve                 2          0.1726228021       2.600720972e-08
+  Nodal_projection               4          0.0267820459       5.400569299e-09
+
+WallClockTime: 6 Pre: 0.00156 Solve: 1.083 Post: 0.00713 Total: 1.092
+Solve time per cell: 1.679e-05
+
+==============================================================================
+Step: 7 dt: 0.0625 Time: 0.375 to 0.4375
+CFL: 0.641085 (conv: 0.640462 diff: 0 src: 0.0199754 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04642165896       8.813243087e-10
+  temperature_solve              2          0.0811139482       1.908108516e-08
+  velocity_solve                 2          0.1572761128       2.406779309e-08
+  Nodal_projection               4         0.02678204592       5.400390723e-09
+
+WallClockTime: 7 Pre: 0.0015 Solve: 1.245 Post: 0.00734 Total: 1.254
+Solve time per cell: 1.93e-05
+
+==============================================================================
+Step: 8 dt: 0.0625 Time: 0.4375 to 0.5
+CFL: 0.641133 (conv: 0.640526 diff: 0 src: 0.019725 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05095254307       9.249373385e-10
+  temperature_solve              2         0.08039680946       1.792886906e-08
+  velocity_solve                 2          0.1437474681       2.227487617e-08
+  Nodal_projection               4         0.02678204593       5.400289617e-09
+
+WallClockTime: 8 Pre: 0.0015 Solve: 1.425 Post: 0.0453 Total: 1.472
+Solve time per cell: 2.208e-05
+
+==============================================================================
+Step: 9 dt: 0.0625 Time: 0.5 to 0.5625
+CFL: 0.641206 (conv: 0.640606 diff: 0 src: 0.0196074 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05877365254       1.075801781e-09
+  temperature_solve              2         0.06840340098       1.583589437e-08
+  velocity_solve                 2          0.1317986772       2.061985072e-08
+  Nodal_projection               4         0.02678204593       5.400339384e-09
+
+WallClockTime: 9 Pre: 0.00618 Solve: 1.457 Post: 0.0217 Total: 1.485
+Solve time per cell: 2.258e-05
+
+==============================================================================
+Step: 10 dt: 0.0625 Time: 0.5625 to 0.625
+CFL: 0.641243 (conv: 0.640651 diff: 0 src: 0.0194851 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0626156701       1.230185816e-09
+  temperature_solve              2          0.0664184815       1.538228389e-08
+  velocity_solve                 2          0.1211766269       1.909726421e-08
+  Nodal_projection               4         0.02678204593       5.400475834e-09
+
+WallClockTime: 10 Pre: 0.00542 Solve: 1.503 Post: 0.0074 Total: 1.516
+Solve time per cell: 2.33e-05
+
+==============================================================================
+Step: 11 dt: 0.0625 Time: 0.625 to 0.6875
+CFL: 0.641289 (conv: 0.640717 diff: 0 src: 0.0191508 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06839334149       1.296794305e-09
+  temperature_solve              2         0.05589394778       1.408614025e-08
+  velocity_solve                 2          0.1116853481       1.765535096e-08
+  Nodal_projection               4         0.02678204594       5.400691156e-09
+
+WallClockTime: 11 Pre: 0.00137 Solve: 3.176 Post: 0.776 Total: 3.953
+Solve time per cell: 4.921e-05
+
+==============================================================================
+Step: 12 dt: 0.0625 Time: 0.6875 to 0.75
+CFL: 0.641329 (conv: 0.640774 diff: 0 src: 0.0188658 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.07538984872       1.523260864e-09
+  temperature_solve              2         0.05404345441         1.2751741e-08
+  velocity_solve                 2          0.1032185558       1.636766811e-08
+  Nodal_projection               4         0.02678204594       5.401074511e-09
+
+WallClockTime: 12 Pre: 0.00177 Solve: 3.569 Post: 0.0435 Total: 3.614
+Solve time per cell: 5.531e-05
+
+==============================================================================
+Step: 13 dt: 0.0625 Time: 0.75 to 0.8125
+CFL: 0.641397 (conv: 0.640831 diff: 0 src: 0.0190388 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.07814146445       1.569419176e-09
+  temperature_solve              2         0.04747430528       1.154745632e-08
+  velocity_solve                 2         0.09556780784       1.522039117e-08
+  Nodal_projection               4         0.02678204594       5.401398856e-09
+
+WallClockTime: 13 Pre: 0.00799 Solve: 1.546 Post: 0.0125 Total: 1.566
+Solve time per cell: 2.396e-05
+
+==============================================================================
+Step: 14 dt: 0.0625 Time: 0.8125 to 0.875
+CFL: 0.641425 (conv: 0.640885 diff: 0 src: 0.0186124 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.08535790212       1.713902939e-09
+  temperature_solve              2         0.04267600681       1.047487785e-08
+  velocity_solve                 2         0.08872469384       1.416656836e-08
+  Nodal_projection               4         0.02678204594       5.401705324e-09
+
+WallClockTime: 14 Pre: 0.00154 Solve: 1.355 Post: 0.00689 Total: 1.363
+Solve time per cell: 2.099e-05
+
+==============================================================================
+Step: 15 dt: 0.0625 Time: 0.875 to 0.9375
+CFL: 0.641493 (conv: 0.640965 diff: 0 src: 0.0184059 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.09099216902       1.917049114e-09
+  temperature_solve              2         0.03855225508       1.029133045e-08
+  velocity_solve                 2         0.08247113695       1.309303777e-08
+  Nodal_projection               4         0.02678204593        5.40194494e-09
+
+WallClockTime: 15 Pre: 0.00132 Solve: 1.534 Post: 0.0389 Total: 1.574
+Solve time per cell: 2.377e-05
+
+==============================================================================
+Step: 16 dt: 0.0625 Time: 0.9375 to 1
+CFL: 0.641541 (conv: 0.641001 diff: 0 src: 0.018625 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0955633979       2.049392114e-09
+  temperature_solve              2         0.03653190108       9.890527508e-09
+  velocity_solve                 2         0.07687547163       1.209398892e-08
+  Nodal_projection               4         0.02678204593         5.4020243e-09
+
+WallClockTime: 16 Pre: 0.00697 Solve: 1.249 Post: 0.218 Total: 1.474
+Solve time per cell: 1.936e-05
+
+==============================================================================
+Step: 17 dt: 0.0625 Time: 1 to 1.0625
+CFL: 0.64155 (conv: 0.641032 diff: 0 src: 0.0182289 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1025635081       1.970529028e-09
+  temperature_solve              2         0.03587872674       9.383654742e-09
+  velocity_solve                 2         0.07170861719        1.13109957e-08
+  Nodal_projection               4         0.02678204593       5.401845998e-09
+
+WallClockTime: 17 Pre: 0.00145 Solve: 1.317 Post: 0.0101 Total: 1.329
+Solve time per cell: 2.042e-05
+
+==============================================================================
+Step: 18 dt: 0.0625 Time: 1.0625 to 1.125
+CFL: 0.641654 (conv: 0.64114 diff: 0 src: 0.0181662 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1056165628        2.24413353e-09
+  temperature_solve              2         0.03573171386       8.797655937e-09
+  velocity_solve                 2         0.06707712419       1.060724664e-08
+  Nodal_projection               4         0.02678204593       5.401687516e-09
+
+WallClockTime: 18 Pre: 0.00129 Solve: 1.32 Post: 0.0354 Total: 1.357
+Solve time per cell: 2.046e-05
+
+==============================================================================
+Step: 19 dt: 0.0625 Time: 1.125 to 1.1875
+CFL: 0.641665 (conv: 0.641147 diff: 0 src: 0.0182351 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5           0.112369481       2.480660833e-09
+  temperature_solve              2         0.03277909999       7.620542419e-09
+  velocity_solve                 2         0.06279110346         9.8370041e-09
+  Nodal_projection               4         0.02678204593       5.401172015e-09
+
+WallClockTime: 19 Pre: 0.00809 Solve: 5.611 Post: 0.194 Total: 5.814
+Solve time per cell: 8.696e-05
+
+==============================================================================
+Step: 20 dt: 0.0625 Time: 1.1875 to 1.25
+CFL: 0.641711 (conv: 0.64121 diff: 0 src: 0.017933 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1209512691       2.532458694e-09
+  temperature_solve              2         0.03277309089       8.235133464e-09
+  velocity_solve                 2         0.05895784117       9.046968508e-09
+  Nodal_projection               4         0.02678204593       5.400544961e-09
+
+WallClockTime: 20 Pre: 0.00917 Solve: 5.648 Post: 0.0374 Total: 5.694
+Solve time per cell: 8.752e-05
+
+==============================================================================
+Step: 21 dt: 0.0625 Time: 1.25 to 1.3125
+CFL: 0.641799 (conv: 0.641298 diff: 0 src: 0.0179309 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1212720739       2.832454913e-09
+  temperature_solve              2         0.03139673267       7.261746759e-09
+  velocity_solve                 2         0.05539513413       8.398583162e-09
+  Nodal_projection               4         0.02678204593       5.400116588e-09
+
+WallClockTime: 21 Pre: 0.0077 Solve: 1.362 Post: 0.0241 Total: 1.394
+Solve time per cell: 2.111e-05
+
+==============================================================================
+Step: 22 dt: 0.0625 Time: 1.3125 to 1.375
+CFL: 0.641796 (conv: 0.641294 diff: 0 src: 0.0179554 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1282999551       3.088292753e-09
+  temperature_solve              2         0.03008758837       6.680579645e-09
+  velocity_solve                 2         0.05217266544        7.87077159e-09
+  Nodal_projection               4         0.02678204593       5.399445183e-09
+
+WallClockTime: 22 Pre: 0.00572 Solve: 5.245 Post: 2.09 Total: 7.345
+Solve time per cell: 8.129e-05
+
+==============================================================================
+Step: 23 dt: 0.0625 Time: 1.375 to 1.4375
+CFL: 0.641871 (conv: 0.641382 diff: 0 src: 0.0177114 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1374800266        3.03555006e-09
+  temperature_solve              2         0.02914440079       6.345544534e-09
+  velocity_solve                 2          0.0491855393       7.360677401e-09
+  Nodal_projection               4         0.02678204593       5.399037177e-09
+
+WallClockTime: 23 Pre: 0.462 Solve: 2.259 Post: 0.0129 Total: 2.734
+Solve time per cell: 3.501e-05
+
+==============================================================================
+Step: 24 dt: 0.0625 Time: 1.4375 to 1.5
+CFL: 0.641927 (conv: 0.641439 diff: 0 src: 0.0177067 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1380000479       3.525636488e-09
+  temperature_solve              2         0.02737391456       6.191385182e-09
+  velocity_solve                 2         0.04641532182       6.774222072e-09
+  Nodal_projection               4         0.02678204593       5.398951919e-09
+
+WallClockTime: 24 Pre: 0.00148 Solve: 1.172 Post: 0.00694 Total: 1.181
+Solve time per cell: 1.816e-05
+
+==============================================================================
+Step: 25 dt: 0.0625 Time: 1.5 to 1.5625
+CFL: 0.641937 (conv: 0.641444 diff: 0 src: 0.0177854 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1431740122       3.537376517e-09
+  temperature_solve              2         0.02719440781       6.021195986e-09
+  velocity_solve                 2         0.04390286749       6.315893586e-09
+  Nodal_projection               4         0.02678204593       5.398958506e-09
+
+WallClockTime: 25 Pre: 0.005 Solve: 1.421 Post: 0.0355 Total: 1.462
+Solve time per cell: 2.202e-05
+
+==============================================================================
+Step: 26 dt: 0.0625 Time: 1.5625 to 1.625
+CFL: 0.642018 (conv: 0.641543 diff: 0 src: 0.0174711 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1516415828       3.695737362e-09
+  temperature_solve              2         0.02579309871       5.552692528e-09
+  velocity_solve                 2          0.0415064672       5.849587481e-09
+  Nodal_projection               4         0.02678204593       5.399281857e-09
+
+WallClockTime: 26 Pre: 0.0061 Solve: 2.593 Post: 0.394 Total: 2.993
+Solve time per cell: 4.019e-05
+
+==============================================================================
+Step: 27 dt: 0.0625 Time: 1.625 to 1.6875
+CFL: 0.642051 (conv: 0.641571 diff: 0 src: 0.0175594 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1543797845       4.195804868e-09
+  temperature_solve              2         0.02488901634       5.139668247e-09
+  velocity_solve                 2         0.03936735266       5.457147623e-09
+  Nodal_projection               4         0.02678204593       5.399951594e-09
+
+WallClockTime: 27 Pre: 0.0182 Solve: 3.043 Post: 0.0167 Total: 3.078
+Solve time per cell: 4.716e-05
+
+==============================================================================
+Step: 28 dt: 0.0625 Time: 1.6875 to 1.75
+CFL: 0.642097 (conv: 0.641615 diff: 0 src: 0.0175822 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1568724484       4.138084783e-09
+  temperature_solve              2         0.02415376692       5.173717454e-09
+  velocity_solve                 2         0.03732617396       5.081196797e-09
+  Nodal_projection               4         0.02678204593       5.400772881e-09
+
+WallClockTime: 28 Pre: 0.00152 Solve: 1.133 Post: 0.0069 Total: 1.141
+Solve time per cell: 1.755e-05
+
+==============================================================================
+Step: 29 dt: 0.0625 Time: 1.75 to 1.8125
+CFL: 0.642172 (conv: 0.641711 diff: 0 src: 0.0172063 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1640421246       4.206842096e-09
+  temperature_solve              2         0.02245130793       4.739206361e-09
+  velocity_solve                 2         0.03545426235       4.757630734e-09
+  Nodal_projection               4         0.02678204593       5.401879243e-09
+
+WallClockTime: 29 Pre: 0.00124 Solve: 1.454 Post: 0.0784 Total: 1.534
+Solve time per cell: 2.253e-05
+
+==============================================================================
+Step: 30 dt: 0.0625 Time: 1.8125 to 1.875
+CFL: 0.642198 (conv: 0.641721 diff: 0 src: 0.0175035 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5           0.169810039       4.808946277e-09
+  temperature_solve              2         0.02219866248       4.427590738e-09
+  velocity_solve                 2         0.03375441492       4.400867226e-09
+  Nodal_projection               4         0.02678204593       5.402978882e-09
+
+WallClockTime: 30 Pre: 0.0158 Solve: 1.651 Post: 0.0507 Total: 1.718
+Solve time per cell: 2.559e-05
+
+==============================================================================
+Step: 31 dt: 0.0625 Time: 1.875 to 1.9375
+CFL: 0.642246 (conv: 0.641778 diff: 0 src: 0.0173351 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1692704403       4.538017895e-09
+  temperature_solve              2         0.02097594052       4.549974619e-09
+  velocity_solve                 2         0.03214702829       4.146516908e-09
+  Nodal_projection               4         0.02678204593       5.404094092e-09
+
+WallClockTime: 31 Pre: 0.00882 Solve: 1.572 Post: 0.0113 Total: 1.592
+Solve time per cell: 2.436e-05
+
+==============================================================================
+Step: 32 dt: 0.0625 Time: 1.9375 to 2
+CFL: 0.642331 (conv: 0.641875 diff: 0 src: 0.0171023 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1787967797       5.022535617e-09
+  temperature_solve              2         0.02010564939       4.221135441e-09
+  velocity_solve                 2          0.0306445255       3.815080696e-09
+  Nodal_projection               4         0.02678204593       5.405106442e-09
+
+WallClockTime: 32 Pre: 0.00169 Solve: 4.884 Post: 0.24 Total: 5.126
+Solve time per cell: 7.569e-05
+
+==============================================================================
+Step: 33 dt: 0.0625 Time: 2 to 2.0625
+CFL: 0.642338 (conv: 0.641866 diff: 0 src: 0.0174067 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5           0.184138284       5.189758059e-09
+  temperature_solve              2          0.0193369196        3.97238864e-09
+  velocity_solve                 2         0.02925683989        3.54101104e-09
+  Nodal_projection               4         0.02678204593       5.406051223e-09
+
+WallClockTime: 33 Pre: 0.0136 Solve: 3.078 Post: 0.219 Total: 3.311
+Solve time per cell: 4.77e-05
+
+==============================================================================
+Step: 34 dt: 0.0625 Time: 2.0625 to 2.125
+CFL: 0.642404 (conv: 0.641951 diff: 0 src: 0.0170554 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1851840839       4.952857062e-09
+  temperature_solve              2         0.01800614505       3.944080618e-09
+  velocity_solve                 2         0.02792363407       3.242635493e-09
+  Nodal_projection               4         0.02678204593       5.406875364e-09
+
+WallClockTime: 34 Pre: 0.0373 Solve: 2.592 Post: 0.00716 Total: 2.637
+Solve time per cell: 4.017e-05
+
+==============================================================================
+Step: 35 dt: 0.0625 Time: 2.125 to 2.1875
+CFL: 0.642487 (conv: 0.64203 diff: 0 src: 0.0171373 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1919533232         5.6013389e-09
+  temperature_solve              2         0.01757004129       3.777984148e-09
+  velocity_solve                 2         0.02670862919       3.021708217e-09
+  Nodal_projection               4         0.02678204593       5.407437061e-09
+
+WallClockTime: 35 Pre: 0.00153 Solve: 1.333 Post: 0.0449 Total: 1.38
+Solve time per cell: 2.066e-05
+
+==============================================================================
+Step: 36 dt: 0.0625 Time: 2.1875 to 2.25
+CFL: 0.642503 (conv: 0.642039 diff: 0 src: 0.0172713 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.1972374088       5.702366546e-09
+  temperature_solve              2         0.01639658117       3.362117695e-09
+  velocity_solve                 2         0.02555682773       2.868596916e-09
+  Nodal_projection               4         0.02678204593       5.407720369e-09
+
+WallClockTime: 36 Pre: 0.00766 Solve: 4.129 Post: 0.00673 Total: 4.144
+Solve time per cell: 6.399e-05
+
+==============================================================================
+Step: 37 dt: 0.0625 Time: 2.25 to 2.3125
+CFL: 0.64257 (conv: 0.642125 diff: 0 src: 0.0169112 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2014204744       5.488779726e-09
+  temperature_solve              2         0.01578783535       3.300385742e-09
+  velocity_solve                 2         0.02445847087       2.762262419e-09
+  Nodal_projection               4         0.02678204593       5.407778534e-09
+
+WallClockTime: 37 Pre: 0.00156 Solve: 1.427 Post: 0.0365 Total: 1.465
+Solve time per cell: 2.211e-05
+
+==============================================================================
+Step: 38 dt: 0.0625 Time: 2.3125 to 2.375
+CFL: 0.64263 (conv: 0.642173 diff: 0 src: 0.0171291 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2070747474       5.975320964e-09
+  temperature_solve              2         0.01489788428       3.271793503e-09
+  velocity_solve                 2          0.0234625346       2.681817435e-09
+  Nodal_projection               4         0.02678204593       5.407680017e-09
+
+WallClockTime: 38 Pre: 0.00987 Solve: 1.257 Post: 0.00692 Total: 1.274
+Solve time per cell: 1.948e-05
+
+==============================================================================
+Step: 39 dt: 0.0625 Time: 2.375 to 2.4375
+CFL: 0.642657 (conv: 0.642203 diff: 0 src: 0.0170827 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2090173964       6.004585763e-09
+  temperature_solve              2         0.01406323591       3.028560513e-09
+  velocity_solve                 2         0.02254711224       2.662374321e-09
+  Nodal_projection               4         0.02678204593       5.407385385e-09
+
+WallClockTime: 39 Pre: 0.00165 Solve: 1.252 Post: 0.00797 Total: 1.261
+Solve time per cell: 1.94e-05
+
+==============================================================================
+Step: 40 dt: 0.0625 Time: 2.4375 to 2.5
+CFL: 0.642731 (conv: 0.642291 diff: 0 src: 0.0168059 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2164471318       6.219079578e-09
+  temperature_solve              2         0.01337193822        2.68084932e-09
+  velocity_solve                 2         0.02167071173       2.551870715e-09
+  Nodal_projection               4         0.02678204593       5.407060038e-09
+
+WallClockTime: 40 Pre: 0.00152 Solve: 3.051 Post: 0.0403 Total: 3.093
+Solve time per cell: 4.728e-05
+
+==============================================================================
+Step: 41 dt: 0.0625 Time: 2.5 to 2.5625
+CFL: 0.642758 (conv: 0.642304 diff: 0 src: 0.0170795 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2210458086       6.479588976e-09
+  temperature_solve              2         0.01244684371       2.710351055e-09
+  velocity_solve                 2         0.02086174504       2.514062736e-09
+  Nodal_projection               4         0.02678204593       5.406595331e-09
+
+WallClockTime: 41 Pre: 0.00743 Solve: 1.413 Post: 0.00684 Total: 1.427
+Solve time per cell: 2.19e-05
+
+==============================================================================
+Step: 42 dt: 0.0625 Time: 2.5625 to 2.625
+CFL: 0.642802 (conv: 0.642359 diff: 0 src: 0.0168841 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2195089997        6.54930068e-09
+  temperature_solve              2         0.01190646238       2.714216407e-09
+  velocity_solve                 2         0.02009406169       2.433084845e-09
+  Nodal_projection               4         0.02678204593        5.40609457e-09
+
+WallClockTime: 42 Pre: 0.00225 Solve: 1.152 Post: 0.00693 Total: 1.161
+Solve time per cell: 1.785e-05
+
+==============================================================================
+Step: 43 dt: 0.0625 Time: 2.625 to 2.6875
+CFL: 0.642885 (conv: 0.642447 diff: 0 src: 0.0167695 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5            0.22977562       6.571398446e-09
+  temperature_solve              2         0.01114835312       2.552610567e-09
+  velocity_solve                 2         0.01937353357        2.36530795e-09
+  Nodal_projection               4         0.02678204593       5.405601982e-09
+
+WallClockTime: 43 Pre: 0.00151 Solve: 1.322 Post: 0.0401 Total: 1.364
+Solve time per cell: 2.049e-05
+
+==============================================================================
+Step: 44 dt: 0.0625 Time: 2.6875 to 2.75
+CFL: 0.64287 (conv: 0.642421 diff: 0 src: 0.0169884 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2351655085       6.915689424e-09
+  temperature_solve              2         0.01080808304       2.376452812e-09
+  velocity_solve                 2         0.01886670734       2.273555122e-09
+  Nodal_projection               4         0.02678204593       5.405181842e-09
+
+WallClockTime: 44 Pre: 0.00682 Solve: 1.713 Post: 0.0128 Total: 1.733
+Solve time per cell: 2.655e-05
+
+==============================================================================
+Step: 45 dt: 0.0625 Time: 2.75 to 2.8125
+CFL: 0.642944 (conv: 0.642504 diff: 0 src: 0.016825 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2327828025        7.24839196e-09
+  temperature_solve              2          0.0100581795       2.269416655e-09
+  velocity_solve                 2         0.01887975694       2.244103126e-09
+  Nodal_projection               4         0.02678204593       5.404854942e-09
+
+WallClockTime: 45 Pre: 0.00154 Solve: 1.145 Post: 0.00758 Total: 1.155
+Solve time per cell: 1.775e-05
+
+==============================================================================
+Step: 46 dt: 0.0625 Time: 2.8125 to 2.875
+CFL: 0.643032 (conv: 0.642593 diff: 0 src: 0.0168077 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2411030084       7.199874011e-09
+  temperature_solve              2        0.009928530862         2.4128326e-09
+  velocity_solve                 2         0.01883703486        2.19567875e-09
+  Nodal_projection               4         0.02678204593       5.404678977e-09
+
+WallClockTime: 46 Pre: 0.00137 Solve: 1.676 Post: 0.0387 Total: 1.716
+Solve time per cell: 2.597e-05
+
+==============================================================================
+Step: 47 dt: 0.0625 Time: 2.875 to 2.9375
+CFL: 0.643019 (conv: 0.642577 diff: 0 src: 0.0168561 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2487371052       7.814482485e-09
+  temperature_solve              2         0.01003728208       2.410729394e-09
+  velocity_solve                 2         0.01886015189        2.20096652e-09
+  Nodal_projection               4         0.02678204593       5.404791429e-09
+
+WallClockTime: 47 Pre: 0.00679 Solve: 1.614 Post: 0.0303 Total: 1.651
+Solve time per cell: 2.502e-05
+
+==============================================================================
+Step: 48 dt: 0.0625 Time: 2.9375 to 3
+CFL: 0.643084 (conv: 0.642647 diff: 0 src: 0.0167647 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2480490261       7.871433699e-09
+  temperature_solve              2         0.01001485974       2.254068932e-09
+  velocity_solve                 2         0.01882145915       2.268251365e-09
+  Nodal_projection               4         0.02678204593       5.404998157e-09
+
+WallClockTime: 48 Pre: 0.0036 Solve: 1.099 Post: 0.212 Total: 1.315
+Solve time per cell: 1.704e-05
+
+==============================================================================
+Step: 49 dt: 0.0625 Time: 3 to 3.0625
+CFL: 0.643165 (conv: 0.642726 diff: 0 src: 0.0168038 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2525566513       7.974166242e-09
+  temperature_solve              2        0.009809242473       2.378442332e-09
+  velocity_solve                 2         0.01881845443       2.375116992e-09
+  Nodal_projection               4         0.02678204593       5.405242004e-09
+
+WallClockTime: 49 Pre: 0.00135 Solve: 5.577 Post: 0.0069 Total: 5.586
+Solve time per cell: 8.643e-05
+
+==============================================================================
+Step: 50 dt: 0.0625 Time: 3.0625 to 3.125
+CFL: 0.643178 (conv: 0.64274 diff: 0 src: 0.0167729 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2587494554       8.321682968e-09
+  temperature_solve              2         0.01004390568        2.42113174e-09
+  velocity_solve                 2         0.01880285559       2.382799735e-09
+  Nodal_projection               4         0.02678204593       5.405289924e-09
+
+WallClockTime: 50 Pre: 0.00153 Solve: 1.322 Post: 0.0395 Total: 1.363
+Solve time per cell: 2.049e-05
+
+==============================================================================
+Step: 51 dt: 0.0625 Time: 3.125 to 3.1875
+CFL: 0.643242 (conv: 0.642809 diff: 0 src: 0.0166901 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2616051174           8.64408e-09
+  temperature_solve              2        0.009880158121       2.254751053e-09
+  velocity_solve                 2          0.0187523037       2.436483015e-09
+  Nodal_projection               4         0.02678204593       5.405281984e-09
+
+WallClockTime: 51 Pre: 0.00783 Solve: 1.416 Post: 0.0418 Total: 1.465
+Solve time per cell: 2.194e-05
+
+==============================================================================
+Step: 52 dt: 0.0625 Time: 3.1875 to 3.25
+CFL: 0.643284 (conv: 0.642847 diff: 0 src: 0.0167725 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2680343505       8.865199526e-09
+  temperature_solve              2         0.00977207014       2.320916792e-09
+  velocity_solve                 2         0.01876721603       2.458669712e-09
+  Nodal_projection               4         0.02678204593        5.40482969e-09
+
+WallClockTime: 52 Pre: 0.00992 Solve: 4.984 Post: 0.0439 Total: 5.038
+Solve time per cell: 7.724e-05
+
+==============================================================================
+Step: 53 dt: 0.0625 Time: 3.25 to 3.3125
+CFL: 0.64333 (conv: 0.642894 diff: 0 src: 0.0167446 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2652794009       9.015120442e-09
+  temperature_solve              2        0.009953811326       2.406693511e-09
+  velocity_solve                 2         0.01870362483       2.553893097e-09
+  Nodal_projection               4         0.02678204593       5.403937497e-09
+
+WallClockTime: 53 Pre: 0.0112 Solve: 1.121 Post: 0.00984 Total: 1.142
+Solve time per cell: 1.737e-05
+
+==============================================================================
+Step: 54 dt: 0.0625 Time: 3.3125 to 3.375
+CFL: 0.643388 (conv: 0.642959 diff: 0 src: 0.0165964 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5           0.273074802       8.834344502e-09
+  temperature_solve              2        0.009654498743       2.271235644e-09
+  velocity_solve                 2         0.01869605226        2.56656385e-09
+  Nodal_projection               4         0.02678204593       5.402716838e-09
+
+WallClockTime: 54 Pre: 0.00152 Solve: 1.53 Post: 0.0075 Total: 1.539
+Solve time per cell: 2.371e-05
+
+==============================================================================
+Step: 55 dt: 0.0625 Time: 3.375 to 3.4375
+CFL: 0.643385 (conv: 0.642953 diff: 0 src: 0.0166752 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2877433214       9.529784035e-09
+  temperature_solve              2        0.009744770028       2.242018127e-09
+  velocity_solve                 2         0.01866669551       2.605021976e-09
+  Nodal_projection               4         0.02678204593       5.401006134e-09
+
+WallClockTime: 55 Pre: 0.00159 Solve: 1.426 Post: 0.0368 Total: 1.464
+Solve time per cell: 2.209e-05
+
+==============================================================================
+Step: 56 dt: 0.0625 Time: 3.4375 to 3.5
+CFL: 0.643472 (conv: 0.643038 diff: 0 src: 0.016706 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2732409003       9.518810053e-09
+  temperature_solve              2        0.009768092942       2.368551577e-09
+  velocity_solve                 2         0.01859018696       2.707839286e-09
+  Nodal_projection               4         0.02678204593       5.400499273e-09
+
+WallClockTime: 56 Pre: 0.00686 Solve: 1.548 Post: 0.00717 Total: 1.562
+Solve time per cell: 2.399e-05
+
+==============================================================================
+Step: 57 dt: 0.0625 Time: 3.5 to 3.5625
+CFL: 0.643524 (conv: 0.643099 diff: 0 src: 0.0165471 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.2822243463       9.425925866e-09
+  temperature_solve              2        0.009496783051       2.267654509e-09
+  velocity_solve                 2         0.01859926808       2.670775601e-09
+  Nodal_projection               4         0.02678204593       5.400291282e-09
+
+WallClockTime: 57 Pre: 0.00153 Solve: 1.301 Post: 0.00689 Total: 1.309
+Solve time per cell: 2.016e-05
+
+==============================================================================
+Step: 58 dt: 0.0625 Time: 3.5625 to 3.625
+CFL: 0.643499 (conv: 0.643071 diff: 0 src: 0.0166046 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6           0.300981149       7.167194199e-10
+  temperature_solve              2        0.009618558927       2.147203304e-09
+  velocity_solve                 2         0.01852761702       2.718728354e-09
+  Nodal_projection               4         0.02678204593       5.399782047e-09
+
+WallClockTime: 58 Pre: 0.00132 Solve: 1.403 Post: 0.0376 Total: 1.442
+Solve time per cell: 2.174e-05
+
+==============================================================================
+Step: 59 dt: 0.0625 Time: 3.625 to 3.6875
+CFL: 0.643602 (conv: 0.643171 diff: 0 src: 0.0166522 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.2872369187       7.237995307e-10
+  temperature_solve              2        0.009484651465       2.306933311e-09
+  velocity_solve                 2          0.0185000121       2.748183903e-09
+  Nodal_projection               4         0.02678204593       5.399296975e-09
+
+WallClockTime: 59 Pre: 0.0081 Solve: 3.377 Post: 0.528 Total: 3.913
+Solve time per cell: 5.234e-05
+
+==============================================================================
+Step: 60 dt: 0.0625 Time: 3.6875 to 3.75
+CFL: 0.643652 (conv: 0.643226 diff: 0 src: 0.0165579 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.2991924857       7.368177457e-10
+  temperature_solve              2        0.009227084194       2.245428732e-09
+  velocity_solve                 2         0.01846561554       2.804517507e-09
+  Nodal_projection               4         0.02678204593       5.398893095e-09
+
+WallClockTime: 60 Pre: 0.442 Solve: 1.951 Post: 0.0473 Total: 2.44
+Solve time per cell: 3.023e-05
+
+==============================================================================
+Step: 61 dt: 0.0625 Time: 3.75 to 3.8125
+CFL: 0.643665 (conv: 0.643237 diff: 0 src: 0.0165967 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3102610983       7.837302404e-10
+  temperature_solve              2        0.009392306945        2.10025064e-09
+  velocity_solve                 2         0.01836883844       2.799488641e-09
+  Nodal_projection               4         0.02678204593       5.398675746e-09
+
+WallClockTime: 61 Pre: 0.015 Solve: 1.257 Post: 0.00724 Total: 1.279
+Solve time per cell: 1.948e-05
+
+==============================================================================
+Step: 62 dt: 0.0625 Time: 3.8125 to 3.875
+CFL: 0.643719 (conv: 0.643292 diff: 0 src: 0.0165795 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.2991567466       7.998006701e-10
+  temperature_solve              2        0.009251873226       2.222691364e-09
+  velocity_solve                 2         0.01837243905       2.877147409e-09
+  Nodal_projection               4         0.02678204593       5.398518228e-09
+
+WallClockTime: 62 Pre: 0.00155 Solve: 1.225 Post: 0.00793 Total: 1.234
+Solve time per cell: 1.898e-05
+
+==============================================================================
+Step: 63 dt: 0.0625 Time: 3.875 to 3.9375
+CFL: 0.643769 (conv: 0.643346 diff: 0 src: 0.016509 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3167873731       8.129035708e-10
+  temperature_solve              2        0.009074250422       2.205297278e-09
+  velocity_solve                 2         0.01828632667       2.891082929e-09
+  Nodal_projection               4         0.02678204593       5.398702548e-09
+
+WallClockTime: 63 Pre: 0.00155 Solve: 1.523 Post: 0.0396 Total: 1.564
+Solve time per cell: 2.36e-05
+
+==============================================================================
+Step: 64 dt: 0.0625 Time: 3.9375 to 4
+CFL: 0.64382 (conv: 0.643393 diff: 0 src: 0.0165829 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3160136213       8.175177826e-10
+  temperature_solve              2        0.009068286075       2.033061719e-09
+  velocity_solve                 2         0.01824864613       2.895188089e-09
+  Nodal_projection               4         0.02678204593       5.398976512e-09
+
+WallClockTime: 64 Pre: 0.00659 Solve: 1.457 Post: 0.876 Total: 2.339
+Solve time per cell: 2.258e-05
+
+==============================================================================
+Step: 65 dt: 0.0625 Time: 4 to 4.0625
+CFL: 0.643863 (conv: 0.643441 diff: 0 src: 0.0164826 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3086458238       8.266729662e-10
+  temperature_solve              2        0.009033275348       2.118326847e-09
+  velocity_solve                 2         0.01819763783        2.92518898e-09
+  Nodal_projection               4         0.02678204593       5.399436934e-09
+
+WallClockTime: 65 Pre: 0.00484 Solve: 4.894 Post: 0.00707 Total: 4.906
+Solve time per cell: 7.584e-05
+
+==============================================================================
+Step: 66 dt: 0.0625 Time: 4.0625 to 4.125
+CFL: 0.643876 (conv: 0.643452 diff: 0 src: 0.0165234 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3318027078       8.487722296e-10
+  temperature_solve              2        0.008820055416       2.149363354e-09
+  velocity_solve                 2         0.01809405154       2.925064635e-09
+  Nodal_projection               4         0.02678204593       5.400363304e-09
+
+WallClockTime: 66 Pre: 0.00129 Solve: 1.296 Post: 0.00671 Total: 1.304
+Solve time per cell: 2.008e-05
+
+==============================================================================
+Step: 67 dt: 0.0625 Time: 4.125 to 4.1875
+CFL: 0.643963 (conv: 0.643538 diff: 0 src: 0.0165522 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3190640265       8.785191359e-10
+  temperature_solve              2        0.008861239984       2.014417078e-09
+  velocity_solve                 2         0.01807904824       2.890807593e-09
+  Nodal_projection               4         0.02678204593       5.401095647e-09
+
+WallClockTime: 67 Pre: 0.00132 Solve: 1.703 Post: 0.0438 Total: 1.749
+Solve time per cell: 2.64e-05
+
+==============================================================================
+Step: 68 dt: 0.0625 Time: 4.1875 to 4.25
+CFL: 0.644001 (conv: 0.643585 diff: 0 src: 0.016377 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3165334593       8.846436222e-10
+  temperature_solve              2        0.008729332373       1.997079835e-09
+  velocity_solve                 2         0.01796530369       2.975880875e-09
+  Nodal_projection               4         0.02678204593       5.401774616e-09
+
+WallClockTime: 68 Pre: 0.00697 Solve: 1.612 Post: 0.0283 Total: 1.648
+Solve time per cell: 2.499e-05
+
+==============================================================================
+Step: 69 dt: 0.0625 Time: 4.25 to 4.3125
+CFL: 0.643963 (conv: 0.643541 diff: 0 src: 0.0164992 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3465971759       8.868551345e-10
+  temperature_solve              2        0.008469825131       2.079389105e-09
+  velocity_solve                 2         0.01793274919       3.056616293e-09
+  Nodal_projection               4         0.02678204593       5.402566844e-09
+
+WallClockTime: 69 Pre: 0.00151 Solve: 1.516 Post: 0.0222 Total: 1.54
+Solve time per cell: 2.349e-05
+
+==============================================================================
+Step: 70 dt: 0.0625 Time: 4.3125 to 4.375
+CFL: 0.644094 (conv: 0.643671 diff: 0 src: 0.0165079 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3197795313       9.200410711e-10
+  temperature_solve              2        0.008656992085        1.98969019e-09
+  velocity_solve                 2          0.0178519203       2.892805995e-09
+  Nodal_projection               4         0.02678204593       5.402962761e-09
+
+WallClockTime: 70 Pre: 0.00153 Solve: 1.562 Post: 0.0567 Total: 1.62
+Solve time per cell: 2.42e-05
+
+==============================================================================
+Step: 71 dt: 0.0625 Time: 4.375 to 4.4375
+CFL: 0.64413 (conv: 0.643715 diff: 0 src: 0.016342 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3406049436       9.423838029e-10
+  temperature_solve              2        0.008341152403       1.862360932e-09
+  velocity_solve                 2         0.01776109863       2.944840816e-09
+  Nodal_projection               4         0.02678204593       5.403333225e-09
+
+WallClockTime: 71 Pre: 0.00848 Solve: 1.623 Post: 0.00713 Total: 1.639
+Solve time per cell: 2.515e-05
+
+==============================================================================
+Step: 72 dt: 0.0625 Time: 4.4375 to 4.5
+CFL: 0.644117 (conv: 0.643696 diff: 0 src: 0.0164593 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3561698436        9.48332534e-10
+  temperature_solve              2        0.008279489778       1.997420895e-09
+  velocity_solve                 2         0.01771149793       3.150857353e-09
+  Nodal_projection               4         0.02678204593       5.403351632e-09
+
+WallClockTime: 72 Pre: 0.00152 Solve: 1.186 Post: 0.00716 Total: 1.194
+Solve time per cell: 1.837e-05
+
+==============================================================================
+Step: 73 dt: 0.0625 Time: 4.5 to 4.5625
+CFL: 0.644211 (conv: 0.643791 diff: 0 src: 0.0164422 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3291452564       9.638817591e-10
+  temperature_solve              2        0.008370273054       1.951264039e-09
+  velocity_solve                 2         0.01756411811       3.022972095e-09
+  Nodal_projection               4         0.02678204593       5.402859125e-09
+
+WallClockTime: 73 Pre: 0.00152 Solve: 5.672 Post: 0.0279 Total: 5.702
+Solve time per cell: 8.79e-05
+
+==============================================================================
+Step: 74 dt: 0.0625 Time: 4.5625 to 4.625
+CFL: 0.644248 (conv: 0.64383 diff: 0 src: 0.0164052 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3577810323       9.733165038e-10
+  temperature_solve              1        0.007912306733       3.469962792e-06
+  velocity_solve                 2         0.01754527419       2.940167221e-09
+  Nodal_projection               4         0.02678204593       5.402064726e-09
+
+WallClockTime: 74 Pre: 0.00154 Solve: 6.35 Post: 0.0385 Total: 6.39
+Solve time per cell: 9.84e-05
+
+==============================================================================
+Step: 75 dt: 0.0625 Time: 4.625 to 4.6875
+CFL: 0.644273 (conv: 0.643856 diff: 0 src: 0.0164031 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3615019061       9.690762047e-10
+  temperature_solve              2         0.00810142518       1.905618774e-09
+  velocity_solve                 2         0.01742334968       3.129137838e-09
+  Nodal_projection               4         0.02678204593       5.401430194e-09
+
+WallClockTime: 75 Pre: 0.00789 Solve: 10.23 Post: 0.0399 Total: 10.28
+Solve time per cell: 0.0001585
+
+==============================================================================
+Step: 76 dt: 0.0625 Time: 4.6875 to 4.75
+CFL: 0.644319 (conv: 0.643904 diff: 0 src: 0.0163565 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6           0.336491936       1.006188558e-09
+  temperature_solve              2        0.008004854002       1.899991275e-09
+  velocity_solve                 2         0.01735637069       3.179833286e-09
+  Nodal_projection               4         0.02678204593       5.400515802e-09
+
+WallClockTime: 76 Pre: 0.00597 Solve: 1.522 Post: 0.0213 Total: 1.549
+Solve time per cell: 2.358e-05
+
+==============================================================================
+Step: 77 dt: 0.0625 Time: 4.75 to 4.8125
+CFL: 0.644346 (conv: 0.643927 diff: 0 src: 0.0164378 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3687266272       1.023667311e-09
+  temperature_solve              1        0.007759389267       3.326259957e-06
+  velocity_solve                 2         0.01726466782       2.888503658e-09
+  Nodal_projection               4         0.02678204593       5.399491278e-09
+
+WallClockTime: 77 Pre: 0.0026 Solve: 1.118 Post: 0.00695 Total: 1.127
+Solve time per cell: 1.732e-05
+
+==============================================================================
+Step: 78 dt: 0.0625 Time: 4.8125 to 4.875
+CFL: 0.644419 (conv: 0.644003 diff: 0 src: 0.0163664 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3631324843       1.037042965e-09
+  temperature_solve              1        0.007844484597       3.527703313e-06
+  velocity_solve                 2         0.01714812608       2.982622149e-09
+  Nodal_projection               4         0.02678204593       5.398856476e-09
+
+WallClockTime: 78 Pre: 0.00155 Solve: 1.302 Post: 0.0395 Total: 1.343
+Solve time per cell: 2.018e-05
+
+==============================================================================
+Step: 79 dt: 0.0625 Time: 4.875 to 4.9375
+CFL: 0.644454 (conv: 0.644043 diff: 0 src: 0.0162591 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3510449882       1.052320242e-09
+  temperature_solve              2        0.007577726677       1.836781394e-09
+  velocity_solve                 2         0.01708459601        3.22342153e-09
+  Nodal_projection               4         0.02678204593       5.398230384e-09
+
+WallClockTime: 79 Pre: 0.00765 Solve: 4.055 Post: 0.00686 Total: 4.069
+Solve time per cell: 6.284e-05
+
+==============================================================================
+Step: 80 dt: 0.0625 Time: 4.9375 to 5
+CFL: 0.644425 (conv: 0.644006 diff: 0 src: 0.0164347 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3853737019       1.065157552e-09
+  temperature_solve              1        0.007528256799       3.220272163e-06
+  velocity_solve                 2         0.01692476472       3.092907264e-09
+  Nodal_projection               4         0.02678204593       5.397563313e-09
+
+WallClockTime: 80 Pre: 0.00157 Solve: 1.357 Post: 0.27 Total: 1.628
+Solve time per cell: 2.103e-05
+
+==============================================================================
+Step: 81 dt: 0.0625 Time: 5 to 5.0625
+CFL: 0.644551 (conv: 0.644138 diff: 0 src: 0.0163149 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3621000476       1.088054358e-09
+  temperature_solve              1        0.007511315599       3.316554285e-06
+  velocity_solve                 2         0.01691265301       2.863796311e-09
+  Nodal_projection               4         0.02678204593       5.397371406e-09
+
+WallClockTime: 81 Pre: 0.00458 Solve: 1.364 Post: 0.00942 Total: 1.378
+Solve time per cell: 2.114e-05
+
+==============================================================================
+Step: 82 dt: 0.0625 Time: 5.0625 to 5.125
+CFL: 0.644578 (conv: 0.644167 diff: 0 src: 0.0162659 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3703012888       1.079217838e-09
+  temperature_solve              1        0.007248222072       3.443803053e-06
+  velocity_solve                 2         0.01675539616       3.136539917e-09
+  Nodal_projection               4         0.02678204593       5.397448388e-09
+
+WallClockTime: 82 Pre: 0.00155 Solve: 1.336 Post: 0.0283 Total: 1.365
+Solve time per cell: 2.07e-05
+
+==============================================================================
+Step: 83 dt: 0.0625 Time: 5.125 to 5.1875
+CFL: 0.644535 (conv: 0.644118 diff: 0 src: 0.0163822 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3942120678         1.0966359e-09
+  temperature_solve              1        0.007225334779       3.159625692e-06
+  velocity_solve                 2         0.01674031922        3.19943716e-09
+  Nodal_projection               4         0.02678204593       5.397338843e-09
+
+WallClockTime: 83 Pre: 0.00154 Solve: 1.262 Post: 0.00694 Total: 1.27
+Solve time per cell: 1.956e-05
+
+==============================================================================
+Step: 84 dt: 0.0625 Time: 5.1875 to 5.25
+CFL: 0.644668 (conv: 0.644258 diff: 0 src: 0.0162535 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3592396502       1.114872576e-09
+  temperature_solve              1        0.007118390311       3.097701779e-06
+  velocity_solve                 2         0.01661759549       2.945782285e-09
+  Nodal_projection               4         0.02678204593       5.397674746e-09
+
+WallClockTime: 84 Pre: 0.00152 Solve: 4.492 Post: 0.00692 Total: 4.501
+Solve time per cell: 6.962e-05
+
+==============================================================================
+Step: 85 dt: 0.0625 Time: 5.25 to 5.3125
+CFL: 0.644688 (conv: 0.644275 diff: 0 src: 0.0163242 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3870729497       1.137866294e-09
+  temperature_solve              1        0.007038358169       3.281034481e-06
+  velocity_solve                 2         0.01655112787       2.918834952e-09
+  Nodal_projection               4         0.02678204593       5.398166881e-09
+
+WallClockTime: 85 Pre: 0.00152 Solve: 1.248 Post: 0.0644 Total: 1.314
+Solve time per cell: 1.934e-05
+
+==============================================================================
+Step: 86 dt: 0.0625 Time: 5.3125 to 5.375
+CFL: 0.644695 (conv: 0.644283 diff: 0 src: 0.0163096 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3985554433       1.144949517e-09
+  temperature_solve              1        0.006911491307       3.078312204e-06
+  velocity_solve                 2         0.01647038053       3.169214224e-09
+  Nodal_projection               4         0.02678204593       5.398465994e-09
+
+WallClockTime: 86 Pre: 0.00686 Solve: 1.383 Post: 0.0354 Total: 1.425
+Solve time per cell: 2.143e-05
+
+==============================================================================
+Step: 87 dt: 0.0625 Time: 5.375 to 5.4375
+CFL: 0.644773 (conv: 0.644364 diff: 0 src: 0.0162299 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3596712986       1.157025822e-09
+  temperature_solve              1        0.006682448385       2.924736521e-06
+  velocity_solve                 2         0.01634629044       3.094646317e-09
+  Nodal_projection               4         0.02678204593       5.398797838e-09
+
+WallClockTime: 87 Pre: 0.00629 Solve: 1.232 Post: 0.0069 Total: 1.245
+Solve time per cell: 1.908e-05
+
+==============================================================================
+Step: 88 dt: 0.0625 Time: 5.4375 to 5.5
+CFL: 0.644779 (conv: 0.644364 diff: 0 src: 0.0163632 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3963502789       1.179834664e-09
+  temperature_solve              1         0.00675838278       3.103370148e-06
+  velocity_solve                 2         0.01630388026       2.828441481e-09
+  Nodal_projection               4         0.02678204593       5.399253194e-09
+
+WallClockTime: 88 Pre: 0.00152 Solve: 1.196 Post: 0.00845 Total: 1.206
+Solve time per cell: 1.854e-05
+
+==============================================================================
+Step: 89 dt: 0.0625 Time: 5.5 to 5.5625
+CFL: 0.644841 (conv: 0.644434 diff: 0 src: 0.0162162 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3991841842        1.16273563e-09
+  temperature_solve              1        0.006566017206       2.978261023e-06
+  velocity_solve                 2         0.01613098833       3.003995275e-09
+  Nodal_projection               4         0.02678204593        5.39937269e-09
+
+WallClockTime: 89 Pre: 0.00143 Solve: 1.523 Post: 0.051 Total: 1.575
+Solve time per cell: 2.36e-05
+
+==============================================================================
+Step: 90 dt: 0.0625 Time: 5.5625 to 5.625
+CFL: 0.644869 (conv: 0.644461 diff: 0 src: 0.016212 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3794836994       1.220567508e-09
+  temperature_solve              1        0.006454368526       2.800825712e-06
+  velocity_solve                 2         0.01612171261       3.113106217e-09
+  Nodal_projection               4         0.02678204593       5.399399669e-09
+
+WallClockTime: 90 Pre: 0.00726 Solve: 1.623 Post: 0.0189 Total: 1.649
+Solve time per cell: 2.515e-05
+
+==============================================================================
+Step: 91 dt: 0.0625 Time: 5.625 to 5.6875
+CFL: 0.64485 (conv: 0.644434 diff: 0 src: 0.0163687 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.4181473388       1.197791755e-09
+  temperature_solve              1        0.006420072342       2.915942616e-06
+  velocity_solve                 2         0.01594701495       2.949603228e-09
+  Nodal_projection               4         0.02678204593       5.399386889e-09
+
+WallClockTime: 91 Pre: 0.0014 Solve: 4.389 Post: 0.00779 Total: 4.398
+Solve time per cell: 6.801e-05
+
+==============================================================================
+Step: 92 dt: 0.0625 Time: 5.6875 to 5.75
+CFL: 0.644979 (conv: 0.644571 diff: 0 src: 0.0162224 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3967142711       1.208733469e-09
+  temperature_solve              1        0.006177777508       2.861363782e-06
+  velocity_solve                 2         0.01592511065       2.807624355e-09
+  Nodal_projection               4         0.02678204593       5.399280042e-09
+
+WallClockTime: 92 Pre: 0.00157 Solve: 1.202 Post: 0.034 Total: 1.237
+Solve time per cell: 1.862e-05
+
+==============================================================================
+Step: 93 dt: 0.0625 Time: 5.75 to 5.8125
+CFL: 0.644988 (conv: 0.64458 diff: 0 src: 0.0162269 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3980309542       1.242139124e-09
+  temperature_solve              1        0.006210584571       2.661547967e-06
+  velocity_solve                 2         0.01578865604       2.996458193e-09
+  Nodal_projection               4         0.02678204593       5.398932528e-09
+
+WallClockTime: 93 Pre: 0.00129 Solve: 1.321 Post: 0.00865 Total: 1.331
+Solve time per cell: 2.047e-05
+
+==============================================================================
+Step: 94 dt: 0.0625 Time: 5.8125 to 5.875
+CFL: 0.64492 (conv: 0.644506 diff: 0 src: 0.0163386 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6            0.42583679       1.196495519e-09
+  temperature_solve              1        0.006035205602       2.721532837e-06
+  velocity_solve                 2          0.0157220777       3.005059312e-09
+  Nodal_projection               4         0.02678204593       5.398817022e-09
+
+WallClockTime: 94 Pre: 0.00149 Solve: 2.917 Post: 0.00702 Total: 2.925
+Solve time per cell: 4.52e-05
+
+==============================================================================
+Step: 95 dt: 0.0625 Time: 5.875 to 5.9375
+CFL: 0.645103 (conv: 0.644694 diff: 0 src: 0.0162341 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.3920347436       1.223510349e-09
+  temperature_solve              1        0.005824214204       2.729461187e-06
+  velocity_solve                 2         0.01561623202       2.793024478e-09
+  Nodal_projection               4         0.02678204593       5.398495082e-09
+
+WallClockTime: 95 Pre: 0.00145 Solve: 1.202 Post: 0.0104 Total: 1.214
+Solve time per cell: 1.863e-05
+
+==============================================================================
+Step: 96 dt: 0.0625 Time: 5.9375 to 6
+CFL: 0.645093 (conv: 0.64468 diff: 0 src: 0.0163153 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.4136543348       1.243464158e-09
+  temperature_solve              1        0.005913364704       2.508652472e-06
+  velocity_solve                 2         0.01551609762       2.763535178e-09
+  Nodal_projection               4         0.02678204593       5.397939772e-09
+
+WallClockTime: 96 Pre: 0.00138 Solve: 1.468 Post: 0.279 Total: 1.749
+Solve time per cell: 2.275e-05
+
+==============================================================================
+Step: 97 dt: 0.0625 Time: 6 to 6.0625
+CFL: 0.645087 (conv: 0.644676 diff: 0 src: 0.0162817 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.4286663743        1.22993922e-09
+  temperature_solve              1        0.005620460502       2.575727478e-06
+  velocity_solve                 2         0.01542932176         2.9293723e-09
+  Nodal_projection               4         0.02678204593       5.397507856e-09
+
+WallClockTime: 97 Pre: 0.00428 Solve: 1.744 Post: 0.0376 Total: 1.786
+Solve time per cell: 2.703e-05
+
+==============================================================================
+Step: 98 dt: 0.0625 Time: 6.0625 to 6.125
+CFL: 0.64521 (conv: 0.644802 diff: 0 src: 0.0162192 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6           0.386133507        1.26523355e-09
+  temperature_solve              1        0.005622277848       2.585386767e-06
+  velocity_solve                 2         0.01530339634        2.88180324e-09
+  Nodal_projection               4         0.02678204593       5.397317312e-09
+
+WallClockTime: 98 Pre: 0.00154 Solve: 1.505 Post: 0.00707 Total: 1.514
+Solve time per cell: 2.333e-05
+
+==============================================================================
+Step: 99 dt: 0.0625 Time: 6.125 to 6.1875
+CFL: 0.645176 (conv: 0.644762 diff: 0 src: 0.0163477 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.4240942485        1.26295217e-09
+  temperature_solve              1        0.005573029393        2.35441604e-06
+  velocity_solve                 2         0.01523786189       2.706379121e-09
+  Nodal_projection               4         0.02678204593       5.396542326e-09
+
+WallClockTime: 99 Pre: 0.00159 Solve: 1.416 Post: 0.0549 Total: 1.473
+Solve time per cell: 2.195e-05
+
+==============================================================================
+Step: 100 dt: 0.0625 Time: 6.1875 to 6.25
+CFL: 0.645239 (conv: 0.644832 diff: 0 src: 0.0161964 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.4275205833       1.266089115e-09
+  temperature_solve              1        0.005429440102       2.468681771e-06
+  velocity_solve                 2         0.01510695812       2.734982019e-09
+  Nodal_projection               4         0.02678204593       5.395829509e-09
+
+WallClockTime: 100 Pre: 0.0104 Solve: 1.734 Post: 0.0381 Total: 1.782
+Solve time per cell: 2.687e-05
+
+==============================================================================
+
+Writing plot file       plt00100 at time 6.25
+Writing checkpoint file chk00100 at time 6.25
+Time spent in InitData():    9.398286066
+Time spent in Evolve():      225.6947159
+
+
+TinyProfiler total time across processes [min...avg...max]: 235 ... 235 ... 235.1
+
+-----------------------------------------------------------------------------------------------------------------
+Name                                                              NCalls  Excl. Min  Excl. Avg  Excl. Max   Max %
+-----------------------------------------------------------------------------------------------------------------
+FillBoundary_finish()                                              93700      96.38        112      138.6  58.96%
+FabArray::ParallelCopy_finish()                                    21144      11.28      36.36      47.59  20.24%
+MLMG::ResNormInf()                                                  1763      8.106      9.967      13.62   5.79%
+FabArray::sum()                                                      863      0.124      5.204      8.403   3.57%
+FabArray::norminf()                                                 2386      4.636       5.86      7.054   3.00%
+amr-wind::ICNS-Godunov::compute_advection_term                       103       3.14      6.067       6.89   2.93%
+FillBoundary_nowait()                                              93700      1.314      4.692      6.729   2.86%
+MLMG::prepareForSolve()                                              413      2.924      4.942      6.644   2.83%
+MLABecLaplacian::Fsmooth()                                         24832      1.505       3.97      5.063   2.15%
+amr-wind::ICNS-Godunov::pre_advection_actions                        103      1.228      2.477      4.825   2.05%
+MLNodeLaplacian::Fsmooth()                                         13056      1.897      3.733      4.723   2.01%
+MLMG::oneIter()                                                     1350      3.491      3.773      4.235   1.80%
+MLMG::solve()                                                        413      3.052      3.465      4.197   1.79%
+amr-wind::PlaneAveraging::compute_averages                           315      2.574      2.956      3.178   1.35%
+amrex::Copy()                                                       5895      1.169        2.8       3.01   1.28%
+VisMF::Write(FabArray)                                                16      2.156      2.307      2.543   1.08%
+MLABecLaplacian::Fapply()                                           4007     0.6319      1.793      2.238   0.95%
+MLTensorOp::apply()                                                 2163     0.7513      1.708      2.177   0.93%
+amr-wind::Temperature-Godunov::compute_advection_term                103     0.7597      1.731      2.133   0.91%
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages            101      1.592      1.791      2.106   0.90%
+FabArray::setVal()                                                 28896     0.7125      1.739      2.049   0.87%
+amr-wind::incflo::ComputeDt                                          101      1.519      1.684      1.989   0.85%
+MLLinOp::makeSubCommunicator()                                       107     0.9397      1.487      1.855   0.79%
+amr-wind::PlaneAveragingFine::compute_averages                       202      1.371      1.431      1.628   0.69%
+MLPoisson::Fsmooth()                                               35456     0.4854     0.9541       1.36   0.58%
+amr-wind::SecondMomentAveraging::compute_average                      18     0.3317      1.203      1.354   0.58%
+amr-wind::ABLStats::post_advance_work                                100     0.1363     0.2227      1.132   0.48%
+MLNodeLinOp::applyBC()                                             16832   0.005714     0.1249      1.063   0.45%
+MLNodeLaplacian::Fapply()                                           3776     0.2871     0.5584     0.9309   0.40%
+amr-wind::ICNS-Godunov::compute_source_term                          206     0.2049     0.4616     0.9268   0.39%
+FabArray::Xpay()                                                   13287     0.2631     0.8055      0.902   0.38%
+MLCellLinOp::applyBC()                                             69488     0.1957     0.3703      0.695   0.30%
+amrex::Add()                                                        1663     0.1438     0.4278     0.6947   0.30%
+amr-wind::VelPlaneAveraging::compute_hvelmag_averages                101     0.5343     0.5972     0.6298   0.27%
+amrex::average_down                                                 9184     0.1422     0.2761     0.6279   0.27%
+amr-wind::diffusion::average_velocity_eta_to_faces                   515     0.2147     0.4914     0.5696   0.24%
+amr-wind::incflo::ApplyProjection                                    104     0.1251      0.273     0.4807   0.20%
+MLMG::computeResidual()                                             1350    0.01558    0.04693       0.43   0.18%
+amr-wind::SamplingContainer::populate_buffer                           1    0.05787      0.152     0.3936   0.17%
+amr-wind::Temperature-Godunov::compute_predictor_rhs                 103    0.02226    0.07578     0.3785   0.16%
+amr-wind::fvm::strainrate                                            103    0.03153     0.1017     0.3484   0.15%
+PhysBCFunct::()                                                     1454   0.003133    0.04438     0.3452   0.15%
+FabArrayBase::getFB()                                              94636    0.02601    0.03548     0.3436   0.15%
+amr-wind::ICNS-Godunov::compute_predictor_rhs                        103     0.1012      0.265     0.3229   0.14%
+amr-wind::Sampling::convert_velocity_lineofsight                       1    0.08594     0.1345     0.3214   0.14%
+NodalProjector::project                                              104    0.06188     0.1429     0.3075   0.13%
+average_down_faces                                                  8652    0.09568     0.2258     0.2964   0.13%
+MLPoisson::Fapply()                                                 5090     0.1115     0.2308     0.2931   0.12%
+ParticleContainer::RedistributeMPI()                                   1     0.1089     0.2435     0.2851   0.12%
+MultiFab::Multiply()                                                 619    0.05746     0.2338     0.2774   0.12%
+amr-wind::IOManager::write_checkpoint_file                             2     0.0817     0.1976     0.2731   0.12%
+MLMG::addInterpCorrection()                                        10800    0.08298      0.205     0.2437   0.10%
+FabArray::ParallelCopy_nowait()                                    21144    0.01882    0.04768     0.2428   0.10%
+amr-wind::ICNS-Godunov::linsys_solve                                 103    0.04564      0.118     0.2256   0.10%
+MLCellLinOp::smooth()                                              30144      0.017    0.02245      0.221   0.09%
+amr-wind::Sampling::create_output_buffer                               1     0.0247    0.08546     0.1962   0.08%
+amr-wind::ThirdMomentAveraging::compute_average                        6     0.1635      0.182     0.1898   0.08%
+amr-wind::incflo::Evolve()                                             1   0.002348   0.003209     0.1887   0.08%
+ParticleContainer::RedistributeCPU()                                   1  0.0004879  0.0008897     0.1711   0.07%
+amr-wind::Temperature-Godunov::linsys_solve                          103    0.01766     0.0506     0.1615   0.07%
+amr-wind::ICNS::multiply_rho                                         206    0.02779     0.1163     0.1439   0.06%
+amr-wind::ICNS::advection_mac_project                                103    0.01453    0.03763     0.1417   0.06%
+amr-wind::main()                                                       1    0.01532    0.02506     0.1326   0.06%
+MLNodeLaplacian::interpolation()                                    3264    0.04663    0.09672     0.1322   0.06%
+NFI::CleanUpMessages                                                  16  5.635e-05  0.0001958     0.1139   0.05%
+FabArray::Saxpy()                                                    521    0.02307    0.07687     0.1096   0.05%
+MLCellLinOp::prepareForSolve()                                       516    0.02975    0.06869     0.1064   0.05%
+MLNodeLaplacian::compRHS()                                           104    0.03319    0.07355    0.09571   0.04%
+amr-wind::incflo::ApplyPredictor                                     103   0.007385    0.01058     0.0836   0.04%
+amr-wind::Sampling::initialize                                         1   0.005957    0.02088    0.08137   0.03%
+MLCellLinOp::compFlux()                                              103    0.02138    0.05684    0.07495   0.03%
+FabArray::FillBoundary()                                           80238    0.02933    0.03864    0.07199   0.03%
+MLNodeLaplacian::restriction()                                      3264    0.02315    0.04368    0.06221   0.03%
+MLLinOp::defineGrids()                                               109    0.02589    0.03265    0.04982   0.02%
+MLMG::apply()                                                        309    0.01418     0.0252    0.04053   0.02%
+amr-wind::setup_operator                                             515   0.009225    0.01765    0.03862   0.02%
+WriteMultiLevelPlotfile()                                              2   0.005739    0.01082    0.03572   0.02%
+MLMG::computeMLResidual()                                            413   0.006018    0.01434     0.0347   0.01%
+amr-wind::Smagorinsky-ConstTransport::update_turbulent_viscosity     103   0.009114    0.02592    0.03315   0.01%
+MLMG:computeResOfCorrection()                                      10800   0.004929   0.007038    0.02449   0.01%
+MLMG::mgVcycle()                                                    1350   0.004317    0.00642    0.02369   0.01%
+OverrideSync_nowait()                                              13464   0.003516   0.005073    0.02322   0.01%
+amr-wind::Field::fillphysbc                                          515   0.002353   0.003722    0.02079   0.01%
+FabArray::ParallelCopy()                                           21144   0.008452   0.009664     0.0191   0.01%
+amr-wind::Field::setVal 1                                            414  0.0008913   0.001402    0.01837   0.01%
+MLNodeLaplacian::define()                                            104   0.003859   0.009039    0.01714   0.01%
+amr-wind::ICNS-Godunov::compute_diffusion_term                       206   0.002347   0.003587    0.01667   0.01%
+MLMG::actualBottomSolve()                                           1350  0.0004577  0.0008599    0.01609   0.01%
+MLMG::mgVcycle_up::0                                                1350   0.001236   0.002226    0.01472   0.01%
+MLCellLinOp::apply()                                                9097   0.004546   0.006632    0.01063   0.00%
+amr-wind::incflo::init_amr_wind_modules                                1  0.0009493   0.004704   0.009225   0.00%
+MLCellLinOp::solutionResidual()                                     1560   0.002648   0.004636   0.008891   0.00%
+FAbArray::OverrideSync()                                           13464   0.004426   0.005665   0.008736   0.00%
+MLMG::mgVcycle_down::0                                              1350   0.002698   0.004583   0.008426   0.00%
+MLCellLinOp::correctionResidual()                                   7536   0.003055    0.00434   0.008354   0.00%
+amr-wind::Field::fillpatch                                           627    0.00261   0.003738   0.008254   0.00%
+MLABecLaplacian::prepareForSolve()                                   515   0.002123   0.003919    0.00813   0.00%
+MLABecLaplacian::averageDownCoeffs()                                 515   0.002196   0.003475   0.007899   0.00%
+MultiFab::Copy()                                                     621   0.001587   0.002543   0.006778   0.00%
+NodalProjector::computeRHS                                           104  0.0001853   0.001834   0.006645   0.00%
+OverrideSync_finish()                                              13464   0.003338   0.003896   0.006552   0.00%
+MLMG::mgVcycle_down::1                                              1350    0.00185   0.003299    0.00654   0.00%
+MLMG::getFluxes()                                                    206  0.0009268   0.003862   0.006265   0.00%
+MLMG::mgVcycle_bottom                                               1350  0.0007018    0.00116   0.006118   0.00%
+FillPatchSingleLevel                                                 939   0.001768   0.002774   0.005944   0.00%
+amr-wind::VelPlaneAveraging::operator                                202  0.0007183   0.002543   0.005502   0.00%
+amr-wind::Field::advance_states                                      300  0.0007628   0.001189   0.005266   0.00%
+amr-wind::incflo::post_advance_work                                  100  0.0006824  0.0009577   0.004957   0.00%
+MLMG::mgVcycle_down::2                                              1350   0.001214   0.001753   0.004632   0.00%
+amr-wind::Field::fillpatch array                                     103  0.0006002  0.0009205   0.004365   0.00%
+MLMG::mgVcycle_down::3                                              1350   0.001035   0.001616   0.004358   0.00%
+amr-wind::Temperature-Godunov::compute_diffusion_term                103   0.001131   0.001817    0.00409   0.00%
+amr-wind::incflo::advance                                            100  0.0004894  0.0007338    0.00373   0.00%
+amr-wind::IOManager::write_plot_file                                   2  0.0001334  0.0003176   0.003714   0.00%
+MLLinOp::define()                                                    109  0.0001802  0.0003579   0.003591   0.00%
+MLMG::mgVcycle_down::4                                              1350  0.0007036  0.0008757   0.003376   0.00%
+amr-wind::FPlaneAveragingFine::operator                              202   0.000441   0.001701   0.003164   0.00%
+MLABecLaplacian::define()                                              4   0.000158   0.001102    0.00303   0.00%
+MLMG::mgVcycle_up::2                                                1350  0.0008489   0.001113   0.002939   0.00%
+MLMG::mgVcycle_up::3                                                1350  0.0005517  0.0006667   0.002933   0.00%
+amr-wind::FPlaneAveraging::operator                                  315  0.0007448    0.00117    0.00276   0.00%
+amr-wind::set_acoeffs                                                515  0.0004973  0.0007629   0.002752   0.00%
+MLMG::mgVcycle_up::5                                                1350  0.0005503   0.000601   0.002651   0.00%
+MLMG::mgVcycle_up::1                                                1350  0.0008231   0.001028   0.002476   0.00%
+MLMG::mgVcycle_down::5                                              1350  0.0007081  0.0009203   0.002062   0.00%
+amr-wind::Sampling::update_container                                   1  2.761e-05  0.0002342    0.00165   0.00%
+amr-wind::incflo::InitialIterations()                                  1  3.032e-05  4.686e-05   0.001217   0.00%
+amr-wind::incflo::InitialProjection()                                  1  1.331e-05  2.909e-05    0.00119   0.00%
+MLMG::mgVcycle_up::4                                                1350  0.0006014  0.0007663   0.001144   0.00%
+amr-wind::incflo::pre_advance_stage1                                 100  7.631e-05  0.0001265  0.0004476   0.00%
+amr-wind::Sampling::post_advance_work                                101  0.0001583  0.0002458  0.0004178   0.00%
+amr-wind::Temperature-Godunov::initialize                              1  2.714e-05  4.582e-05  0.0001019   0.00%
+amr-wind::Sampling::sampling_workflow                                  1  5.501e-06  1.194e-05  4.115e-05   0.00%
+amr-wind::incflo::prepare_for_time_integration                         1  4.597e-06  9.105e-06   4.11e-05   0.00%
+amr-wind::Sampling::fill_buffer                                        1  1.293e-06  3.305e-06  2.111e-05   0.00%
+MLPoisson::define()                                                    1  2.051e-06  4.211e-06  2.035e-05   0.00%
+amr-wind::incflo::InitData()                                           1  1.342e-06  3.028e-06  1.422e-05   0.00%
+Other                                                             255335     0.2481     0.5414       1.25   0.53%
+-----------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------
+Name                                                              NCalls  Incl. Min  Incl. Avg  Incl. Max   Max %
+-----------------------------------------------------------------------------------------------------------------
+amr-wind::main()                                                       1        235        235      235.1 100.00%
+amr-wind::incflo::Evolve()                                             1      225.6      225.8      225.9  96.08%
+amr-wind::incflo::ApplyPredictor                                     103      220.2      220.4      220.7  93.88%
+amr-wind::incflo::advance                                            100      214.2      214.4      214.7  91.31%
+MLMG::solve()                                                        413      194.1      196.5      200.6  85.34%
+MLMG::oneIter()                                                     1350      153.3      158.3      160.8  68.38%
+MLMG::mgVcycle()                                                    1350        149      153.6        156  66.34%
+FabArray::FillBoundary()                                           80238      90.59      107.3      139.1  59.15%
+FillBoundary_finish()                                              93700      96.38        112      138.6  58.96%
+MLCellLinOp::applyBC()                                             69488      72.26      81.81      96.83  41.19%
+MLCellLinOp::smooth()                                              30144      63.11      71.78      86.19  36.66%
+amr-wind::ICNS-Godunov::pre_advection_actions                        103      76.94      77.47      78.17  33.25%
+amr-wind::ICNS::advection_mac_project                                103      71.38      73.35      74.93  31.87%
+amr-wind::incflo::ApplyProjection                                    104      64.52      64.96      65.25  27.76%
+NodalProjector::project                                              104       62.2      62.58      62.79  26.71%
+MLMG::mgVcycle_up::2                                                1350      10.47      46.16      61.93  26.34%
+FabArray::ParallelCopy()                                           21144      11.42      36.46      47.65  20.27%
+FabArray::ParallelCopy_finish()                                    21144      11.28      36.36      47.59  20.24%
+MLMG::addInterpCorrection()                                        10800     0.6241      34.27      47.52  20.21%
+MLNodeLinOp::applyBC()                                             16832       12.9      21.76      39.13  16.65%
+MLMG::mgVcycle_down::2                                              1350      19.48      22.92      37.12  15.79%
+amr-wind::ICNS-Godunov::linsys_solve                                 103      34.79      35.34      36.07  15.34%
+amr-wind::Temperature-Godunov::linsys_solve                          103      26.41      27.19      28.74  12.22%
+MLMG::mgVcycle_down::3                                              1350    0.02139      5.115      27.23  11.58%
+MLMG::mgVcycle_down::1                                              1350      16.09       21.2      24.49  10.42%
+MLNodeLaplacian::Fsmooth()                                         13056      2.383      12.59      23.93  10.18%
+MLCellLinOp::apply()                                                9097      14.23      16.78      23.18   9.86%
+MLMG:computeResOfCorrection()                                      10800      12.29      16.44      23.14   9.84%
+MLMG::mgVcycle_up::0                                                1350      16.25      19.26      21.95   9.34%
+FAbArray::OverrideSync()                                           13464      0.457      9.492      21.13   8.99%
+OverrideSync_finish()                                              13464     0.3848      9.305      20.87   8.88%
+MLMG::mgVcycle_down::0                                              1350      13.12      17.61      20.66   8.79%
+MLMG::mgVcycle_up::1                                                1350      14.99       17.6      19.98   8.50%
+MLMG::ResNormInf()                                                  1763      12.23      14.91      19.45   8.27%
+MLMG::prepareForSolve()                                              413      10.74      13.03      16.67   7.09%
+MLMG::mgVcycle_up::3                                                1350    0.01431      3.487      16.42   6.98%
+MLNodeLaplacian::restriction()                                      3264      2.449      6.296      15.82   6.73%
+MLCellLinOp::correctionResidual()                                   7536      9.191       11.5      14.68   6.25%
+MLCellLinOp::solutionResidual()                                     1560      6.374      7.579      12.83   5.46%
+MLTensorOp::apply()                                                 2163      6.115      7.761      12.56   5.34%
+amrex::average_down                                                 9184      0.226      1.211      9.654   4.11%
+MLABecLaplacian::prepareForSolve()                                   515      6.089      6.887      9.502   4.04%
+amr-wind::incflo::InitData()                                           1      9.182      9.222      9.375   3.99%
+amr-wind::incflo::post_advance_work                                  100      8.212       8.44       8.58   3.65%
+amr-wind::ABLStats::post_advance_work                                100      8.211      8.438      8.579   3.65%
+FabArray::sum()                                                      863      0.124      5.204      8.403   3.57%
+amr-wind::incflo::prepare_for_time_integration                         1      7.766      8.177      8.399   3.57%
+MLMG::apply()                                                        309      2.549      3.365      8.141   3.46%
+amr-wind::ICNS-Godunov::compute_advection_term                       103      3.394      6.682      7.547   3.21%
+amr-wind::ICNS-Godunov::compute_diffusion_term                       206       2.86      3.735      7.132   3.03%
+MLMG::computeResidual()                                             1350      4.123      5.286      7.123   3.03%
+FabArray::norminf()                                                 2386      4.636       5.86      7.054   3.00%
+FillBoundary_nowait()                                              93700      1.342      4.732        6.8   2.89%
+amr-wind::incflo::InitialIterations()                                  1      6.338      6.364      6.373   2.71%
+MLABecLaplacian::averageDownCoeffs()                                 515     0.1528     0.7371      6.083   2.59%
+average_down_faces                                                  8652     0.1063     0.4944      5.285   2.25%
+MLABecLaplacian::Fsmooth()                                         24832      1.505       3.97      5.063   2.15%
+amr-wind::VelPlaneAveraging::operator                                202      4.155      4.397      4.642   1.97%
+FillPatchSingleLevel                                                 939      1.705       2.81      4.332   1.84%
+MLMG::mgVcycle_down::4                                              1350    0.01709     0.1036      4.064   1.73%
+amr-wind::Field::fillpatch                                           627      1.169      2.086      3.372   1.43%
+amr-wind::FPlaneAveraging::operator                                  315      2.603      2.986      3.209   1.36%
+amr-wind::PlaneAveraging::compute_averages                           315      2.574      2.956      3.178   1.35%
+amrex::Copy()                                                       5895      1.169        2.8       3.01   1.28%
+VisMF::Write(FabArray)                                                16      2.173      2.307      2.543   1.08%
+MLABecLaplacian::Fapply()                                           4007     0.6319      1.793      2.238   0.95%
+amr-wind::IOManager::write_checkpoint_file                             2      1.866      1.996      2.204   0.94%
+amr-wind::Temperature-Godunov::compute_advection_term                103     0.7619      1.735      2.136   0.91%
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages            101      1.594      1.793      2.108   0.90%
+FabArray::setVal()                                                 28896     0.7125      1.739      2.049   0.87%
+MLMG::mgVcycle_up::4                                                1350    0.01211    0.06878          2   0.85%
+amr-wind::incflo::ComputeDt                                          101      1.519      1.684      1.989   0.85%
+MLLinOp::define()                                                    109     0.9959      1.544      1.907   0.81%
+MLLinOp::defineGrids()                                               109     0.9955      1.543      1.907   0.81%
+amr-wind::incflo::pre_advance_stage1                                 100      1.434      1.579       1.88   0.80%
+MLLinOp::makeSubCommunicator()                                       107     0.9397      1.487      1.855   0.79%
+amr-wind::setup_operator                                             515     0.7035      1.688      1.848   0.79%
+MLMG::computeMLResidual()                                            413      1.138      1.295      1.743   0.74%
+amr-wind::FPlaneAveragingFine::operator                              202      1.385      1.445      1.642   0.70%
+amr-wind::PlaneAveragingFine::compute_averages                       202      1.383      1.443       1.64   0.70%
+MLNodeLaplacian::define()                                            104     0.8024      1.198       1.58   0.67%
+amr-wind::Temperature-Godunov::compute_diffusion_term                103     0.4411     0.7169      1.466   0.62%
+amr-wind::incflo::init_amr_wind_modules                                1     0.8725      1.018      1.434   0.61%
+MLPoisson::Fsmooth()                                               35456     0.4854     0.9541       1.36   0.58%
+amr-wind::SecondMomentAveraging::compute_average                      18     0.3317      1.203      1.354   0.58%
+amr-wind::Field::fillpatch array                                     103     0.4313      0.729      1.171   0.50%
+amr-wind::ICNS-Godunov::compute_source_term                          206     0.2352     0.5779      1.046   0.44%
+MLNodeLaplacian::Fapply()                                           3776     0.2871     0.5584     0.9309   0.40%
+FabArray::Xpay()                                                   13287     0.2631     0.8055      0.902   0.38%
+amr-wind::Sampling::post_advance_work                                101     0.2493     0.3725     0.8095   0.34%
+amr-wind::Sampling::sampling_workflow                                  1      0.249     0.3722     0.8092   0.34%
+amr-wind::incflo::InitialProjection()                                  1     0.1844     0.5929     0.7363   0.31%
+amrex::Add()                                                        1663     0.1438     0.4278     0.6947   0.30%
+NodalProjector::computeRHS                                           104     0.2227     0.3056     0.6917   0.29%
+MLNodeLaplacian::compRHS()                                           104     0.2205     0.3038     0.6896   0.29%
+amr-wind::IOManager::write_plot_file                                   2      0.453     0.5303     0.6454   0.27%
+MultiFab::Copy()                                                     621     0.2336     0.5723      0.635   0.27%
+WriteMultiLevelPlotfile()                                              2     0.4428     0.5196     0.6344   0.27%
+amr-wind::VelPlaneAveraging::compute_hvelmag_averages                101     0.5343     0.5972     0.6298   0.27%
+amr-wind::Smagorinsky-ConstTransport::update_turbulent_viscosity     103     0.1763     0.2721     0.6141   0.26%
+MLMG::getFluxes()                                                    206    0.09548     0.3202     0.6105   0.26%
+MLCellLinOp::compFlux()                                              103    0.08092     0.2989     0.5883   0.25%
+amr-wind::diffusion::average_velocity_eta_to_faces                   515     0.2161     0.4954     0.5745   0.24%
+MLMG::mgVcycle_up::5                                                1350    0.01188    0.01437     0.5602   0.24%
+MLMG::mgVcycle_down::5                                              1350    0.01666    0.02006     0.4634   0.20%
+amr-wind::Sampling::fill_buffer                                        1    0.05788      0.152     0.3936   0.17%
+amr-wind::SamplingContainer::populate_buffer                           1    0.05787      0.152     0.3936   0.17%
+amr-wind::Temperature-Godunov::compute_predictor_rhs                 103     0.0226    0.07624     0.3788   0.16%
+FabArrayBase::getFB()                                              94636    0.02735    0.04343       0.37   0.16%
+amr-wind::Field::advance_states                                      300     0.1298     0.2948     0.3587   0.15%
+amr-wind::fvm::strainrate                                            103    0.03153     0.1017     0.3484   0.15%
+PhysBCFunct::()                                                     1454   0.003133    0.04438     0.3452   0.15%
+amr-wind::Sampling::initialize                                         1     0.2411     0.2657      0.343   0.15%
+amr-wind::ICNS-Godunov::compute_predictor_rhs                        103     0.1015     0.2653     0.3233   0.14%
+amr-wind::Sampling::convert_velocity_lineofsight                       1    0.08594     0.1345     0.3214   0.14%
+OverrideSync_nowait()                                              13464    0.05034     0.1807     0.3193   0.14%
+amr-wind::Sampling::update_container                                   1     0.2311     0.2448     0.3046   0.13%
+MLPoisson::define()                                                    1    0.02093     0.1878     0.2988   0.13%
+FabArray::ParallelCopy_nowait()                                    21144    0.05233    0.08909     0.2948   0.13%
+MLPoisson::Fapply()                                                 5090     0.1115     0.2308     0.2931   0.12%
+ParticleContainer::RedistributeCPU()                                   1     0.2303     0.2444     0.2858   0.12%
+ParticleContainer::RedistributeMPI()                                   1     0.1089     0.2435     0.2852   0.12%
+MultiFab::Multiply()                                                 619    0.05746     0.2338     0.2774   0.12%
+amr-wind::set_acoeffs                                                515     0.0512     0.1275      0.245   0.10%
+MLABecLaplacian::define()                                              4    0.02589     0.2178     0.2344   0.10%
+amr-wind::Temperature-Godunov::initialize                              1   0.002609     0.1957     0.2132   0.09%
+amr-wind::Sampling::create_output_buffer                               1     0.0247    0.08546     0.1962   0.08%
+amr-wind::ThirdMomentAveraging::compute_average                        6     0.1635      0.182     0.1898   0.08%
+amr-wind::ICNS::multiply_rho                                         206    0.02779     0.1163     0.1439   0.06%
+MLNodeLaplacian::interpolation()                                    3264    0.04663    0.09672     0.1322   0.06%
+amr-wind::Field::setVal 1                                            414    0.04311     0.1002     0.1276   0.05%
+amr-wind::Field::fillphysbc                                          515   0.004062    0.01823      0.125   0.05%
+NFI::CleanUpMessages                                                  16  5.635e-05  0.0001958     0.1139   0.05%
+FabArray::Saxpy()                                                    521    0.02307    0.07687     0.1096   0.05%
+MLCellLinOp::prepareForSolve()                                       516    0.02975    0.06869     0.1064   0.05%
+MLMG::mgVcycle_bottom                                               1350   0.001223   0.002061     0.1037   0.04%
+MLMG::actualBottomSolve()                                           1350  0.0004577  0.0009015     0.1026   0.04%
+Other                                                             255335      0.548       1.11      2.281   0.97%
+-----------------------------------------------------------------------------------------------------------------
+
+Unused ParmParse Variables:
+  [TOP]::zlo.tke_type(nvals = 1)  :: [zero_gradient]
+
+Pinned Memory Usage:
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                       Nalloc   Nfree  AvgMem min  AvgMem avg  AvgMem max  MaxMem min  MaxMem avg  MaxMem max
+-------------------------------------------------------------------------------------------------------------------------------------------------
+The_Pinned_Arena::Initialize()                               2080    2080      71   B     136   B     159   B    8192 KiB    8192 KiB    8192 KiB
+amr-wind::ThirdMomentAveraging::compute_average             49920   49920     102   B     113   B     118   B     144 KiB     144 KiB     144 KiB
+amr-wind::SecondMomentAveraging::compute_average           112320  112320      58   B     103   B     119   B      60 KiB      60 KiB      60 KiB
+amr-wind::PlaneAveraging::compute_averages                 655200  655200      92   B     104   B     116   B      12 KiB      12 KiB      12 KiB
+amr-wind::PlaneAveragingFine::compute_averages             420160  420160      46   B      49   B      60   B      12 KiB      12 KiB      12 KiB
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages  630240  630240      83   B      93   B     110   B      12 KiB      12 KiB      12 KiB
+amr-wind::VelPlaneAveraging::compute_hvelmag_averages      210080  210080       9   B       9   B      10   B    4096   B    4096   B    4096   B
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cpu Memory Usage:
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                          Nalloc      Nfree  AvgMem min  AvgMem avg  AvgMem max  MaxMem min  MaxMem avg  MaxMem max
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+amr-wind::FieldRepo::make_new_level_from_scratch               90112      90112      11 MiB      22 MiB      22 MiB      11 MiB      22 MiB      22 MiB
+amr-wind::ICNS-Godunov::compute_advection_term               1687552    1687552     191 KiB     428 KiB     497 KiB      15 MiB      17 MiB      17 MiB
+MLABecLaplacian::define()                                     135768     135768    7882 KiB      15 MiB      15 MiB    7894 KiB      15 MiB      15 MiB
+MLMG::prepareForSolve()                                     18562301   18562301    2971 KiB    5860 KiB    6141 KiB    7164 KiB      13 MiB      14 MiB
+amr-wind::FieldRepo::create_scratch_field                    6037504    6037504     229 KiB     594 KiB     635 KiB    4752 KiB    9357 KiB    9504 KiB
+amr-wind::Temperature-Godunov::compute_advection_term         843776     843776      13 KiB      30 KiB      38 KiB    4605 KiB    4605 KiB    4605 KiB
+amr-wind::ABLStats::post_advance_work                          12480      12480    2359   B    3891   B      18 KiB    4096 KiB    4096 KiB    4096 KiB
+MLMG::apply()                                                3174048    3174048      31 KiB      40 KiB      69 KiB    1689 KiB    3326 KiB    3378 KiB
+MLTensorOp::define()                                           24576      24576    1582 KiB    3116 KiB    3165 KiB    1584 KiB    3119 KiB    3168 KiB
+amr-wind::incflo::ApplyProjection                            1277952    1277952     378 KiB     747 KiB     762 KiB    1383 KiB    2724 KiB    2767 KiB
+amr-wind::ICNS::advection_mac_project                          20480      20480    1342 KiB    2645 KiB    2688 KiB    1355 KiB    2668 KiB    2710 KiB
+FillBoundary_nowait()                                      169723664  169723664      34 KiB      60 KiB      78 KiB     833 KiB    1841 KiB    2072 KiB
+BndryData::define()                                           245760     245760     898 KiB    1769 KiB    1798 KiB     901 KiB    1774 KiB    1802 KiB
+amr-wind::diffusion::average_velocity_eta_to_faces           6328320    6328320    2046   B    9962   B      10 KiB     792 KiB    1559 KiB    1584 KiB
+MLCellLinOp::defineAuxData()                                  561804     561804     656 KiB    1298 KiB    1401 KiB     658 KiB    1301 KiB    1404 KiB
+amr-wind::ICNS-Godunov::pre_advection_actions                 214240     214240    5468   B      10 KiB      21 KiB    1035 KiB    1035 KiB    1035 KiB
+amr-wind::FieldRepo::declare_int_field                          8192       8192     320 KiB     631 KiB     641 KiB     321 KiB     632 KiB     642 KiB
+MLCellLinOp::setLevelBC()                                       4096       4096       0   B       0   B       1   B     307 KiB     604 KiB     614 KiB
+MLNodeLinOp::buildMasks()                                    1765088    1765088      75 KiB     148 KiB     151 KiB     280 KiB     552 KiB     561 KiB
+MLNodeLaplacian::define()                                    1339000    1339000      43 KiB      86 KiB      90 KiB     162 KiB     320 KiB     336 KiB
+OwnerMask()                                                   426088     426088      37 KiB      74 KiB      75 KiB     140 KiB     276 KiB     280 KiB
+amr-wind::PlaneAveragingFine::compute_averages                827392     827392      56   B     225   B     256   B     128 KiB     252 KiB     256 KiB
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages     413696     413696      23   B      92   B     155   B     128 KiB     252 KiB     256 KiB
+MLTensorOp::apply()                                          4499040    4499040     506   B    1155   B    1478   B     157 KiB     157 KiB     157 KiB
+MLCellLinOp::compFlux()                                       642720     642720       6   B      15   B      21   B      52 KiB      52 KiB      52 KiB
+FabArray::ParallelCopy_nowait()                             11436608   11436608     159   B     449   B    1123   B    1920   B    9055   B      22 KiB
+average_down_faces                                           2893476    2893476       0   B       2   B      46   B    1920   B    3780   B    3840   B
+MLCGSolver::bicgstab                                            8384       8384       0   B       0   B       0   B       0   B       1   B    3648   B
+MLMG::addInterpCorrection()                                  6320700    6320700       1   B     234   B     343   B    1536   B    3024   B    3072   B
+amrex::average_down                                          5374936    5374936       0   B       4   B      52   B    1536   B    3024   B    3072   B
+MLNodeLaplacian::restriction()                               1910256    1910256       0   B      10   B      74   B    1000   B    1969   B    2000   B
+MLMG::actualBottomSolve()                                        962        962       0   B       0   B       0   B       0   B       0   B    1000   B
+MLCGSolver::ParallelAllReduce                                   2448       2448       0   B       0   B       0   B       0   B       0   B     216   B
+MLCellLinOp::applyBC()                                     144536498  144536498       0   B       0   B       0   B      24   B      24   B      24   B
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AMReX (24.09-45-g6d9c25b989f1) finalized
