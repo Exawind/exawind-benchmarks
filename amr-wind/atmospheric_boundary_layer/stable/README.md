@@ -1,1 +1,1 @@
-Put a synopsis of the case here, including which resources were used, which hashes of the codes, and a brief description of the computational performance.
+The stable ABL case was previously run for the AMR-Wind paper, to demonstrate that it works with the latest release of AMR-Wind, the input file was modified to run for 100 timesteps and is logged under `performance/run_info` directories. This case was run on kestrel, using 20 CPU nodes.
