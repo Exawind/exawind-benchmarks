@@ -1,0 +1,2424 @@
+
+Lmod is automatically replacing "gcc-native/12.1" with "intel/2023.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-gnu/8.5.0" with "PrgEnv-intel/8.5.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/23.12.5     2) cray-mpich/8.1.28
+
++ spack env activate -p -d /home/pmohan/exawind/exawind-manager/environments/amr-wind
+==============================================================================
+                AMR-Wind (https://github.com/exawind/amr-wind)
+
+  AMR-Wind version :: v3.1.5-11-g32811b18
+  AMR-Wind Git SHA :: 32811b18af31e7b54f7e5cb23c6ead424f21f1f0
+  AMReX version    :: 24.09-45-g6d9c25b989f1
+
+  Exec. time       :: Wed Oct 23 14:09:34 2024
+  Build time       :: Oct 14 2024 08:26:23
+  C++ compiler     :: IntelLLVM 2023.2.0
+
+  MPI              :: ON    (Num. ranks = 2080)
+  GPU              :: OFF
+  OpenMP           :: OFF
+
+  Enabled third-party libraries: 
+    NetCDF    4.9.2
+    HYPRE     2.31.0
+
+           This software is released under the BSD 3-clause license.           
+ See https://github.com/Exawind/amr-wind/blob/development/LICENSE for details. 
+------------------------------------------------------------------------------
+
+Initializing AMReX (24.09-45-g6d9c25b989f1)...
+MPI initialized with 2080 MPI processes
+MPI initialized with thread support level 0
+AMReX (24.09-45-g6d9c25b989f1) initialized
+Initializing AMR-Wind ...
+Initializing boundary conditions for velocity_mueff
+Initializing boundary conditions for velocity
+Initializing boundary conditions for density
+Initializing boundary conditions for p
+Initializing boundary conditions for velocity_src_term
+Initializing boundary conditions for gp
+Creating PDESystem instance: ICNS-Godunov
+ABLWallFunction: log_law_height not specified for ABL physics. Assuming log_law_height = first cell height
+Initializing boundary conditions for temperature_mueff
+Initializing boundary conditions for temperature
+Initializing boundary conditions for temperature_src_term
+Creating PDESystem instance: Temperature-Godunov
+Creating ABLStatsBase instance: precursor
+Creating Physics instance: ABL
+Initializing boundary conditions for mu_turb
+using default CellConsLinear interpolation for TKE fillpatch
+Initializing boundary conditions for tke_mueff
+Initializing boundary conditions for tke
+Initializing boundary conditions for tke_src_term
+Creating PDESystem instance: TKE-Godunov
+Creating TurbulenceModel instance: OneEqKsgsM84-ConstTransport
+Initializing I/O manager
+Creating mesh... done
+Grid summary: 
+  Level 0   3584 grids  56623104 cells  100 % of domain
+            smallest grid: 32 x 32 x 8  biggest grid: 32 x 32 x 16
+
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.905844372 zeta = -2.623509073
+psi_m = 1.656488827 psi_h = 2.658288783
+utau = 0.1817751218 Tsurf = 303.9399195 q = 0.24
+Shear Stress model: moeng
+Heat Flux model: moeng
+Creating MomentumSource instance: BoussinesqBuoyancy
+Creating MomentumSource instance: CoriolisForcing
+Geostrophic forcing: Coriolis factor = 0.0001
+Creating MomentumSource instance: GeostrophicForcing
+Creating TKESource instance: KsgsM84Src
+Begin initial projection
+  Nodal_projection               0                     0                     0
+Completed initial projection
+
+Begin initial pressure iterations. Num. iters = 3
+dt: 0.5
+CFL: 0.05 (conv: 0.05 diff: 0 src: 0 )
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 6          0.0091666275       4.281380165e-09
+  temperature_solve              2         0.05072397293       1.478917966e-08
+  tke_solve                      2       9.259482031e-05       2.366648544e-11
+  velocity_solve                 2       0.0008357747714       2.103604582e-10
+  Nodal_projection               4         0.03668724502       2.184988295e-09
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4        0.003338937489       4.267529601e-09
+  temperature_solve              2         0.05073354026       1.478929335e-08
+  tke_solve                      2       9.260106739e-05       2.366819241e-11
+  velocity_solve                 2       0.0008448756432       1.989217333e-10
+  Nodal_projection               2        0.002042301837       1.754459397e-09
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4        0.003174557358       3.933553259e-09
+  temperature_solve              2         0.05073621937       1.478940703e-08
+  tke_solve                      2       9.260331407e-05       2.366883078e-11
+  velocity_solve                 2       0.0008521026966       1.934528163e-10
+  Nodal_projection               2        0.001258650496       6.728034593e-10
+Completed initial pressure iterations
+
+Writing plot file       plt00000 at time 0
+Writing checkpoint file chk00000 at time 0
+Initialization successful. Time elapsed = 7.854325563
+
+Begin simulation: 
+  Run until 20000 sec. or 100 timesteps
+  Fixed timestepping with dt = 0.5; max. CFL from inputs = 0.95
+
+==============================================================================
+Step: 1 dt: 0.5 Time: 0 to 0.5
+CFL: 0.0828567 (conv: 0.05 diff: 0 src: 0.0521766 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.905844372 zeta = -2.623509073
+psi_m = 1.656488827 psi_h = 2.658288783
+utau = 0.1817751218 Tsurf = 303.9399195 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4        0.003136054377       3.770450502e-09
+  temperature_solve              2         0.05073757144       1.478940703e-08
+  tke_solve                      2       9.260431498e-05       2.366912222e-11
+  velocity_solve                 2        0.000855252449       1.918811117e-10
+  Nodal_projection               4            0.03676461       2.185106434e-09
+
+WallClockTime: 1 Pre: 0.0217 Solve: 4.941 Post: 0.00629 Total: 4.969
+Solve time per cell: 0.0001815
+
+==============================================================================
+Step: 2 dt: 0.5 Time: 0.5 to 1
+CFL: 0.0822024 (conv: 0.0503647 diff: 0 src: 0.051158 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.901359283 zeta = -2.62969763
+psi_m = 1.657924987 psi_h = 2.660285695
+utau = 0.1815909115 Tsurf = 303.9450228 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 4        0.008353290499       9.253701422e-09
+  temperature_solve              2         0.04715359911        1.38844598e-08
+  tke_solve                      2       0.0001790496657       4.554639998e-11
+  velocity_solve                 2       0.0008727861748       2.698537227e-10
+  Nodal_projection               4         0.03676461108       2.185106285e-09
+
+WallClockTime: 2 Pre: 0.00107 Solve: 1.961 Post: 0.0135 Total: 1.976
+Solve time per cell: 7.204e-05
+
+==============================================================================
+Step: 3 dt: 0.5 Time: 1 to 1.5
+CFL: 0.0834995 (conv: 0.0508221 diff: 0 src: 0.0522355 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.896926424 zeta = -2.635842876
+psi_m = 1.659348276 psi_h = 2.662264393
+utau = 0.1814072029 Tsurf = 303.9499037 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.01227123414        9.10872894e-10
+  temperature_solve              2         0.04376712187       1.310479547e-08
+  tke_solve                      2       0.0002610502796       6.515782358e-11
+  velocity_solve                 2       0.0009153289492        3.23190294e-10
+  Nodal_projection               4         0.03676461109       2.185105413e-09
+
+WallClockTime: 3 Pre: 0.00104 Solve: 3.039 Post: 0.00681 Total: 3.047
+Solve time per cell: 0.0001116
+
+==============================================================================
+Step: 4 dt: 0.5 Time: 1.5 to 2
+CFL: 0.0810298 (conv: 0.0512901 diff: 0 src: 0.0490897 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.892546952 zeta = -2.641942381
+psi_m = 1.660758206 psi_h = 2.664224206
+utau = 0.1812240255 Tsurf = 303.9545917 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.01555171771       1.077580377e-09
+  temperature_solve              2         0.04106320728       1.199470034e-08
+  tke_solve                      2       0.0003403182715       8.530667839e-11
+  velocity_solve                 2       0.0009564139728       3.679932886e-10
+  Nodal_projection               4         0.03676461109       2.185104213e-09
+
+WallClockTime: 4 Pre: 0.000942 Solve: 2.971 Post: 0.505 Total: 3.478
+Solve time per cell: 0.0001091
+
+==============================================================================
+Step: 5 dt: 0.5 Time: 2 to 2.5
+CFL: 0.0792077 (conv: 0.0517419 diff: 0 src: 0.0466423 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.888220574 zeta = -2.647995721
+psi_m = 1.662154751 psi_h = 2.666165109
+utau = 0.1810413506 Tsurf = 303.9591088 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.01817180997       1.226601165e-09
+  temperature_solve              2         0.03876832326        1.09741336e-08
+  tke_solve                      2       0.0004249184196       1.076612688e-10
+  velocity_solve                 2        0.001104931725       4.035976692e-10
+  Nodal_projection               4         0.03676461109       2.185102874e-09
+
+WallClockTime: 5 Pre: 0.0858 Solve: 5.843 Post: 0.0274 Total: 5.957
+Solve time per cell: 0.0002147
+
+==============================================================================
+Step: 6 dt: 0.5 Time: 2.5 to 3
+CFL: 0.0777025 (conv: 0.0521661 diff: 0 src: 0.0445448 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.883946639 zeta = -2.654002983
+psi_m = 1.663538004 psi_h = 2.668087238
+utau = 0.1808591344 Tsurf = 303.9634732 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.02014038817       1.346465175e-09
+  temperature_solve              2         0.03648167978       1.003905936e-08
+  tke_solve                      2       0.0005096307541       1.296009133e-10
+  velocity_solve                 2        0.001248354739       4.340928728e-10
+  Nodal_projection               4         0.03676461109       2.185273424e-09
+
+WallClockTime: 6 Pre: 0.00472 Solve: 2.315 Post: 0.00395 Total: 2.324
+Solve time per cell: 8.504e-05
+
+==============================================================================
+Step: 7 dt: 0.5 Time: 3 to 3.5
+CFL: 0.0763925 (conv: 0.0525565 diff: 0 src: 0.0426719 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.879724448 zeta = -2.659964339
+psi_m = 1.664908076 psi_h = 2.669990758
+utau = 0.1806773303 Tsurf = 303.9676996 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0220051897       1.462538631e-09
+  temperature_solve              2         0.03422013723       9.185725958e-09
+  tke_solve                      2       0.0005907756106        1.50729651e-10
+  velocity_solve                 2         0.00138688426       4.692960187e-10
+  Nodal_projection               4         0.03676461109       2.185271686e-09
+
+WallClockTime: 7 Pre: 0.00108 Solve: 3.039 Post: 0.0039 Total: 3.044
+Solve time per cell: 0.0001116
+
+==============================================================================
+Step: 8 dt: 0.5 Time: 3.5 to 4
+CFL: 0.0760004 (conv: 0.0529102 diff: 0 src: 0.0418911 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.875553327 zeta = -2.665879944
+psi_m = 1.666265073 psi_h = 2.671875824
+utau = 0.180495892 Tsurf = 303.9717993 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.02526792575       1.510380836e-09
+  temperature_solve              2         0.03218481722       8.855352007e-09
+  tke_solve                      2        0.000667350368       1.707535779e-10
+  velocity_solve                 2        0.001506496492        5.00607944e-10
+  Nodal_projection               4         0.03676461109       2.185270453e-09
+
+WallClockTime: 8 Pre: 0.00111 Solve: 6.304 Post: 0.0828 Total: 6.388
+Solve time per cell: 0.0002316
+
+==============================================================================
+Step: 9 dt: 0.5 Time: 4 to 4.5
+CFL: 0.0755299 (conv: 0.0532252 diff: 0 src: 0.0410447 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.871432659 zeta = -2.67174989
+psi_m = 1.667609085 psi_h = 2.67374257
+utau = 0.1803147746 Tsurf = 303.9757813 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.02769079528       1.570715306e-09
+  temperature_solve              2         0.03114920724       8.304027688e-09
+  tke_solve                      2       0.0007387214075       1.894566448e-10
+  velocity_solve                 2        0.001606623227       5.280077486e-10
+  Nodal_projection               4         0.03676461109       2.185268494e-09
+
+WallClockTime: 9 Pre: 0.00104 Solve: 3.452 Post: 0.00406 Total: 3.457
+Solve time per cell: 0.0001268
+
+==============================================================================
+Step: 10 dt: 0.5 Time: 4.5 to 5
+CFL: 0.0751026 (conv: 0.0536034 diff: 0 src: 0.0401826 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.867361922 zeta = -2.677574144
+psi_m = 1.668940173 psi_h = 2.675591087
+utau = 0.180133936 Tsurf = 303.9796526 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.02934059335       1.630805981e-09
+  temperature_solve              2         0.02999553256       7.753840237e-09
+  tke_solve                      2       0.0008055721715       2.069808769e-10
+  velocity_solve                 2        0.001689073692       5.515711776e-10
+  Nodal_projection               4         0.03676461109       2.185267437e-09
+
+WallClockTime: 10 Pre: 0.000843 Solve: 2.111 Post: 0.216 Total: 2.327
+Solve time per cell: 7.753e-05
+
+==============================================================================
+Step: 11 dt: 0.5 Time: 5 to 5.5
+CFL: 0.0748448 (conv: 0.0539668 diff: 0 src: 0.0395298 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.863340677 zeta = -2.683352573
+psi_m = 1.670258373 psi_h = 2.677421436
+utau = 0.1799533367 Tsurf = 303.9834189 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03016479671       1.638703938e-09
+  temperature_solve              2         0.02878273344       7.225708032e-09
+  tke_solve                      2       0.0008733972734       2.246469122e-10
+  velocity_solve                 2        0.001751793399       5.713217677e-10
+  Nodal_projection               4         0.03676461109       2.185265388e-09
+
+WallClockTime: 11 Pre: 0.00125 Solve: 3.056 Post: 0.00848 Total: 3.066
+Solve time per cell: 0.0001123
+
+==============================================================================
+Step: 12 dt: 0.5 Time: 5.5 to 6
+CFL: 0.07458 (conv: 0.0543061 diff: 0 src: 0.0388848 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.859368569 zeta = -2.689084931
+psi_m = 1.671563695 psi_h = 2.679233639
+utau = 0.1797729399 Tsurf = 303.9870838 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03054076739       1.604981831e-09
+  temperature_solve              2         0.02753704556       6.719972134e-09
+  tke_solve                      2       0.0009388039091       2.413232114e-10
+  velocity_solve                 2        0.001796495399       5.870098574e-10
+  Nodal_projection               4         0.03676461109       2.185264107e-09
+
+WallClockTime: 12 Pre: 0.00108 Solve: 2.08 Post: 0.00719 Total: 2.088
+Solve time per cell: 7.64e-05
+
+==============================================================================
+Step: 13 dt: 0.5 Time: 6 to 6.5
+CFL: 0.0743077 (conv: 0.0546176 diff: 0 src: 0.0382508 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.855445303 zeta = -2.694770896
+psi_m = 1.672856133 psi_h = 2.681027693
+utau = 0.17959271 Tsurf = 303.9906508 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03216022415       1.671663798e-09
+  temperature_solve              2         0.02627745456       6.252435014e-09
+  tke_solve                      2       0.0009726089454       2.496171325e-10
+  velocity_solve                 2        0.001823137965       6.117706342e-10
+  Nodal_projection               4         0.03676461109       2.185262393e-09
+
+WallClockTime: 13 Pre: 0.001 Solve: 5.429 Post: 0.0331 Total: 5.463
+Solve time per cell: 0.0001994
+
+==============================================================================
+Step: 14 dt: 0.5 Time: 6.5 to 7
+CFL: 0.0740531 (conv: 0.0549444 diff: 0 src: 0.0376172 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.851570635 zeta = -2.700410077
+psi_m = 1.674135662 psi_h = 2.682803573
+utau = 0.1794126128 Tsurf = 303.9941217 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0337263157       1.703072064e-09
+  temperature_solve              2          0.0250036209       5.910351319e-09
+  tke_solve                      2       0.0009986335372        2.55807403e-10
+  velocity_solve                 2        0.001832204162       6.385165174e-10
+  Nodal_projection               4         0.03676461109        2.18526049e-09
+
+WallClockTime: 14 Pre: 0.00552 Solve: 2.952 Post: 0.00441 Total: 2.962
+Solve time per cell: 0.0001084
+
+==============================================================================
+Step: 15 dt: 0.5 Time: 7 to 7.5
+CFL: 0.0738096 (conv: 0.0552853 diff: 0 src: 0.0369766 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.847744442 zeta = -2.706001915
+psi_m = 1.675402221 psi_h = 2.684561204
+utau = 0.1792326186 Tsurf = 303.997498 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03505425864       1.713137143e-09
+  temperature_solve              2         0.02370907579       5.590152341e-09
+  tke_solve                      2        0.001019259631       2.606518612e-10
+  velocity_solve                 2        0.001824149693       6.416012166e-10
+  Nodal_projection               4         0.03676461109       2.185259692e-09
+
+WallClockTime: 15 Pre: 0.00129 Solve: 2.282 Post: 0.0321 Total: 2.316
+Solve time per cell: 8.384e-05
+
+==============================================================================
+Step: 16 dt: 0.5 Time: 7.5 to 8
+CFL: 0.073532 (conv: 0.0556076 diff: 0 src: 0.0363045 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.843966611 zeta = -2.711545843
+psi_m = 1.676655746 psi_h = 2.686300501
+utau = 0.1790526968 Tsurf = 304.0007802 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03619216882       1.741372239e-09
+  temperature_solve              2         0.02243599291       5.425420113e-09
+  tke_solve                      2        0.001040051535       2.659846787e-10
+  velocity_solve                 2        0.001799141379       6.442950062e-10
+  Nodal_projection               4         0.03676461109       2.185258032e-09
+
+WallClockTime: 16 Pre: 0.00568 Solve: 2.979 Post: 0.0043 Total: 2.989
+Solve time per cell: 0.0001094
+
+==============================================================================
+Step: 17 dt: 0.5 Time: 8 to 8.5
+CFL: 0.0732363 (conv: 0.0559121 diff: 0 src: 0.0356197 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.840237088 zeta = -2.717041208
+psi_m = 1.677896154 psi_h = 2.68802136
+utau = 0.1788728187 Tsurf = 304.0039684 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03717829749       1.812854379e-09
+  temperature_solve              2         0.02119924685       5.292235983e-09
+  tke_solve                      2        0.001066230988       2.683473721e-10
+  velocity_solve                 2        0.001838803951       6.695357602e-10
+  Nodal_projection               4         0.03676461109       2.185255737e-09
+
+WallClockTime: 17 Pre: 0.00106 Solve: 10.3 Post: 0.281 Total: 10.59
+Solve time per cell: 0.0003785
+
+==============================================================================
+Step: 18 dt: 0.5 Time: 8.5 to 9
+CFL: 0.0731853 (conv: 0.0561979 diff: 0 src: 0.0352594 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.836555893 zeta = -2.722487249
+psi_m = 1.679123338 psi_h = 2.689723638
+utau = 0.1786929578 Tsurf = 304.0070625 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03799363481       1.806492977e-09
+  temperature_solve              2         0.01999010745       5.156607585e-09
+  tke_solve                      2        0.001089098477       2.639104768e-10
+  velocity_solve                 2        0.001875585567       6.912786454e-10
+  Nodal_projection               4         0.03676461109       2.185254258e-09
+
+WallClockTime: 18 Pre: 0.0598 Solve: 10.47 Post: 0.543 Total: 11.07
+Solve time per cell: 0.0003845
+
+==============================================================================
+Step: 19 dt: 0.5 Time: 9 to 9.5
+CFL: 0.0732404 (conv: 0.0564618 diff: 0 src: 0.0350552 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.832923069 zeta = -2.727883174
+psi_m = 1.680337183 psi_h = 2.691407185
+utau = 0.1785130878 Tsurf = 304.0100622 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03860361555       1.814905334e-09
+  temperature_solve              2         0.02022978614       5.008246262e-09
+  tke_solve                      2        0.001102853858       2.639963526e-10
+  velocity_solve                 2        0.001902241146       7.086803089e-10
+  Nodal_projection               4         0.03676461109       2.185252626e-09
+
+WallClockTime: 19 Pre: 0.303 Solve: 3.053 Post: 0.00371 Total: 3.359
+Solve time per cell: 0.0001121
+
+==============================================================================
+Step: 20 dt: 0.5 Time: 9.5 to 10
+CFL: 0.0732293 (conv: 0.0566979 diff: 0 src: 0.0347934 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.829338691 zeta = -2.733228146
+psi_m = 1.681537565 psi_h = 2.693071836
+utau = 0.1783331827 Tsurf = 304.012967 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.03931895361       1.788738391e-09
+  temperature_solve              2         0.01950789086       4.898993211e-09
+  tke_solve                      2        0.001107329828       2.633692431e-10
+  velocity_solve                 2         0.00191715435       7.232626997e-10
+  Nodal_projection               4         0.03676461109       2.185251308e-09
+
+WallClockTime: 20 Pre: 0.000851 Solve: 2.639 Post: 0.263 Total: 2.902
+Solve time per cell: 9.692e-05
+
+==============================================================================
+Step: 21 dt: 0.5 Time: 10 to 10.5
+CFL: 0.0731568 (conv: 0.0569045 diff: 0 src: 0.0344814 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.825802917 zeta = -2.738521202
+psi_m = 1.682724333 psi_h = 2.694717389
+utau = 0.1781532198 Tsurf = 304.0157756 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04030224138        1.85647458e-09
+  temperature_solve              2         0.01920561046       4.773994533e-09
+  tke_solve                      2        0.001102751544       2.605179128e-10
+  velocity_solve                 2        0.001921097238       7.309222949e-10
+  Nodal_projection               4         0.03676461109       2.185249645e-09
+
+WallClockTime: 21 Pre: 0.00349 Solve: 2.411 Post: 0.0064 Total: 2.421
+Solve time per cell: 8.858e-05
+
+==============================================================================
+Step: 22 dt: 0.5 Time: 10.5 to 11
+CFL: 0.0730338 (conv: 0.0570823 diff: 0 src: 0.0341321 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.822315896 zeta = -2.743761392
+psi_m = 1.683897337 psi_h = 2.696343645
+utau = 0.1779731748 Tsurf = 304.0184875 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04119422442        1.84964488e-09
+  temperature_solve              2         0.01885796195        4.63495553e-09
+  tke_solve                      2        0.001089736661       2.556159728e-10
+  velocity_solve                 2        0.001979309027       7.283996184e-10
+  Nodal_projection               4         0.03676461109       2.185247865e-09
+
+WallClockTime: 22 Pre: 0.00109 Solve: 2.889 Post: 0.562 Total: 3.453
+Solve time per cell: 0.0001061
+
+==============================================================================
+Step: 23 dt: 0.5 Time: 11 to 11.5
+CFL: 0.072866 (conv: 0.0572292 diff: 0 src: 0.0337549 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.818877894 zeta = -2.748947588
+psi_m = 1.68505639 psi_h = 2.697950351
+utau = 0.1777930284 Tsurf = 304.0211016 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04192082406       1.846859146e-09
+  temperature_solve              2         0.01848090885       4.484093097e-09
+  tke_solve                      2        0.001069030018       2.488172168e-10
+  velocity_solve                 2          0.0020307641       7.448733297e-10
+  Nodal_projection               4         0.03676461109       2.185246723e-09
+
+WallClockTime: 23 Pre: 0.0847 Solve: 7.072 Post: 0.00416 Total: 7.161
+Solve time per cell: 0.0002598
+
+==============================================================================
+Step: 24 dt: 0.5 Time: 11.5 to 12
+CFL: 0.0726549 (conv: 0.057343 diff: 0 src: 0.0333539 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.815489122 zeta = -2.754078743
+psi_m = 1.686201323 psi_h = 2.699537279
+utau = 0.1776127578 Tsurf = 304.0236165 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04246798236       1.886085859e-09
+  temperature_solve              2         0.01808727556       4.324306246e-09
+  tke_solve                      2        0.001041643635       2.414657363e-10
+  velocity_solve                 2        0.002073002878       7.374896804e-10
+  Nodal_projection               4         0.03676461109       2.185244885e-09
+
+WallClockTime: 24 Pre: 0.00101 Solve: 3.092 Post: 0.00432 Total: 3.097
+Solve time per cell: 0.0001136
+
+==============================================================================
+Step: 25 dt: 0.5 Time: 12 to 12.5
+CFL: 0.0724137 (conv: 0.0574234 diff: 0 src: 0.0329469 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.812149841 zeta = -2.759153734
+psi_m = 1.687331948 psi_h = 2.70110418
+utau = 0.1774323415 Tsurf = 304.0260306 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04285658707       1.923652118e-09
+  temperature_solve              2         0.01778547432       4.159346645e-09
+  tke_solve                      2        0.001008490588       2.443819036e-10
+  velocity_solve                 2         0.00210606246       7.720128981e-10
+  Nodal_projection               4         0.03676461109       2.185243349e-09
+
+WallClockTime: 25 Pre: 0.00107 Solve: 4.543 Post: 0.00394 Total: 4.548
+Solve time per cell: 0.0001669
+
+==============================================================================
+Step: 26 dt: 0.5 Time: 12.5 to 13
+CFL: 0.0721387 (conv: 0.0574687 diff: 0 src: 0.0325311 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.808860365 zeta = -2.764171351
+psi_m = 1.688448063 psi_h = 2.702650778
+utau = 0.1772517602 Tsurf = 304.0283427 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04362733576       1.973616723e-09
+  temperature_solve              2         0.01758772544        4.01013267e-09
+  tke_solve                      2        0.001019075762       2.461019999e-10
+  velocity_solve                 2        0.002130598622       8.035200283e-10
+  Nodal_projection               4         0.03676461109        2.18524219e-09
+
+WallClockTime: 26 Pre: 0.00104 Solve: 5.988 Post: 0.0039 Total: 5.993
+Solve time per cell: 0.00022
+
+==============================================================================
+Step: 27 dt: 0.5 Time: 13 to 13.5
+CFL: 0.0718513 (conv: 0.0574794 diff: 0 src: 0.0321347 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.805620981 zeta = -2.769130427
+psi_m = 1.689549472 psi_h = 2.704176811
+utau = 0.1770709922 Tsurf = 304.0305511 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04461707621       1.973439957e-09
+  temperature_solve              2         0.01735516344       3.831303275e-09
+  tke_solve                      2        0.001044083407        2.46844295e-10
+  velocity_solve                 2        0.002148069923       8.314933186e-10
+  Nodal_projection               4         0.03676461109        2.18524009e-09
+
+WallClockTime: 27 Pre: 0.000926 Solve: 2.167 Post: 0.0323 Total: 2.2
+Solve time per cell: 7.959e-05
+
+==============================================================================
+Step: 28 dt: 0.5 Time: 13.5 to 14
+CFL: 0.0717381 (conv: 0.0575761 diff: 0 src: 0.031874 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.802432085 zeta = -2.774029624
+psi_m = 1.690635943 psi_h = 2.705681965
+utau = 0.1768900207 Tsurf = 304.032654 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04547980863       2.001880156e-09
+  temperature_solve              2         0.01709286779       3.773607204e-09
+  tke_solve                      2         0.00109417996       2.467027693e-10
+  velocity_solve                 2        0.002159980226       8.555380293e-10
+  Nodal_projection               4         0.03676461109       2.185238618e-09
+
+WallClockTime: 28 Pre: 0.00766 Solve: 2.965 Post: 0.00389 Total: 2.976
+Solve time per cell: 0.0001089
+
+==============================================================================
+Step: 29 dt: 0.5 Time: 14 to 14.5
+CFL: 0.0718381 (conv: 0.0578436 diff: 0 src: 0.0317071 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.799294031 zeta = -2.778867663
+psi_m = 1.691707258 psi_h = 2.707165945
+utau = 0.1767088262 Tsurf = 304.0346497 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04615092558       2.006639211e-09
+  temperature_solve              2         0.01680235682       3.785771696e-09
+  tke_solve                      2        0.001131083112       2.456292114e-10
+  velocity_solve                 2        0.002178188864       8.743810676e-10
+  Nodal_projection               4         0.03676461109       2.185236976e-09
+
+WallClockTime: 29 Pre: 0.00107 Solve: 2.252 Post: 0.0281 Total: 2.281
+Solve time per cell: 8.273e-05
+
+==============================================================================
+Step: 30 dt: 0.5 Time: 14.5 to 15
+CFL: 0.0718308 (conv: 0.058082 diff: 0 src: 0.031426 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.796207145 zeta = -2.783643309
+psi_m = 1.692763209 psi_h = 2.708628471
+utau = 0.1765273863 Tsurf = 304.0365363 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04664145097       1.970126756e-09
+  temperature_solve              2         0.01648267249       3.780257885e-09
+  tke_solve                      2        0.001161507137       2.521381992e-10
+  velocity_solve                 2        0.002190030641       8.864385337e-10
+  Nodal_projection               4         0.03676461109       2.185235331e-09
+
+WallClockTime: 30 Pre: 0.00641 Solve: 2.921 Post: 0.207 Total: 3.134
+Solve time per cell: 0.0001073
+
+==============================================================================
+Step: 31 dt: 0.5 Time: 15 to 15.5
+CFL: 0.071728 (conv: 0.0582898 diff: 0 src: 0.0310467 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.793171848 zeta = -2.788355173
+psi_m = 1.693803554 psi_h = 2.710069216
+utau = 0.1763456833 Tsurf = 304.038312 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04784211686       1.998848252e-09
+  temperature_solve              2         0.01614421919       3.762522738e-09
+  tke_solve                      2        0.001185995084       2.590750947e-10
+  velocity_solve                 2        0.002219522547       8.892884762e-10
+  Nodal_projection               4         0.03676461109        2.18523409e-09
+
+WallClockTime: 31 Pre: 0.0013 Solve: 2.793 Post: 0.0323 Total: 2.826
+Solve time per cell: 0.0001026
+
+==============================================================================
+Step: 32 dt: 0.5 Time: 15.5 to 16
+CFL: 0.0715456 (conv: 0.0584656 diff: 0 src: 0.0305912 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.790188574 zeta = -2.793001851
+psi_m = 1.69482805 psi_h = 2.711487849
+utau = 0.1761636995 Tsurf = 304.0399753 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04963734575        2.01930719e-09
+  temperature_solve              2         0.01579197738       3.753996225e-09
+  tke_solve                      2        0.001204536115       2.644747199e-10
+  velocity_solve                 2        0.002252296844       8.755380865e-10
+  Nodal_projection               4         0.03676461109       2.185232092e-09
+
+WallClockTime: 32 Pre: 0.0053 Solve: 3.501 Post: 0.366 Total: 3.872
+Solve time per cell: 0.0001286
+
+==============================================================================
+Step: 33 dt: 0.5 Time: 16 to 16.5
+CFL: 0.0713607 (conv: 0.0586083 diff: 0 src: 0.0301665 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.787257795 zeta = -2.797581868
+psi_m = 1.695836436 psi_h = 2.712884018
+utau = 0.1759814187 Tsurf = 304.0415244 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05117633287       1.986283736e-09
+  temperature_solve              2         0.01541958829       3.665832082e-09
+  tke_solve                      2        0.001217306729       2.683430145e-10
+  velocity_solve                 2        0.002260074905       8.720380529e-10
+  Nodal_projection               4         0.03676461109       2.185231695e-09
+
+WallClockTime: 33 Pre: 0.00433 Solve: 3.457 Post: 0.00442 Total: 3.466
+Solve time per cell: 0.000127
+
+==============================================================================
+Step: 34 dt: 0.5 Time: 16.5 to 17
+CFL: 0.0712986 (conv: 0.0587128 diff: 0 src: 0.0299557 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.784379982 zeta = -2.802093752
+psi_m = 1.696828454 psi_h = 2.714257375
+utau = 0.1757988242 Tsurf = 304.0429573 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05230449078       1.997045084e-09
+  temperature_solve              2         0.01502560812       3.555612693e-09
+  tke_solve                      2         0.00122469402       2.707213342e-10
+  velocity_solve                 2        0.002256064157       8.686112385e-10
+  Nodal_projection               4         0.03676461109       2.185229569e-09
+
+WallClockTime: 34 Pre: 0.00106 Solve: 2.573 Post: 0.0289 Total: 2.603
+Solve time per cell: 9.451e-05
+
+==============================================================================
+Step: 35 dt: 0.5 Time: 17 to 17.5
+CFL: 0.0713471 (conv: 0.0587871 diff: 0 src: 0.0299352 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.781555581 zeta = -2.80653607
+psi_m = 1.697803856 psi_h = 2.715607579
+utau = 0.1756158968 Tsurf = 304.0442724 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05288962912       2.073510532e-09
+  temperature_solve              2         0.01461114974       3.439652119e-09
+  tke_solve                      2        0.001225786624       2.716692982e-10
+  velocity_solve                 2        0.002245427275       8.621461323e-10
+  Nodal_projection               4         0.03676461109       2.185228662e-09
+
+WallClockTime: 35 Pre: 0.0113 Solve: 6.312 Post: 0.00399 Total: 6.327
+Solve time per cell: 0.0002319
+
+==============================================================================
+Step: 36 dt: 0.5 Time: 17.5 to 18
+CFL: 0.0715683 (conv: 0.0590132 diff: 0 src: 0.0299758 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.778785125 zeta = -2.810907247
+psi_m = 1.698762361 psi_h = 2.716934254
+utau = 0.1754326221 Tsurf = 304.0454677 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05290845393       2.001618532e-09
+  temperature_solve              2         0.01417923916       3.317552455e-09
+  tke_solve                      2        0.001220819186       2.711129654e-10
+  velocity_solve                 2        0.002229446174       8.531661488e-10
+  Nodal_projection               4         0.03676461109        2.18522703e-09
+
+WallClockTime: 36 Pre: 0.00107 Solve: 2.07 Post: 0.00365 Total: 2.075
+Solve time per cell: 7.603e-05
+
+==============================================================================
+Step: 37 dt: 0.5 Time: 18 to 18.5
+CFL: 0.0717632 (conv: 0.0592767 diff: 0 src: 0.0299344 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.77606906 zeta = -2.815205846
+psi_m = 1.69970372 psi_h = 2.71823706
+utau = 0.1752489794 Tsurf = 304.0465412 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05241956411       1.914083551e-09
+  temperature_solve              2         0.01379066225        3.19460014e-09
+  tke_solve                      2        0.001210165139       2.690336565e-10
+  velocity_solve                 2        0.002269278487       8.419601683e-10
+  Nodal_projection               4         0.03676461109       2.185225646e-09
+
+WallClockTime: 37 Pre: 0.000816 Solve: 3.216 Post: 0.0037 Total: 3.22
+Solve time per cell: 0.0001181
+
+==============================================================================
+Step: 38 dt: 0.5 Time: 18.5 to 19
+CFL: 0.0718685 (conv: 0.0595029 diff: 0 src: 0.0298111 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.773407951 zeta = -2.819430237
+psi_m = 1.700627641 psi_h = 2.719515602
+utau = 0.1750649554 Tsurf = 304.0474911 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5           0.051551048       1.933882192e-09
+  temperature_solve              2         0.01378940419        3.10797077e-09
+  tke_solve                      2        0.001194671016       2.656809495e-10
+  velocity_solve                 2        0.002331080183       8.335408475e-10
+  Nodal_projection               4         0.03676461109       2.185224359e-09
+
+WallClockTime: 38 Pre: 0.000803 Solve: 2.344 Post: 0.0305 Total: 2.375
+Solve time per cell: 8.611e-05
+
+==============================================================================
+Step: 39 dt: 0.5 Time: 19 to 19.5
+CFL: 0.0718905 (conv: 0.0596908 diff: 0 src: 0.0296148 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.770802296 zeta = -2.8235789
+psi_m = 1.701533859 psi_h = 2.720769519
+utau = 0.1748805314 Tsurf = 304.0483154 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05045383701       1.869087818e-09
+  temperature_solve              2         0.01375456794       3.019749784e-09
+  tke_solve                      2        0.001175194677       2.613250449e-10
+  velocity_solve                 2        0.002382938195       8.431181864e-10
+  Nodal_projection               4         0.03676461109        2.18522286e-09
+
+WallClockTime: 39 Pre: 0.00596 Solve: 6.437 Post: 0.0304 Total: 6.473
+Solve time per cell: 0.0002364
+
+==============================================================================
+Step: 40 dt: 0.5 Time: 19.5 to 20
+CFL: 0.0718255 (conv: 0.0598374 diff: 0 src: 0.0293437 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.768252627 zeta = -2.82765026
+psi_m = 1.702422094 psi_h = 2.721998432
+utau = 0.1746956905 Tsurf = 304.049012 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04938839091       1.909610949e-09
+  temperature_solve              2         0.01368670613       2.927890819e-09
+  tke_solve                      2        0.001152271061       2.561179047e-10
+  velocity_solve                 2        0.002425628061       8.501122029e-10
+  Nodal_projection               4         0.03676461109       2.185221451e-09
+
+WallClockTime: 40 Pre: 0.00849 Solve: 2.013 Post: 0.245 Total: 2.267
+Solve time per cell: 7.394e-05
+
+==============================================================================
+Step: 41 dt: 0.5 Time: 20 to 20.5
+CFL: 0.071675 (conv: 0.0599442 diff: 0 src: 0.0289966 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.765759452 zeta = -2.831642778
+psi_m = 1.703292076 psi_h = 2.723201975
+utau = 0.1745104132 Tsurf = 304.0495788 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.04963345223       1.855868436e-09
+  temperature_solve              2         0.01359270266       2.841261448e-09
+  tke_solve                      2        0.001126040192       2.500685214e-10
+  velocity_solve                 2        0.002457195382       8.522005324e-10
+  Nodal_projection               4         0.03676461109       2.185219956e-09
+
+WallClockTime: 41 Pre: 0.00121 Solve: 3.071 Post: 0.00637 Total: 3.078
+Solve time per cell: 0.0001128
+
+==============================================================================
+Step: 42 dt: 0.5 Time: 20.5 to 21
+CFL: 0.0714485 (conv: 0.0600115 diff: 0 src: 0.0285859 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.763323355 zeta = -2.835554798
+psi_m = 1.704143509 psi_h = 2.724379746
+utau = 0.1743246848 Tsurf = 304.0500139 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05093715121       1.831850081e-09
+  temperature_solve              2         0.01367244835       2.752244654e-09
+  tke_solve                      2        0.001096542342        2.43170456e-10
+  velocity_solve                 2        0.002476872035       8.505306459e-10
+  Nodal_projection               4         0.03676461109       2.185218278e-09
+
+WallClockTime: 42 Pre: 0.0011 Solve: 2.089 Post: 0.00396 Total: 2.094
+Solve time per cell: 7.673e-05
+
+==============================================================================
+Step: 43 dt: 0.5 Time: 21 to 21.5
+CFL: 0.0712267 (conv: 0.0600388 diff: 0 src: 0.0282289 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.760944896 zeta = -2.839384702
+psi_m = 1.704976106 psi_h = 2.725531354
+utau = 0.1741384885 Tsurf = 304.0503154 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05013019733       1.839791972e-09
+  temperature_solve              2         0.01371103476       2.660044629e-09
+  tke_solve                      2        0.001063884481       2.355100281e-10
+  velocity_solve                 2        0.002484821131       8.450673494e-10
+  Nodal_projection               4         0.03676461109       2.185216939e-09
+
+WallClockTime: 43 Pre: 0.00108 Solve: 2.972 Post: 0.00449 Total: 2.978
+Solve time per cell: 0.0001092
+
+==============================================================================
+Step: 44 dt: 0.5 Time: 21.5 to 22
+CFL: 0.0709727 (conv: 0.0600304 diff: 0 src: 0.0278677 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.758624695 zeta = -2.84313078
+psi_m = 1.705789558 psi_h = 2.726656381
+utau = 0.1739518113 Tsurf = 304.0504815 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05120246309       1.841804761e-09
+  temperature_solve              2          0.0137087916       2.563183443e-09
+  tke_solve                      2        0.001028074941       2.271771105e-10
+  velocity_solve                 2        0.002481715331       8.357649017e-10
+  Nodal_projection               4         0.03676461109        2.18521547e-09
+
+WallClockTime: 44 Pre: 0.00104 Solve: 5.421 Post: 0.00385 Total: 5.426
+Solve time per cell: 0.0001991
+
+==============================================================================
+Step: 45 dt: 0.5 Time: 22 to 22.5
+CFL: 0.0706655 (conv: 0.0599861 diff: 0 src: 0.0274712 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.756363299 zeta = -2.846791436
+psi_m = 1.706583584 psi_h = 2.727754443
+utau = 0.1737646343 Tsurf = 304.0505102 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05235174189        1.83693759e-09
+  temperature_solve              2         0.01366828192       2.531919563e-09
+  tke_solve                      2       0.0009893957057       2.180921832e-10
+  velocity_solve                 2        0.002467550071       8.227343806e-10
+  Nodal_projection               4         0.03676461109       2.185215206e-09
+
+WallClockTime: 45 Pre: 0.0011 Solve: 2.141 Post: 0.00388 Total: 2.146
+Solve time per cell: 7.866e-05
+
+==============================================================================
+Step: 46 dt: 0.5 Time: 22.5 to 23
+CFL: 0.070709 (conv: 0.0600483 diff: 0 src: 0.0274557 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.75416137 zeta = -2.850364901
+psi_m = 1.707357861 psi_h = 2.728825104
+utau = 0.1735769474 Tsurf = 304.0503997 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5           0.050187102       1.823037391e-09
+  temperature_solve              2         0.01359237743       2.503838914e-09
+  tke_solve                      2       0.0009482143898       2.083418715e-10
+  velocity_solve                 2        0.002443469401       8.063207879e-10
+  Nodal_projection               4         0.03676461109       2.185213425e-09
+
+WallClockTime: 46 Pre: 0.00107 Solve: 3.254 Post: 0.00367 Total: 3.258
+Solve time per cell: 0.0001195
+
+==============================================================================
+Step: 47 dt: 0.5 Time: 23 to 23.5
+CFL: 0.0708389 (conv: 0.0601469 diff: 0 src: 0.0275212 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.752019472 zeta = -2.853849561
+psi_m = 1.708112105 psi_h = 2.729867974
+utau = 0.1733887319 Tsurf = 304.0501479 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05058329957       1.841393031e-09
+  temperature_solve              2         0.01348412877       2.469107585e-09
+  tke_solve                      2        0.000904952657       1.980376696e-10
+  velocity_solve                 2        0.002413108911       7.876924668e-10
+  Nodal_projection               4         0.03676461109        2.18521161e-09
+
+WallClockTime: 47 Pre: 0.00084 Solve: 2.309 Post: 0.0269 Total: 2.336
+Solve time per cell: 8.48e-05
+
+==============================================================================
+Step: 48 dt: 0.5 Time: 23.5 to 24
+CFL: 0.0709588 (conv: 0.0602658 diff: 0 src: 0.0275456 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.749938224 zeta = -2.857243719
+psi_m = 1.708846009 psi_h = 2.730882639
+utau = 0.1731999734 Tsurf = 304.0497528 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05083095044       1.801890708e-09
+  temperature_solve              2         0.01334677258       2.426986612e-09
+  tke_solve                      2       0.0008603756854        1.93178723e-10
+  velocity_solve                 2        0.002377566019       7.703724325e-10
+  Nodal_projection               4         0.03676461109        2.18521014e-09
+
+WallClockTime: 48 Pre: 0.00649 Solve: 8.99 Post: 0.00449 Total: 9.001
+Solve time per cell: 0.0003302
+
+==============================================================================
+Step: 49 dt: 0.5 Time: 24 to 24.5
+CFL: 0.0710419 (conv: 0.0603595 diff: 0 src: 0.0275482 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.747918268 zeta = -2.86054565
+psi_m = 1.709559262 psi_h = 2.731868673
+utau = 0.1730106594 Tsurf = 304.0492127 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05093266107       1.862413956e-09
+  temperature_solve              2         0.01318508478       2.379294983e-09
+  tke_solve                      2       0.0008151814766       1.959374329e-10
+  velocity_solve                 2        0.002337960746       7.604697427e-10
+  Nodal_projection               4         0.03676461109       2.185208717e-09
+
+WallClockTime: 49 Pre: 0.00108 Solve: 3.021 Post: 0.00743 Total: 3.029
+Solve time per cell: 0.000111
+
+==============================================================================
+Step: 50 dt: 0.5 Time: 24.5 to 25
+CFL: 0.0710963 (conv: 0.0604217 diff: 0 src: 0.0275486 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.745960208 zeta = -2.863753697
+psi_m = 1.710251565 psi_h = 2.732825674
+utau = 0.1728207732 Tsurf = 304.0485255 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0508875141       1.875185477e-09
+  temperature_solve              2         0.01300384506       2.327112725e-09
+  tke_solve                      2       0.0007794761276       1.980364761e-10
+  velocity_solve                 2        0.002295634248       7.489684428e-10
+  Nodal_projection               4         0.03676461109       2.185207375e-09
+
+WallClockTime: 50 Pre: 0.00106 Solve: 8.32 Post: 0.491 Total: 8.812
+Solve time per cell: 0.0003056
+
+==============================================================================
+Step: 51 dt: 0.5 Time: 25 to 25.5
+CFL: 0.0711206 (conv: 0.0604933 diff: 0 src: 0.0274921 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.744064672 zeta = -2.866866167
+psi_m = 1.710922615 psi_h = 2.733753224
+utau = 0.1726303006 Tsurf = 304.0476893 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05069181198       1.854621563e-09
+  temperature_solve              2         0.01280758461       2.271690391e-09
+  tke_solve                      2       0.0007852723382        1.99429584e-10
+  velocity_solve                 2        0.002251235707       7.436171678e-10
+  Nodal_projection               4         0.03676461109       2.185205942e-09
+
+WallClockTime: 51 Pre: 0.0769 Solve: 5.183 Post: 0.0311 Total: 5.291
+Solve time per cell: 0.0001904
+
+==============================================================================
+Step: 52 dt: 0.5 Time: 25.5 to 26
+CFL: 0.0711703 (conv: 0.0606368 diff: 0 src: 0.0273801 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.742232295 zeta = -2.869881367
+psi_m = 1.711572104 psi_h = 2.734650908
+utau = 0.1724392272 Tsurf = 304.0467021 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05321999137       1.871169171e-09
+  temperature_solve              2         0.01259855725       2.214903816e-09
+  tke_solve                      2       0.0007927686897       2.000897503e-10
+  velocity_solve                 2        0.002205161479       7.350087206e-10
+  Nodal_projection               4         0.03676461109       2.185204341e-09
+
+WallClockTime: 52 Pre: 0.00751 Solve: 4.536 Post: 0.0943 Total: 4.638
+Solve time per cell: 0.0001666
+
+==============================================================================
+Step: 53 dt: 0.5 Time: 26 to 26.5
+CFL: 0.0711786 (conv: 0.0607383 diff: 0 src: 0.0272604 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.740463738 zeta = -2.872797572
+psi_m = 1.712199717 psi_h = 2.735518296
+utau = 0.1722475417 Tsurf = 304.0455623 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05372794059       1.870508541e-09
+  temperature_solve              2         0.01237508125       2.159424639e-09
+  tke_solve                      2       0.0007973544976        2.00017114e-10
+  velocity_solve                 2        0.002165315516       7.251089174e-10
+  Nodal_projection               4         0.03676461109       2.185203197e-09
+
+WallClockTime: 53 Pre: 0.0261 Solve: 7.007 Post: 0.698 Total: 7.732
+Solve time per cell: 0.0002574
+
+==============================================================================
+Step: 54 dt: 0.5 Time: 26.5 to 27
+CFL: 0.0712396 (conv: 0.0607963 diff: 0 src: 0.0272759 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.738759628 zeta = -2.875613121
+psi_m = 1.712805156 psi_h = 2.736354981
+utau = 0.1720552287 Tsurf = 304.044268 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05400391503       1.841806443e-09
+  temperature_solve              2         0.01214141967       2.121907983e-09
+  tke_solve                      2       0.0007990710074       1.992720156e-10
+  velocity_solve                 2        0.002151797919       7.175752215e-10
+  Nodal_projection               4         0.03676461109       2.185201622e-09
+
+WallClockTime: 54 Pre: 0.125 Solve: 4.077 Post: 0.00528 Total: 4.207
+Solve time per cell: 0.0001498
+
+==============================================================================
+Step: 55 dt: 0.5 Time: 27 to 27.5
+CFL: 0.0713542 (conv: 0.0609401 diff: 0 src: 0.0272596 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.737120657 zeta = -2.878326258
+psi_m = 1.713388096 psi_h = 2.737160522
+utau = 0.1718622806 Tsurf = 304.0428175 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05405267129       1.817043982e-09
+  temperature_solve              2         0.01190834371       2.111335107e-09
+  tke_solve                      2       0.0007980142267       1.978473496e-10
+  velocity_solve                 2        0.002139177049       7.076641495e-10
+  Nodal_projection               4         0.03676461109       2.185199745e-09
+
+WallClockTime: 55 Pre: 0.00106 Solve: 2.245 Post: 0.0331 Total: 2.279
+Solve time per cell: 8.245e-05
+
+==============================================================================
+Step: 56 dt: 0.5 Time: 27.5 to 28
+CFL: 0.0714487 (conv: 0.0611499 diff: 0 src: 0.0271262 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.735547425 zeta = -2.880935391
+psi_m = 1.713948251 psi_h = 2.737934528
+utau = 0.1716686789 Tsurf = 304.0412087 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05388767076        1.76496283e-09
+  temperature_solve              2         0.01171627857       2.075012162e-09
+  tke_solve                      2       0.0007944471248       1.958062879e-10
+  velocity_solve                 2        0.002120764263        7.02462255e-10
+  Nodal_projection               4         0.03676461109        2.18519894e-09
+
+WallClockTime: 56 Pre: 0.0058 Solve: 3.751 Post: 0.00405 Total: 3.761
+Solve time per cell: 0.0001378
+
+==============================================================================
+Step: 57 dt: 0.5 Time: 28 to 28.5
+CFL: 0.0715546 (conv: 0.0613223 diff: 0 src: 0.0270586 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.734040605 zeta = -2.883438823
+psi_m = 1.714485308 psi_h = 2.738676574
+utau = 0.171474414 Tsurf = 304.03944 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05426227198        1.77072284e-09
+  temperature_solve              2         0.01161986911       2.053468506e-09
+  tke_solve                      2       0.0007885163213       1.931981797e-10
+  velocity_solve                 2        0.002096959799       7.098479027e-10
+  Nodal_projection               4         0.03676461109       2.185198256e-09
+
+WallClockTime: 57 Pre: 0.00107 Solve: 6.962 Post: 0.0277 Total: 6.991
+Solve time per cell: 0.0002558
+
+==============================================================================
+Step: 58 dt: 0.5 Time: 28.5 to 29
+CFL: 0.0716506 (conv: 0.0614544 diff: 0 src: 0.027029 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.732600861 zeta = -2.885834881
+psi_m = 1.714998959 psi_h = 2.73938624
+utau = 0.1712794755 Tsurf = 304.0375097 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05538369836       1.826755168e-09
+  temperature_solve              2         0.01150860977       2.030503765e-09
+  tke_solve                      2       0.0007804067602       1.900730129e-10
+  velocity_solve                 2        0.002067893293       7.154824511e-10
+  Nodal_projection               4         0.03676461109       2.185196386e-09
+
+WallClockTime: 58 Pre: 0.0054 Solve: 2.515 Post: 0.00393 Total: 2.524
+Solve time per cell: 9.237e-05
+
+==============================================================================
+Step: 59 dt: 0.5 Time: 29 to 29.5
+CFL: 0.0717392 (conv: 0.061548 diff: 0 src: 0.027039 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.731228831 zeta = -2.888121957
+psi_m = 1.71548891 psi_h = 2.740063124
+utau = 0.1710838498 Tsurf = 304.0354161 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0564392034       1.756313567e-09
+  temperature_solve              2         0.01138386281       2.004696853e-09
+  tke_solve                      2       0.0007703793228       1.864992327e-10
+  velocity_solve                 2        0.002033822139        7.19310389e-10
+  Nodal_projection               4         0.03676461109       2.185195581e-09
+
+WallClockTime: 59 Pre: 0.00107 Solve: 2.647 Post: 0.0285 Total: 2.677
+Solve time per cell: 9.725e-05
+
+==============================================================================
+Step: 60 dt: 0.5 Time: 29.5 to 30
+CFL: 0.0717909 (conv: 0.0616046 diff: 0 src: 0.0270423 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.729925184 zeta = -2.890298404
+psi_m = 1.715954856 psi_h = 2.740706811
+utau = 0.1708875283 Tsurf = 304.0331576 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05740887652       1.755973586e-09
+  temperature_solve              2          0.0112468564       1.976331987e-09
+  tke_solve                      2       0.0007587520957       1.825574691e-10
+  velocity_solve                 2        0.002020210639       7.213051822e-10
+  Nodal_projection               4         0.03676461109       2.185194083e-09
+
+WallClockTime: 60 Pre: 0.00691 Solve: 2.507 Post: 0.224 Total: 2.737
+Solve time per cell: 9.207e-05
+
+==============================================================================
+Step: 61 dt: 0.5 Time: 30 to 30.5
+CFL: 0.0720413 (conv: 0.0618611 diff: 0 src: 0.0270812 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.728690532 zeta = -2.892362691
+psi_m = 1.716396514 psi_h = 2.741316915
+utau = 0.1706904939 Tsurf = 304.0307324 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0582765229       1.708884337e-09
+  temperature_solve              2         0.01109860601       1.962632723e-09
+  tke_solve                      2       0.0007453509395       1.782064496e-10
+  velocity_solve                 2        0.002053127565       7.215328335e-10
+  Nodal_projection               4         0.03676461109       2.185193054e-09
+
+WallClockTime: 61 Pre: 0.00138 Solve: 2.949 Post: 0.00981 Total: 2.961
+Solve time per cell: 0.0001083
+
+==============================================================================
+Step: 62 dt: 0.5 Time: 30.5 to 31
+CFL: 0.0722216 (conv: 0.0620843 diff: 0 src: 0.0270579 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.727525561 zeta = -2.89431318
+psi_m = 1.71681358 psi_h = 2.741893019
+utau = 0.1704927415 Tsurf = 304.0281391 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05901473603       1.692959307e-09
+  temperature_solve              2         0.01093582448       1.958710527e-09
+  tke_solve                      2       0.0007302545512       1.734776212e-10
+  velocity_solve                 2        0.002054928426       7.198242002e-10
+  Nodal_projection               4         0.03676461109       2.185191694e-09
+
+WallClockTime: 62 Pre: 0.0011 Solve: 2.122 Post: 0.00477 Total: 2.128
+Solve time per cell: 7.796e-05
+
+==============================================================================
+Step: 63 dt: 0.5 Time: 31 to 31.5
+CFL: 0.0723449 (conv: 0.0622732 diff: 0 src: 0.0269932 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.726430929 zeta = -2.8961483
+psi_m = 1.717205758 psi_h = 2.742434723
+utau = 0.1702942632 Tsurf = 304.0253762 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05958377222       1.725006108e-09
+  temperature_solve              2         0.01076307981       1.952344064e-09
+  tke_solve                      2        0.000713644927       1.684597462e-10
+  velocity_solve                 2        0.002047523029       7.163836191e-10
+  Nodal_projection               4         0.03676461109       2.185190072e-09
+
+WallClockTime: 63 Pre: 0.00105 Solve: 5.508 Post: 0.00365 Total: 5.512
+Solve time per cell: 0.0002023
+
+==============================================================================
+Step: 64 dt: 0.5 Time: 31.5 to 32
+CFL: 0.0723599 (conv: 0.0624217 diff: 0 src: 0.0268166 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.725407266 zeta = -2.89786655
+psi_m = 1.717572769 psi_h = 2.742941643
+utau = 0.1700950469 Tsurf = 304.0224421 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05995649426       1.678051068e-09
+  temperature_solve              2         0.01058161858       1.943476491e-09
+  tke_solve                      2       0.0006958515022       1.632411983e-10
+  velocity_solve                 2        0.002037096269       7.113191702e-10
+  Nodal_projection               4         0.03676461109       2.185189005e-09
+
+WallClockTime: 64 Pre: 0.000874 Solve: 3.134 Post: 0.00402 Total: 3.139
+Solve time per cell: 0.0001151
+
+==============================================================================
+Step: 65 dt: 0.5 Time: 32 to 32.5
+CFL: 0.0723663 (conv: 0.062533 diff: 0 src: 0.0266759 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.724455219 zeta = -2.89946642
+psi_m = 1.717914329 psi_h = 2.743413391
+utau = 0.1698950844 Tsurf = 304.0193353 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06008337896       1.686891968e-09
+  temperature_solve              2         0.01042333154       1.931368843e-09
+  tke_solve                      2        0.000676910717       1.577898368e-10
+  velocity_solve                 2        0.002042895443        7.04821479e-10
+  Nodal_projection               4         0.03676461109       2.185187502e-09
+
+WallClockTime: 65 Pre: 0.00107 Solve: 5.888 Post: 0.00384 Total: 5.893
+Solve time per cell: 0.0002163
+
+==============================================================================
+Step: 66 dt: 0.5 Time: 32.5 to 33
+CFL: 0.0723453 (conv: 0.0626078 diff: 0 src: 0.0265418 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.723575449 zeta = -2.900946403
+psi_m = 1.718230152 psi_h = 2.743849576
+utau = 0.1696943728 Tsurf = 304.0160548 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05991838976       1.672444282e-09
+  temperature_solve              2         0.01030226523       1.916703241e-09
+  tke_solve                      2        0.000656912788       1.521295034e-10
+  velocity_solve                 2        0.002044862367       7.018293724e-10
+  Nodal_projection               4         0.03676461109       2.185018915e-09
+
+WallClockTime: 66 Pre: 0.000892 Solve: 2.72 Post: 0.0284 Total: 2.749
+Solve time per cell: 9.991e-05
+
+==============================================================================
+Step: 67 dt: 0.5 Time: 33 to 33.5
+CFL: 0.0723016 (conv: 0.0626446 diff: 0 src: 0.0264238 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.722768583 zeta = -2.902305074
+psi_m = 1.718519966 psi_h = 2.744249827
+utau = 0.1694929036 Tsurf = 304.0125991 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0594632823        1.65196164e-09
+  temperature_solve              2          0.0102997363       1.915509529e-09
+  tke_solve                      2       0.0006360247329       1.463024424e-10
+  velocity_solve                 2        0.002058013081       7.082941456e-10
+  Nodal_projection               4         0.03676461109       2.185017428e-09
+
+WallClockTime: 67 Pre: 0.00706 Solve: 2.358 Post: 0.00853 Total: 2.374
+Solve time per cell: 8.663e-05
+
+==============================================================================
+Step: 68 dt: 0.5 Time: 33.5 to 34
+CFL: 0.0724678 (conv: 0.0626438 diff: 0 src: 0.0266819 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.722035238 zeta = -2.903541048
+psi_m = 1.718783508 psi_h = 2.744613785
+utau = 0.1692906679 Tsurf = 304.0089669 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05870784894       1.597511297e-09
+  temperature_solve              2         0.01035857731       1.918124326e-09
+  tke_solve                      2       0.0006143947962       1.403433481e-10
+  velocity_solve                 2        0.002068990032       7.125823265e-10
+  Nodal_projection               4         0.03676461109       2.185016295e-09
+
+WallClockTime: 68 Pre: 0.00109 Solve: 2.739 Post: 0.0306 Total: 2.771
+Solve time per cell: 0.0001006
+
+==============================================================================
+Step: 69 dt: 0.5 Time: 34 to 34.5
+CFL: 0.07258 (conv: 0.0626042 diff: 0 src: 0.026908 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.721376046 zeta = -2.904652944
+psi_m = 1.719020512 psi_h = 2.744941083
+utau = 0.1690876633 Tsurf = 304.0051572 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05767307105       1.597043447e-09
+  temperature_solve              2         0.01039925215        1.91636218e-09
+  tke_solve                      2        0.000592157445       1.342826406e-10
+  velocity_solve                 2        0.002076461466       7.148407977e-10
+  Nodal_projection               4         0.03676461109       2.185014588e-09
+
+WallClockTime: 69 Pre: 0.00801 Solve: 2.26 Post: 0.00386 Total: 2.272
+Solve time per cell: 8.303e-05
+
+==============================================================================
+Step: 70 dt: 0.5 Time: 34.5 to 35
+CFL: 0.0726289 (conv: 0.062526 diff: 0 src: 0.027088 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.720791627 zeta = -2.905639428
+psi_m = 1.71923072 psi_h = 2.745231369
+utau = 0.1688838882 Tsurf = 304.0011691 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05640828756       1.663976018e-09
+  temperature_solve              2         0.01042215742       1.910393621e-09
+  tke_solve                      2       0.0005694540819       1.281628137e-10
+  velocity_solve                 2        0.002078989497       7.151295112e-10
+  Nodal_projection               4         0.03676461109        2.18501461e-09
+
+WallClockTime: 70 Pre: 0.00106 Solve: 5.99 Post: 0.257 Total: 6.248
+Solve time per cell: 0.00022
+
+==============================================================================
+Step: 71 dt: 0.5 Time: 35 to 35.5
+CFL: 0.0726256 (conv: 0.0624114 diff: 0 src: 0.0272363 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.720282579 zeta = -2.906499234
+psi_m = 1.719413884 psi_h = 2.745484305
+utau = 0.1686793384 Tsurf = 303.9970015 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0549702998       1.702859251e-09
+  temperature_solve              2         0.01042784272       1.900389179e-09
+  tke_solve                      2        0.000546399601       1.220259171e-10
+  velocity_solve                 2        0.002079154895       7.133525437e-10
+  Nodal_projection               4         0.03676461109       2.185012966e-09
+
+WallClockTime: 71 Pre: 0.00391 Solve: 3.031 Post: 0.0066 Total: 3.041
+Solve time per cell: 0.0001113
+
+==============================================================================
+Step: 72 dt: 0.5 Time: 35.5 to 36
+CFL: 0.0725635 (conv: 0.0622615 diff: 0 src: 0.0273414 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719849483 zeta = -2.907231155
+psi_m = 1.719569769 psi_h = 2.745699565
+utau = 0.1684740065 Tsurf = 303.9926534 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05682100869       1.708507075e-09
+  temperature_solve              2          0.0104169141       1.886689915e-09
+  tke_solve                      2       0.0005346110382       1.185951892e-10
+  velocity_solve                 2        0.002076999596       7.096935817e-10
+  Nodal_projection               4         0.03676461109       2.185012203e-09
+
+WallClockTime: 72 Pre: 0.00112 Solve: 2.458 Post: 0.0331 Total: 2.492
+Solve time per cell: 9.028e-05
+
+==============================================================================
+Step: 73 dt: 0.5 Time: 36 to 36.5
+CFL: 0.0728415 (conv: 0.0625245 diff: 0 src: 0.0274136 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719492921 zeta = -2.907834013
+psi_m = 1.719698142 psi_h = 2.745876831
+utau = 0.1682678901 Tsurf = 303.9881238 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05323070773       1.702498526e-09
+  temperature_solve              2          0.0103899771       1.869409516e-09
+  tke_solve                      2       0.0005315256394       1.157370866e-10
+  velocity_solve                 2        0.002072362796       7.040240613e-10
+  Nodal_projection               4         0.03676461109       2.185010539e-09
+
+WallClockTime: 73 Pre: 0.00533 Solve: 2.774 Post: 0.00401 Total: 2.783
+Solve time per cell: 0.0001019
+
+==============================================================================
+Step: 74 dt: 0.5 Time: 36.5 to 37
+CFL: 0.073091 (conv: 0.0627801 diff: 0 src: 0.0274524 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719213466 zeta = -2.908306675
+psi_m = 1.719798774 psi_h = 2.74601579
+utau = 0.1680609918 Tsurf = 303.9834123 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05529958118       1.662849835e-09
+  temperature_solve              2         0.01034780951       1.849002729e-09
+  tke_solve                      2       0.0005271942854       1.131738314e-10
+  velocity_solve                 2        0.002065431156       7.051935702e-10
+  Nodal_projection               4         0.03676461109       2.185008894e-09
+
+WallClockTime: 74 Pre: 0.00117 Solve: 4.376 Post: 0.18 Total: 4.557
+Solve time per cell: 0.0001608
+
+==============================================================================
+Step: 75 dt: 0.5 Time: 37 to 37.5
+CFL: 0.0732783 (conv: 0.062995 diff: 0 src: 0.0274507 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719011671 zeta = -2.908648081
+psi_m = 1.719871453 psi_h = 2.746116147
+utau = 0.1678533098 Tsurf = 303.978518 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05725543224       1.578668713e-09
+  temperature_solve              2         0.01029179308       1.825469553e-09
+  tke_solve                      2       0.0005216546655        1.10764703e-10
+  velocity_solve                 2        0.002097444669       7.101988997e-10
+  Nodal_projection               4         0.03676461109       2.185008427e-09
+
+WallClockTime: 75 Pre: 0.00108 Solve: 4.229 Post: 0.00387 Total: 4.234
+Solve time per cell: 0.0001553
+
+==============================================================================
+Step: 76 dt: 0.5 Time: 37.5 to 38
+CFL: 0.0734164 (conv: 0.0631682 diff: 0 src: 0.0274297 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.718888074 zeta = -2.90885723
+psi_m = 1.719915973 psi_h = 2.746177622
+utau = 0.1676448407 Tsurf = 303.9734402 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05905330634       1.614217503e-09
+  temperature_solve              2          0.0102237095       1.799776328e-09
+  tke_solve                      2       0.0005149495048       1.082288426e-10
+  velocity_solve                 2        0.002125048539       7.135776414e-10
+  Nodal_projection               4         0.03676461109       2.185006844e-09
+
+WallClockTime: 76 Pre: 0.00106 Solve: 2.044 Post: 0.00386 Total: 2.049
+Solve time per cell: 7.51e-05
+
+==============================================================================
+Step: 77 dt: 0.5 Time: 38 to 38.5
+CFL: 0.0735161 (conv: 0.0632994 diff: 0 src: 0.0274061 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.7188432 zeta = -2.90893317
+psi_m = 1.719932137 psi_h = 2.746199942
+utau = 0.1674355894 Tsurf = 303.9681785 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06065480268       1.605702295e-09
+  temperature_solve              2         0.01014359736       1.771695679e-09
+  tke_solve                      2       0.0005071460991       1.061818133e-10
+  velocity_solve                 2        0.002146897393       7.152659576e-10
+  Nodal_projection               4         0.03676461109       2.185005559e-09
+
+WallClockTime: 77 Pre: 0.00106 Solve: 3.051 Post: 0.00412 Total: 3.056
+Solve time per cell: 0.0001121
+
+==============================================================================
+Step: 78 dt: 0.5 Time: 38.5 to 39
+CFL: 0.0735837 (conv: 0.0633877 diff: 0 src: 0.0273909 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.718877559 zeta = -2.908875024
+psi_m = 1.71991976 psi_h = 2.746182852
+utau = 0.1672255575 Tsurf = 303.9627326 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06198682912       1.593795508e-09
+  temperature_solve              2         0.01005268677       1.741796041e-09
+  tke_solve                      2       0.0004982554829       1.056036369e-10
+  velocity_solve                 2        0.002163297224       7.151234049e-10
+  Nodal_projection               4         0.03676461109       2.185004576e-09
+
+WallClockTime: 78 Pre: 0.00115 Solve: 2.222 Post: 0.475 Total: 2.699
+Solve time per cell: 8.164e-05
+
+==============================================================================
+Step: 79 dt: 0.5 Time: 39 to 39.5
+CFL: 0.0736099 (conv: 0.0634272 diff: 0 src: 0.0273779 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.718991642 zeta = -2.908681973
+psi_m = 1.719878667 psi_h = 2.746126109
+utau = 0.1670147435 Tsurf = 303.9571018 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06300496171       1.567335227e-09
+  temperature_solve              2        0.009952642504       1.710247943e-09
+  tke_solve                      2        0.000488287205       1.048550691e-10
+  velocity_solve                 2        0.002175272917       7.134722813e-10
+  Nodal_projection               4         0.03676461109       2.185002848e-09
+
+WallClockTime: 79 Pre: 0.0849 Solve: 7.953 Post: 0.00924 Total: 8.047
+Solve time per cell: 0.0002921
+
+==============================================================================
+Step: 80 dt: 0.5 Time: 39.5 to 40
+CFL: 0.0736007 (conv: 0.063421 diff: 0 src: 0.0273721 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719185919 zeta = -2.908353276
+psi_m = 1.719808695 psi_h = 2.746029489
+utau = 0.1668031577 Tsurf = 303.9512863 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06367633289       1.535907184e-09
+  temperature_solve              2        0.009844636046       1.677619821e-09
+  tke_solve                      2       0.0004772485321       1.039730524e-10
+  velocity_solve                 2        0.002182843675       7.103474475e-10
+  Nodal_projection               4         0.03676461109       2.185001976e-09
+
+WallClockTime: 80 Pre: 0.00139 Solve: 2.491 Post: 0.255 Total: 2.748
+Solve time per cell: 9.152e-05
+
+==============================================================================
+Step: 81 dt: 0.5 Time: 40 to 40.5
+CFL: 0.0737634 (conv: 0.0636101 diff: 0 src: 0.0273667 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719460839 zeta = -2.907888267
+psi_m = 1.719709693 psi_h = 2.745892782
+utau = 0.1665908049 Tsurf = 303.945286 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06398508615       1.549580139e-09
+  temperature_solve              2        0.009729893942       1.644195891e-09
+  tke_solve                      2        0.000465117477         1.0296905e-10
+  velocity_solve                 2        0.002185923008       7.058169604e-10
+  Nodal_projection               4         0.03676461109       2.185001419e-09
+
+WallClockTime: 81 Pre: 0.00488 Solve: 7.856 Post: 0.00759 Total: 7.869
+Solve time per cell: 0.0002886
+
+==============================================================================
+Step: 82 dt: 0.5 Time: 40.5 to 41
+CFL: 0.073954 (conv: 0.0637869 diff: 0 src: 0.0274208 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.719816834 zeta = -2.907286347
+psi_m = 1.719581523 psi_h = 2.745715795
+utau = 0.1663776896 Tsurf = 303.9391009 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06395118958       1.511265985e-09
+  temperature_solve              1        0.009609156672        3.10726972e-06
+  tke_solve                      2       0.0004519401311       1.018310714e-10
+  velocity_solve                 2        0.002184363887       6.999375524e-10
+  Nodal_projection               4         0.03676461109       2.185000242e-09
+
+WallClockTime: 82 Pre: 0.00117 Solve: 5.003 Post: 0.00406 Total: 5.008
+Solve time per cell: 0.0001838
+
+==============================================================================
+Step: 83 dt: 0.5 Time: 41 to 41.5
+CFL: 0.0742077 (conv: 0.0639224 diff: 0 src: 0.027627 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.720254299 zeta = -2.906547017
+psi_m = 1.719424062 psi_h = 2.745498359
+utau = 0.1661638247 Tsurf = 303.9327307 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06385974175       1.511662568e-09
+  temperature_solve              1        0.009482820846       3.082167439e-06
+  tke_solve                      2       0.0004377758215       1.005917016e-10
+  velocity_solve                 2        0.002177562604       6.924533169e-10
+  Nodal_projection               4         0.03676461109       2.184999408e-09
+
+WallClockTime: 83 Pre: 0.00106 Solve: 2.564 Post: 0.0285 Total: 2.593
+Solve time per cell: 9.417e-05
+
+==============================================================================
+Step: 84 dt: 0.5 Time: 41.5 to 42
+CFL: 0.074411 (conv: 0.0640197 diff: 0 src: 0.0278071 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.720773609 zeta = -2.905669853
+psi_m = 1.719237202 psi_h = 2.745240321
+utau = 0.1659492193 Tsurf = 303.9261763 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06319937124       1.486710217e-09
+  temperature_solve              1        0.009351217679       3.061306131e-06
+  tke_solve                      2       0.0004262623412       9.925099631e-11
+  velocity_solve                 2        0.002166804745       6.838180022e-10
+  Nodal_projection               4         0.03676461109        2.18499872e-09
+
+WallClockTime: 84 Pre: 0.00767 Solve: 2.363 Post: 0.00495 Total: 2.375
+Solve time per cell: 8.679e-05
+
+==============================================================================
+Step: 85 dt: 0.5 Time: 42 to 42.5
+CFL: 0.0745612 (conv: 0.0640788 diff: 0 src: 0.0279568 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.721375135 zeta = -2.904654482
+psi_m = 1.71902084 psi_h = 2.744941536
+utau = 0.1657338769 Tsurf = 303.9194376 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0623173989       1.528690695e-09
+  temperature_solve              1        0.009214982276       3.043030631e-06
+  tke_solve                      2        0.000417432281       9.777761933e-11
+  velocity_solve                 2        0.002153353569       6.755259685e-10
+  Nodal_projection               4         0.03676461109       2.184997152e-09
+
+WallClockTime: 85 Pre: 0.00105 Solve: 2.946 Post: 0.594 Total: 3.542
+Solve time per cell: 0.0001082
+
+==============================================================================
+Step: 86 dt: 0.5 Time: 42.5 to 43
+CFL: 0.0746553 (conv: 0.0641 diff: 0 src: 0.0280715 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.722059202 zeta = -2.903500643
+psi_m = 1.718774894 psi_h = 2.744601889
+utau = 0.1655178101 Tsurf = 303.9125152 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06087070832       1.541850986e-09
+  temperature_solve              1        0.009073668553       3.045091944e-06
+  tke_solve                      2        0.000409383638       9.618755792e-11
+  velocity_solve                 2        0.002135157001       6.723754886e-10
+  Nodal_projection               4         0.03676461109       2.184995612e-09
+
+WallClockTime: 86 Pre: 0.168 Solve: 6.174 Post: 0.00759 Total: 6.349
+Solve time per cell: 0.0002268
+
+==============================================================================
+Step: 87 dt: 0.5 Time: 43 to 43.5
+CFL: 0.0747077 (conv: 0.0640836 diff: 0 src: 0.0281727 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.722826135 zeta = -2.902208121
+psi_m = 1.718499289 psi_h = 2.744221272
+utau = 0.1653010249 Tsurf = 303.9054095 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05999824528       1.481860777e-09
+  temperature_solve              1        0.008947351301       3.043630329e-06
+  tke_solve                      2       0.0004087513192       9.449654947e-11
+  velocity_solve                 2        0.002112780521       6.675175412e-10
+  Nodal_projection               4         0.03676461109       2.184994422e-09
+
+WallClockTime: 87 Pre: 0.00104 Solve: 2.549 Post: 0.0306 Total: 2.581
+Solve time per cell: 9.364e-05
+
+==============================================================================
+Step: 88 dt: 0.5 Time: 43.5 to 44
+CFL: 0.0747152 (conv: 0.0640292 diff: 0 src: 0.028256 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.723676182 zeta = -2.90077687
+psi_m = 1.718193981 psi_h = 2.743799621
+utau = 0.1650835424 Tsurf = 303.8981214 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5          0.0586263681       1.557050943e-09
+  temperature_solve              1        0.008986245039       3.038477644e-06
+  tke_solve                      2       0.0004096043148       9.271722279e-11
+  velocity_solve                 2        0.002107757994       6.611114434e-10
+  Nodal_projection               4         0.03676461109        2.18499425e-09
+
+WallClockTime: 88 Pre: 0.00735 Solve: 4.24 Post: 0.0316 Total: 4.279
+Solve time per cell: 0.0001558
+
+==============================================================================
+Step: 89 dt: 0.5 Time: 44 to 44.5
+CFL: 0.0746821 (conv: 0.0639373 diff: 0 src: 0.0283275 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.724609585 zeta = -2.899206895
+psi_m = 1.717858934 psi_h = 2.743336882
+utau = 0.1648653767 Tsurf = 303.8906519 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05675185629       1.528334072e-09
+  temperature_solve              1        0.009013462779        3.03005487e-06
+  tke_solve                      2       0.0004093358189       9.157885561e-11
+  velocity_solve                 2        0.002109250459       6.532717145e-10
+  Nodal_projection               4         0.03676461109       2.184992366e-09
+
+WallClockTime: 89 Pre: 0.00656 Solve: 7.194 Post: 0.00386 Total: 7.205
+Solve time per cell: 0.0002643
+
+==============================================================================
+Step: 90 dt: 0.5 Time: 44.5 to 45
+CFL: 0.0746911 (conv: 0.0639213 diff: 0 src: 0.0283622 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.725626548 zeta = -2.897498305
+psi_m = 1.71749413 psi_h = 2.742833026
+utau = 0.1646465445 Tsurf = 303.8830019 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05568483526        1.52084475e-09
+  temperature_solve              1        0.009028836237       3.018181872e-06
+  tke_solve                      2       0.0004079759521       9.183495631e-11
+  velocity_solve                 2        0.002107342507       6.441098765e-10
+  Nodal_projection               4         0.03676461109        2.18499158e-09
+
+WallClockTime: 90 Pre: 0.00109 Solve: 2.077 Post: 0.236 Total: 2.315
+Solve time per cell: 7.631e-05
+
+==============================================================================
+Step: 91 dt: 0.5 Time: 45 to 45.5
+CFL: 0.0750051 (conv: 0.0642743 diff: 0 src: 0.0283701 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.726727268 zeta = -2.895651267
+psi_m = 1.717099559 psi_h = 2.742288036
+utau = 0.164427059 Tsurf = 303.8751723 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05361491381       1.485886302e-09
+  temperature_solve              1        0.009032219309       2.998460332e-06
+  tke_solve                      2       0.0004055633356       9.182482552e-11
+  velocity_solve                 2        0.002102331499       6.444080825e-10
+  Nodal_projection               4         0.03676461109        2.18499083e-09
+
+WallClockTime: 91 Pre: 0.00436 Solve: 3.119 Post: 0.00749 Total: 3.131
+Solve time per cell: 0.0001146
+
+==============================================================================
+Step: 92 dt: 0.5 Time: 45.5 to 46
+CFL: 0.075264 (conv: 0.0645879 diff: 0 src: 0.0283466 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.727911877 zeta = -2.893666086
+psi_m = 1.716675241 psi_h = 2.741701931
+utau = 0.1642069401 Tsurf = 303.8671645 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05532598696       1.435980027e-09
+  temperature_solve              1        0.009023766196       2.974811366e-06
+  tke_solve                      2       0.0004021483851       9.155812219e-11
+  velocity_solve                 2        0.002094768677       6.501944538e-10
+  Nodal_projection               4         0.03676461109       2.184989434e-09
+
+WallClockTime: 92 Pre: 0.00108 Solve: 2.247 Post: 0.0293 Total: 2.278
+Solve time per cell: 8.255e-05
+
+==============================================================================
+Step: 93 dt: 0.5 Time: 46 to 46.5
+CFL: 0.0754623 (conv: 0.0648521 diff: 0 src: 0.0282961 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.729180442 zeta = -2.89154323
+psi_m = 1.716221221 psi_h = 2.741074769
+utau = 0.1639862148 Tsurf = 303.8589802 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05753307246       1.501941346e-09
+  temperature_solve              1        0.009003860591       2.947635039e-06
+  tke_solve                      2       0.0003977863889       9.105069476e-11
+  velocity_solve                 2        0.002084838937       6.550744391e-10
+  Nodal_projection               4         0.03676461109       2.184988096e-09
+
+WallClockTime: 93 Pre: 0.00708 Solve: 2.79 Post: 0.0039 Total: 2.801
+Solve time per cell: 0.0001025
+
+==============================================================================
+Step: 94 dt: 0.5 Time: 46.5 to 47
+CFL: 0.0755787 (conv: 0.0650665 diff: 0 src: 0.0281869 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.730533058 zeta = -2.889283146
+psi_m = 1.715737541 psi_h = 2.740406603
+utau = 0.1637648982 Tsurf = 303.8506206 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.05933827576       1.501497951e-09
+  temperature_solve              1        0.008973055572       2.917040888e-06
+  tke_solve                      2       0.0003925420223       9.031406178e-11
+  velocity_solve                 2        0.002072425133       6.589689905e-10
+  Nodal_projection               4          0.0367646111       2.184987465e-09
+
+WallClockTime: 94 Pre: 0.00108 Solve: 2.368 Post: 0.0338 Total: 2.403
+Solve time per cell: 8.698e-05
+
+==============================================================================
+Step: 95 dt: 0.5 Time: 47 to 47.5
+CFL: 0.0756442 (conv: 0.0652312 diff: 0 src: 0.0280658 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.731969745 zeta = -2.886886457
+psi_m = 1.715224275 psi_h = 2.739697526
+utau = 0.1635430143 Tsurf = 303.8420875 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06071956084       1.512613638e-09
+  temperature_solve              1        0.008931869169       2.883164029e-06
+  tke_solve                      2        0.000387633407       8.928968676e-11
+  velocity_solve                 2        0.002087760649       6.618965376e-10
+  Nodal_projection               4          0.0367646111       2.184986715e-09
+
+WallClockTime: 95 Pre: 0.00632 Solve: 2.707 Post: 0.00395 Total: 2.718
+Solve time per cell: 9.946e-05
+
+==============================================================================
+Step: 96 dt: 0.5 Time: 47.5 to 48
+CFL: 0.0756606 (conv: 0.0653492 diff: 0 src: 0.0279314 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.733490426 zeta = -2.884353975
+psi_m = 1.714681535 psi_h = 2.738947688
+utau = 0.1633205955 Tsurf = 303.8333831 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06166422754       1.514649696e-09
+  temperature_solve              1        0.008880802513       2.855501464e-06
+  tke_solve                      2       0.0003863471768       8.805786655e-11
+  velocity_solve                 2        0.002139414647       6.637551619e-10
+  Nodal_projection               4          0.0367646111       2.184985238e-09
+
+WallClockTime: 96 Pre: 0.00103 Solve: 4.635 Post: 0.00384 Total: 4.639
+Solve time per cell: 0.0001702
+
+==============================================================================
+Step: 97 dt: 0.5 Time: 48 to 48.5
+CFL: 0.0756326 (conv: 0.0654275 diff: 0 src: 0.0277819 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.735095086 zeta = -2.881686451
+psi_m = 1.714109416 psi_h = 2.738157213
+utau = 0.1630976603 Tsurf = 303.824509 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06219725901        1.55464233e-09
+  temperature_solve              1        0.008820346232       2.842807589e-06
+  tke_solve                      2       0.0003848371024       8.662509599e-11
+  velocity_solve                 2        0.002186485308       6.647549178e-10
+  Nodal_projection               4          0.0367646111       2.184983897e-09
+
+WallClockTime: 97 Pre: 0.00105 Solve: 1.986 Post: 0.0298 Total: 2.017
+Solve time per cell: 7.294e-05
+
+==============================================================================
+Step: 98 dt: 0.5 Time: 48.5 to 49
+CFL: 0.0755972 (conv: 0.0654562 diff: 0 src: 0.0276881 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.736783622 zeta = -2.878884818
+psi_m = 1.71350805 psi_h = 2.737326275
+utau = 0.1628742354 Tsurf = 303.8154672 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06236227592       1.553944749e-09
+  temperature_solve              1        0.008751039813       2.825097681e-06
+  tke_solve                      2        0.000382568433       8.501538362e-11
+  velocity_solve                 2        0.002224482171       6.647438155e-10
+  Nodal_projection               4          0.0367646111       2.184983545e-09
+
+WallClockTime: 98 Pre: 0.0058 Solve: 6.983 Post: 0.0162 Total: 7.005
+Solve time per cell: 0.0002565
+
+==============================================================================
+Step: 99 dt: 0.5 Time: 49 to 49.5
+CFL: 0.0757767 (conv: 0.0654369 diff: 0 src: 0.0279914 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.738555901 zeta = -2.87595009
+psi_m = 1.712877582 psi_h = 2.736455066
+utau = 0.1626503468 Tsurf = 303.8062598 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06222606031       1.527143149e-09
+  temperature_solve              1        0.008673486379       2.802719507e-06
+  tke_solve                      2       0.0003792913859       8.324527179e-11
+  velocity_solve                 2        0.002255572151       6.638084527e-10
+  Nodal_projection               4          0.0367646111       2.184982567e-09
+
+WallClockTime: 99 Pre: 0.00256 Solve: 2.035 Post: 0.00387 Total: 2.041
+Solve time per cell: 7.475e-05
+
+==============================================================================
+Step: 100 dt: 0.5 Time: 49.5 to 50
+CFL: 0.0758975 (conv: 0.06537 diff: 0 src: 0.0282668 )
+MOData::update_fluxes: Convergence criteria not met after 25 iterations
+Obuhov length = -1.740411701 zeta = -2.872883466
+psi_m = 1.712218195 psi_h = 2.735543832
+utau = 0.1624260278 Tsurf = 303.7968894 q = 0.24
+
+Godunov:
+  System                     Iters      Initial residual        Final residual
+  ----------------------------------------------------------------------------
+  MAC_projection                 5         0.06185015626        1.51287484e-09
+  temperature_solve              1        0.008588396604       2.775817052e-06
+  tke_solve                      2       0.0003751085845         8.1327306e-11
+  velocity_solve                 2        0.002279043206       6.731122326e-10
+  Nodal_projection               4          0.0367646111       2.184981096e-09
+
+WallClockTime: 100 Pre: 0.00131 Solve: 2.831 Post: 0.24 Total: 3.073
+Solve time per cell: 0.000104
+
+==============================================================================
+
+Writing plot file       plt00100 at time 50
+Writing checkpoint file chk00100 at time 50
+Time spent in InitData():    7.874299979
+Time spent in Evolve():      390.3647882
+
+
+TinyProfiler total time across processes [min...avg...max]: 398.1 ... 398.2 ... 398.2
+
+------------------------------------------------------------------------------------------------------------------
+Name                                                               NCalls  Excl. Min  Excl. Avg  Excl. Max   Max %
+------------------------------------------------------------------------------------------------------------------
+FillBoundary_finish()                                               51319      118.1      153.5        223  56.00%
+FabArray::ParallelCopy_finish()                                      8548      14.85      159.1      205.3  51.56%
+MLCGSolver::ParallelAllReduce                                       27105          0      12.26      144.7  36.33%
+MLMG::ResNormInf()                                                   2035      11.57      15.32      19.39   4.87%
+FabArray::sum()                                                       987     0.5033       7.01      13.11   3.29%
+FillBoundary_nowait()                                               51319     0.8911      3.785      10.45   2.62%
+MLMG::actualBottomSolve()                                            1519  0.0004087     0.8274      8.855   2.22%
+FabArray::norminf()                                                 16506      4.397      5.517      6.835   1.72%
+MLMG::oneIter()                                                      1519      5.407      5.856      6.124   1.54%
+MLMG::solve()                                                         516      4.367      5.234      5.957   1.50%
+amr-wind::ICNS-Godunov::compute_advection_term                        103      1.188      2.383      4.162   1.05%
+MLMG::prepareForSolve()                                               516      2.303      2.935      3.738   0.94%
+MLABecLaplacian::Fsmooth()                                          14376     0.6916      1.533      3.191   0.80%
+amr-wind::PlaneAveraging::compute_averages                            333      2.441      2.925      3.076   0.77%
+MLNodeLaplacian::Fsmooth()                                           4896     0.9393      1.599      2.452   0.62%
+amr-wind::ABLStats::post_advance_work                                 100     0.2486     0.4032      1.964   0.49%
+amrex::Copy()                                                       13000     0.5265      1.163      1.825   0.46%
+amr-wind::ICNS-Godunov::pre_advection_actions                         103     0.6263       1.06      1.786   0.45%
+amr-wind::SecondMomentAveraging::compute_average                       30    0.06057      1.549      1.704   0.43%
+MLLinOp::makeSubCommunicator()                                        108     0.8165      1.278      1.465   0.37%
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages             101      1.388      1.423      1.448   0.36%
+amr-wind::incflo::ComputeDt                                           101      1.271      1.383      1.423   0.36%
+amr-wind::PlaneAveragingFine::compute_averages                        202      1.178      1.217      1.398   0.35%
+VisMF::Write(FabArray)                                                 18      1.014       1.12      1.364   0.34%
+FabArray::setVal()                                                  16506     0.3201     0.7334      1.187   0.30%
+MLABecLaplacian::Fapply()                                            3190     0.2138      0.619      1.162   0.29%
+MLTensorOp::apply()                                                  1158      0.304     0.6252      1.057   0.27%
+amr-wind::TKE-Godunov::compute_advection_term                         103     0.2935     0.5332      1.032   0.26%
+amr-wind::Temperature-Godunov::compute_advection_term                 103     0.3042     0.5339     0.8706   0.22%
+MLPoisson::Fsmooth()                                                12288     0.2162     0.3725     0.5671   0.14%
+MLNodeLinOp::applyBC()                                               9127   0.002319    0.07549     0.5097   0.13%
+MLNodeLaplacian::Fapply()                                            4231     0.1447     0.2585     0.5045   0.13%
+amr-wind::VelPlaneAveraging::compute_hvelmag_averages                 101     0.4376     0.4654     0.4956   0.12%
+MLCellLinOp::applyBC()                                              38458     0.1241      0.247     0.4916   0.12%
+FabArray::LinComb()                                                   412    0.03137    0.07401     0.4295   0.11%
+amr-wind::diffusion::average_velocity_eta_to_faces                    721     0.1287     0.2602     0.4249   0.11%
+FabArray::Xpay()                                                    11771    0.08122     0.2347     0.4158   0.10%
+PhysBCFunct::()                                                      1971   0.002357    0.04948     0.4024   0.10%
+amr-wind::IOManager::write_checkpoint_file                              2    0.08001      0.296     0.3659   0.09%
+amr-wind::TKE-Godunov::compute_source_term                            206    0.02566     0.0714     0.3354   0.08%
+amr-wind::ICNS-Godunov::compute_source_term                           206    0.09269     0.1833     0.3041   0.08%
+amr-wind::incflo::ApplyProjection                                     104    0.06209     0.1257     0.3025   0.08%
+amrex::Add()                                                         1935    0.05327     0.1491     0.2552   0.06%
+FabArray::ParallelCopy_nowait()                                      8548    0.01994    0.09423     0.2309   0.06%
+MLPoisson::Fapply()                                                  8501    0.04992    0.09546       0.22   0.06%
+amrex::average_down                                                  4260     0.0787     0.1396     0.2041   0.05%
+average_down_faces                                                   4635    0.04168    0.09793     0.1695   0.04%
+amr-wind::incflo::Evolve()                                              1   0.001783   0.002708       0.14   0.04%
+MLMG::addInterpCorrection()                                          4557     0.0456    0.08629     0.1335   0.03%
+amr-wind::ICNS-Godunov::linsys_solve                                  103    0.01225     0.0407     0.1327   0.03%
+amr-wind::main()                                                        1     0.0187    0.02806     0.1234   0.03%
+MLCGSolver::bicgstab                                                  186          0    0.01277     0.1133   0.03%
+amr-wind::ICNS::advection_mac_project                                 103    0.00766    0.01493     0.1119   0.03%
+amr-wind::Temperature-Godunov::linsys_solve                           103   0.006553    0.01551     0.1117   0.03%
+amr-wind::TKE-Godunov::linsys_solve                                   103   0.005782    0.01538     0.1086   0.03%
+amr-wind::incflo::ApplyPredictor                                      103   0.007722    0.01187     0.1035   0.03%
+NodalProjector::project                                               104    0.02866    0.05492     0.0975   0.02%
+amr-wind::OneEqKsgsM84-ConstTransport::update_turbulent_viscosity     103    0.02152    0.05514    0.07946   0.02%
+FabArray::FillBoundary()                                            46017    0.01535    0.02558    0.07015   0.02%
+MLNodeLaplacian::compRHS()                                            104    0.01638    0.02843    0.04906   0.01%
+MLABecLaplacian::prepareForSolve()                                    721   0.001965   0.003518    0.04434   0.01%
+MLMG::apply()                                                         412   0.009799    0.01967    0.04304   0.01%
+MLNodeLaplacian::restriction()                                       1224    0.01237    0.02121    0.04221   0.01%
+WriteMultiLevelPlotfile()                                               2    0.00669    0.02103    0.04122   0.01%
+FabArray::ParallelCopy()                                             8548   0.004513   0.007139    0.03854   0.01%
+MLMG::computeResidual()                                              1519   0.006684      0.016    0.03752   0.01%
+MLCellLinOp::compFlux()                                               103   0.009878    0.02175    0.03624   0.01%
+amr-wind::setup_operator                                              721   0.006725    0.01242    0.03344   0.01%
+MLLinOp::defineGrids()                                                111    0.01862    0.02277    0.03041   0.01%
+MLCellLinOp::smooth()                                               13332   0.008228    0.01241    0.02987   0.01%
+MLCellLinOp::apply()                                                11691   0.002714   0.006722    0.02573   0.01%
+amr-wind::OneEqKsgsM84-ConstTransport::update_alphaeff                103    0.00367   0.008126    0.02134   0.01%
+amr-wind::Field::fillpatch                                            939   0.002196   0.003472    0.02047   0.01%
+amr-wind::TKE-Godunov::compute_diffusion_term                         103  0.0004784  0.0008083    0.01763   0.00%
+MLMG:computeResOfCorrection()                                        4557   0.002508   0.004129    0.01576   0.00%
+MLNodeLaplacian::define()                                             104   0.003178   0.006561    0.01115   0.00%
+MLMG::computeMLResidual()                                             516   0.002401   0.005326    0.01014   0.00%
+MLMG::mgVcycle()                                                     1519   0.002865   0.004947   0.009184   0.00%
+MLMG::getFluxes()                                                     206  0.0007746   0.003541   0.008691   0.00%
+MLMG::mgVcycle_down::0                                               1519   0.002004   0.003619   0.007931   0.00%
+MLMG::mgVcycle_down::1                                               1519   0.001539   0.002638   0.007881   0.00%
+MLABecLaplacian::averageDownCoeffs()                                  721   0.001909   0.003428    0.00756   0.00%
+MultiFab::Copy()                                                      828  0.0009712   0.001762   0.007254   0.00%
+amr-wind::ICNS-Godunov::compute_diffusion_term                        206   0.001882    0.00298   0.006789   0.00%
+MLCellLinOp::correctionResidual()                                    3333   0.001555   0.002516   0.006482   0.00%
+FillPatchSingleLevel                                                 1250   0.001159   0.002156   0.006466   0.00%
+amr-wind::Field::setVal 1                                             621  0.0007153   0.002093   0.006246   0.00%
+MLCellLinOp::solutionResidual()                                      1935   0.002038   0.003428   0.005805   0.00%
+OverrideSync_finish()                                                5304   0.001353   0.001689   0.005404   0.00%
+amr-wind::FPlaneAveraging::operator                                   333  0.0003617  0.0006147   0.005038   0.00%
+FAbArray::OverrideSync()                                             5304   0.002004   0.002545   0.004889   0.00%
+amr-wind::IOManager::write_plot_file                                    2  0.0001395  0.0002214   0.004819   0.00%
+MLMG::mgVcycle_up::2                                                 1519  0.0009439   0.001928     0.0048   0.00%
+amr-wind::Temperature-Godunov::compute_diffusion_term                 103  0.0007317   0.001253   0.004702   0.00%
+MLMG::mgVcycle_bottom                                                1519  0.0006211   0.001175   0.004341   0.00%
+amr-wind::Field::advance_states                                       400   0.000601   0.001069   0.003939   0.00%
+amr-wind::Field::fillpatch array                                      103  0.0003437  0.0006264   0.003902   0.00%
+amr-wind::incflo::advance                                             100  0.0004989  0.0007015   0.003727   0.00%
+NodalProjector::computeRHS                                            104  0.0001435   0.001302   0.003646   0.00%
+MLMG::mgVcycle_down::2                                               1519  0.0009765   0.001618   0.003637   0.00%
+MLMG::mgVcycle_up::0                                                 1519      0.001   0.001599   0.003452   0.00%
+MLMG::MLResNormInf()                                                  516  0.0002966  0.0005753   0.003411   0.00%
+amr-wind::FPlaneAveragingFine::operator                               202  0.0002637   0.001187   0.003355   0.00%
+amr-wind::pde::set_acoeffs                                            206  0.0005187  0.0009593   0.003245   0.00%
+amr-wind::VelPlaneAveraging::operator                                 202  0.0003516   0.001834   0.003072   0.00%
+amr-wind::incflo::post_advance_work                                   100  0.0004948  0.0006976   0.002948   0.00%
+MLMG::mgVcycle_up::1                                                 1519  0.0009382   0.001342   0.001941   0.00%
+amr-wind::incflo::InitialIterations()                                   1  1.996e-05  3.626e-05    0.00185   0.00%
+MLLinOp::define()                                                     111  0.0001734  0.0002576  0.0009263   0.00%
+amr-wind::Temperature-Godunov::compute_mueff                          103  0.0001972  0.0003174  0.0006859   0.00%
+amr-wind::incflo::pre_advance_stage1                                  100  4.729e-05   8.37e-05  0.0001408   0.00%
+amr-wind::incflo::prepare_for_time_integration                          1  3.238e-06  5.468e-06  5.702e-05   0.00%
+amr-wind::incflo::InitData()                                            1  1.015e-06   2.03e-06  1.548e-05   0.00%
+Other                                                              223638     0.3916      0.904      2.266   0.57%
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+Name                                                               NCalls  Incl. Min  Incl. Avg  Incl. Max   Max %
+------------------------------------------------------------------------------------------------------------------
+amr-wind::main()                                                        1      398.1      398.2      398.2 100.00%
+amr-wind::incflo::Evolve()                                              1      390.3      390.3      390.4  98.03%
+amr-wind::incflo::ApplyPredictor                                      103      386.6      386.8      387.1  97.21%
+amr-wind::incflo::advance                                             100        380      380.1      380.4  95.52%
+MLMG::solve()                                                         516      366.7      369.3      371.6  93.32%
+MLMG::oneIter()                                                      1519      314.2        320      324.5  81.47%
+MLMG::mgVcycle()                                                     1519      308.3      313.4        318  79.84%
+MLMG::mgVcycle_up::1                                                 1519      23.37      59.68      234.2  58.81%
+FabArray::FillBoundary()                                            46017      110.7      148.5      225.9  56.73%
+FillBoundary_finish()                                               51319      118.1      153.5        223  56.00%
+FabArray::ParallelCopy()                                             8548      15.02      159.2      205.4  51.57%
+FabArray::ParallelCopy_finish()                                      8548      14.85      159.1      205.3  51.56%
+MLMG::addInterpCorrection()                                          4557      0.674      149.3      205.2  51.52%
+amr-wind::ICNS-Godunov::pre_advection_actions                         103      188.2      188.6      189.1  47.50%
+amr-wind::ICNS::advection_mac_project                                 103      184.1      184.9      185.6  46.61%
+MLMG::mgVcycle_up::2                                                 1519    0.02735      128.8      175.7  44.11%
+MLCellLinOp::applyBC()                                              38458      89.75      119.2      171.4  43.03%
+MLMG::mgVcycle_bottom                                                1519   0.001055      19.12      158.8  39.88%
+MLMG::actualBottomSolve()                                            1519  0.0004087      19.12      158.8  39.88%
+MLCGSolver::bicgstab                                                  186          0      18.29        150  37.66%
+MLCGSolver::ParallelAllReduce                                       27105          0      12.27      144.8  36.35%
+MLCellLinOp::smooth()                                               13332      70.76      95.16      104.7  26.30%
+amr-wind::incflo::ApplyProjection                                     104      93.65       94.1      94.45  23.72%
+NodalProjector::project                                               104      91.71       91.8      91.86  23.07%
+MLCellLinOp::apply()                                                11691      18.59      26.38      76.19  19.13%
+MLNodeLinOp::applyBC()                                               9127      13.74      23.63      50.82  12.76%
+MLMG::mgVcycle_down::1                                               1519      28.22      36.27      44.78  11.25%
+amr-wind::ICNS-Godunov::linsys_solve                                  103      31.42      32.78      33.36   8.38%
+amr-wind::TKE-Godunov::linsys_solve                                   103      31.61       31.9      32.03   8.04%
+MLMG::mgVcycle_down::2                                               1519    0.03092      17.82      31.28   7.85%
+MLMG::mgVcycle_up::0                                                 1519      24.88      28.15         31   7.78%
+amr-wind::Temperature-Godunov::linsys_solve                           103      28.14      29.09      30.03   7.54%
+MLMG::mgVcycle_down::0                                               1519      18.06      23.59      29.12   7.31%
+MLMG::ResNormInf()                                                   2035      14.73      19.21      24.45   6.14%
+MLMG:computeResOfCorrection()                                        4557      11.13       17.7      22.35   5.61%
+MLMG::prepareForSolve()                                               516      14.41      16.72      18.84   4.73%
+MLCellLinOp::correctionResidual()                                    3333      8.476      13.77      17.06   4.28%
+MLNodeLaplacian::Fsmooth()                                           4896      3.607      9.767      15.89   3.99%
+FAbArray::OverrideSync()                                             5304      1.715      8.811      15.34   3.85%
+OverrideSync_finish()                                                5304      1.551      8.686      15.24   3.83%
+MLABecLaplacian::prepareForSolve()                                    721      11.18      13.27      15.02   3.77%
+amrex::average_down                                                  4260     0.1277      4.242      14.92   3.75%
+FabArray::sum()                                                       987     0.5033       7.01      13.11   3.29%
+MLCellLinOp::solutionResidual()                                      1935       6.65      9.302      12.83   3.22%
+MLNodeLaplacian::restriction()                                       1224      2.371      6.665      11.59   2.91%
+MLABecLaplacian::averageDownCoeffs()                                  721    0.08669      4.615      10.92   2.74%
+FillBoundary_nowait()                                               51319     0.9036      3.815       10.5   2.64%
+average_down_faces                                                   4635    0.05868      3.565      9.425   2.37%
+MLMG::computeResidual()                                              1519      4.283      6.492      8.764   2.20%
+MLTensorOp::apply()                                                  1158      4.258      6.071       8.55   2.15%
+amr-wind::incflo::post_advance_work                                   100      7.761      8.077      8.214   2.06%
+amr-wind::ABLStats::post_advance_work                                 100       7.76      8.077      8.214   2.06%
+amr-wind::incflo::InitData()                                            1      7.801      7.818      7.847   1.97%
+amr-wind::incflo::prepare_for_time_integration                          1      7.579      7.594      7.626   1.91%
+amr-wind::incflo::InitialIterations()                                   1      6.821      6.827      6.837   1.72%
+FabArray::norminf()                                                 16506      4.397      5.517      6.835   1.72%
+MLMG::apply()                                                         412       1.83      3.073      5.412   1.36%
+FillPatchSingleLevel                                                 1250      2.982      4.023      4.976   1.25%
+amr-wind::ICNS-Godunov::compute_diffusion_term                        206      1.554      2.543      4.652   1.17%
+amr-wind::ICNS-Godunov::compute_advection_term                        103      1.313      2.634      4.559   1.14%
+amr-wind::VelPlaneAveraging::operator                                 202        3.8      4.106      4.247   1.07%
+amr-wind::Field::fillpatch                                            939      1.923      2.868      3.522   0.88%
+MLABecLaplacian::Fsmooth()                                          14376     0.6916      1.533      3.191   0.80%
+amr-wind::FPlaneAveraging::operator                                   333      2.453      2.938      3.089   0.78%
+amr-wind::PlaneAveraging::compute_averages                            333      2.441      2.925      3.076   0.77%
+MLMG::computeMLResidual()                                             516     0.9467      1.582      2.371   0.60%
+amrex::Copy()                                                       13000     0.5265      1.163      1.825   0.46%
+amr-wind::SecondMomentAveraging::compute_average                       30    0.06057      1.549      1.704   0.43%
+amr-wind::Field::fillpatch array                                      103     0.7959      1.159      1.605   0.40%
+MLLinOp::define()                                                     111     0.8698      1.332      1.517   0.38%
+MLLinOp::defineGrids()                                                111     0.8695      1.332      1.517   0.38%
+MLNodeLaplacian::define()                                             104     0.8634      1.318      1.504   0.38%
+MLLinOp::makeSubCommunicator()                                        108     0.8165      1.278      1.465   0.37%
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages             101      1.388      1.423      1.448   0.36%
+amr-wind::incflo::ComputeDt                                           101      1.271      1.383      1.423   0.36%
+amr-wind::incflo::pre_advance_stage1                                  100      1.263      1.375      1.416   0.36%
+amr-wind::FPlaneAveragingFine::operator                               202      1.185      1.223      1.401   0.35%
+amr-wind::PlaneAveragingFine::compute_averages                        202      1.184      1.222        1.4   0.35%
+VisMF::Write(FabArray)                                                 18      1.014      1.121      1.364   0.34%
+amr-wind::IOManager::write_checkpoint_file                              2     0.9971      1.219      1.357   0.34%
+amr-wind::setup_operator                                              721     0.3424     0.7605      1.321   0.33%
+FabArray::setVal()                                                  16506     0.3201     0.7334      1.187   0.30%
+MLABecLaplacian::Fapply()                                            3190     0.2138      0.619      1.162   0.29%
+amr-wind::TKE-Godunov::compute_advection_term                         103     0.2949     0.5356      1.035   0.26%
+amr-wind::Temperature-Godunov::compute_diffusion_term                 103     0.2813     0.5193     0.9202   0.23%
+amr-wind::Temperature-Godunov::compute_advection_term                 103     0.3059     0.5368      0.874   0.22%
+amr-wind::TKE-Godunov::compute_diffusion_term                         103     0.2966     0.4819      0.778   0.20%
+MLMG::getFluxes()                                                     206     0.2146      0.356     0.6491   0.16%
+MLCellLinOp::compFlux()                                               103       0.21     0.3489      0.641   0.16%
+amr-wind::OneEqKsgsM84-ConstTransport::update_turbulent_viscosity     103      0.186     0.3645     0.5825   0.15%
+MLPoisson::Fsmooth()                                                12288     0.2162     0.3725     0.5671   0.14%
+NodalProjector::computeRHS                                            104     0.1548     0.2203      0.551   0.14%
+MLNodeLaplacian::compRHS()                                            104     0.1534      0.219     0.5497   0.14%
+MLNodeLaplacian::Fapply()                                            4231     0.1447     0.2585     0.5045   0.13%
+amr-wind::VelPlaneAveraging::compute_hvelmag_averages                 101     0.4376     0.4654     0.4956   0.12%
+MultiFab::Copy()                                                      828     0.1323     0.2792       0.49   0.12%
+amr-wind::IOManager::write_plot_file                                    2      0.149     0.2225      0.441   0.11%
+WriteMultiLevelPlotfile()                                               2     0.1427     0.2186     0.4355   0.11%
+FabArray::LinComb()                                                   412    0.03137    0.07401     0.4295   0.11%
+amr-wind::diffusion::average_velocity_eta_to_faces                    721     0.1299     0.2622     0.4274   0.11%
+FabArray::Xpay()                                                    11771    0.08122     0.2347     0.4158   0.10%
+amr-wind::Temperature-Godunov::compute_mueff                          103     0.1254     0.2432     0.4147   0.10%
+amr-wind::OneEqKsgsM84-ConstTransport::update_alphaeff                103      0.125     0.2429     0.4144   0.10%
+PhysBCFunct::()                                                      1971   0.002357    0.04948     0.4024   0.10%
+amr-wind::pde::set_acoeffs                                            206    0.01827    0.04991     0.4008   0.10%
+amr-wind::TKE-Godunov::compute_source_term                            206    0.03908     0.1145     0.3918   0.10%
+amr-wind::ICNS-Godunov::compute_source_term                           206    0.09927     0.2083     0.3614   0.09%
+amr-wind::Field::advance_states                                       400    0.09251     0.1723     0.3174   0.08%
+MLMG::MLResNormInf()                                                  516   0.008811    0.01516     0.3082   0.08%
+FabArray::ParallelCopy_nowait()                                      8548    0.04989     0.1261     0.2702   0.07%
+amrex::Add()                                                         1935    0.05327     0.1491     0.2552   0.06%
+amr-wind::Field::setVal 1                                             621    0.02472    0.06227     0.2333   0.06%
+MLPoisson::Fapply()                                                  8501    0.04992    0.09546       0.22   0.06%
+Other                                                              223638     0.8818      1.765      3.808   0.96%
+------------------------------------------------------------------------------------------------------------------
+
+Pinned Memory Usage:
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                       Nalloc   Nfree  AvgMem min  AvgMem avg  AvgMem max  MaxMem min  MaxMem avg  MaxMem max
+-------------------------------------------------------------------------------------------------------------------------------------------------
+The_Pinned_Arena::Initialize()                               2080    2080      39   B      81   B     120   B    8192 KiB    8192 KiB    8192 KiB
+amr-wind::ThirdMomentAveraging::compute_average             83200   83200      12   B      12   B      15   B      60 KiB      60 KiB      60 KiB
+amr-wind::SecondMomentAveraging::compute_average           187200  187200       2   B      21   B      24   B      25 KiB      25 KiB      25 KiB
+amr-wind::PlaneAveraging::compute_averages                 692640  692640      23   B      27   B      29   B    5184   B    5184   B    5184   B
+amr-wind::PlaneAveragingFine::compute_averages             420160  420160      11   B      11   B      12   B    5184   B    5184   B    5184   B
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages  630240  630240      18   B      18   B      18   B    5184   B    5184   B    5184   B
+amr-wind::VelPlaneAveraging::compute_hvelmag_averages      210080  210080       1   B       1   B       2   B    1728   B    1728   B    1728   B
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cpu Memory Usage:
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                          Nalloc      Nfree  AvgMem min  AvgMem avg  AvgMem max  MaxMem min  MaxMem avg  MaxMem max
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+amr-wind::FieldRepo::make_new_level_from_scratch              121856     121856    8300 KiB      13 MiB      20 MiB    8304 KiB      13 MiB      20 MiB
+MLABecLaplacian::define()                                     153600     153600    5072 KiB    8508 KiB      12 MiB    5076 KiB    8513 KiB      12 MiB
+amr-wind::ICNS-Godunov::compute_advection_term               1476608    1476608      22 KiB      51 KiB      95 KiB    8222 KiB    9053 KiB       9 MiB
+MLMG::prepareForSolve()                                     18389664   18389664    1335 KiB    2263 KiB    3460 KiB    3654 KiB    6172 KiB    9406 KiB
+amr-wind::FieldRepo::create_scratch_field                    9415168    9415168      63 KiB     121 KiB     205 KiB    2400 KiB    3990 KiB    6024 KiB
+amr-wind::ABLStats::post_advance_work                          20800      20800    2502   B    4070   B      19 KiB    4096 KiB    4096 KiB    4096 KiB
+amr-wind::TKE-Godunov::compute_advection_term                1107456    1107456    1805   B    3170   B    6515   B    2686 KiB    2686 KiB    2686 KiB
+amr-wind::Temperature-Godunov::compute_advection_term         738304     738304    1746   B    2957   B    4298   B    2438 KiB    2438 KiB    2438 KiB
+BndryData::define()                                           301056     301056     840 KiB    1427 KiB    2354 KiB     840 KiB    1428 KiB    2355 KiB
+MLMG::apply()                                                3810176    3810176    6052   B    8332   B      13 KiB     871 KiB    1451 KiB    2206 KiB
+MLTensorOp::define()                                           21504      21504     799 KiB    1329 KiB    2007 KiB     800 KiB    1330 KiB    2008 KiB
+amr-wind::incflo::ApplyProjection                            1118208    1118208     166 KiB     278 KiB     423 KiB     710 KiB    1182 KiB    1794 KiB
+amr-wind::ICNS::advection_mac_project                          17920      17920     689 KiB    1147 KiB    1737 KiB     690 KiB    1149 KiB    1739 KiB
+MLCellLinOp::defineAuxData()                                  571392     571392     534 KiB     927 KiB    1517 KiB     534 KiB     928 KiB    1518 KiB
+FillBoundary_nowait()                                      206242960  206242960      13 KiB      28 KiB      41 KiB     518 KiB    1058 KiB    1498 KiB
+amr-wind::ICNS-Godunov::pre_advection_actions                 214240     214240    1640   B    2776   B    4703   B    1035 KiB    1035 KiB    1035 KiB
+amr-wind::diffusion::average_velocity_eta_to_faces           7752192    7752192     280   B    1125   B    2286   B     400 KiB     665 KiB    1004 KiB
+amr-wind::FieldRepo::declare_int_field                          7168       7168     172 KiB     287 KiB     442 KiB     172 KiB     287 KiB     442 KiB
+MLCellLinOp::setLevelBC()                                       3584       3584       0   B       0   B       0   B     162 KiB     271 KiB     415 KiB
+MLNodeLinOp::buildMasks()                                    1357824    1357824      33 KiB      56 KiB      86 KiB     144 KiB     241 KiB     370 KiB
+MLNodeLaplacian::define()                                     958464     958464      19 KiB      32 KiB      49 KiB      82 KiB     140 KiB     214 KiB
+OwnerMask()                                                   399360     399360      16 KiB      28 KiB      43 KiB      72 KiB     120 KiB     185 KiB
+amr-wind::VelPlaneAveragingFine::compute_hvelmag_averages     361984     361984       3   B       9   B      22   B      64 KiB     106 KiB     160 KiB
+amr-wind::PlaneAveragingFine::compute_averages                723968     723968       8   B      24   B      63   B      64 KiB     106 KiB     160 KiB
+MLTensorOp::apply()                                          4499040    4499040     120   B     246   B     421   B     157 KiB     157 KiB     157 KiB
+MLCGSolver::bicgstab                                         7030528    7030528       0   B    1271   B      10 KiB       0   B    8997   B      73 KiB
+MLCellLinOp::compFlux()                                       642720     642720       1   B       3   B       5   B      52 KiB      52 KiB      52 KiB
+FabArray::ParallelCopy_nowait()                             25287682   25287682     270   B     991   B    1681   B    8448   B      29 KiB      40 KiB
+average_down_faces                                           4983552    4983552       0   B      81   B     189   B    7680   B      12 KiB      19 KiB
+MLMG::addInterpCorrection()                                  8166144    8166144       6   B     413   B    1304   B    6144   B       9 KiB      15 KiB
+amrex::average_down                                          7633920    7633920       0   B      37   B     132   B    6144   B       9 KiB      15 KiB
+MLMG::actualBottomSolve()                                     235520     235520       0   B     240   B    2045   B       0   B    1161   B    9680   B
+MLNodeLaplacian::restriction()                               2193408    2193408       0   B      30   B      82   B    3240   B    5423   B    8424   B
+MLCGSolver::ParallelAllReduce                                5294592    5294592       0   B      15   B     224   B       0   B     618   B    5184   B
+MLCellLinOp::applyBC()                                      79994464   79994464       0   B       0   B       0   B      24   B      24   B      24   B
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AMReX (24.09-45-g6d9c25b989f1) finalized

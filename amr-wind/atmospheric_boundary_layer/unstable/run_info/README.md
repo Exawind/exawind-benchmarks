@@ -1,1 +1,1 @@
-placeholder file; put log file headers and footers here
+The log file for the 100 timestep run is `unstable.log`.
