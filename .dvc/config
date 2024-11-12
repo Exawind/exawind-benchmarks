@@ -1,0 +1,4 @@
+[core]
+    remote = kestrel
+['remote "kestrel"']
+    url = ssh://gvijayak@kl3.hpc.nrel.gov:/projects/hfm/exawind-benchmark-meshes
