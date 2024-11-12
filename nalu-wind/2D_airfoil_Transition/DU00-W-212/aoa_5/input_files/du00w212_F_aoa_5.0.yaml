@@ -188,7 +188,7 @@ realms:
       value: 1.392416666666667e-05
     target_name:
     - Flow-QUAD
-  mesh: du00w212_F.exo
+  mesh: ../../mesh/du00w212_F.exo
   mesh_transformation:
   - mesh_parts:
     - Flow-QUAD
