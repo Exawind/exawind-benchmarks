@@ -135,7 +135,7 @@ linear_solvers:
 realms:
 
 - name: realm_1
-  mesh: mesh/nrelvi_nearbody_mesh.exo
+  mesh: ../../../mesh/nrelvi_nearbody_mesh.exo
   use_edges: yes
 
   equation_systems:
@@ -180,7 +180,7 @@ realms:
   material_properties:
     target_name:
     - nearbody-HEX
-      
+
     specifications:
     - name: density
       type: constant
@@ -234,7 +234,7 @@ realms:
 #  # rotate mesh before starting simulation to align the rotor properly
 #  mesh_transformation:
 #  - name: interior
-#    mesh_parts: 
+#    mesh_parts:
 #      - nearbody-HEX
 #    motion:
 #    - type: rotation
