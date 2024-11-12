@@ -188,7 +188,7 @@ realms:
       value: 1.0443125000000002e-05
     target_name:
     - Flow-QUAD
-  mesh: nlf0416_F.exo
+  mesh: ../../mesh/nlf0416_F.exo
   mesh_transformation:
   - mesh_parts:
     - Flow-QUAD
