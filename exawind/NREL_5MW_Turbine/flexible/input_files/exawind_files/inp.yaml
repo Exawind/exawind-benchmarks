@@ -1,0 +1,31 @@
+n_turbines_glob: 1
+dry_run: False
+debug: False
+sim_start: init
+coupling_mode: strong
+n_iter: 1
+t_start: 0.0
+t_end: 4.958677685950414
+t_max: 600.553079947575359
+dt_driver: 0.003443526170798898
+restart_freq: 1440
+output_freq: 1
+set_exp_law_wind: False
+set_uniform_x_blade_forces: False
+x_blade_force: 0.0
+super_controller: False
+Turbine0:
+  turb_id: 0
+  FAST_input_filename: "5MW_Land_BD_DLL_WTurb/5MW_Land_BD_DLL_WTurb.fst"
+  sim_type: ext-loads
+  #restart_filename: "Turbine0"
+  turbine_base_pos: [1800, 1800, 0]
+  turbine_hub_pos: [1795, 1800, 90]
+  num_force_pts_blade: 50
+  num_force_pts_tower: 12
+  az_blend_mean: 18.84955592
+  az_blend_delta: 1.570796327
+  vel_mean: 11.4
+  wind_dir: 240.0
+  z_ref: 90.0
+  shear_exp: 0.0

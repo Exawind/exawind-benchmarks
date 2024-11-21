@@ -1,0 +1,34 @@
+hypre_simple_precon:
+  output_level: 0
+  bamg_max_levels: 1
+  bamg_relax_type: 12 # Use 11 for Hypre master or v2.21 and later, 8 for earlier
+  bamg_num_sweeps: 2
+  bamg_cycle_type: 1
+  bamg_relax_order: 0
+  bamg_output_level: 0
+  bamg_debug: 0
+
+hypre_elliptic:
+  #bamg_max_levels: 7
+  bamg_coarsen_type: 8
+  bamg_interp_type: 6
+  bamg_relax_type: 11
+  bamg_cycle_type: 1
+  bamg_relax_order: 0
+  bamg_keep_transpose: 1
+
+  bamg_num_sweeps: 2
+  #bamg_num_down_sweeps: 2
+  #bamg_num_up_sweeps: 2
+  #bamg_num_coarse_sweeps: 1
+
+  bamg_strong_threshold: 0.3243198904981685
+  bamg_trunc_factor: 0.4227143073461007
+  bamg_pmax_elmts: 3
+
+  bamg_agg_num_levels: 2
+  bamg_agg_interp_type: 7
+  bamg_agg_pmax_elmts: 3
+
+  bamg_output_level: 0
+  bamg_debug: 0
