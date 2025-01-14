@@ -8,4 +8,5 @@ They include the following airfoils and flow parameters:
 - NASA NLF(1)-0416 airfoil at M=0.1, Re=4M, Tu=0.15%
 - TU Delft DU00-W-212 airfoil at M=0.1, Re=3M, Tu=0.0864%
 
-A paper is currently in draft containing these results.
+Read the NLF(1)-0416 case first, then the DU00-W-212 case.
+A paper containing detailed validation is currently under review.

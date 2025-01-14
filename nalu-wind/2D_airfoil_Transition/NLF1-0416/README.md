@@ -53,6 +53,13 @@ Option 2 is activated only if fsti is explicitly specified in the Nalu-Wind inpu
 Based on the grid sensitivity results, a full sweep of angles of attack was performed using the Fine mesh level. The two figures above compare the lift and drag polar with the experimental measurements[^5]. For the lift, the transition simulation slightly over-predicts the lift coefficient in the linear range of the lift curve, a similar behavior also observed in transition predictions using other transition models and other flow solvers. For the drag polar, the transition simulation predicts lower drag across the range of angles of attack than the fully turbulent simulation and better compares with the experimental data. 
 Specifically, the errors in the predicted drag coefficient at AoA=5° are 2.87% for the transition simulation and 57.56% for the fully turbulent simualtion.
 
+## Results: Convergence
+
+### Time history of the residuals and aerodynamic coefficients
+<img src="aoa_5/figures_and_scripts/time_history.png" alt="Cf" width="1000">
+
+Convergence behaviors of the transition simulation are presented in the above figure at AoA=5°. Left figure shows the time history of the non-linear residuals from Nalu-Wind for the mean flow (momentum), turbulence model (𝑘), and transition model (𝛾) at the last Picard iteration of each main iteration. In the figure, all residuals decline smoothly by 3.5 to 4 orders of magnitude until they finally stall. Similary, both the lift and drag converge well without oscillations, with less than 0.1% difference from the converged value around iteration 4,000.
+
 Each case with the "Fine" mesh took approximately 40 minutes to 10,000 iterations, using 4 Picard iterations per time step, on 26 cores of NREL's Kestrel HPC cluster. The number of cores per case was not determined by Nalu-Wind’s scalability on Kestrel, but simply to accommodate 4 cases on a single node of Kestrel.
 
 ## References
