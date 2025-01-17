@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExaWind Benchmarks &mdash; ExaWind Benchmarks 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing to exawind-benchmarks" href="info.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            ExaWind Benchmarks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Contributing to exawind-benchmarks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exawind/benchmarks.html">Benchmark problems using hybrid overset solver (ExaWind)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="amr-wind/benchmarks.html">Benchmark problems using AMR-Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amr-wind/published.html">Additional published cases using AMR-Wind</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nalu-wind/benchmarks.html">Benchmark problems using Nalu-Wind</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ExaWind Benchmarks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ExaWind Benchmarks</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="exawind-benchmarks">
+<h1>ExaWind Benchmarks<a class="headerlink" href="#exawind-benchmarks" title="Link to this heading"></a></h1>
+<p>These are reference problems used to evaluate and compare the performance of ExaWind. These benchmarks have been chosen to represent the various capabilities within the ExaWind software stack, featuring cases for each individual solver (AMR-Wind and Nalu-Wind) and the overset hybrid solver. By providing up-to-date examples in an applied context, they also serve as a starting point for researchers setting up similar simulations.</p>
+<p>This repository is intended to become a nexus for collaborating among
+research groups, providing a reference frame for other code capabilities,
+and hosting external contributions.</p>
+<p>Benchmark problems are grouped by the program used to perform the simulation. For each problem included in the repository, the files required to run the case are included in an input_files directory, information about the latest run is contained in a run_info directory, and output data is compiled in a performance directory. Run information primarily includes the headers of log files, which capture the git hash/version recently used to run each specific example, and the footers of log files, which display profiling data and the number of time steps taken. Performance broadly includes both measured results from the simulation, such as physical quantities of interest, and computational timing information. README files provide synopses of each case and the resources used.</p>
+</section>
+<section id="references">
+<h1>References<a class="headerlink" href="#references" title="Link to this heading"></a></h1>
+<p>To cite the cases and data from this repository, please use the following references (which contain the published versions of the cases and results):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span><span class="n">Sharma2024</span><span class="p">,</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Sharma</span><span class="p">,</span> <span class="n">Ashesh</span> <span class="ow">and</span> <span class="n">Brazell</span><span class="p">,</span> <span class="n">Michael</span> <span class="n">J</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Vijayakumar</span><span class="p">,</span> <span class="n">Ganesh</span> <span class="ow">and</span> <span class="n">Ananthan</span><span class="p">,</span> <span class="n">Shreyas</span> <span class="ow">and</span> <span class="n">Cheung</span><span class="p">,</span> <span class="n">Lawrence</span> <span class="ow">and</span> <span class="n">deVelder</span><span class="p">,</span> <span class="n">Nathaniel</span> <span class="ow">and</span> <span class="p">{</span><span class="n">Henry</span> <span class="n">de</span> <span class="n">Frahan</span><span class="p">},</span> <span class="n">Marc</span> <span class="n">T</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Matula</span><span class="p">,</span> <span class="n">Neil</span> <span class="ow">and</span> <span class="n">Mullowney</span><span class="p">,</span> <span class="n">Paul</span> <span class="ow">and</span> <span class="n">Rood</span><span class="p">,</span> <span class="n">Jon</span> <span class="ow">and</span> <span class="n">Sakievich</span><span class="p">,</span> <span class="n">Philip</span> <span class="ow">and</span> <span class="n">Almgren</span><span class="p">,</span> <span class="n">Ann</span> <span class="ow">and</span> <span class="n">Crozier</span><span class="p">,</span> <span class="n">Paul</span> <span class="n">S</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Sprague</span><span class="p">,</span> <span class="n">Michael</span><span class="p">},</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">ExaWind</span><span class="p">:</span> <span class="n">Open</span><span class="o">-</span><span class="n">source</span> <span class="n">CFD</span> <span class="k">for</span> <span class="n">hybrid</span><span class="o">-</span><span class="n">RANS</span><span class="o">/</span><span class="n">LES</span> <span class="n">geometry</span><span class="o">-</span><span class="n">resolved</span> <span class="n">wind</span> <span class="n">turbine</span> <span class="n">simulations</span> <span class="ow">in</span> <span class="n">atmospheric</span> <span class="n">flows</span><span class="p">},</span>
+    <span class="n">journal</span> <span class="o">=</span> <span class="p">{</span><span class="n">Wind</span> <span class="n">Energy</span><span class="p">},</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="p">{</span><span class="mi">27</span><span class="p">},</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">},</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">225</span><span class="o">-</span><span class="mi">257</span><span class="p">},</span>
+    <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1002</span><span class="o">/</span><span class="n">we</span><span class="mf">.2886</span><span class="p">},</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">onlinelibrary</span><span class="o">.</span><span class="n">wiley</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">doi</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">10.1002</span><span class="o">/</span><span class="n">we</span><span class="mf">.2886</span><span class="p">},</span>
+    <span class="n">eprint</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">onlinelibrary</span><span class="o">.</span><span class="n">wiley</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">doi</span><span class="o">/</span><span class="n">pdf</span><span class="o">/</span><span class="mf">10.1002</span><span class="o">/</span><span class="n">we</span><span class="mf">.2886</span><span class="p">},</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2024</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@article</span><span class="p">{</span><span class="n">Bidadi2023</span><span class="p">,</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Shreyas</span> <span class="n">Bidadi</span><span class="p">,</span> <span class="n">Ganesh</span> <span class="n">Vijayakumar</span><span class="p">,</span> <span class="n">Ashesh</span> <span class="n">Sharma</span> <span class="ow">and</span> <span class="n">Michael</span> <span class="n">A</span><span class="o">.</span> <span class="n">Sprague</span><span class="p">},</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">Mesh</span> <span class="ow">and</span> <span class="n">model</span> <span class="n">requirements</span> <span class="k">for</span> <span class="n">capturing</span> <span class="n">deep</span><span class="o">-</span><span class="n">stall</span> <span class="n">aerodynamics</span> <span class="ow">in</span> <span class="n">low</span><span class="o">-</span><span class="n">Mach</span><span class="o">-</span><span class="n">number</span> <span class="n">flows</span><span class="p">},</span>
+    <span class="n">journal</span> <span class="o">=</span> <span class="p">{</span><span class="n">Journal</span> <span class="n">of</span> <span class="n">Turbulence</span><span class="p">},</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="p">{</span><span class="mi">24</span><span class="p">},</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="p">{</span><span class="mi">8</span><span class="p">},</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">393</span><span class="o">--</span><span class="mi">418</span><span class="p">},</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2023</span><span class="p">},</span>
+    <span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">Taylor</span> \<span class="o">&amp;</span> <span class="n">Francis</span><span class="p">},</span>
+    <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1080</span><span class="o">/</span><span class="mf">14685248.2023.2225141</span><span class="p">},</span>
+    <span class="n">URL</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1080</span><span class="o">/</span><span class="mf">14685248.2023.2225141</span><span class="p">},</span>
+    <span class="n">eprint</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1080</span><span class="o">/</span><span class="mf">14685248.2023.2225141</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Contributing to exawind-benchmarks</a></li>
+</ul>
+</div>
+<section id="exawind">
+<h1>ExaWind<a class="headerlink" href="#exawind" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exawind/benchmarks.html">Benchmark problems using hybrid overset solver (ExaWind)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exawind/nrel_phase_vi.html">NREL Phase VI Rotor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exawind/nrel_5mw.html">NREL 5-MW Turbine</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="amr-wind">
+<h1>AMR-Wind<a class="headerlink" href="#amr-wind" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="amr-wind/benchmarks.html">Benchmark problems using AMR-Wind</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amr-wind/abl.html">Atmospheric Boundary Layer (ABL)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="amr-wind/published.html">Additional published cases using AMR-Wind</a></li>
+</ul>
+</div>
+</section>
+<section id="nalu-wind">
+<h1>Nalu-Wind<a class="headerlink" href="#nalu-wind" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nalu-wind/benchmarks.html">Benchmark problems using Nalu-Wind</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nalu-wind/2d_airfoil_trans.html">Two-dimensional (2D) flow past airfoils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nalu-wind/clcd_cfd_total.html">Postprocessing for DU00-W-212: Coefficients of lift and drag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nalu-wind/3d_airfoil_iddes.html">Three-dimensional (3D) flow past airfoils</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="info.html" class="btn btn-neutral float-right" title="Contributing to exawind-benchmarks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
