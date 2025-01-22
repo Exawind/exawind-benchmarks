@@ -1,0 +1,5 @@
+outs:
+- md5: d1f52b81678f74f8b1266806e04c0a28
+  size: 651170917
+  hash: md5
+  path: naca0021_aoa_60.exo
