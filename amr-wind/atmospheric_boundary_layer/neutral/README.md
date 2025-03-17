@@ -22,7 +22,7 @@ The input files for this case are in the [input_files](input_files) directory. T
 - Surface temperature flux: 0.0 K-m/s
 - Reference temperature: 290 K 
 - Domain size: 5120m x 5120m x 1920m 
-- Mesh size: 512 x 512 x 192 (C-Grid)
+- Mesh size: 512 x 512 x 184 (C-Grid)
 - Total mesh size: 48234496 cells
 - Timestep: ∆t = 0.5s
 - Total simulation time: 125000s
@@ -87,3 +87,49 @@ TODO: Add expression
 
 ## Grid Refinement Study
 
+A grid refinement study is included with this benchmarking case to document the impact of mesh resolution on the neutral ABL statistics in AMR-Wind. The mesh resolution in each direction are doubled, leading to a mesh side of 1024 x 1024 x 368 or 385875968a total cells. The horizontal resolution in this case corresponds to the "D-grid" in Berg et al. (2020), which are included in the comparisons below. The input file for the refined-resolution case is found in [input_files/abl_neutral_D_grid.inp](input_files/abl_neutral_D_grid.inp).
+
+## Results
+
+The refined-resolution case is also evolved for 125000s, and statistics are averaged over the time interval t=[120000,125000]. The hub-height statistics for this case are 
+
+| z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | ObukhovL | Veer | zi | u* |
+|--|--|--|--|--|--|--|--|--|
+| 90m | 4.36m/s | 252.2 deg | 0.0603 | 0.1678 | 754.4361 | 0.0368 | 337.04 | 0.203
+
+### Horizontal Profiles
+
+Horizontal velocity profiles are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are shown below: 
+
+- Horizontal velocity:![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_D_grids.png)
+
+- Temperature: ![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_D_grids.png)
+
+- Wind Direction: ![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_D_grids.png)
+
+- Turbulence Intensity (TKE): ![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_D_grids.png)
+
+- Wind Shear: ![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_D_grids.png)
+
+- Resolved Reynolds stress, avg(u'w'): ![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_D_grids.png)
+
+- Resolved Reynolds stress, avg(v'w'): ![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_D_grids.png)
+
+### Wavenumber Spectra
+
+Wavenumber spectra are computed in the [ABL_wavenumber_spectra.ipynb](postprocessing/ABL_wavenumber_spectra.ipynb) notebook and are shown below. 
+
+TODO: Add expression
+
+![wavenumber_spectra](postprocessing/figures/ABL_wavenumber_spectra_C_D_grids.png)
+![wavenumber_spectra](postprocessing/figures/ABL_wavenumber_spectra_D_grid.png)
+
+### Temporal Spectra
+
+Temporal spectra are computed in the [ABL_temporal_spectra.ipynb](postprocessing/ABL_temporal_spectra.ipynb) notebook and are shown below. 
+
+
+TODO: Add expression
+
+![temporal_spectra_27](postprocessing/figures/ABL_temporal_spectra_z27_C_D_grids.png)
+![temporal_spectra_90](postprocessing/figures/ABL_temporal_spectra_z90_C_D_grids.png)
