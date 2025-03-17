@@ -1,1 +1,89 @@
-The neutral ABL case was run to convergence with the input file that was used in the upcoming AMR-Wind paper. The computation was done on kestrel, using 20 CPU nodes for 144 hours, with the latest release of AMR-Wind `(v 3.15)`.
+<!-- This file is automatically compiled into the website. Please copy linked files into .website_src/ paths to enable website rendering -->
+
+# Neutral Atmospheric Boundary Layer 
+
+This is a conventionally neutral stability case that was presented in Berg et
+al. (2020). The flow is driven by a uniform, moderate geostrophic wind of 5 m/s,
+aligned in the x-direction. There is no specified heat flux at the surface. This
+case starts out weakly stably stratified and the turbulence naturally present
+evolves the flow to create a neutral layer with a capping inversion. The flow is
+dominated by streaks of high and low velocities near the surface and at heights
+typical for wind turbine rotors. The domain spatial size is 2560 m × 2560 m ×
+896 m. Berg et al. (2020) used resolutions ranging from ∆x = ∆y = 30 m and ∆z =
+14 m to ∆x = ∆y = 3.75 m and ∆z = 1.75 m. The benchmark simulation in AMR-Wind 
+use ∆x = ∆y = 5 m and ∆z = 4.87 m (512 × 512 × 184 cells), corresponding the horizontal
+resolution in the "C-grid" used in Berg et al (2020). 
+
+The input files for this case are in the [input_files](input_files) directory. The computation was done on kestrel, using 20 CPU nodes for 144 hours, with the latest release of AMR-Wind [f67a52dd6aa1882595d16700527470bc8097cb13](https://github.com/Exawind/amr-wind/commit/f67a52dd6aa1882595d16700527470bc8097cb13) (update this). Several input parameters for this case are summarized below: 
+
+- Hub-height wind speed: 5.0 m/s
+- Hub-height wind direction: 250 degrees W
+- Surface roughness: 0.05 m
+- Surface temperature flux: 0.0 K-m/s
+- Reference temperature: 290 K 
+- Domain size: 5120m x 5120m x 1920m 
+- Mesh size: 512 x 512 x 192 (C-Grid)
+- Total mesh size: 48234496 cells
+- Timestep: ∆t = 0.5s
+- Total simulation time: 125000s
+
+## Results
+
+Statistics and results from the ABL are calculated using the scripts and notebooks in the [postprocessing](postprocessing) directory, and are saved to the [results](directory) directory. Statistics from the hub-height plane are computed in [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are summarized in the following table: 
+
+| z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | ObukhovL | Veer | zi | u* |
+|--|--|--|--|--|--|--|--|--|
+| 90m | 4.39m/s | 252.7 deg | 0.0603 | 0.1465 | 729.8625 | 0.0237 | 352.06 | 0.208
+
+The statistics are averaged over the time interval t=[120000,125000]s. Defining the eddy turnover time as T=zi/u*, this time interval corresponds to t/TE = [72.5,75.5], which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times is exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times (t/TE=[55,54]) the ARM-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
+
+### Horizontal Profiles
+
+Horizontal velocity profiles are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are shown below: 
+
+- Horizontal velocity:![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_grid.png)
+
+- Temperature: ![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_grid.png)
+
+- Wind Direction: ![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_grid.png)
+
+- Turbulence Intensity (TKE): ![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_grid.png)
+
+- Wind Shear: ![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_grid.png)
+
+- Resolved Reynolds stress, avg(u'w'): ![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_grid.png)
+
+- Resolved Reynolds stress, avg(v'w'): ![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_grid.png)
+
+### Wavenumber Spectra
+
+Wavenumber spectra are computed in the [ABL_wavenumber_spectra.ipynb](postprocessing/ABL_wavenumber_spectra.ipynb) notebook and are shown below. 
+
+TODO: Add expression
+
+![wavenumber_spectra](postprocessing/figures/ABL_wavenumber_spectra_C_grid.png)
+
+### Temporal Spectra
+
+Temporal spectra are computed in the [ABL_temporal_spectra.ipynb](postprocessing/ABL_temporal_spectra.ipynb) notebook and are shown below. 
+
+
+TODO: Add expression
+
+![temporal_spectra_27](postprocessing/figures/ABL_temporal_spectra_z27_C_grid.png)
+![temporal_spectra_90](postprocessing/figures/ABL_temporal_spectra_z90_C_grid.png)
+
+### Integral Lengthscale 
+
+The longitudinal and latitudinal integral lengthscales in the [ABL_integral_lengthscale.ipynb](postprocessing/ABL_integral_lengthscale.ipynb) notebook, resulting in 
+
+- Longitudinal lengthscale = 154.94 m 
+- Latitudinal lengthscale  = 34.03 m 
+
+TODO: Add expression
+
+![intL_long](postprocessing/figures/ABL_integral_lengthscale_long.png)
+![intL_lat](postprocessing/figures/ABL_integral_lengthscale_lat.png)
+
+## Grid Refinement Study
+
