@@ -15,7 +15,7 @@ and ∆z = 1.75 m. The benchmark simulation in AMR-Wind uses ∆x = ∆y = 5 m a
 = 4.87 m (512 × 512 × 184 cells), corresponding the horizontal resolution in the
 "C-grid" used in Berg et al (2020). 
 
-The input files for this case are in the [input_files](input_files) directory. The computation was done on kestrel, using 20 CPU nodes for 144 hours, with the latest release of AMR-Wind [f67a52dd6aa1882595d16700527470bc8097cb13](https://github.com/Exawind/amr-wind/commit/f67a52dd6aa1882595d16700527470bc8097cb13) (update this). Several of the main input parameters for this case are summarized below: 
+The input files for this case are in the [input_files](input_files) directory. The computation was done on kestrel, using 20 CPU nodes for 144 hours, with the latest release of AMR-Wind [32811b18af31e7b54f7e5cb23c6ead424f21f1f0](https://github.com/Exawind/amr-wind/commit/32811b18af31e7b54f7e5cb23c6ead424f21f1f0). Several of the main input parameters for this case are summarized below: 
 
 - Hub-height wind speed: 5.0 m/s
 - Hub-height wind direction: 250 degrees W
@@ -27,6 +27,19 @@ The input files for this case are in the [input_files](input_files) directory. T
 - Total mesh size: 48234496 cells
 - Timestep: ∆t = 0.5s
 - Total simulation time: 125000s
+
+## Performance
+
+Full details provided in [**performance documentation**](performance/README.md).
+
+The job was run on the NREL's [Kestrel](https://nrel.github.io/HPC/Documentation/Systems/) HPC cluster using 20 nodes/2080 CPU's and run for 144 hours wall-time:
+
+| Parameter       | Value |
+|---              |---  |
+| Number of nodes | 20   |
+| Number of CPUs  | 2080 |
+| Wall-time       | 144 hours|
+| CPU-hours       | 299520     |
 
 ## Results
 
@@ -54,17 +67,17 @@ if postproamrwinddir not in sys.path:
 
 #### Horizontal velocity:![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_grid.png)
 
-#### Temperature: ![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_grid.png)
+#### Temperature:![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_grid.png)
 
-#### Wind Direction: ![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_grid.png)
+#### Wind Direction:![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_grid.png)
 
-#### Turbulence Intensity (TKE): ![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_grid.png)
+#### Turbulence Intensity (TKE):![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_grid.png)
 
-#### Wind Shear: ![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_grid.png)
+#### Wind Shear:![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_grid.png)
 
-#### Resolved Reynolds stress, avg(u'w'): ![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_grid.png)
+#### Resolved Reynolds stress, avg(u'w'):![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_grid.png)
 
-#### Resolved Reynolds stress, avg(v'w'): ![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_grid.png)
+#### Resolved Reynolds stress, avg(v'w'):![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_grid.png)
 
 ### Wavenumber Spectra
 -----------------------
@@ -75,69 +88,6 @@ python ppengine.py postpro_windspectra_CGrid.yaml
 ```
 Details of the 2D wavenumber computation can be found in the [documentation](edit) for the post-processing engine.
 The [ABL_wavenumber_spectra.ipynb](postprocessing/ABL_wavenumber_spectra.ipynb) Jupyter notebook plots the energy, horizontal, and vertical 2D wavenumber spectra and are reported below at three different vertical locations in the domain. 
-
-Specifically, the Fourier transform of the two-point velocity correlation $R_{ij}(\boldsymbol{r},t) = \langle u_i(\boldsymbol{x},t) u_j(\boldsymbol{x}+\boldsymbol{r},t) \rangle$ is computed from the FFT of the sampled AMR-Wind velocity data at a given height, $z$, as 
-
-
-```math
-\hat{R}_{ij}(\boldsymbol{r},t) = \langle \hat{u}^*_i(\boldsymbol{\kappa},t) \hat{u}_j(\boldsymbol{\kappa},t) \rangle 
-.
-```
-
-
-Here, $\boldsymbol{x} = (x,y)$ is a 2D horizontal vector, and $\boldsymbol{r} = (r_x,r_y)$ is a 2D separation vector. 
-The velocity spectrum tensor, $\Phi_{ij}(\boldsymbol{\kappa},t)$, for a 2D wavenumber vector $\boldsymbol{\kappa} = (\kappa_x,\kappa_y)$, is then computed as 
-
-
-```math
-\Phi_{ij}(\boldsymbol{\kappa},t) \equiv \sum_{\boldsymbol{\kappa'}} \delta(\boldsymbol{\kappa} - \boldsymbol{\kappa}') \hat{R}_{ij}(\boldsymbol{\kappa}',t) \approx \hat{R}_{ij}(\boldsymbol{\kappa},t)/(\Delta \boldsymbol{\kappa}),
-```
-
-
-such that
-
-
-```math
-R_{ij}(\boldsymbol{r},t) = \iint \Phi_{ij}(\boldsymbol{\kappa},t) e^{i \boldsymbol{\kappa} \cdot \boldsymbol{r}} d \boldsymbol{\kappa}.
-```
-
-
-The two dimensional spectra are then computed as surface integrals in 2D wavenumber space. Specifically, we denote the circle in wavenumber space, centered at the origin, with radius $\kappa = |\boldsymbol{\kappa}|$ as $\mathcal{S}(\kappa)$. Then the integration over the surface of this circle is approximated as 
-
-
-```math
-\oint f(\boldsymbol{\kappa}) d \mathcal{S}(\kappa) \approx 
-\frac{2 \pi \kappa}{N} \sum^N_{ |\kappa' - \kappa| < d\kappa } f(\boldsymbol{\kappa}') 
-,
-```
-
-
-where $N$ is the total number of points in the summation for each wavenumber magnitude. 
-This is applied to different components of the velocity spectrum tensor to compute the energy, horizontal, and vertical spectra as:
-
-- Energy spectra: 
-
-
-```math
-E = \oint  \frac{1}{2} \Phi_{ii}(\boldsymbol{\kappa},t) d\mathcal{S}(\kappa)
-```
-
-
-- Horizontal spectra:
-
-
-```math
-E = \oint  \frac{1}{2} \left[ \Phi_{11}(\boldsymbol{\kappa},t) + \Phi_{22}(\boldsymbol{\kappa},t)  \right] d\mathcal{S}(\kappa)
-```
-
-
-- Vertical spectra:
-
-
-```math
-E = \oint \Phi_{33}(\boldsymbol{\kappa},t) d\mathcal{S}(\kappa)
-```
-
 
 
 ![wavenumber_spectra](postprocessing/figures/ABL_wavenumber_spectra_C_grid.png)
@@ -190,49 +140,20 @@ A grid refinement study is included with this benchmarking case to document the 
 
 ## Performance
 
-The relevant code versions are
+Full details provided in [**performance documentation**](performance/README.md).
 
-- AMR-Wind version: [26063277b57415e735274c0d366ff702ca14fc14](https://github.com/Exawind/amr-wind/commit/26063277b57415e735274c0d366ff702ca14fc14)
-
-The job was run on the Sandia Flight HPC cluster using the following resources: 
+The grid refinement study was run on the Sandia Flight HPC cluster using the following resources: 
 
 | Parameter       | Value |
 |---              |---  |
 | Number of nodes | 64   |
 | Number of CPUs  | 7168 |
-| Wall-time       | XX hours|
-| CPU-hours       | XX     | 
-
-with the following machine specifications: 
-
-| Parameter           | Value |
-|---                  |---  |
-| CPU processor type  | Intel(R) Xeon(R) Platinum 8480+ |
-| CPU processor speed | 3800 Mhz |
-| Node interconnects  | Cornelis Omni-Path high-speed interconnect |
-
-The overall simulation parameters 
-
-| Parameter              | Value |
-|---                     |---    |
-| Total simulation time  | 125000 sec | 
-| Simulation timestep    | 0.025 sec | 
-| Total mesh size        | 385,875,968 |
-| Num mesh elements/rank | 53,833 |
-
-Average time spent every iteration in the following categories:  
-
-|Category| Time [s]|
-|---            | --- |
-|Pre-processing | XX|
-|Solve          | XX|
-|Post-processing| XX|
-|**Total**      | XX|
-
+| Wall-time       | 177.68 hours|
+| CPU-hours       | 1273610.24 | 
 
 ## Results
 
-The refined-resolution case is also evolved for 125000s, and statistics are averaged over the time interval t=[120000,125000]. The hub-height statistics for this case are 
+The refined-resolution case is also evolved for 125000s, and statistics are averaged over the time interval $t\in[120000,125000]s$. The hub-height statistics for this case are 
 
 | z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | ObukhovL | Veer | $z_i$ | $u^*$ |
 |--|--|--|--|--|--|--|--|--|
@@ -247,17 +168,17 @@ Horizontally averaged profiles of are computed in the [AVG_horiz_profiles.ipynb]
 
 #### Horizontal velocity:![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_D_grids.png)
 
-#### Temperature: ![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_D_grids.png)
+#### Temperature:![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_D_grids.png)
 
-#### Wind Direction: ![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_D_grids.png)
+#### Wind Direction:![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_D_grids.png)
 
-#### Turbulence Intensity (TKE): ![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_D_grids.png)
+#### Turbulence Intensity (TKE):![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_D_grids.png)
 
-#### Wind Shear: ![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_D_grids.png)
+#### Wind Shear:![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_D_grids.png)
 
-#### Resolved Reynolds stress, avg(u'w'): ![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_D_grids.png)
+#### Resolved Reynolds stress, avg(u'w'):![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_D_grids.png)
 
-#### Resolved Reynolds stress, avg(v'w'): ![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_D_grids.png)
+#### Resolved Reynolds stress, avg(v'w'):![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_D_grids.png)
 
 ### Wavenumber Spectra
 -----------------------
