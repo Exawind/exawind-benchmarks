@@ -12,7 +12,7 @@ spectra_27:
   wavenumber_spectra:
   - name: Spectra_027
     ncfile: /nscratch/gyalla/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/neutral/runs/D_grid/post_processing/XYdomain_027_480000.nc
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     group: Farm_XYdomain027
     csvfile: neutral_DGrid_E_spectra_Z027.csv
     remove_endpoint_x: True
@@ -23,7 +23,7 @@ spectra_90:
   - name: Spectra_090
     ncfile: /nscratch/gyalla/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/neutral/runs/D_grid/post_processing/XYdomain_090_480000.nc
     group: Farm_XYdomain090
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_DGrid_E_spectra_Z090.csv
     remove_endpoint_x: True
     remove_endpoint_y: True
@@ -33,7 +33,7 @@ spectra_153:
   - name: Spectra_153
     ncfile: /nscratch/gyalla/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/neutral/runs/D_grid/post_processing/XYdomain_153_480000.nc
     group: Farm_XYdomain153
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_DGrid_E_spectra_Z153.csv
     remove_endpoint_x: True
     remove_endpoint_y: True
@@ -43,7 +43,7 @@ spectra_125:
   - name: Spectra_125
     ncfile: /nscratch/gyalla/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/neutral/runs/D_grid/post_processing/XYdomain_125_480000.nc
     group: Farm_XYdomain125
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_DGrid_E_spectra_Z125.csv
     remove_endpoint_x: True
     remove_endpoint_y: True
@@ -53,7 +53,7 @@ spectra_035:
   - name: Spectra_035
     ncfile: /nscratch/gyalla/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/neutral/runs/D_grid/post_processing/XYdomain_035_480000.nc
     group: Farm_XYdomain035
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_DGrid_E_spectra_Z035.csv
     remove_endpoint_x: True
     remove_endpoint_y: True
@@ -63,7 +63,7 @@ spectra_315:
   - name: Spectra_035
     ncfile: /nscratch/gyalla/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/neutral/runs/D_grid/post_processing/XYdomain_315_480000.nc
     group: Farm_XYdomain315
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_DGrid_E_spectra_Z315.csv
     remove_endpoint_x: True
     remove_endpoint_y: True

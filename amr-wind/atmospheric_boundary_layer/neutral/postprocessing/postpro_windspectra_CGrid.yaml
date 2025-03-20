@@ -11,7 +11,7 @@ spectra_27:
     ncfile: /lustre/orion/cfd162/proj-shared/prakash/neutral_spectra_postprocessing/XYdomain_027_240000.nc
     group: Farm_XYdomain027
     csvfile: neutral_E_spectra_Z027.csv
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     remove_endpoint_x: True
     remove_endpoint_y: True
 
@@ -20,7 +20,7 @@ spectra_90:
   - name: Spectra_090
     ncfile: /lustre/orion/cfd162/proj-shared/prakash/neutral_spectra_postprocessing/XYdomain_090_240000.nc
     group: Farm_XYdomain090
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_E_spectra_Z090.csv
     remove_endpoint_x: True
     remove_endpoint_y: True
@@ -30,7 +30,7 @@ spectra_153:
   - name: Spectra_153
     ncfile: /lustre/orion/cfd162/proj-shared/prakash/neutral_spectra_postprocessing/XYdomain_153_240000.nc
     group: Farm_XYdomain153
-    trange:  [124000, 125000]
+    trange:  [120000, 125000]
     csvfile: neutral_E_spectra_Z153.csv
     remove_endpoint_x: True
     remove_endpoint_y: True
