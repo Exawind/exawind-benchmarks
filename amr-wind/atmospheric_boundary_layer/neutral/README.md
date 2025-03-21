@@ -10,9 +10,9 @@ out weakly stably stratified and the turbulence naturally present evolves the
 flow to create a neutral layer with a capping inversion. The flow is dominated
 by streaks of high and low velocities near the surface and at heights typical
 for wind turbine rotors. The domain spatial size is 2560 m × 2560 m × 896 m.
-Berg et al. (2020) used resolutions ranging from ∆x = ∆y = 30 m and ∆z = 14 m
-to ∆x = ∆y = 3.75 m and ∆z = 1.75 m. The benchmark simulation in AMR-Wind uses
-∆x = ∆y = 5 m and ∆z = 4.87 m (512 × 512 × 184 cells), corresponding the
+Berg et al. (2020) used resolutions ranging from $\Delta$x = $\Delta$y = 30 m and $\Delta$z = 14 m
+to $\Delta$x = $\Delta$y = 3.75 m and $\Delta$z = 1.75 m. The benchmark simulation in AMR-Wind uses
+$\Delta$x = $\Delta$y = 5 m and $\Delta$z = 4.87 m (512 × 512 × 184 cells), corresponding the
 horizontal resolution in the "C-grid" used in Berg et al (2020). 
 
 **Contents**
@@ -34,7 +34,7 @@ The input files for this case are located in the [input_files](input_files) dire
 - Domain size: 5120m x 5120m x 1920m 
 - Mesh size: 512 x 512 x 184 (C-Grid)
 - Total mesh size: 48234496 cells
-- Timestep: ∆t = 0.5s
+- Timestep: $\Delta$t = 0.5s
 - Total simulation time: 125000s
 
 ## Performance
@@ -71,10 +71,9 @@ The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov
  - $z_i$ = 352.066 m
  - Obukhov Length = 2553.476 m (computed at z=27 m)  
 
-The statistics are averaged over the time interval $t\in[120000,125000]s$. Defining the eddy turnover time as $TE=z_i/u^*$, this time interval corresponds to $t/TE \in [72.5,75.5]$, which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times ($t/TE=[55,65]$) the ARM-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
+The statistics are averaged over the time interval $t\in[120000,125000]s$. Defining the eddy turnover time as $TE=z_i/u^*$, this time interval corresponds to $t/TE \in [72.5,75.5]$, which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times ($t/TE=[55,65]$) the AMR-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
 
 ### Horizontal Profiles
------------------------
 
 Horizontally averaged profiles of are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) Jupyter notebook and python code are shown below. 
 
@@ -106,7 +105,6 @@ if postproamrwinddir not in sys.path:
 ![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_grid.png)
 
 ### Wavenumber Spectra
------------------------
 
 Two-dimensional (2D) wavenumber spectra are computed from the XY planes sampled from AMR-Wind using the [post-processing engine](https://github.com/Exawind/amr-wind-frontend/tree/main/postproengine) in the the [AMR-Wind frontend](https://github.com/Exawind/amr-wind-frontend) library. The [yaml file](/postprocessing/postpro_windspectra_CGrid.yaml) for computing 2D wavenumber spectra of vertical planes sampled in this benchmark case can be called using the [ppengine.py](https://github.com/Exawind/amr-wind-frontend/blob/main/utilities/ppengine.py) utility as
 ```
@@ -119,7 +117,6 @@ The [ABL_wavenumber_spectra.ipynb](postprocessing/ABL_wavenumber_spectra.ipynb) 
 ![wavenumber_spectra](postprocessing/figures/ABL_wavenumber_spectra_C_grid.png)
 
 ### Temporal Spectra
------------------------
 
 Temporal spectra are computed from the XY planes sampled from AMR-Wind using the [post-processing engine](https://github.com/Exawind/amr-wind-frontend/tree/main/postproengine) in the [AMR-Wind frontend](https://github.com/Exawind/amr-wind-frontend) library. The [ABL_temporal_spectra.ipynb](postprocessing/ABL_temporal_spectra.ipynb) jupyter notebook can be used to compute the temporal spectra and to plot the results against a Kaimal spectra. 
 Details of the temporal spectra computation can be found in the [documentation](edit) for the post-processing engine. 
@@ -136,6 +133,7 @@ The streamwise, lateral, and vertical temporal spectra sampled from XY planes at
 
 #### z = 27m
 ![temporal_spectra_27](postprocessing/figures/ABL_temporal_spectra_z27_C_grid.png)
+
 #### z = 90m
 ![temporal_spectra_90](postprocessing/figures/ABL_temporal_spectra_z90_C_grid.png)
 
@@ -201,7 +199,6 @@ The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov
 The instructions for computing statistics from the AMR-Wind sampling planes are identical those reported above, the results of which are reported in the following subsection.
 
 ### Horizontal Profiles
------------------------
 
 Horizontally averaged profiles of are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) Jupyter notebook and are shown below. 
 
@@ -224,7 +221,6 @@ Horizontally averaged profiles of are computed in the [AVG_horiz_profiles.ipynb]
 ![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_D_grids.png)
 
 ### Wavenumber Spectra
------------------------
 
 Two-dimensional wavenumber spectra are computed in the [ABL_wavenumber_spectra.ipynb](postprocessing/ABL_wavenumber_spectra.ipynb) Jupyter notebook and are reported below at different vertical locations in the domain:
 
@@ -232,7 +228,6 @@ Two-dimensional wavenumber spectra are computed in the [ABL_wavenumber_spectra.i
 ![wavenumber_spectra](postprocessing/figures/ABL_wavenumber_spectra_D_grid.png)
 
 ### Temporal Spectra
----------------------
 
 Temporal spectra are computed in the [ABL_temporal_spectra.ipynb](postprocessing/ABL_temporal_spectra.ipynb) notebook and are reported below at two different vertical locations in the domain:
 
