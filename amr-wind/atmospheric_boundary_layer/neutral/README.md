@@ -75,19 +75,26 @@ if postproamrwinddir not in sys.path:
     sys.path.append(postproamrwinddir)
 ```
 
-#### Horizontal velocity:![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_grid.png)
+#### Horizontal velocity:
+![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_grid.png)
 
-#### Temperature:![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_grid.png)
+#### Temperature:
+![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_grid.png)
 
-#### Wind Direction:![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_grid.png)
+#### Wind Direction:
+![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_grid.png)
 
-#### Turbulence Intensity (TKE):![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_grid.png)
+#### Turbulence Intensity (TKE):
+![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_grid.png)
 
-#### Wind Shear:![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_grid.png)
+#### Wind Shear:
+![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_grid.png)
 
-#### Resolved Reynolds stress, avg(u'w'):![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_grid.png)
+#### Resolved Reynolds stress, avg(u'w'):
+![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_grid.png)
 
-#### Resolved Reynolds stress, avg(v'w'):![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_grid.png)
+#### Resolved Reynolds stress, avg(v'w'):
+![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_grid.png)
 
 ### Wavenumber Spectra
 -----------------------
@@ -118,8 +125,10 @@ for x in amrwindfedirs: sys.path.insert(1, x)
 ```
 The streamwise, lateral, and vertical temporal spectra sampled from XY planes at two different vertical locations are reported below:
 
-#### z = 27m![temporal_spectra_27](postprocessing/figures/ABL_temporal_spectra_z27_C_grid.png)
-#### z = 90m![temporal_spectra_90](postprocessing/figures/ABL_temporal_spectra_z90_C_grid.png)
+#### z = 27m
+![temporal_spectra_27](postprocessing/figures/ABL_temporal_spectra_z27_C_grid.png)
+#### z = 90m
+![temporal_spectra_90](postprocessing/figures/ABL_temporal_spectra_z90_C_grid.png)
 
 ### Integral Lengthscale 
 
@@ -176,19 +185,26 @@ The instructions for computing statistics from the AMR-Wind sampling planes are 
 
 Horizontally averaged profiles of are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) Jupyter notebook and are shown below. 
 
-#### Horizontal velocity:![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_D_grids.png)
+#### Horizontal velocity:
+![Uhoriz_Profile](postprocessing/figures/AVG_horiz_profiles_Uhoriz_C_D_grids.png)
 
-#### Temperature:![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_D_grids.png)
+#### Temperature:
+![T_Profile](postprocessing/figures/AVG_horiz_profiles_T_C_D_grids.png)
 
-#### Wind Direction:![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_D_grids.png)
+#### Wind Direction:
+![winddir_profile](postprocessing/figures/AVG_horiz_profiles_WindDir_C_D_grids.png)
 
-#### Turbulence Intensity (TKE):![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_D_grids.png)
+#### Turbulence Intensity (TKE):
+![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_D_grids.png)
 
-#### Wind Shear:![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_D_grids.png)
+#### Wind Shear:
+![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_D_grids.png)
 
-#### Resolved Reynolds stress, avg(u'w'):![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_D_grids.png)
+#### Resolved Reynolds stress, avg(u'w'):
+![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_D_grids.png)
 
-#### Resolved Reynolds stress, avg(v'w'):![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_D_grids.png)
+#### Resolved Reynolds stress, avg(v'w'):
+![vw_profile](postprocessing/figures/AVG_horiz_profiles_vw_C_D_grids.png)
 
 ### Wavenumber Spectra
 -----------------------
