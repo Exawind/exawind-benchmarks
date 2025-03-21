@@ -27,8 +27,7 @@ Full details of the simulation setup are provided in [**setup documentation**](i
 
 The input files for this case are located in the [input_files](input_files) directory. Several of the main input parameters for this case are summarized below: 
 
-- Hub-height wind speed: 5.0 m/s
-- Hub-height wind direction: 250 degrees W
+- Geostrophic wind speed: 5.0 m/s
 - Surface roughness: 0.05 m
 - Surface temperature flux: 0.0 K-m/s
 - Reference temperature: 290 K 
@@ -53,7 +52,7 @@ The simulation was run on the NREL's [Kestrel](https://nrel.github.io/HPC/Docume
 
 ## Results
 
-Statistics and results from the ABL are calculated using the scripts and notebooks in the [postprocessing](postprocessing) directory, and are saved to the [results](directory) directory. Statistics from the hub-height plane are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are summarized in the following table: 
+Statistics and results from the ABL are calculated using the scripts and notebooks in the [postprocessing](postprocessing) directory, and are saved to the [results](directory) directory. Statistics from a horizontal plane at z = 90m are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are summarized in the following table: 
 
 | z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | ObukhovL | Veer | $z_i$ | $u^*$ |
 |--|--|--|--|--|--|--|--|--|
