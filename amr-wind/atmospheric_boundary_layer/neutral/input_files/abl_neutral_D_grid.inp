@@ -1,7 +1,7 @@
 #¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
 #            SIMULATION STOP            #
 #.......................................#
-time.stop_time               =   125000.0     # Max (simulated) time to evolve
+time.stop_time               =   120000.0     # Max (simulated) time to evolve
 time.max_step                =   -1          # Max number of time steps
 
 #¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
@@ -14,7 +14,6 @@ time.cfl              =   0.95         # CFL factor
 #            INPUT AND OUTPUT           #
 #.......................................#
 io.check_file                 = chk                 
-io.restart_file               = chk480000
 time.plot_interval            = 5000       # Steps between plot files
 time.checkpoint_interval      = 5000       # Steps between checkpoint files
 ABL.stats_output_frequency    = 100
@@ -97,67 +96,3 @@ zhi.temperature = 0.003 # tracer is used to specify potential temperature gradie
 #.......................................#
 incflo.verbose          =   0          # incflo_level
 
-#.......................................#
-#		SAMPLING		#
-#.......................................#
-incflo.post_processing                   = XYdomain_027_ XYdomain_090_ XYdomain_153_ XYdomain_315_ XYdomain_035_ XYdomain_125_
-XYdomain_027_.type                       = Sampling            
-XYdomain_027_.output_frequency           = 2
-XYdomain_027_.fields                     = velocity temperature tke
-XYdomain_090_.type                       = Sampling            
-XYdomain_090_.output_frequency           = 2
-XYdomain_090_.fields                     = velocity temperature tke
-XYdomain_153_.type                       = Sampling            
-XYdomain_153_.output_frequency           = 2
-XYdomain_153_.fields                     = velocity temperature tke
-XYdomain_315_.type                       = Sampling            
-XYdomain_315_.output_frequency           = 2
-XYdomain_315_.fields                     = velocity temperature tke
-XYdomain_035_.type                       = Sampling            
-XYdomain_035_.output_frequency           = 2
-XYdomain_035_.fields                     = velocity temperature tke
-XYdomain_125_.type                       = Sampling            
-XYdomain_125_.output_frequency           = 2
-XYdomain_125_.fields                     = velocity temperature tke
-XYdomain_027_.labels                     = Farm_XYdomain027    
-XYdomain_090_.labels                     = Farm_XYdomain090    
-XYdomain_153_.labels                     = Farm_XYdomain153 
-XYdomain_315_.labels                     = Farm_XYdomain315
-XYdomain_035_.labels                     = Farm_XYdomain035
-XYdomain_125_.labels                     = Farm_XYdomain125
-XYdomain_027_.Farm_XYdomain027.type      = PlaneSampler        
-XYdomain_027_.Farm_XYdomain027.num_points = 513 513
-XYdomain_027_.Farm_XYdomain027.origin    = 0.0000 0.0000 27.0  
-XYdomain_027_.Farm_XYdomain027.axis1     = 2560 0.0 0.0   
-XYdomain_027_.Farm_XYdomain027.axis2     = 0.0 2560 0.0   
-XYdomain_027_.Farm_XYdomain027.offset_vector = 0.0 0.0 0.0         
-XYdomain_090_.Farm_XYdomain090.type      = PlaneSampler        
-XYdomain_090_.Farm_XYdomain090.num_points = 513 513
-XYdomain_090_.Farm_XYdomain090.origin    = 0.0 0.0 90.0  
-XYdomain_090_.Farm_XYdomain090.axis1     = 2560 0.0 0.0   
-XYdomain_090_.Farm_XYdomain090.axis2     = 0.0 2560 0.0   
-XYdomain_090_.Farm_XYdomain090.offset_vector = 0.0 0.0 0.0         
-XYdomain_153_.Farm_XYdomain153.type      = PlaneSampler        
-XYdomain_153_.Farm_XYdomain153.num_points = 513 513
-XYdomain_153_.Farm_XYdomain153.origin    = 0.0 0.0 153.0 
-XYdomain_153_.Farm_XYdomain153.axis1     = 2560 0.0 0.0   
-XYdomain_153_.Farm_XYdomain153.axis2     = 0.0 2560 0.0   
-XYdomain_153_.Farm_XYdomain153.offset_vector = 0.0 0.0 0.0     
-XYdomain_315_.Farm_XYdomain315.type      = PlaneSampler        
-XYdomain_315_.Farm_XYdomain315.num_points = 513 513
-XYdomain_315_.Farm_XYdomain315.origin    = 0.0 0.0 315.0 
-XYdomain_315_.Farm_XYdomain315.axis1     = 2560 0.0 0.0   
-XYdomain_315_.Farm_XYdomain315.axis2     = 0.0 2560 0.0   
-XYdomain_315_.Farm_XYdomain315.offset_vector = 0.0 0.0 0.0     
-XYdomain_035_.Farm_XYdomain035.type      = PlaneSampler        
-XYdomain_035_.Farm_XYdomain035.num_points = 513 513
-XYdomain_035_.Farm_XYdomain035.origin    = 0.0 0.0 35.0 
-XYdomain_035_.Farm_XYdomain035.axis1     = 2560 0.0 0.0   
-XYdomain_035_.Farm_XYdomain035.axis2     = 0.0 2560 0.0   
-XYdomain_035_.Farm_XYdomain035.offset_vector = 0.0 0.0 0.0     
-XYdomain_125_.Farm_XYdomain125.type      = PlaneSampler        
-XYdomain_125_.Farm_XYdomain125.num_points = 513 513
-XYdomain_125_.Farm_XYdomain125.origin    = 0.0 0.0 125.0 
-XYdomain_125_.Farm_XYdomain125.axis1     = 2560 0.0 0.0   
-XYdomain_125_.Farm_XYdomain125.axis2     = 0.0 2560 0.0   
-XYdomain_125_.Farm_XYdomain125.offset_vector = 0.0 0.0 0.0     
