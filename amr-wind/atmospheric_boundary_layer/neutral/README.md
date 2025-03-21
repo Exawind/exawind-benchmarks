@@ -3,19 +3,29 @@
 # Neutral Atmospheric Boundary Layer 
 
 This benchmark problem is a conventionally neutral atmospheric boundary layer
-(ABL) and corresponds to the case presented in Berg et al. (2020). The flow is driven by a
-uniform, moderate geostrophic wind of 5 m/s, aligned in the x-direction. There
-is no specified heat flux at the surface. This case starts out weakly stably
-stratified and the turbulence naturally present evolves the flow to create a
-neutral layer with a capping inversion. The flow is dominated by streaks of high
-and low velocities near the surface and at heights typical for wind turbine
-rotors. The domain spatial size is 2560 m × 2560 m × 896 m. Berg et al. (2020)
-used resolutions ranging from ∆x = ∆y = 30 m and ∆z = 14 m to ∆x = ∆y = 3.75 m
-and ∆z = 1.75 m. The benchmark simulation in AMR-Wind uses ∆x = ∆y = 5 m and ∆z
-= 4.87 m (512 × 512 × 184 cells), corresponding the horizontal resolution in the
-"C-grid" used in Berg et al (2020). 
+(ABL) and corresponds to the case presented in Berg et al. (2020). The flow is
+driven by a uniform, moderate geostrophic wind of 5 m/s, aligned in the
+x-direction. There is no specified heat flux at the surface. This case starts
+out weakly stably stratified and the turbulence naturally present evolves the
+flow to create a neutral layer with a capping inversion. The flow is dominated
+by streaks of high and low velocities near the surface and at heights typical
+for wind turbine rotors. The domain spatial size is 2560 m × 2560 m × 896 m.
+Berg et al. (2020) used resolutions ranging from ∆x = ∆y = 30 m and ∆z = 14 m
+to ∆x = ∆y = 3.75 m and ∆z = 1.75 m. The benchmark simulation in AMR-Wind uses
+∆x = ∆y = 5 m and ∆z = 4.87 m (512 × 512 × 184 cells), corresponding the
+horizontal resolution in the "C-grid" used in Berg et al (2020). 
 
-The input files for this case are in the [input_files](input_files) directory. The computation was done on kestrel, using 20 CPU nodes for 144 hours, with the latest release of AMR-Wind [32811b18af31e7b54f7e5cb23c6ead424f21f1f0](https://github.com/Exawind/amr-wind/commit/32811b18af31e7b54f7e5cb23c6ead424f21f1f0). Several of the main input parameters for this case are summarized below: 
+**Contents**
+
+- [Simulation setup](#simulation-setup)
+- [Performance](#performance)
+- [Results](#results)
+
+## Simulation Setup
+
+Full details of the simulation setup are provided in [**setup documentation**](input_files/README.md).
+
+The input files for this case are located in the [input_files](input_files) directory. Several of the main input parameters for this case are summarized below: 
 
 - Hub-height wind speed: 5.0 m/s
 - Hub-height wind direction: 250 degrees W
