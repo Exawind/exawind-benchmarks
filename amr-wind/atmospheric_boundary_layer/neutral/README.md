@@ -67,8 +67,8 @@ Horizontally averaged statistics are computed in the [AVG_horiz_profiles.ipynb](
 
 The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov lengthscale for this simulation are:
 
- - $u^*$ = 0.208
- - $z_i$ = 352.066
+ - $u^*$ = 0.208 m/s
+ - $z_i$ = 352.066 m
  - Obukhov Length = 2553.476 m (computed at z=27m)  
 
 The statistics are averaged over the time interval $t\in[120000,125000]s$. Defining the eddy turnover time as $TE=z_i/u^*$, this time interval corresponds to $t/TE \in [72.5,75.5]$, which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times ($t/TE=[55,65]$) the ARM-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
@@ -194,8 +194,8 @@ The finer resolution case is also evolved for 125000s, and statistics are averag
 
 The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov lengthscale for this simulation are:
 
- - $u^*$ = 0.203
- - $z_i$ = 337.048
+ - $u^*$ = 0.203 m/s
+ - $z_i$ = 337.048 m
  - Obukhov Length = 2549.324 m (computed at z=27m)  
 
 The instructions for computing statistics from the AMR-Wind sampling planes are identical those reported above, the results of which are reported in the following subsection.
