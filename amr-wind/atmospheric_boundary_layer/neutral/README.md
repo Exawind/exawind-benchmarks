@@ -52,11 +52,24 @@ The simulation was run on the NREL's [Kestrel](https://nrel.github.io/HPC/Docume
 
 ## Results
 
-Statistics and results from the ABL are calculated using the scripts and notebooks in the [postprocessing](postprocessing) directory, and are saved to the [results](directory) directory. Statistics from a horizontal plane at z = 90m are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are summarized in the following table: 
+Statistics and results from the ABL are calculated using the scripts and notebooks in the [postprocessing](postprocessing) directory, and are saved to the [results](directory) directory. 
 
-| z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | ObukhovL | Veer | $z_i$ | $u^*$ |
-|--|--|--|--|--|--|--|--|--|
-| 90m | 4.39m/s | 252.7 deg | 0.0603 | 0.1465 | 729.8625 | 0.0237 | 352.06 | 0.208
+Horizontally averaged statistics are computed in the [AVG_horiz_profiles.ipynb](postprocessing/AVG_horiz_profiles.ipynb) notebook and are summarized in the following table at six different vertical locations:
+
+| z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | Veer|
+|--|--|--|--|--|--|
+|27 m  | 3.71 m/s  | 251.23 deg | 8.57 % |0.136|0.029 deg
+|90 m  | 4.39 m/s  | 252.70 deg | 6.03 % |0.146|0.024 deg
+|153 m | 4.77 m/s| 254.28 deg| 4.77 %| 0.170|0.025 deg
+|175 m| 4.89 m/s| 254.84 deg| 4.40 %| 0.174|0.025 deg
+|200 m| 5.00 m/s| 255.48 deg| 4.00 %| 0.175|0.027  deg
+|250 m | 5.21 m/s| 256.98 deg| 3.19 %| 0.194|0.034 deg
+
+The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov lengthscale for this simulation are:
+
+ - $u^*$ = 0.208
+ - $z_i$ = 352.066
+ - Obukhov Length = 2553.476 m (computed at z=27m)  
 
 The statistics are averaged over the time interval $t\in[120000,125000]s$. Defining the eddy turnover time as $TE=z_i/u^*$, this time interval corresponds to $t/TE \in [72.5,75.5]$, which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times ($t/TE=[55,65]$) the ARM-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
 
@@ -85,9 +98,6 @@ if postproamrwinddir not in sys.path:
 
 #### Turbulence Intensity (TKE):
 ![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_grid.png)
-
-#### Wind Shear:
-![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_grid.png)
 
 #### Resolved Reynolds stress, avg(u'w'):
 ![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_grid.png)
@@ -147,7 +157,7 @@ import sys, os, shutil
 for x in amrwindfedirs: sys.path.insert(1, x)
 for x in amrwindfedirs: sys.path.insert(1, x+'/utilities')  
 ```
-The two-point correlation, $R_{ij}$, as a function of longitudinal and latitudinal separation distance $\boldsymbol{\xi}$ are shown below at multiple locations, $\boldsymbol{x}$, on the hub-height plane:
+The two-point correlation, $R_{ij}$, as a function of longitudinal and latitudinal separation distance $\boldsymbol{\xi}$ are shown below at multiple locations, $\boldsymbol{x}$, on the XY-plane at z=90m:
 
 ![intL_long](postprocessing/figures/ABL_integral_lengthscale_long.png)
 ![intL_lat](postprocessing/figures/ABL_integral_lengthscale_lat.png)
@@ -171,11 +181,22 @@ The grid refinement study was run on the Sandia Flight HPC cluster using the fol
 
 ## Results
 
-The refined-resolution case is also evolved for 125000s, and statistics are averaged over the time interval $t\in[120000,125000]s$. The hub-height statistics for this case are 
+The finer resolution case is also evolved for 125000s, and statistics are averaged over the time interval $t\in[120000,125000]s$. The horizontally averaged statistics for this case are summarized in the following table:
 
-| z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | ObukhovL | Veer | $z_i$ | $u^*$ |
-|--|--|--|--|--|--|--|--|--|
-| 90m | 4.36m/s | 252.2 deg | 0.0603 | 0.1678 | 754.4361 | 0.0368 | 337.04 | 0.203
+| z | Horizontal Velocity | Wind Direction | TI (TKE) | Shear Exponent | Veer|
+|--|--|--|--|--|--|
+|27 m | 3.62 m/s |250.32 deg | 8.48% | 0.136| 0.027 deg
+|90 m | 4.36 m/s |252.15 deg | 6.03% | 0.174| 0.032 deg
+|153 m| 4.81 m/s |254.31 deg | 4.62% | 0.190| 0.033 deg
+|175 m| 4.94 m/s |255.06 deg | 4.23% | 0.195| 0.035 deg
+|200 m| 5.07 m/s |255.97 deg | 3.79% | 0.195| 0.037 deg
+|250 m| 5.30 m/s |257.97 deg | 2.94% | 0.204| 0.045 deg
+
+The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov lengthscale for this simulation are:
+
+ - $u^*$ = 0.203
+ - $z_i$ = 337.048
+ - Obukhov Length = 2549.324 m (computed at z=27m)  
 
 The instructions for computing statistics from the AMR-Wind sampling planes are identical those reported above, the results of which are reported in the following subsection.
 
@@ -195,9 +216,6 @@ Horizontally averaged profiles of are computed in the [AVG_horiz_profiles.ipynb]
 
 #### Turbulence Intensity (TKE):
 ![TI_profile](postprocessing/figures/AVG_horiz_profiles_TI_C_D_grids.png)
-
-#### Wind Shear:
-![shear_profile](postprocessing/figures/AVG_horiz_profiles_WindShear_C_D_grids.png)
 
 #### Resolved Reynolds stress, avg(u'w'):
 ![uw_profile](postprocessing/figures/AVG_horiz_profiles_uw_C_D_grids.png)
