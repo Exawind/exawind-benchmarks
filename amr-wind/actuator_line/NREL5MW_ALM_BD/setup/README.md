@@ -20,7 +20,7 @@
     
     
     Here the optional argument `BENCHMARKDIR` is the location where you'd like the 
-    benchmark repository to be cloned.  If it not provided, then the repo will be cloned into `exawind-benchmarks` in the current directory.
+    benchmark repository to be cloned.  If it is not provided, then the repo will be cloned into `exawind-benchmarks` in the current directory.
 
 
 2.  Run the [slightly convective ABL benchmark](https://github.com/Exawind/exawind-benchmarks/tree/main/amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw) case.
@@ -29,9 +29,9 @@
     condition data which is generated during that ABL benchmark case,
     so it needs to be run before the NREL5MW case can be run.
 
-3.  Download the [AMR-Wind frontend](https://github.com/Exawind/amr-wind-frontend) tool.
+3.  Download the [AMR-Wind front end](https://github.com/Exawind/amr-wind-frontend) tool.
 
-	The AMR-Wind frontend tool has useful utilities which can be used
+	The AMR-Wind front end tool has useful utilities which can be used
     for setting up the OpenFAST turbine model and postprocessing
     results.  It is available on github and can be downloaded via
 
@@ -40,7 +40,7 @@
 	```
 
     where `AMRWINDFEDIR` is the location you'd like the tool to be
-    located.  For the basic use of frontend-tool, the usual python 3
+    located.  For the basic use of front end tool, the usual python 3
     libraries (numpy, scipy, pandas, etc.) are required.
 
 ## Step 1: create the run directory
@@ -106,7 +106,7 @@ In each of these lines, change the path to match the location where the precurso
 
 ## Step 4: submit the run
 
-On many HPC platforms, a submission script needs to used to launch the case.  For slurm based systems, a submit script like this `submit.sh` file is used:
+On many HPC platforms, a submission script needs to be used to launch the case.  For slurm based systems, a submit script like this `submit.sh` file is used:
 ```bash
 #!/bin/bash
 #SBATCH --nodes=8
@@ -245,7 +245,7 @@ Actuator.T0.epsilon_tower                = 1.5 1.5 1.5
 
 If you're interested in modifying the AMR-Wind input file, for instance, to change the refinement regions or sampling planes, you can use the Jupyter notebook [SetupALM_OFv402.ipynb](SetupALM_OFv402.ipynb).  This will allow you to visualize the loccations of the refinements or planes, and will generate the AMR-Wind input file [NREL5MW_ALM_BD_OFv402.inp](../input_files/NREL5MW_ALM_BD_OFv402.inp) at the end of the process.
 
-There are a few modifications required to execute the notebook.  First, the location of the AMR-Wind frontend directory (and the utilities subdirectory) should be provided in the `amrwindfedirs` list here: 
+There are a few modifications required to execute the notebook.  First, the location of the AMR-Wind front end directory (and the utilities subdirectory) should be provided in the `amrwindfedirs` list here: 
 ```python
 # Add any possible locations of amr-wind-frontend here
 amrwindfedirs = ['/projects/wind_uq/lcheung/amrwind-frontend',

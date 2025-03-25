@@ -25,6 +25,7 @@ The overall simulation parameters
 | Num mesh elements/rank | 23,190 |
 
 Average time spent every iteration in the following categories:
+
 |Category| Time [s]|
 |---            | --- |
 |Pre-processing | 0.0041|
