@@ -243,7 +243,7 @@ Actuator.T0.epsilon_tower                = 1.5 1.5 1.5
 
 ## Optional: using the jupyter notebook
 
-If you're interested in modifying the AMR-Wind input file, for instance, to change the refinement regions or sampling planes, you can use the Jupyter notebook [SetupALM_OFv402.ipynb](SetupALM_OFv402.ipynb).  This will allow you to visualize the loccations of the refinements or planes, and will generate the AMR-Wind input file [NREL5MW_ALM_BD_OFv402.inp](../input_files/NREL5MW_ALM_BD_OFv402.inp) at the end of the process.
+If you're interested in modifying the AMR-Wind input file, for instance, to change the refinement regions or sampling planes, you can use the Jupyter notebook [SetupALM_OFv402.ipynb](SetupALM_OFv402.ipynb).  This will allow you to visualize the locations of the refinements or planes, and will generate the AMR-Wind input file [NREL5MW_ALM_BD_OFv402.inp](../input_files/NREL5MW_ALM_BD_OFv402.inp) at the end of the process.
 
 There are a few modifications required to execute the notebook.  First, the location of the AMR-Wind front end directory (and the utilities subdirectory) should be provided in the `amrwindfedirs` list here: 
 ```python

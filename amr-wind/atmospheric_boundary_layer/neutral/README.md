@@ -10,9 +10,9 @@ out weakly stably stratified and the turbulence naturally present evolves the
 flow to create a neutral layer with a capping inversion. The flow is dominated
 by streaks of high and low velocities near the surface and at heights typical
 for wind turbine rotors. The domain spatial size is 2560 m × 2560 m × 896 m.
-Berg et al. (2020) used resolutions ranging from $\Delta$x = $\Delta$y = 30 m and $\Delta$z = 14 m
-to $\Delta$x = $\Delta$y = 3.75 m and $\Delta$z = 1.75 m. The benchmark simulation in AMR-Wind uses
-$\Delta$x = $\Delta$y = 5 m and $\Delta$z = 4.87 m (512 × 512 × 184 cells), corresponding the
+Berg et al. (2020) used resolutions ranging from $\Delta x$ = $\Delta y$ = 30 m and $\Delta z$ = 14 m
+to $\Delta x$ = $\Delta y$ = 3.75 m and $\Delta z$ = 1.75 m. The benchmark simulation in AMR-Wind uses
+$\Delta x$ = $\Delta y$ = 5 m and $\Delta z$ = 4.87 m (512 × 512 × 184 cells), corresponding the
 horizontal resolution in the "C-grid" used in Berg et al (2020). 
 
 **Contents**
@@ -34,7 +34,7 @@ The input files for this case are located in the [input_files](input_files) dire
 - Domain size: 5120m x 5120m x 1920m 
 - Mesh size: 512 x 512 x 184 (C-Grid)
 - Total mesh size: 48234496 cells
-- Timestep: $\Delta$t = 0.5s
+- Timestep: $\Delta t$ = 0.5s
 - Total simulation time: 125000s
 
 ## Performance
@@ -110,7 +110,7 @@ Two-dimensional (2D) wavenumber spectra are computed from the XY planes sampled 
 ```
 python ppengine.py postpro_windspectra_CGrid.yaml
 ```
-Details of the 2D wavenumber computation can be found in the [documentation](edit) for the post-processing engine.
+Details of the 2D wavenumber computation can be found in the [documentation](https://github.com/Exawind/amr-wind-frontend/tree/main/postproengine/doc) for the post-processing engine.
 The [ABL_wavenumber_spectra.ipynb](postprocessing/ABL_wavenumber_spectra.ipynb) Jupyter notebook plots the energy, horizontal, and vertical 2D wavenumber spectra and are reported below at three different vertical locations in the domain. 
 
 

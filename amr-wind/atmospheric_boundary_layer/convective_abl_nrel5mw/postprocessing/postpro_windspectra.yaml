@@ -1,0 +1,26 @@
+globalattributes:
+  verbose: False
+  executeorder:
+  - spectra_27
+  - spectra_90
+    
+spectra_27:
+  wavenumber_spectra:
+  - name: Spectra_027
+    ncfile: /gpfs/lcheung/HFM/exawind-benchmarks/convective_abl/post_processing/XYdomain_027_30000.nc
+    trange:  [15000, 20000]
+    group: Farm_XYdomain027
+    csvfile: ../results/wavenumberspectra_Z027.csv
+    remove_endpoint_x: True
+    remove_endpoint_y: True
+
+spectra_90:
+  wavenumber_spectra:
+  - name: Spectra_090
+    ncfile: /gpfs/lcheung/HFM/exawind-benchmarks/convective_abl/post_processing/XYdomain_090_30000.nc
+    group: Farm_XYdomain090
+    trange:  [15000, 20000]
+    csvfile: ../results/wavenumberspectra_Z090.csv
+    remove_endpoint_x: True
+    remove_endpoint_y: True
+
