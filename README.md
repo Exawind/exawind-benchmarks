@@ -12,6 +12,19 @@ Benchmark problems are grouped by the program used to perform the simulation. Fo
 To cite the cases and data from this repository, please use the following references (which contain the published versions of the cases and results):
 
 ```
+@article{amrwind2025,
+    author = {Kuhn, Michael B. and {Henry de Frahan}, Marc T. and Mohan, Prakash and Deskos, Georgios and Churchfield, Matthew and Cheung, Lawrence and Sharma, Ashesh and Almgren, Ann and Ananthan, Shreyas and Brazell, Michael J. and {Martinez-Tossas} Luis A. and Thedin, Regis and Rood, Jon and Sakievich, Philip and Vijayakumar, Ganesh and Zhang, Weiqun and Sprague, Michael A.},
+    title = {AMR-Wind: A performance-portable, high-fidelity flow solver for wind farm simulations},
+    journal = {Wind Energy},
+    volume = {28},
+    number = {5},
+    pages = {-},
+    doi = {10.1002/we.70010},
+    url = {https://onlinelibrary.wiley.com/doi/full/10.1002/we.70010},
+    eprint = {},
+    year = {2025}
+}
+
 @article{Sharma2024,
     author = {Sharma, Ashesh and Brazell, Michael J. and Vijayakumar, Ganesh and Ananthan, Shreyas and Cheung, Lawrence and deVelder, Nathaniel and {Henry de Frahan}, Marc T. and Matula, Neil and Mullowney, Paul and Rood, Jon and Sakievich, Philip and Almgren, Ann and Crozier, Paul S. and Sprague, Michael},
     title = {ExaWind: Open-source CFD for hybrid-RANS/LES geometry-resolved wind turbine simulations in atmospheric flows},
