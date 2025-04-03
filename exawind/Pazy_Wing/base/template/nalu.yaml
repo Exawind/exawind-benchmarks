@@ -1,0 +1,348 @@
+Simulations:
+- name: sim1
+  time_integrator: ti_1
+  optimizer: opt1
+
+#hypre_config:
+#  umpire_device_pool_mbs: 4096
+#  use_vendor_spgemm: 1
+#  use_vendor_spmv: 0
+#  use_vendor_sptrans: 0
+
+linear_solvers:
+  # solver for the momentum
+  - name: solve_mom
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 30
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    #write_preassembly_matrix_files: yes
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    segregated_solver: yes
+    hypre_cfg_file: hypre_file.yaml
+    hypre_cfg_node: hypre_simple_precon
+
+  # solver for the scalars TKE, SDR
+  - name: solve_scalar
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 30
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    #write_preassembly_matrix_files: yes
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    hypre_cfg_file: hypre_file.yaml
+    hypre_cfg_node: hypre_simple_precon
+
+  # solver for the pressure
+  - name: solve_elliptic
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 30
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    #write_preassembly_matrix_files: yes
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    hypre_cfg_file: hypre_file.yaml
+    hypre_cfg_node: hypre_elliptic
+
+realms:
+
+- name: realm_1
+  mesh: ../mesh/pazyslip.exo
+  #mesh: ../mesh/pazytight.exo  
+  automatic_decomposition_type: rcb
+  rebalance_mesh: yes
+  stk_rebalance_method: parmetis
+  use_edges: yes
+  check_jacobians: true
+
+  equation_systems:
+    name: theEqSys
+    max_iterations: 4
+    decoupled_overset_solve: yes
+
+    solver_system_specification:
+      gamma_transition: solve_scalar
+      velocity: solve_mom
+      turbulent_ke: solve_scalar
+      specific_dissipation_rate: solve_scalar
+      pressure: solve_elliptic
+      ndtw: solve_elliptic
+
+    systems:
+    - WallDistance:
+        name: myNDTW
+        max_iterations: 1
+        convergence_tolerance: 1.0e-8
+        update_frequency: 1
+        exchange_fringe_data: false
+
+    - LowMachEOM:
+        name: myLowMach
+        max_iterations: 1
+        convergence_tolerance: 1e-8
+
+    - ShearStressTransport:
+        name: mySST
+        max_iterations: 1
+        convergence_tolerance: 1e-8
+
+  initial_conditions:
+    - constant: ic_1
+      target_name:
+        - air1-HEX
+      value:
+        gamma_transition: 1.0
+        pressure: 0.0
+        velocity: [{windspeed}, 0.0, 0.0]
+        turbulent_ke: {tkein}
+        specific_dissipation_rate: {sdrin}
+
+  material_properties:
+    target_name:
+      - air1-HEX
+
+    specifications:
+    - name: density
+      type: constant
+      value: {density}
+    - name: viscosity
+      type: constant
+      value: {viscosity}
+
+  boundary_conditions:
+
+  - symmetry_boundary_condition: ground
+    target_name: slip1
+    symmetry_user_data:
+
+
+  - wall_boundary_condition: bc_wall1
+    target_name: wall1
+    wall_user_data:
+      use_wall_function: no
+      velocity: [0.0, 0.0, 0.0]	      
+      turbulent_ke: 0.0
+
+
+
+
+  - overset_boundary_condition: bc_overset
+    overset_connectivity_type: tioga
+    overset_user_data:
+      mesh_tag_offset: 0
+      #tioga_options:
+      #  symmetry_direction: 3
+      mesh_group:
+      - overset_name: b1ovr
+        mesh_parts:  [air1-HEX]
+        wall_parts:  [wall1]
+        ovset_parts: [overset1]
+
+
+  #mesh_transformation:
+  #- name: rotation
+  #  mesh_parts:
+  #  - air1-HEX
+  #  - air2-HEX
+  #  - air3-HEX
+  #  frame: inertial
+  #  motion:
+  #  - type: rotation
+  #    angle: -93
+  #    axis: [0.0, 0.0, 1.0]
+  #    centroid: [0.0, 0.0, 0.0]
+
+
+
+  openfast_fsi:
+    n_turbines_glob: 1
+    dry_run:  False
+    debug:    False
+    sim_start: trueRestart #/trueRestart/restartDriverInitFAST
+    #sim_start: init
+    t_start: 0.1 # one rev
+    t_max: 1000.0 # 100 rev
+    n_checkpoint: 1
+    dt_FAST: {dtlong}
+    Turbine0:
+      turb_id: 0
+      turbine_base_pos:
+        - 0.0
+        - 0.0
+        - -90.0
+      turbine_hub_pos:
+        - 0.0
+        - 0.0
+        - 0.0
+      restart_filename: "pazy.10000.chkp"
+      FAST_input_filename: "pazy.fst"
+     
+      sim_type: "ext-loads"
+      blade_parts:
+        - ["air1-HEX"]
+      blade_boundary_parts:
+        - ["wall1"]
+      az_blend_mean:  -1000
+      az_blend_delta: 3.14
+      vel_mean: {windspeed}
+      wind_dir: 270.0
+      z_ref: 0.0
+      shear_exp: 0.0
+      
+      deflection_ramping:
+        enable_temporal_ramping: false
+        enable_theta_ramping: false
+        enable_span_ramping: false
+        temporal_ramp_start: 0.0
+        temporal_ramp_end: 10000.0
+
+
+
+  solution_options:
+    name: myOptions
+    turbulence_model: sst
+    transition_model: true
+    #turbulence_model: laminar
+    projected_timescale_type: momentum_diag_inv
+
+    options:
+    - source_terms:
+        continuity: density_time_derivative
+
+    - hybrid_factor:
+        gamma_transition: 1.0
+        velocity: 1.0
+        turbulent_ke: 1.0
+        specific_dissipation_rate: 1.0
+
+    - alpha_upw:
+        gamma_transition: 1.0
+        velocity: 1.0
+        turbulent_ke: 1.0
+        specific_dissipation_rate: 1.0
+
+    - upw_factor:
+        gamma_transition: 0.0
+        velocity: 0.0
+        turbulent_ke: 0.0
+        specific_dissipation_rate: 0.0
+
+    - noc_correction:
+        pressure: yes
+
+    - limiter:
+        pressure: no
+        velocity: yes
+        turbulent_ke: yes
+        specific_dissipation_rate: yes
+
+    - projected_nodal_gradient:
+        gamma_transition: element
+        velocity: element
+        pressure: element
+        turbulent_ke: element
+        specific_dissipation_rate: element
+        ndtw: element
+
+    - relaxation_factor:
+        gamma_transition: 0.7
+        velocity: 0.7
+        pressure: 0.3
+        turbulent_ke: 0.7
+        specific_dissipation_rate: 0.7
+
+    - turbulence_model_constants:
+        fsti: 0.5
+        sdr_amb: 0.0
+        tke_amb: 0.0
+
+  post_processing:
+  - type: surface
+    physics: surface_force_and_moment
+    output_file_name: forces01.dat
+    frequency: 10
+    parameters: [0, 0, 0]
+    target_name:
+    - wall1
+
+  turbulence_averaging:
+    time_filter_interval: 100000.0
+
+    specifications:
+
+    - name: one
+      target_name:
+        - air1-HEX
+      reynolds_averaged_variables:
+      - velocity
+
+      compute_q_criterion: yes
+      compute_vorticity: yes
+
+  restart:
+    restart_data_base_name: rst01/nrel5mw.rst
+    restart_frequency: {cfdcheckpointinterval}
+    restart_start: {cfdcheckpointinterval}
+
+  output:
+    output_data_base_name: out01/nrel5mw.e
+    output_frequency: {cfdplotinterval}
+    output_node_set: no
+    output_variables:
+    - velocity
+    - pressure
+    #- turbulent_ke
+    #- specific_dissipation_rate
+    #- minimum_distance_to_wall
+    #- turbulent_viscosity
+    #- iblank
+    #- iblank_cell
+    - mesh_displacement
+    #- mesh_velocity
+    #- q_criterion
+    #- y_plus
+    #- yplus
+    #- vorticity
+    #- disp_map
+    #- disp_map_interp
+    #- div_mesh_velocity
+    - element_courant
+    - dual_nodal_volume
+
+Time_Integrators:
+- StandardTimeIntegrator:
+    name: ti_1
+    start_time: 0
+    time_step: {dtlong}
+    termination_step_count: 200000000
+    time_stepping_type: fixed
+    time_step_count: 0
+    second_order_accuracy: yes
+    nonlinear_iterations: 1
+
+    realms:
+    - realm_1

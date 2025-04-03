@@ -1,0 +1,41 @@
+n_turbines_glob: 1
+verbose: True
+dry_run: False
+debug: False
+sim_start: init
+coupling_mode: strong
+n_iter: 1
+t_start:  0.0
+t_end:    0.02501
+t_max:    20.01
+dt_driver: {dtlong}
+restart_freq: 100
+output_freq: 1
+set_exp_law_wind: False
+set_uniform_x_blade_forces: False
+x_blade_force: 0.0
+super_controller: False
+Turbine0:
+  turb_id: 0
+  FAST_input_filename: "pazy.fst"
+  sim_type: ext-loads
+  #restart_filename: "Turbine0"
+  turbine_base_pos:
+  - 0.0
+  - 0.0
+  - -90.0
+  turbine_hub_pos:
+  - 0.0
+  - 0.0
+  - 0.0
+  num_force_pts_blade: 50
+  num_force_pts_tower: 0
+  az_blend_mean: -1000
+  az_blend_delta: 3.14
+  vel_mean: {windspeed}
+  wind_dir: 270.0
+  z_ref: 0.0
+  shear_exp: 0.0
+  air_density: 1.225  
+  nacelle_cd: 0.8
+  nacelle_area: 8.0

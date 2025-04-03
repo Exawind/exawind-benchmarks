@@ -1,0 +1,42 @@
+#!/bin/bash 
+
+#SBATCH -A fy240196
+#SBATCH -t 03:59:00
+#SBATCH -p short,batch
+
+#SBATCH -o machine.out
+#SBATCH -J a{aoa}v{windspeed}
+##SBATCH --reservation=flight-cldera
+#SBATCH -L gpfs
+#SBATCH -N 4
+
+# Percent of cores for nalu
+ipercent=90
+
+
+
+# load the modules with exawind executable/setup the run env
+# MACHINE_NAME will get populated via aprepro
+source loadmod
+
+
+nodes=$SLURM_JOB_NUM_NODES
+rpn=$(ranks_per_node)
+ranks=$(( $rpn*$nodes ))
+nalu_ranks=$((($ranks*$ipercent)/100 ))
+amr_ranks=$((  $ranks-$nalu_ranks ))   
+
+# Check setup
+echo "nodes       " $nodes
+echo "rpn         " $rpn
+echo "ranks       " $ranks
+echo "nalu_ranks  " $nalu_ranks
+echo "amr_ranks   " $amr_ranks
+echo "exawind loc " $(which exawind)
+echo "amrwind loc " $(which amr_wind)
+
+srun -n 1 openfastcpp inp.yaml
+rm -rf pazy.out
+srun -N $nodes -n $ranks exawind --nwind $nalu_ranks --awind $amr_ranks a.yaml &> log
+
+

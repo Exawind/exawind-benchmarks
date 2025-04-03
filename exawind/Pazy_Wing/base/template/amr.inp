@@ -1,0 +1,117 @@
+#"""""""""""""""""""""""""""""""""""""""#
+#            SIMULATION STOP            #
+#.......................................#
+time.stop_time               =   -1     # Max (simulated) time to evolve
+time.max_step                =   10000000     # Max number of time steps
+#"""""""""""""""""""""""""""""""""""""""#
+#         TIME STEP COMPUTATION         #
+#.......................................#
+time.fixed_dt         =   {dtlong}
+#time.cfl              =   -1.0       # CFL factor
+#"""""""""""""""""""""""""""""""""""""""#
+#            INPUT AND OUTPUT           #
+#.......................................#
+io.KE_int = -1
+io.line_plot_int = -1
+io.derived_outputs = q_criterion
+#io.outputs = wall_dist #synth_turb_forcing
+time.plot_interval            =  {cfdplotinterval} #32         # Steps between plot files
+time.checkpoint_interval      =  {cfdcheckpointinterval} #1440      # Steps between checkpoint files
+
+incflo.initial_iterations = 0
+
+#"""""""""""""""""""""""""""""""""""""""#
+#               PHYSICS                 #
+#.......................................#
+#incflo.gravity        =  0.0  0.0 -9.81  # Gravitational force (3D)
+incflo.gravity        =  0.0  0.0 0.0  # Gravitational force (3D)
+incflo.density        =  {density}           # Reference density
+incflo.velocity = {windspeed} 0.0 0.0
+incflo.use_godunov = 1
+incflo.godunov_type = "weno_z"
+
+transport.viscosity = 1.8e-5
+transport.laminar_prandtl = 0.7
+transport.turbulent_prandtl = 0.3333
+#turbulence.model = Laminar
+turbulence.model = KOmegaSST
+TKE.source_terms = KwSSTSrc
+SDR.source_terms = SDRSrc
+
+incflo.physics = FreeStream Intermittency
+#SyntheticTurbulence
+
+FreeStream.velocity_type = ConstValue
+ConstValue.velocity.value = {windspeed} 0.0 0.0
+
+FreeStream.tke_type = ConstValue
+ConstValue.tke.value = {tkein}
+FreeStream.sdr_type = ConstValue
+ConstValue.sdr.value = {sdrin}
+
+FreeStream.fields = wall_dist
+FreeStream.wall_dist_type = ConstValue
+ConstValue.wall_dist.value = 8.0
+
+#"""""""""""""""""""""""""""""""""""""""#
+#        ADAPTIVE MESH REFINEMENT       #
+#.......................................#
+amr.n_cell              = {amrnx} {amrnx} {amrnx} # Grid cells at coarsest AMRlevel
+amr.refine_grid_layout = true
+amr.max_grid_size       = 64
+amr.blocking_factor     = 32
+amr.max_level           = 0           # Max AMR level in hierarchy
+tagging.labels = static
+tagging.static.static_refinement_def = static_box.txt
+tagging.static.type = CartBoxRefinement
+
+#"""""""""""""""""""""""""""""""""""""""#
+#              GEOMETRY                 #
+#.......................................#
+geometry.prob_lo        =   -1.5 -1.5 1.45  # Lo corner coordinates
+geometry.prob_hi        =   1.5 1.5 2.95  # Hi corner coordinates
+geometry.is_periodic    =   0   0   0   # Periodicity x y z (0/1)
+# Boundary conditions
+xlo.type = "mass_inflow"
+xlo.density = {density}
+xlo.velocity = {windspeed} 0.0 0.0
+xlo.tke = {tkein}
+xlo.sdr = {sdrin}
+xhi.type = "pressure_outflow"
+ylo.type = "slip_wall"
+yhi.type = "slip_wall"
+zlo.type =   "slip_wall"
+zhi.type =   "slip_wall"
+incflo.verbose =   1
+
+# HYPRE
+incflo.verbose =   0
+nodal_proj.verbose = 0
+#nodal_proj.mg_max_coarsening_level = 0
+nodal_proj.mg_rtol = 1.0e-6
+nodal_proj.mg_atol = 1.0e-10
+nodal_proj.num_pre_smooth = 10
+nodal_proj.num_post_smooth = 10
+#nodal_proj.bottom_solver = hypre
+nodal_proj.bottom_rtol = 1.0e-9
+nodal_proj.bottom_atol = 1.0e-12
+mac_proj.verbose=0
+#mac_proj.mg_max_coarsening_level = 0
+mac_proj.bottom_verbose  = 0
+mac_proj.bottom_solver = hypre
+mac_proj.num_pre_smooth = 10
+mac_proj.num_post_smooth = 10
+mac_proj.mg_rtol = 1.0e-6
+mac_proj.mg_atol = 1.0e-10
+#mac_proj.bottom_rtol = 1.0e-11
+#mac_proj.bottom_atol = 1.0e-12
+hypre.bamg_verbose = 0
+hypre.verbose = 0
+hypre.recompute_preconditioner = 0
+hypre.hypre_solver = GMRES
+hypre.hypre_preconditioner = BoomerAMG
+#nodal_proj.do_nsolve = true
+diffusion.do_nsolve = true
+velocity_diffusion.do_nsolve = true
+velocity_diffusion.use_tensor_operator = false
+velocity_diffusion.use_segregated_operator = true

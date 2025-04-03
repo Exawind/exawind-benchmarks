@@ -1,0 +1,97 @@
+--------- BEAMDYN with OpenFAST INPUT FILE -------------------------------------------
+NREL 5MW blade
+---------------------- SIMULATION CONTROL --------------------------------------
+False         Echo             - Echo input data to "<RootName>.ech"? (flag)
+True          QuasiStaticInit  - Use quasi-static pre-conditioning with centripetal accelerations in initialization? (flag) [dynamic solve only]
+          0   rhoinf           - Numerical damping parameter for generalized-alpha integrator
+          2   quadrature       - Quadrature method: 1=Gaussian; 2=Trapezoidal (switch)
+          2     refine           - Refinement factor for trapezoidal quadrature (-) [DEFAULT = 1; used only when quadrature=2]
+"DEFAULT"     n_fact           - Factorization frequency for the Jacobian in N-R iteration(-) [DEFAULT = 5]
+"DEFAULT"     DTBeam           - Time step size (s)
+"DEFAULT"     load_retries     - Number of factored load retries before quitting the simulation [DEFAULT = 20]
+100           NRMax            - Max number of iterations in Newton-Raphson algorithm (-) [DEFAULT = 10]
+"DEFAULT"     stop_tol         - Tolerance for stopping criterion (-) [DEFAULT = 1E-5]
+"DEFAULT"     tngt_stf_fd      - Use finite differenced tangent stiffness matrix? (flag)
+"DEFAULT"     tngt_stf_comp    - Compare analytical finite differenced tangent stiffness matrix? (flag)
+"DEFAULT"     tngt_stf_pert    - Perturbation size for finite differencing (-) [DEFAULT = 1E-6]
+"DEFAULT"     tngt_stf_difftol - Maximum allowable relative difference between analytical and fd tangent stiffness (-); [DEFAULT = 0.1]
+True          RotStates        - Orient states in the rotating frame during linearization? (flag) [used only when linearizing] 
+---------------------- GEOMETRY PARAMETER --------------------------------------
+          1   member_total    - Total number of members (-)
+         49   kp_total        - Total number of key points (-) [must be at least 3]
+     1     49                 - Member number; Number of key points in this member
+   kp_xr         kp_yr         kp_zr        initial_twist
+   (m)            (m)          (m)            (deg)
+0.0000000E+00  0.0000000E+00  0.0000000E+00  0
+0.0000000E+00  0.0000000E+00  1.7875000E-03  0
+0.0000000E+00  0.0000000E+00  1.0730500E-02  0
+0.0000000E+00  0.0000000E+00  1.9673500E-02  0
+0.0000000E+00  0.0000000E+00  2.8616500E-02  0
+0.0000000E+00  0.0000000E+00  3.7559500E-02  0
+0.0000000E+00  0.0000000E+00  4.6502500E-02  0
+0.0000000E+00  0.0000000E+00  5.5445500E-02  0
+0.0000000E+00  0.0000000E+00  6.4388500E-02  0
+0.0000000E+00  0.0000000E+00  7.3342500E-02  0
+0.0000000E+00  0.0000000E+00  8.2274500E-02  0
+0.0000000E+00  0.0000000E+00  9.1217500E-02  0
+0.0000000E+00  0.0000000E+00  1.0016050E-01  0
+0.0000000E+00  0.0000000E+00  1.0910350E-01  0
+0.0000000E+00  0.0000000E+00  1.1805750E-01  0
+0.0000000E+00  0.0000000E+00  1.2698950E-01  0
+0.0000000E+00  0.0000000E+00  1.3593250E-01  0
+0.0000000E+00  0.0000000E+00  1.4487550E-01  0
+0.0000000E+00  0.0000000E+00  1.6277250E-01  0
+0.0000000E+00  0.0000000E+00  1.8065300E-01  0
+0.0000000E+00  0.0000000E+00  1.9853900E-01  0
+0.0000000E+00  0.0000000E+00  2.1642500E-01  0
+0.0000000E+00  0.0000000E+00  2.3431100E-01  0
+0.0000000E+00  0.0000000E+00  2.5220250E-01  0
+0.0000000E+00  0.0000000E+00  2.7008300E-01  0
+0.0000000E+00  0.0000000E+00  2.8796900E-01  0
+0.0000000E+00  0.0000000E+00  3.0585500E-01  0
+0.0000000E+00  0.0000000E+00  3.2374100E-01  0
+0.0000000E+00  0.0000000E+00  3.4163250E-01  0
+0.0000000E+00  0.0000000E+00  3.5951300E-01  0
+0.0000000E+00  0.0000000E+00  3.7739900E-01  0
+0.0000000E+00  0.0000000E+00  3.9528500E-01  0
+0.0000000E+00  0.0000000E+00  4.1317100E-01  0
+0.0000000E+00  0.0000000E+00  4.3106800E-01  0
+0.0000000E+00  0.0000000E+00  4.4894300E-01  0
+0.0000000E+00  0.0000000E+00  4.6682900E-01  0
+0.0000000E+00  0.0000000E+00  4.8471500E-01  0
+0.0000000E+00  0.0000000E+00  4.9365800E-01  0
+0.0000000E+00  0.0000000E+00  5.0260100E-01  0
+0.0000000E+00  0.0000000E+00  5.1154400E-01  0
+0.0000000E+00  0.0000000E+00  5.1601550E-01  0
+0.0000000E+00  0.0000000E+00  5.2049800E-01  0
+0.0000000E+00  0.0000000E+00  5.2495850E-01  0
+0.0000000E+00  0.0000000E+00  5.2943000E-01  0
+0.0000000E+00  0.0000000E+00  5.3390150E-01  0
+0.0000000E+00  0.0000000E+00  5.3837300E-01  0
+0.0000000E+00  0.0000000E+00  5.4284450E-01  0
+0.0000000E+00  0.0000000E+00  5.4731600E-01  0
+0.0000000E+00  0.0000000E+00  5.5000000E-01  0
+---------------------- MESH PARAMETER ------------------------------------------
+          9   order_elem     - Order of interpolation (basis) function (-)
+---------------------- MATERIAL PARAMETER --------------------------------------
+"pazy_BeamDyn_Blade.dat"    BldFile - Name of file containing properties for blade (quoted string)
+---------------------- PITCH ACTUATOR PARAMETERS -------------------------------
+False         UsePitchAct - Whether a pitch actuator should be used (flag)
+        200   PitchJ      - Pitch actuator inertia (kg-m^2) [used only when UsePitchAct is true]
+   20000000   PitchK      - Pitch actuator stiffness (kg-m^2/s^2) [used only when UsePitchAct is true]
+     500000   PitchC      - Pitch actuator damping (kg-m^2/s) [used only when UsePitchAct is true]
+---------------------- OUTPUTS -------------------------------------------------
+True          SumPrint       - Print summary data to "<RootName>.sum" (flag)
+"ES10.3E2"    OutFmt          - Format used for text tabular output, excluding the time channel.
+          0   NNodeOuts      - Number of nodes to output to file [0 - 9] (-)
+          1,          2,          3,          4,          5,          6    OutNd          - Nodes whose values will be output  (-)
+          OutList        - The next line(s) contains a list of output parameters. See OutListParameters.xlsx for a listing of available output channels, (-)
+"TipTDxr"
+"TipTDyr"
+"TipTDzr"
+END of OutList section (the word "END" must appear in the first 3 columns of the last OutList line)
+====== Outputs for all blade stations (same ending as above for B1N1.... =========================== (optional section)
+"All"         BldNd_BlOutNd       - Future feature will allow selecting a portion of the nodes to output.  Not implemented yet. (-)
+                  OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
+END (the word "END" must appear in the first 3 columns of this last OutList line in the optional nodal output section)
+--------------------------------------------------------------------------------

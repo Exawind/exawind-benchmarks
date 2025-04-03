@@ -1,0 +1,8 @@
+# Location where files should exist
+destdir: ../../.website_src/exawind/Pazy_Wing
+# Define the valid file types to copy over (optional)
+validtypes: ['.html', '.md', '.ipynb', '.png', '.jpg', '.rst', ] 
+
+# Markdown files to parse and copy files
+mdfiles:
+  - README.md
