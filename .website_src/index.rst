@@ -33,4 +33,4 @@ Nalu-Wind
 
    nalu-wind/benchmarks
 
-   info
+   notes

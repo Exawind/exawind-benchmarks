@@ -14,5 +14,4 @@
 .. toctree::
    :maxdepth: 1
 
-   clcd_cfd_total
 
