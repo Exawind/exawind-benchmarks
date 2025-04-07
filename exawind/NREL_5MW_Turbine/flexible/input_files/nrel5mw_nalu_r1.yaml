@@ -1,0 +1,392 @@
+Simulations:
+- name: sim1
+  time_integrator: ti_1
+  optimizer: opt1
+
+hypre_config:
+  umpire_device_pool_mbs: 4096
+  use_vendor_spgemm: 1
+  use_vendor_spmv: 0
+  use_vendor_sptrans: 0
+
+linear_solvers:
+  # solver for the momentum
+  - name: solve_mom
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 1000
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    #write_preassembly_matrix_files: yes
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    segregated_solver: yes
+    hypre_cfg_file: hypre_file.yaml
+    hypre_cfg_node: hypre_simple_precon
+
+  # solver for the scalars TKE, SDR
+  - name: solve_scalar
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 1000
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    #write_preassembly_matrix_files: yes
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    hypre_cfg_file: hypre_file.yaml
+    hypre_cfg_node: hypre_simple_precon
+
+  # solver for the pressure
+  - name: solve_elliptic
+    type: hypre
+    method: hypre_gmres
+    preconditioner: boomerAMG
+    tolerance: 1e-5
+    max_iterations: 1000
+    kspace: 1000
+    sync_alg: 1
+    output_level: 0
+    write_matrix_files: no
+    #write_preassembly_matrix_files: yes
+    recompute_preconditioner_frequency: 1
+    reuse_linear_system: yes
+    simple_hypre_matrix_assemble: yes
+    dump_hypre_matrix_stats: no
+    hypre_cfg_file: hypre_file.yaml
+    hypre_cfg_node: hypre_elliptic
+
+realms:
+- name: realm_1
+  #mesh: /pscratch/ndeveld/hfm-2025-q1/mesh/combine_split/split_tower_and_blades.exo
+  mesh: /pscratch/ndeveld/hfm-2025-q1/origmesh-fsi-withtower-abl-rosco-final2/rst/nrel5mw.rst
+  #automatic_decomposition_type: rcb
+  #rebalance_mesh: yes
+  #stk_rebalance_method: parmetis
+  use_edges: yes
+  check_jacobians: true
+
+  equation_systems:
+    name: theEqSys
+    max_iterations: 4
+    decoupled_overset_solve: yes
+
+    solver_system_specification:
+      velocity: solve_mom
+      turbulent_ke: solve_scalar
+      specific_dissipation_rate: solve_scalar
+      pressure: solve_elliptic
+      ndtw: solve_elliptic
+
+    systems:
+    - WallDistance:
+        name: myNDTW
+        max_iterations: 1
+        convergence_tolerance: 1.0e-8
+        update_frequency: 1000000000
+        exchange_fringe_data: false
+
+    - LowMachEOM:
+        name: myLowMach
+        max_iterations: 1
+        convergence_tolerance: 1e-8
+
+    - ShearStressTransport:
+        name: mySST
+        max_iterations: 1
+        convergence_tolerance: 1e-8
+
+  initial_conditions:
+    - constant: ic_1
+      target_name:
+        - blade1-HEX
+        - blade2-HEX
+        - blade3-HEX
+        - tower-fluid-HEX
+      value:
+        pressure: 0.0
+        velocity: [9.8726896031426, 5.7, 0.0]
+        turbulent_ke: 1.0
+        specific_dissipation_rate: 687.25
+
+  material_properties:
+    target_name:
+      - blade1-HEX
+      - blade2-HEX
+      - blade3-HEX
+      - tower-fluid-HEX
+
+    specifications:
+    - name: density
+      type: constant
+      value: 1.0
+    - name: viscosity
+      type: constant
+      value: 1.8e-5
+
+  boundary_conditions:
+
+  - wall_boundary_condition: bc_wall
+    target_name: blade1
+    wall_user_data:
+      use_wall_function: no
+      turbulent_ke: 0.0
+
+  - wall_boundary_condition: bc_wall
+    target_name: blade2
+    wall_user_data:
+      use_wall_function: no
+      turbulent_ke: 0.0
+
+  - wall_boundary_condition: bc_wall
+    target_name: blade3
+    wall_user_data:
+      use_wall_function: no
+      turbulent_ke: 0.0
+
+  - wall_boundary_condition: bc_wall
+    target_name: tower-wall
+    wall_user_data:
+      use_wall_function: no
+      turbulent_ke: 0.0
+
+  - symmetry_boundary_condition: ground
+    target_name: tower-ground
+    symmetry_user_data:
+
+  - overset_boundary_condition: bc_overset
+    overset_connectivity_type: tioga
+    overset_user_data:
+      mesh_tag_offset: 0
+      tioga_options:
+        symmetry_direction: 3
+      mesh_group:
+      - overset_name: ovst-blade1
+        mesh_parts:
+          - blade1-HEX
+        wall_parts: 
+          - blade1 
+        ovset_parts:
+          - outerbcblade1block
+      - overset_name: ovst-blade2
+        mesh_parts:
+          - blade2-HEX
+        wall_parts: 
+          - blade2 
+        ovset_parts:
+          - outerbcblade2block
+      - overset_name: ovst-blade3
+        mesh_parts:
+          - blade3-HEX
+        wall_parts: 
+          - blade3 
+        ovset_parts:
+          - outerbcblade3block
+      - overset_name: ovst-tower
+        mesh_parts:
+          - tower-fluid-HEX
+        wall_parts: 
+          - tower-wall
+        ovset_parts:
+          - tower-overset
+
+  # mesh_transformation:
+  # - name: turbine_rotor_placement
+  #   mesh_parts:
+  #     - blade1-HEX
+  #     - blade2-HEX
+  #     - blade3-HEX
+  #   motion:
+  #     #tilt done in original mesh location of [0, 0, 0]
+  #     # - type: rotation
+  #     #   angle: 5.0
+  #     #   axis: [0.0, 1.0, 0.0]
+  #     #   centroid: [0.0, 0.0, 0.0]
+  #     # then translated to the hub_ref_position as computed by openfast
+  #     - type: translation
+  #       displacement: [1795, 1800, 90]
+        
+  # - name: turbine_tower_placement
+  #   mesh_parts:
+  #     - tower-fluid-HEX
+  #   motion:
+  #     - type: translation
+  #       displacement: [1800, 1800, 0]
+        
+  openfast_fsi:
+    n_turbines_glob: 1
+    dry_run:  False
+    debug:    False
+    sim_start: trueRestart #/trueRestart/restartDriverInitFAST
+    t_start: 49.5867768594979
+    t_max: 600.55
+    n_checkpoint: 5760
+    dt_FAST: 0.0008608815426997245
+    Turbine0:
+      turb_id: 0
+      turbine_base_pos: [1800, 1800, 0]
+      turbine_hub_pos: [1795, 1800, 90]
+      restart_filename: "5MW_Land_BD_DLL_WTurb/5MW_Land_BD_DLL_WTurb.63360"
+      sim_type: "ext-loads"
+      tower_parts:
+        - tower-fluid-HEX
+      tower_boundary_parts:
+        - tower-wall
+      blade_parts:
+        - ["blade1-HEX"]
+        - ["blade2-HEX"]
+        - ["blade3-HEX"]
+      blade_boundary_parts:
+        - ["blade1"]
+        - ["blade2"]
+        - ["blade3"]
+      az_blend_mean: 18.84955592
+      az_blend_delta: 1.570796327
+      
+      deflection_ramping:
+        enable_temporal_ramping: true
+        enable_theta_ramping: true
+        enable_span_ramping: true
+        span_ramp_distance: 4.0
+        temporal_ramp_start: 0.0
+        temporal_ramp_end: 0.5
+        theta_ramp_span: 30.0 # degrees
+        zero_theta_ramp_angle: 58.0
+    
+
+  solution_options:
+    name: myOptions
+    turbulence_model: sst
+    projected_timescale_type: momentum_diag_inv
+
+    options:
+    - source_terms:
+        continuity: density_time_derivative
+
+    - hybrid_factor:
+        velocity: 1.0
+        turbulent_ke: 1.0
+        specific_dissipation_rate: 1.0
+
+    - alpha_upw:                           # Blends central diff on line 244 of MomentumEdgeSolverAlg.C
+        velocity: 1.0                      # 1.0 gives terms on 200 and 202 (possible upwind extrap + limiter)
+        turbulent_ke: 1.0                  # 0.0 gives straight central diff of line 244 
+        specific_dissipation_rate: 1.0
+
+    - upw_factor:                          # Used Lines 200 and 202 of MomentumEdgeSolverAlg.C as "hoUpwind"
+        velocity: 1.0                      # uIpL[d] = vel.get(nodeL, d) + duL[d] * hoUpwind * limitL[d] * density_upwinding_factor;
+        turbulent_ke: 0.0                  # 0.0 eliminates upwind grad contribution
+        specific_dissipation_rate: 0.0
+
+    - noc_correction:
+        pressure: yes
+
+    - limiter:                             # vanLeer Limiter, feeds line with upw_factor
+        pressure: no
+        velocity: yes
+        turbulent_ke: yes
+        specific_dissipation_rate: yes
+
+    - projected_nodal_gradient:
+        velocity: element
+        pressure: element
+        turbulent_ke: element
+        specific_dissipation_rate: element
+        ndtw: element
+
+    - relaxation_factor:
+        velocity: 0.7
+        pressure: 0.3
+        turbulent_ke: 0.5
+        specific_dissipation_rate: 0.5
+
+  post_processing:
+  - type: surface
+    physics: surface_force_and_moment
+    output_file_name: forcesBlades.dat
+    frequency: 1
+    parameters: [1795.669873, 1797.5, 90]
+    target_name:
+    - blade1
+    - blade2
+    - blade3
+  - type: surface
+    physics: surface_force_and_moment
+    output_file_name: forcesTower.dat
+    frequency: 1
+    parameters: [1800, 1800, 0]
+    target_name:
+    - tower
+
+  turbulence_averaging:
+    time_filter_interval: 100000.0
+
+    specifications:
+
+    - name: one
+      target_name:
+        - blade1-HEX
+        - blade2-HEX
+        - blade3-HEX
+        - tower-fluid-HEX
+
+      reynolds_averaged_variables:
+      - velocity
+
+      compute_q_criterion: yes
+      compute_vorticity: yes
+
+  restart:
+    restart_data_base_name: rst01/nrel5mw.rst
+    restart_frequency: 1440
+    restart_start: 0
+    restart_time: 49.5867768594979
+
+  output:
+    output_data_base_name: out01/nrel5mw.e
+    output_frequency: 1440
+    output_node_set: no
+    output_variables:
+    - velocity
+    - pressure
+    - turbulent_ke
+    - specific_dissipation_rate
+    - minimum_distance_to_wall
+    - turbulent_viscosity
+    - iblank
+    - iblank_cell
+    - mesh_displacement
+    - mesh_velocity
+    - q_criterion
+    - vorticity
+    - disp_map
+    - disp_map_interp
+    - div_mesh_velocity
+    - element_courant
+    - dual_nodal_volume
+
+Time_Integrators:
+- StandardTimeIntegrator:
+    name: ti_1
+    start_time: 49.5867768594979
+    time_step: 0.003443526170799
+    termination_step_count: 200000000
+    time_stepping_type: fixed
+    time_step_count: 0
+    second_order_accuracy: yes
+    nonlinear_iterations: 1
+
+    realms:
+    - realm_1

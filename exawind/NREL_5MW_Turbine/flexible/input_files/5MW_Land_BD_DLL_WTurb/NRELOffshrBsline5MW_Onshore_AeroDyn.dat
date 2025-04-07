@@ -128,5 +128,7 @@ ALL                    BldNd_BlOutNd   - Specify a portion of the nodes to outpu
                        OutList_Nodal - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 "Fn"
 "Ft"
+"Fx"
+"Fy"
 END (the word "END" must appear in the first 3 columns of this last OutList line in the optional nodal output section)
 ====================================================================================================

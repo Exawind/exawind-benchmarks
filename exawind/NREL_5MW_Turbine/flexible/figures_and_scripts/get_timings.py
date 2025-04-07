@@ -117,33 +117,40 @@ def processline(inputline):
 def main():
 
     casedir = '/pscratch/ndeveld/hfm-2025-q1'
-    casename = 'nrel5mw-fsi-abl-bench2-final'
+    casename = 'origmesh-fsi-withtower-abl-rosco-final2'
     casepath = os.path.join(casedir,casename)
 
-    exlogfile = casepath+"/log"
-    amrlogfile = casepath+"/run_125158/nrel5mw_amr.log"
-    nalulogfile = casepath+"/run_125158/nrel5mw_nalu.log"
+    exlogfiles = ["/run_235256/log"]
+    amrlogfiles = ["/run_235256/nrel5mw_amr_r1.log"]
+    nalulogfiles = ["/run_235256/nrel5mw_nalu_r1.log"]
 
-    #cmd="grep '^Exawind::Total' "+exlogfile+" | awk '{print $3}' > "+casepath+"/exatimestep.dat"
-    #result = sp.run(cmd, shell=True, capture_output=True, text=True)
+    total_timesteps = []
+    nalu_timesteps = []
+    amr_timesteps = []
 
-    cmd="grep '^Exawind::Total' "+exlogfile+" | awk '{print $3}'"
-    result = sp.run(cmd, shell=True, capture_output=True, text=True)
-    total_timesteps = [float(x) for x in result.stdout.replace('\n',' ').split()]
+    for i in range(len(exlogfiles)):
 
-    cmd="grep '^Nalu-Wind-1::Total' "+exlogfile+" | awk '{print $3}'"
-    result = sp.run(cmd, shell=True, capture_output=True, text=True)
-    nalu_timesteps = [float(x) for x in result.stdout.replace('\n',' ').split()]
+        exlogfile = casepath + exlogfiles[i]
+        amrlogfile = casepath + amrlogfiles[i]
+        nalulogfile = casepath + nalulogfiles[i]
 
-    cmd="grep '^AMR-Wind::Total' "+exlogfile+" | awk '{print $3}'"
-    result = sp.run(cmd, shell=True, capture_output=True, text=True)
-    amr_timesteps = [float(x) for x in result.stdout.replace('\n',' ').split()]
+        cmd="grep '^Exawind::Total' "+exlogfile+" | awk '{print $3}'"
+        result = sp.run(cmd, shell=True, capture_output=True, text=True)
+        total_timesteps.extend([float(x) for x in result.stdout.replace('\n',' ').split()])
+
+        cmd="grep '^Nalu-Wind-1::Total' "+exlogfile+" | awk '{print $3}'"
+        result = sp.run(cmd, shell=True, capture_output=True, text=True)
+        nalu_timesteps.extend([float(x) for x in result.stdout.replace('\n',' ').split()])
+
+        cmd="grep '^AMR-Wind::Total' "+exlogfile+" | awk '{print $3}'"
+        result = sp.run(cmd, shell=True, capture_output=True, text=True)
+        amr_timesteps.extend([float(x) for x in result.stdout.replace('\n',' ').split()])
 
 
     #tsdata = pd.read_csv(casepath+'/avgtimestep.dat',header=None)
     ts = range(len(total_timesteps))
 
-    print('Mean timestep',np.mean(total_timesteps))
+    print('Mean timestep',np.mean(total_timesteps),ts)
 
     # Get AMR Cells
     cmd="grep '  Level' "+amrlogfile+" | awk '{print $5}'"
@@ -183,7 +190,7 @@ def main():
     for i in range(3):
         ax[i].set_ylabel('Time (s)')
         ax[i].set_xlabel('Timestep')
-        ax[i].set_ylim([0,20])
+        ax[i].set_ylim([0,30])
 
     fig.tight_layout()
     fig.savefig('timepertimestep.png')

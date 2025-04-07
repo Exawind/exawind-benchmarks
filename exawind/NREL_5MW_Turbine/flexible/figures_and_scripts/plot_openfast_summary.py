@@ -61,22 +61,26 @@ def get_of_time_mean(ofdata,ts,te):
     of_data_slice = ofdata.loc[thistest]
     mean_data = of_data_slice.mean()
 
-    return mean_data
+    return pd.DataFrame(mean_data)
 
 def main():
 
 
-    casename='nrel5mw-fsi-abl-bench2-final'
+    casename='origmesh-fsi-withtower-abl-rosco-final2'
     ofdata = read_openfast_output('/pscratch/ndeveld/hfm-2025-q1/'+casename+'/5MW_Land_BD_DLL_WTurb','5MW_Land_BD_DLL_WTurb.out', 0.0, 0.02)
     #print(list(ofdata.columns))
     
     data_output_cols = ['Time','GenPwr','GenTq','RotSpeed','RotThrust','B1RootMxr','B1RootMyr','B1TipTDxr','BldPitch1']
 
     timeseries_out = ofdata[data_output_cols]
-    meanout = get_of_time_mean(timeseries_out,65.0,125.0)
+    meanout = get_of_time_mean(timeseries_out,60.0,120.0)
+    meanout = meanout.reset_index()
+    print(meanout.index)
+    meanout.columns=['variable','value']
+    print(meanout)
 
     timeseries_out.to_csv('../performance/timeseries_openfast.csv',index=None)
-    meanout.to_csv('../performance/mean_openfast_65_125.csv')
+    meanout.to_csv('../performance/mean_openfast_60_120.csv',index=None)
 
     ##############################################
     # Plot summary
