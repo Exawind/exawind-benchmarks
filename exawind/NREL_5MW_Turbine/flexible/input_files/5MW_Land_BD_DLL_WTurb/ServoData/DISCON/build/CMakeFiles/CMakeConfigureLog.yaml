@@ -1,0 +1,862 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      The system is: Linux - 4.18.0-553.5.1.1toss.t4.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icx 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is IntelLLVM, found in:
+        /pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/3.27.7/CompilerIdC/a.out
+      
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      The system is: Linux - 4.18.0-553.5.1.1toss.t4.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icx 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is IntelLLVM, found in:
+        /pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/3.27.7/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icpx 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is IntelLLVM, found in:
+        /pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/3.27.7/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:61 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9"
+      binary: "/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9'
+        
+        Run Build Command(s): /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bb311/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bb311.dir/build.make CMakeFiles/cmTC_bb311.dir/build
+        gmake[1]: Entering directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9'
+        Building C object CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icx   -v -MD -MT CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm
+        Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icx.cfg
+        Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        Found HIP installation: /opt/rocm-6.1.2, version 6.1.40093
+         (in-process)
+         "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9 -resource-dir /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17 -dependency-file CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -sys-header-deps -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -c-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -cxx-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -internal-isystem /usr/local/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdebug-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9 -ferror-limit 19 -fheinous-gnu-extensions -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -o CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -x c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 17.0.0 based upon LLVM 17.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include
+         /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        Linking C executable cmTC_bb311
+        /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb311.dir/link.txt --verbose=1
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icx  -v CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -o cmTC_bb311 
+        Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm
+        Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icx.cfg
+        Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        Found HIP installation: /opt/rocm-6.1.2, version 6.1.40093
+         "/projects/aue/hpc/deploy/f9a38d2c/linux-rhel8-x86_64/gcc-12.3.0/binutils-2.42-xd7fipb/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bb311 /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/lib -L/usr/lib -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -Bstatic -limf -Bdynamic -lm -lgcc --as-needed -lgcc_s --no-as-needed -Bstatic -lirc -Bdynamic -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed -Bstatic -lirc_s -Bdynamic /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        gmake[1]: Leaving directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+          add: [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        collapse include dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include] ==> [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include;/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9']
+        ignore line: []
+        ignore line: [Run Build Command(s): /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bb311/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_bb311.dir/build.make CMakeFiles/cmTC_bb311.dir/build]
+        ignore line: [gmake[1]: Entering directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9']
+        ignore line: [Building C object CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icx   -v -MD -MT CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm]
+        ignore line: [Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icx.cfg]
+        ignore line: [Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [Found HIP installation: /opt/rocm-6.1.2  version 6.1.40093]
+        ignore line: [ (in-process)]
+        ignore line: [ "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9 -resource-dir /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17 -dependency-file CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -sys-header-deps -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -c-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -cxx-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -internal-isystem /usr/local/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdebug-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-li2HD9 -ferror-limit 19 -fheinous-gnu-extensions -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -o CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -x c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 17.0.0 based upon LLVM 17.0.0git default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        ignore line: [ /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_bb311]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb311.dir/link.txt --verbose=1]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icx  -v CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -o cmTC_bb311 ]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm]
+        ignore line: [Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icx.cfg]
+        ignore line: [Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [Found HIP installation: /opt/rocm-6.1.2  version 6.1.40093]
+        link line: [ "/projects/aue/hpc/deploy/f9a38d2c/linux-rhel8-x86_64/gcc-12.3.0/binutils-2.42-xd7fipb/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bb311 /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/lib -L/usr/lib -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -Bstatic -limf -Bdynamic -lm -lgcc --as-needed -lgcc_s --no-as-needed -Bstatic -lirc -Bdynamic -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed -Bstatic -lirc_s -Bdynamic /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/projects/aue/hpc/deploy/f9a38d2c/linux-rhel8-x86_64/gcc-12.3.0/binutils-2.42-xd7fipb/bin/ld] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_bb311] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib] ==> dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> ignore
+          arg [CMakeFiles/cmTC_bb311.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lsvml] ==> lib [svml]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-Bstatic] ==> search static
+          arg [-lirng] ==> lib [irng]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-Bstatic] ==> search static
+          arg [-limf] ==> lib [imf]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lirc] ==> lib [irc]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-ldl] ==> lib [dl]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lirc_s] ==> lib [irc_s]
+          arg [-Bdynamic] ==> search dynamic
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        collapse library dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib] ==> [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        implicit libs: [svml;irng;imf;m;gcc;gcc_s;irc;dl;gcc;gcc_s;c;gcc;gcc_s;irc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64;/lib64;/usr/lib64;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib;/lib;/usr/lib;/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:61 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC"
+      binary: "/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC'
+        
+        Run Build Command(s): /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8a7ff/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8a7ff.dir/build.make CMakeFiles/cmTC_8a7ff.dir/build
+        gmake[1]: Entering directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC'
+        Building CXX object CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icpx   -v -MD -MT CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm
+        Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icpx.cfg
+        Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        Found HIP installation: /opt/rocm-6.1.2, version 6.1.40093
+         (in-process)
+         "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC -resource-dir /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17 -dependency-file CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -c-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -cxx-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0 -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -internal-isystem /usr/local/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC -ferror-limit 19 -fheinous-gnu-extensions -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -o CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -x c++ /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 17.0.0 based upon LLVM 17.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include
+         /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        Linking CXX executable cmTC_8a7ff
+        /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a7ff.dir/link.txt --verbose=1
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icpx  -v CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8a7ff 
+        Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm
+        Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icpx.cfg
+        Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        Found HIP installation: /opt/rocm-6.1.2, version 6.1.40093
+         "/projects/aue/hpc/deploy/f9a38d2c/linux-rhel8-x86_64/gcc-12.3.0/binutils-2.42-xd7fipb/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8a7ff /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/lib -L/usr/lib -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        gmake[1]: Leaving directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+          add: [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        collapse include dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include] ==> [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/include/c++/10.3.0]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/include/c++/10.3.0/x86_64-pc-linux-gnu]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/include/c++/10.3.0/backward]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include;/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/include/c++/10.3.0;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/include/c++/10.3.0/x86_64-pc-linux-gnu;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/include/c++/10.3.0/backward;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:61 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC']
+        ignore line: []
+        ignore line: [Run Build Command(s): /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8a7ff/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_8a7ff.dir/build.make CMakeFiles/cmTC_8a7ff.dir/build]
+        ignore line: [gmake[1]: Entering directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC']
+        ignore line: [Building CXX object CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icpx   -v -MD -MT CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm]
+        ignore line: [Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icpx.cfg]
+        ignore line: [Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [Found HIP installation: /opt/rocm-6.1.2  version 6.1.40093]
+        ignore line: [ (in-process)]
+        ignore line: [ "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC -resource-dir /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17 -dependency-file CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -c-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -cxx-isystem /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0 -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -internal-isystem /usr/local/include -internal-isystem /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir=/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-ExsPNC -ferror-limit 19 -fheinous-gnu-extensions -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -o CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -x c++ /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 17.0.0 based upon LLVM 17.0.0git default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        ignore line: [ /projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../compiler/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_8a7ff]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a7ff.dir/link.txt --verbose=1]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/icpx  -v CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8a7ff ]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2023.2.0 (2023.2.0.20230622)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm]
+        ignore line: [Configuration file: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../bin/icpx.cfg]
+        ignore line: [Found candidate GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Selected GCC installation: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [Found HIP installation: /opt/rocm-6.1.2  version 6.1.40093]
+        link line: [ "/projects/aue/hpc/deploy/f9a38d2c/linux-rhel8-x86_64/gcc-12.3.0/binutils-2.42-xd7fipb/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8a7ff /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib -L/lib -L/usr/lib -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/projects/aue/hpc/deploy/f9a38d2c/linux-rhel8-x86_64/gcc-12.3.0/binutils-2.42-xd7fipb/bin/ld] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_8a7ff] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib] ==> dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> ignore
+          arg [CMakeFiles/cmTC_8a7ff.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lsvml] ==> lib [svml]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-Bstatic] ==> search static
+          arg [-lirng] ==> lib [irng]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-Bstatic] ==> search static
+          arg [-limf] ==> lib [imf]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-Bstatic] ==> search static
+          arg [-lirc] ==> lib [irc]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-ldl] ==> lib [dl]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-Bstatic] ==> search static
+          arg [-lirc_s] ==> lib [irc_s]
+          arg [-Bdynamic] ==> search dynamic
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/../lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        collapse library dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib] ==> [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        implicit libs: [svml;irng;stdc++;imf;m;gcc_s;gcc;irc;dl;gcc_s;gcc;c;gcc_s;gcc;irc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64;/lib64;/usr/lib64;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib;/lib;/usr/lib;/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineFortranCompiler.cmake:179 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:62 (enable_language)"
+    message: |
+      Compiling the Fortran compiler identification source file "CMakeFortranCompilerId.F" succeeded.
+      Compiler: /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/ifx 
+      Build flags: 
+      Id flags: -v 
+      
+      The output was:
+      0
+      ifx version 2023.2.0
+      /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/fpp    -D__INTEL_LLVM_COMPILER=20230200 -D__INTEL_LLVM_COMPILER_UPDATE=0 -D__INTEL_COMPILER=20230200 -D__INTEL_COMPILER_UPDATE=0 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20230622 -I. -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64 -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include -I/usr/local/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -I/usr/include -fixed -4Ycpp -4Ncvf -f_com=yes -MX CMakeFortranCompilerId.F /tmp/ifx19532303128tNsss/ifx113XXn.i
+      #include "..." search starts here:
+      #include <...> search starts here:
+       .
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include
+       /usr/local/include
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include
+       /usr/include
+      End of search list.
+      /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/xfortcom    -triple x86_64-unknown-linux-gnu -emit-obj "-verify nomodule" -main-file-name CMakeFortranCompilerId.F -mllvm --relocation-model=static "-options-string -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -gcc-name=/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/bin/gcc -gxx-name=/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/bin/g++ -v " -mframe-pointer=none -omp_simd -target-cpu x86-64 -target-linker-version 2.42 -fveclib=SVML -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -disable-hir-generate-mkl-call -mllvm -paropt=11 -fintel-libirc-allowed -o /tmp/ifx19532303128tNsss/ifxhOB8wu.o -D__INTEL_LLVM_COMPILER=20230200 -D__INTEL_LLVM_COMPILER_UPDATE=0 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20230622 -D__INTEL_COMPILER=20230200 -D__INTEL_COMPILER_UPDATE=0 -I. -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64 -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include -I/usr/local/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -I/usr/include -omp_simd -O2 "-reentrancy threaded" "-unroll 2" -simd -offload_host /tmp/ifx19532303128tNsss/ifx113XXn.i
+      #include "..." search starts here:
+      #include <...> search starts here:
+       .
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include
+       /usr/local/include
+       /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include
+       /usr/include
+      End of search list.
+      ld    /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o a.out /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/for_main.o -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin /tmp/ifx19532303128tNsss/ifxhOB8wu.o -Bdynamic -Bstatic -lifport -lifcoremt -Bdynamic -limf -Bstatic -lsvml -Bdynamic -lm -Bstatic -lipgo -lirc -Bdynamic -lpthread -Bstatic -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+      
+      
+      Compilation of the Fortran compiler identification source "CMakeFortranCompilerId.F" produced "a.out"
+      
+      The Fortran compiler identification is IntelLLVM, found in:
+        /pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/3.27.7/CompilerIdFortran/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:62 (enable_language)"
+    checks:
+      - "Detecting Fortran compiler ABI info"
+    directories:
+      source: "/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3"
+      binary: "/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3"
+    cmakeVariables:
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_Fortran_FLAGS: ""
+      CMAKE_Fortran_FLAGS_DEBUG: "-g"
+    buildResult:
+      variable: "CMAKE_Fortran_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3'
+        
+        Run Build Command(s): /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2b966/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2b966.dir/build.make CMakeFiles/cmTC_2b966.dir/build
+        gmake[1]: Entering directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3'
+        Building Fortran object CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/ifx   -v -c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o
+        ifx version 2023.2.0
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/fpp    -D__INTEL_LLVM_COMPILER=20230200 -D__INTEL_LLVM_COMPILER_UPDATE=0 -D__INTEL_COMPILER=20230200 -D__INTEL_COMPILER_UPDATE=0 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20230622 -I. -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64 -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include -I/usr/local/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -I/usr/include -4Ycpp -4Ncvf -f_com=yes -MX /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeFortranCompilerABI.F90 /tmp/ifx1561759600urVddL/ifx6oJJ1c.i90
+        #include "..." search starts here:
+        #include <...> search starts here:
+         .
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include
+         /usr/local/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include
+         /usr/include
+        End of search list.
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/xfortcom    -triple x86_64-unknown-linux-gnu -emit-obj "-verify nomodule" -main-file-name /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeFortranCompilerABI.F90 -mllvm --relocation-model=static "-options-string -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -Wl,-rpath,/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -gcc-name=/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/bin/gcc -gxx-name=/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/bin/g++ -v -c -o CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o " -mframe-pointer=none -omp_simd -target-cpu x86-64 -target-linker-version 2.42 -fveclib=SVML -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -disable-hir-generate-mkl-call -mllvm -paropt=11 -fintel-libirc-allowed -o CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o -D__INTEL_LLVM_COMPILER=20230200 -D__INTEL_LLVM_COMPILER_UPDATE=0 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20230622 -D__INTEL_COMPILER=20230200 -D__INTEL_COMPILER_UPDATE=0 -I/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules -I. -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64 -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include -I/usr/local/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -I/usr/include -omp_simd -O2 "-reentrancy threaded" "-unroll 2" -simd -offload_host /tmp/ifx1561759600urVddL/ifx6oJJ1c.i90
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules
+         .
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include
+         /usr/local/include
+         /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include
+         /usr/include
+        End of search list.
+        Linking Fortran executable cmTC_2b966
+        /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b966.dir/link.txt --verbose=1
+        /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/ifx  -v CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o -o cmTC_2b966 
+        ifx version 2023.2.0
+        ld    /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTC_2b966 /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/for_main.o -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o -Bdynamic -Bstatic -lifport -lifcoremt -Bdynamic -limf -Bstatic -lsvml -Bdynamic -lm -Bstatic -lipgo -lirc -Bdynamic -lpthread -Bstatic -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        gmake[1]: Leaving directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:62 (enable_language)"
+    message: |
+      Parsed Fortran implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [.]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include]
+          add: [/usr/local/include]
+          add: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+          add: [/usr/include]
+        end of search list found
+        skipping relative include dir [.]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include;/usr/local/include;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:62 (enable_language)"
+    message: |
+      Parsed Fortran implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3']
+        ignore line: []
+        ignore line: [Run Build Command(s): /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2b966/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_2b966.dir/build.make CMakeFiles/cmTC_2b966.dir/build]
+        ignore line: [gmake[1]: Entering directory '/pscratch/ndeveld/hfm-2025-q1/5MW_Baseline/ServoData/DISCON/build/CMakeFiles/CMakeScratch/TryCompile-1tb3Z3']
+        ignore line: [Building Fortran object CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/ifx   -v -c /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o]
+        ignore line: [ifx version 2023.2.0]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/fpp    -D__INTEL_LLVM_COMPILER=20230200 -D__INTEL_LLVM_COMPILER_UPDATE=0 -D__INTEL_COMPILER=20230200 -D__INTEL_COMPILER_UPDATE=0 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20230622 -I. -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64 -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include -I/usr/local/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -I/usr/include -4Ycpp -4Ncvf -f_com=yes -MX /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeFortranCompilerABI.F90 /tmp/ifx1561759600urVddL/ifx6oJJ1c.i90]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ .]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin-llvm/xfortcom    -triple x86_64-unknown-linux-gnu -emit-obj "-verify nomodule" -main-file-name /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules/CMakeFortranCompilerABI.F90 -mllvm --relocation-model=static "-options-string -Wl -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -Wl -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -Wl -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -Wl -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -Wl -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -gcc-name=/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/bin/gcc -gxx-name=/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/bin/g++ -v -c -o CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o " -mframe-pointer=none -omp_simd -target-cpu x86-64 -target-linker-version 2.42 -fveclib=SVML -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -disable-hir-generate-mkl-call -mllvm -paropt=11 -fintel-libirc-allowed -o CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o -D__INTEL_LLVM_COMPILER=20230200 -D__INTEL_LLVM_COMPILER_UPDATE=0 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20230622 -D__INTEL_COMPILER=20230200 -D__INTEL_COMPILER_UPDATE=0 -I/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules -I. -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64 -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include -I/usr/local/include -I/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include -I/usr/include -omp_simd -O2 "-reentrancy threaded" "-unroll 2" -simd -offload_host /tmp/ifx1561759600urVddL/ifx6oJJ1c.i90]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/share/cmake-3.27/Modules]
+        ignore line: [ .]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include/intel64]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking Fortran executable cmTC_2b966]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/f6a36cb8/tooling-sprint-24.02/install/linux-rhel8-x86_64/gcc-10.3.0/cmake-3.27.7-f3bfcza/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b966.dir/link.txt --verbose=1]
+        ignore line: [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/ifx  -v CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o -o cmTC_2b966 ]
+        ignore line: [ifx version 2023.2.0]
+        link line: [ld    /lib/../lib64/crt1.o /lib/../lib64/crti.o /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTC_2b966 /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/for_main.o -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/ -L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64 -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib -rpath /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o -Bdynamic -Bstatic -lifport -lifcoremt -Bdynamic -limf -Bstatic -lsvml -Bdynamic -lm -Bstatic -lipgo -lirc -Bdynamic -lpthread -Bstatic -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [ld] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_2b966] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/for_main.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/for_main.o]
+          arg [-L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib] ==> dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/lib/../lib64/] ==> dir [/lib/../lib64/]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib/../lib64/] ==> dir [/usr/lib/../lib64/]
+          arg [-L/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib/] ==> dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib/]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/]
+          arg [-L/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../] ==> dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../]
+          arg [-L/lib64] ==> dir [/lib64]
+          arg [-L/lib/] ==> dir [/lib/]
+          arg [-L/usr/lib64] ==> dir [/usr/lib64]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/x64] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/host/linux64/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/oclfpga/linux64/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> ignore
+          arg [CMakeFiles/cmTC_2b966.dir/CMakeFortranCompilerABI.F90.o] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-Bstatic] ==> search static
+          arg [-lifport] ==> lib [ifport]
+          arg [-lifcoremt] ==> lib [ifcoremt]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-limf] ==> lib [imf]
+          arg [-Bstatic] ==> search static
+          arg [-lsvml] ==> lib [svml]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [-Bstatic] ==> search static
+          arg [-lipgo] ==> lib [ipgo]
+          arg [-lirc] ==> lib [irc]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lpthread] ==> lib [pthread]
+          arg [-Bstatic] ==> search static
+          arg [-lsvml] ==> lib [svml]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-Bstatic] ==> search static
+          arg [-lirc_s] ==> lib [irc_s]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-ldl] ==> lib [dl]
+          arg [-lc] ==> lib [c]
+          arg [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib] ==> [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/lib/../lib64/] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/../lib64/] ==> [/usr/lib64]
+        collapse library dir [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib/] ==> [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib]
+        collapse library dir [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../] ==> [/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib]
+        collapse library dir [/lib64] ==> [/lib64]
+        collapse library dir [/lib/] ==> [/lib]
+        collapse library dir [/usr/lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [ifport;ifcoremt;imf;svml;m;ipgo;irc;pthread;svml;c;gcc;gcc_s;irc_s;dl;c]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin/for_main.o;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/projects/aue/hpc/deploy/b306e83c/linux-rhel8-x86_64/intel-2021.10.0/openmpi-4.1.6-kmcrtuu/lib;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/linux;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/lib/clang/17/lib/x86_64-unknown-linux-gnu;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib64;/lib64;/usr/lib64;/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/gcc-10.3.0/install/linux-rhel8-x86_64/gcc-8.5.0/gcc-10.3.0-6ljscis/lib;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+...
