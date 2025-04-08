@@ -53,10 +53,10 @@ def read_openfast_output(file_dir, file_name, skip_time, dt_out):
     print('Reading',file_loc,sys.getsizeof(this_data),'bytes')
     return this_data
 
-def get_of_time_mean(ofdata,ts,te):
+def get_of_time_mean(ofdata,ts,tend):
 
     uptest = np.array(ofdata.Time > ts)
-    downtest = np.array(ofdata.Time < te)
+    downtest = np.array(ofdata.Time < tend)
     thistest = np.logical_and(uptest,downtest)
     of_data_slice = ofdata.loc[thistest]
     mean_data = of_data_slice.mean()
