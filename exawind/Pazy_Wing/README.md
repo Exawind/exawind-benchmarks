@@ -36,7 +36,7 @@ The CFD computational domain consists of an inner Nalu-Wind domain immediately s
 
 In the experiment, the wing tip passes near the wind-tunnel walls at peak deflection.  Since the Nalu-Wind domain extends several chord lengths away from the wing, the AMR-Wind domain was chosen to be somewhat larger than the wind tunnel in order to avoid collisions of the overset boundary with the slip wall at peak deflection, and additional padding was provided to ensure the results are not contaminated by the effect of the artificial slip wall boundaries.  Future studies are planned to investigate the impact of the choice of AMR-Wind domain size on the simulation results.
 
-The structural deformations of the wing are modeled using the BeamDyn module of OpenFAST.  In the simulation setup used here, the aerodynamic forces calculated by Nalu-Wind are passed to OpenFAST/BeamDyn, and the deformations are passed back to Nalu-Wind.  No information is passed between OpenFAST/BeamDyn and AMR-Wind; instead, AMR-Wind communicates with Nalu-Wind through the overset boundary in the CFD domain.  (Note that this is different from some of the other benchmark cases, such as the  [``NREL5MW Actuator Line``](https://github.com/Exawind/exawind-benchmarks/tree/main/amr-wind/actuator_line/NREL5MW_ALM_BD) case.  There, AMR-Wind and BeamDyn communcate directly, and Nalu-Wind is not present.) 
+The structural deformations of the wing are modeled using the BeamDyn module of OpenFAST.  In the simulation setup used here, the aerodynamic forces calculated by Nalu-Wind are passed to OpenFAST/BeamDyn, and the deformations are passed back to Nalu-Wind.  No information is passed between OpenFAST/BeamDyn and AMR-Wind; instead, AMR-Wind communicates with Nalu-Wind through the overset boundary in the CFD domain.  (Note that this is different from some of the other benchmark cases, such as the  [``NREL5MW Actuator Line``](https://github.com/Exawind/exawind-benchmarks/tree/main/amr-wind/actuator_line/NREL5MW_ALM_BD) case.  There, AMR-Wind and BeamDyn communicate directly, and Nalu-Wind is not present.) 
 
 **Grid Generation**
 
@@ -96,7 +96,7 @@ For the results shown in this documentation, the same grid was used for all wind
    ```
 
    Variable description:
-   - `aoa` - The angle of attack, given in degrees.  Since the nominal position of the wing is with the leading edge perpindicular to the incoming flow (per OpenFAST conventions), `aoa` should be set 90 degrees higher than the true angle of attack.  The angles of attack used in the experiment are 3, 5, and 7 degrees, so the corresponding values of `aoa` are 93, 95, and 97 degrees.
+   - `aoa` - The angle of attack, given in degrees.  Since the nominal position of the wing is with the leading edge perpendicular to the incoming flow (per OpenFAST conventions), `aoa` should be set 90 degrees higher than the true angle of attack.  The angles of attack used in the experiment are 3, 5, and 7 degrees, so the corresponding values of `aoa` are 93, 95, and 97 degrees.
    - `windspeed` - The freestream wind velocity, given in meters per second.
    - `dtshort` - The structural timestep, in seconds.
    - `dtlong` - The CFD and driver timestep, in seconds.  This should be an integer multiple of `dtshort`.

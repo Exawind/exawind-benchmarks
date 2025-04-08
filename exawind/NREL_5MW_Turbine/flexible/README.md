@@ -19,7 +19,7 @@ This benchmark contains a geometry and boundary-layer resolved model of the NREL
 - Rated Power: 5 MW
 - Type: Upwind 3 Blade
 
-<i>Note on run-time: Current results are for 125s simulation time, but by the time of bechmark release, a minimum of 360s will be posted.</i>
+<i>Note on run-time: Current results are for 125s simulation time, but by the time of benchmark release, a minimum of 360s will be posted.</i>
 
 ## Simulation Setup
 - ExaWind driver SHA: [cba5259fc43ddeca67329630d3c84faad90e91bb](https://github.com/Exawind/exawind-driver/commit/cba5259fc43ddeca67329630d3c84faad90e91bb)

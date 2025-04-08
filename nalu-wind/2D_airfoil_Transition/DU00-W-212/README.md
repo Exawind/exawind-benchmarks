@@ -58,7 +58,7 @@ For the drag coefficient, the transition simulation captures the laminar drag bu
 
 Regarding the pitching moment, the transition simulations show better correlation with the experimental data compared to the fully turbulent simulations in the linear range of the lift curve. After the stall AoA, due to the limitations of the RANS turbulence model, neither simulation captures the pitching moment trends accurately, with both under-predicting the magnitude in the post-stall region.
 
-In summary, the transition model significantly improves the prediction of the aerodynamic coefficeints in the linear range.
+In summary, the transition model significantly improves the prediction of the aerodynamic coefficients in the linear range.
 
 In this simulation, each case took approximately 30 minutes to 10,000 iterations, using 4 Picard iterations per time step, on 26 cores of NREL's [Kestrel HPC cluster](https://nrel.github.io/HPC/Documentation/Systems/). It should be noted that the number of cores per case was not determined by Nalu-Wind’s scalability on Kestrel, but simply to accommodate 4 cases on a single node of Kestrel. For more details, refer to the Nalu-Wind log files in the run directory.
 
