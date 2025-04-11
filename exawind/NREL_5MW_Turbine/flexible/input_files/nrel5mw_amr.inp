@@ -242,13 +242,13 @@ nodal_proj.mg_atol                       = 1e-10
 mac_proj.mg_rtol                         = 1e-06               
 mac_proj.mg_atol                         = 1e-10  
 
-nodal_proj.max_coarsening_level          = 0                   
+# nodal_proj.max_coarsening_level          = 0  # 0 for hypre                   
 nodal_proj.num_pre_smooth                = 10                  
 nodal_proj.num_post_smooth               = 10                  
 nodal_proj.bottom_rtol                   = 1.0e-9              
 nodal_proj.bottom_atol                   = 1.0e-12             
 mac_proj.verbose                         = 0                   
-mac_proj.max_coarsening_level            = 0                   
+# mac_proj.max_coarsening_level            = 0  # 0 for hypre                  
 mac_proj.do_nsolve                       = true                
 mac_proj.bottom_verbose                  = 0                   
 mac_proj.bottom_rtol                     = 1.0e-11             
