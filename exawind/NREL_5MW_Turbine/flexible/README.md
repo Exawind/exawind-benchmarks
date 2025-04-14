@@ -10,7 +10,9 @@ This benchmark contains a geometry and boundary-layer resolved model of the NREL
 - Simulation dt: 0.003443526170799 s
 - OpenFAST dt: 0.0008608815426997245 s
 
-<i>Note on run-time: Current results are for approximately 120s simulation time, but a minimum of 300s will be posted as results become available.</i>
+*Note on run-time: Current results are for approximately 180s simulation time, but a minimum of 300s will be posted as results become available.*
+
+*Note on turbine controller: This case will be re-run in Q3 as a result of a small bug in the controller. If interested in running this benchmark, please contact the authors for up-to-date scheduling*
 
 ## Simulation Setup
 - ExaWind driver SHA: [cba5259fc43ddeca67329630d3c84faad90e91bb](https://github.com/Exawind/exawind-driver/commit/cba5259fc43ddeca67329630d3c84faad90e91bb)
@@ -34,11 +36,11 @@ A near-neutral convective boundary layer precursor was run to feed the domain fo
 **Total number of cells: 155,363,046**
 
 The near-body (Nalu-Wind) mesh was created using a proprietary surface mesher, pyHyp, and Pointwise. Three blades are split at the hub, and an unconnected tower is included.
-- Structured hex mesh
+- Hexahedral cells
 - Cell count: 13,436,646
 
 Off-body (AMR-Wind) mesh was generated using the built-in capability of AMR-Wind. Off-body mesh information is summarized below 
-- Mesh topology: Cartesian with AMR
+- Mesh topology: structured hex with nested refinements
 - Domain in x= 0 to 5000m, y=0m to 5000m, z=0m to 1000m
 - Initial grid size: 10m
 - Finest cell size: 0.625m with 4 AMR levels
@@ -48,18 +50,18 @@ Off-body (AMR-Wind) mesh was generated using the built-in capability of AMR-Wind
 
 <img src="figures_and_scripts/openfast_summary.png" alt="Summary of OpenFAST Results" style="width:800px; background-color: #ffffff;"/>
 
-#### Mean values over time period: 60s to 120s 
+#### Mean values over time period: 60s to 180s 
 
 | variable | value |
 | -------- | ------- |
-|GenPwr|4551.89|
-|GenTq|39.34|
-|RotSpeed|12.07|
-|RotThrust|647.96|
-|B1RootMxr|770618.58|
-|B1RootMyr|7875054.77|
-|B1TipTDxr|4.20|
-|BldPitch1|2.80|
+|Generator Power|4165.49 kW|
+|Rotor Aero Torque|3509.12 kN-m|
+|Rotor Speed|12.0 rpm|
+|Rotor Thrust|643.58 kN|
+|B1 Root Flap Moment (x)|8.300869e+05 N-m|
+|B1 Root Edge Moment (y)|7.869930e+06 N-m|
+|B1 Tip Deflection x-direction|4.24 m|
+|B1 Pitch|2.07 degrees|
 
 
 ## Simulation Timings
@@ -74,13 +76,18 @@ This benchmark was run at Sandia National Laboratories on a machine comprised of
 - Mean wall-clock time per timestep for entire simulation: 17.75s 
 - Mean wall-clock time per timestep per cell 1.142e-07s
 
-## Exawind Simulation Guide
-#### Step 1: Run the precursor for 5760 OpenFAST timesteps (approximately 1 rotation)
-srun -n1 openfastcpp inp.yaml 
-#### Step 2: Run the full Exawind suite
-srun -N 50 -n 5600 exawind --nwind 672 --awind 4928 nrel5mw.yaml &> log
-#### Step 3: Setup and Run the full Exawind suite restart(s)
-srun -N 50 -n 5600 exawind --nwind 672 --awind 4928 nrel5mw_r1.yaml &> log_1
+## Quick Exawind Simulation Guide
+#### Step 0: Run the ABL precursor in AMR-Wind
+This simulation is driven by an ABL precursor, run in AMR-Wind, with recorded boundary planes, initial conditions, and average temperature.
+#### Step 1: Develop and decompose overset mesh
+It is necessary to develop a near-body mesh surrounding the blade surface in Nalu-Wind using external tools. This
+mesh should be in the Exodus II format and decomposed to approximately 20K cells per core available to Nalu-Wind.
+#### Step 2: Run the OpenFAST precursor for 5760 OpenFAST timesteps (approximately 1 rotation)
+``srun -n1 openfastcpp inp.yaml``
+#### Step 3: Run the full Exawind suite
+``srun -N 50 -n 5600 exawind --nwind 672 --awind 4928 nrel5mw.yaml &> log``
+#### Step 4: Setup and Run the full Exawind suite restart(s)
+``srun -N 50 -n 5600 exawind --nwind 672 --awind 4928 nrel5mw_r1.yaml &> log_1``
 
 
 ## References
