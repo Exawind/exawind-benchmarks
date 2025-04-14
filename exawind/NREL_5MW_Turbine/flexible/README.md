@@ -83,7 +83,7 @@ This simulation is driven by an ABL precursor, run in AMR-Wind, with recorded bo
 It is necessary to develop a near-body mesh surrounding the blade surface in Nalu-Wind using external tools. This
 mesh should be in the Exodus II format and decomposed to approximately 20K cells per core available to Nalu-Wind.
 #### Step 2: Run the OpenFAST precursor for 5760 OpenFAST timesteps (approximately 1 rotation)
-``srun -n1 openfastcpp inp.yaml``
+``srun -n 1 openfastcpp inp.yaml``
 #### Step 3: Run the full Exawind suite
 ``srun -N 50 -n 5600 exawind --nwind 672 --awind 4928 nrel5mw.yaml &> log``
 #### Step 4: Setup and Run the full Exawind suite restart(s)
