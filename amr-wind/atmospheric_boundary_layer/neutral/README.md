@@ -71,7 +71,7 @@ The corresponding friction velocity, $u^*$, inversion height, $z_i$, and Obukhov
  - $z_i$ = 352.066 m
  - Obukhov Length = 2553.476 m (computed at z=27 m)  
 
-The statistics are averaged over the time interval $t\in[120000,125000]s$. Defining the eddy turnover time as $TE=z_i/u^*$, this time interval corresponds to $t/TE \in [72.5,75.5]$, which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times ($t/TE=[55,65]$) the AMR-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
+The statistics are averaged over the time interval $t\in[120000,125000]s$. Defining the eddy turnover time as $T_E=z_i/u^*$, this time interval corresponds to $t/T_E \in [72.5,75.5]$, which is used to compute all of the results discussed herein. It is important to note that 75 eddy turnover times exceed the 55 eddy turnover times needed for statistical convergence, as identified by Berg et al. (2020). However, while Berg et al. (2020) averaged their results over 10 eddy turnover times ($t/T_E=[55,65]$) the AMR-Wind results are averaged over 3 eddy turnover times. This distinction should be considered in the subsequent comparisons. 
 
 ### Horizontal Profiles
 

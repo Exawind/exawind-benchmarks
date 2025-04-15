@@ -24,7 +24,9 @@ jobs:
         run: |
           export DEBIAN_FRONTEND=noninteractive
           python3 -m pip install --upgrade pip
-          pip3 install sphinx sphinx_rtd_theme sphinx_toolbox sphinx_copybutton sphinx-mdinclude matplotlib myst-nb
+          pip3 install sphinx sphinx_rtd_theme sphinx_toolbox sphinx_copybutton sphinx-mdinclude matplotlib myst-nb codespell
+      - name: Run codespell
+        run: codespell
       - name: Build
         run: |
           echo "::add-matcher::.github/problem-matchers/sphinx.json"
