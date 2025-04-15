@@ -22,7 +22,6 @@ AMR-Wind
    :maxdepth: 2
 
    amr-wind/benchmarks
-   amr-wind/published
 
 
 Nalu-Wind
@@ -33,4 +32,10 @@ Nalu-Wind
 
    nalu-wind/benchmarks
 
-   info
+Notes
+---------
+
+.. toctree::
+   :maxdepth: 2
+
+   notes

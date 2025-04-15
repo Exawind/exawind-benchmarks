@@ -5,9 +5,14 @@ Actuator line models
    :alt: Hub-height horizontal velocity contours for the NREL5MW ALM turbine
    :align: center
 
-`NREL5MW Actuator line model using BeamDyn and ROSCO controller <actuator_line/NREL5MW_ALM_BD/README.html>`__
+#. `Flexible NREL 5MW <actuator_line/NREL5MW_ALM_BD/README.html>`__: Actuator line simulation of the NREL5MW reference turbine, coupled to the OpenFAST BeamDyn aeroelastic solver and ROSCO turbine controller 
 
-NREL5MW Actuator line model with rigid blades and fixed controller
+   * `Simulation setup <actuator_line/NREL5MW_ALM_BD/README.html#simulation-description-and-setup>`__
+   * `Postprocessing <actuator_line/NREL5MW_ALM_BD/README.html#postprocessing>`__
+   * `Code performance <actuator_line/NREL5MW_ALM_BD/README.html#code-performance>`__
+   * `Results <actuator_line/NREL5MW_ALM_BD/README.html#results>`__
+     
+#. Rigid NREL 5MW: case to be posted in near future.
 
 `View these cases in the github repository
 <https://github.com/Exawind/exawind-benchmarks/tree/main/amr-wind/actuator_line>`__

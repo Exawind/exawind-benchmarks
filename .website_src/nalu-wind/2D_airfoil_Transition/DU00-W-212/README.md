@@ -50,7 +50,7 @@ Validation of the transition model is conducted for the DU00-W-212 wind turbine 
 <!-- <img src="figures_and_scripts/du_rey_3M.png" alt="Cf" width="1000"> -->
 ![Cf](figures_and_scripts/du_rey_3M.png)
 
-The figures above show comparisons of the lift, drag, and pitching moment from the experiment, fully turbulent simulations, and transition simulations.
+The figures above show comparisons of the lift, drag, and pitching moment from the experiment, fully turbulent simulations, and transition simulations.  The lift, drag, and pitching moment coefficients are calculated using this jupyter notebook: [clcd_cfd_total.ipynb](figures_and_scripts/clcd_cfd_total.ipynb).
 
 For the lift coefficient, both the fully turbulent and transition simulations show good agreement with the experimental data in the linear range. The transition simulation predicts a slightly higher lift curve slope than the fully turbulent simulation in this range, but the differences are minor. However, neither the transition nor turbulent simulations accurately predict the stall angle of attack due to the limitations of RANS modeling under strong adverse pressure gradients.
 

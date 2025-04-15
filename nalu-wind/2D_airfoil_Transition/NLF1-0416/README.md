@@ -66,7 +66,7 @@ There are two ways for the Option 1: specifying k and $\omega$ accounting for th
 
 If the freestream k and $\omega$ account for the decay, the sustaining terms should be zero.
 
-Option 2, which applies a constant turbulence intensity, improves grid convergence of the lift and drag, particularly at low mesh resolutions. For more consistent and accurate predictions, Option 2 is recommended, which can be speficied in a Nalu-Wind input as follows:
+Option 2, which applies a constant turbulence intensity, improves grid convergence of the lift and drag, particularly at low mesh resolutions. For more consistent and accurate predictions, Option 2 is recommended, which can be specified in a Nalu-Wind input as follows:
 
     - turbulence_model_constants:
        -  fsti: 0.15
@@ -82,7 +82,7 @@ Option 2 is activated only if fsti is explicitly specified in the Nalu-Wind inpu
 ![Cf](figures_and_scripts/nlf0416_clcd.png)
 
 Based on the grid sensitivity results, a full sweep of angles of attack was performed using the Fine mesh level. The two figures above compare the lift and drag polar with the experimental measurements[5]. For the lift, the transition simulation slightly over-predicts the lift coefficient in the linear range of the lift curve, a similar behavior also observed in transition predictions using other transition models and other flow solvers. For the drag polar, the transition simulation predicts lower drag across the range of angles of attack than the fully turbulent simulation and better compares with the experimental data. 
-Specifically, the errors in the predicted drag coefficient at AoA=5° are 2.87% for the transition simulation and 57.56% for the fully turbulent simualtion.
+Specifically, the errors in the predicted drag coefficient at AoA=5° are 2.87% for the transition simulation and 57.56% for the fully turbulent simulation.
 
 ## Results: Convergence
 
@@ -90,7 +90,7 @@ Specifically, the errors in the predicted drag coefficient at AoA=5° are 2.87% 
 <!-- <img src="aoa_5/figures_and_scripts/time_history.png" alt="Cf" width="1000"> -->
 ![Cf](aoa_5/figures_and_scripts/time_history.png)
 
-Convergence behaviors of the transition simulation are presented in the above figure at AoA=5°. Left figure shows the time history of the non-linear residuals from Nalu-Wind for the mean flow (momentum), turbulence model ($k$), and transition model ($\gamma$) at the last Picard iteration of each main iteration. In the figure, all residuals decline smoothly by 3.5 to 4 orders of magnitude until they finally stall. Similary, both the lift and drag converge well without oscillations, with less than 0.1% difference from the converged value around iteration 4,000.
+Convergence behaviors of the transition simulation are presented in the above figure at AoA=5°. Left figure shows the time history of the non-linear residuals from Nalu-Wind for the mean flow (momentum), turbulence model ($k$), and transition model ($\gamma$) at the last Picard iteration of each main iteration. In the figure, all residuals decline smoothly by 3.5 to 4 orders of magnitude until they finally stall. Similarly, both the lift and drag converge well without oscillations, with less than 0.1% difference from the converged value around iteration 4,000.
 
 Each case with the "Fine" mesh took approximately 40 minutes to 10,000 iterations, using 4 Picard iterations per time step, on 26 cores of NREL's Kestrel HPC cluster. The number of cores per case was not determined by Nalu-Wind’s scalability on Kestrel, but simply to accommodate 4 cases on a single node of Kestrel.
 

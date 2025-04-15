@@ -58,7 +58,7 @@ The rotor simulations are performed in four sequential stages with reduced time 
 - Rev. 5 and 6: 0.0625° per iteration
 - Rev. 7 and 8: 0.03125° per iteration
 
-This approach was particularly important for the wind speed of 15 m/s to acheive the time-step size conevergence, which exhibits highly separated flow, with the sectional angle of attack distribution ranging between 15° and 35°.
+This approach was particularly important for the wind speed of 15 m/s to achieve the time-step size conevergence, which exhibits highly separated flow, with the sectional angle of attack distribution ranging between 15° and 35°.
 
 The figure below compares the rotor performance (thrust and torque) against experimental data and available other numerical results [2]. The experimental error is indicated by the black uncertainty bar at the top of each `Experiment` column. For the Nalu-Wind results, the rotor performance was averaged over the last one revolution.
 

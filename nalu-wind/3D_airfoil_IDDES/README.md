@@ -53,7 +53,7 @@ angles of attack except at $17^\circ$. At this angle, the peak in $C_l$ is subst
 higher and is delayed compared to Swalwell et al. (2001) experimental results. 
 In the deep stall regime, the percentage difference between the CFD and experimental results
 is within or close to the $10\%$ threshold level on the finer spanwise grids.
-The results show that, in the deep-stall regime, the IDDES model combined with atleast 24 cells per chord
+The results show that, in the deep-stall regime, the IDDES model combined with at least 24 cells per chord
 accurately predicts the aerodynamic loads.
 
 1. The experimental results for the left and drag coefficients can be found in NACA-0021/experimental_data directory.

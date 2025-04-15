@@ -1,4 +1,4 @@
-This input file was used to run the unstable ABL case that will appear in the AMR-Wind paper. To demostrate that this case runs with the latest release of AMR-Wind, a 100 timestep run was perfomed using 20 nodes on kestrel. The relevant output from this run is:
+This input file was used to run the unstable ABL case that will appear in the AMR-Wind paper. To demonstrate that this case runs with the latest release of AMR-Wind, a 100 timestep run was performed using 20 nodes on kestrel. The relevant output from this run is:
 
 ```
 Time spent in InitData():    7.874299979

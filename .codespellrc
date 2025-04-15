@@ -1,0 +1,3 @@
+[codespell]
+skip = .git,*.ipynb,*.bib,*.ps,*.patch,*/5MW_Baseline/*,*/5MW_Land_BD_DLL_WTurb/*,*AeroDyn15*,*ElastoDyn*,*DISCON.IN,*.pdf,NACA_0018.dat,DU21_A17_dragfree.txt,NACA64_A17.dat
+ignore-words = .codespell-ignore-words

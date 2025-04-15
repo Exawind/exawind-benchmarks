@@ -23,12 +23,12 @@ log_file = "nlf0416_F_aoa_5.0.log" # Nalu-Wind log file
 def read_resid(log_file,niter,line_num):
 
     # Find residual values
-    dum=[]
+    tmp=[]
     file=open(log_file,'r')
     for lines in file:
-       dum += [lines.split()]
+       tmp += [lines.split()]
     file.close()
-    n_line=int(len(dum))
+    n_line=int(len(tmp))
     
     # Save residuals in arrays
     resid_mom_eqs_x = np.zeros((niter))
@@ -50,17 +50,17 @@ def read_resid(log_file,niter,line_num):
 
         # Read time step count number
         ii = i0+1
-        it[j] = dum[ii][3]
+        it[j] = tmp[ii][3]
 
-        dum_lines = 8
+        tmp_lines = 8
         n_solver = 4
-        i  =i0+ dum_lines + (n_solver-1)*nlines
-        resid_mom_eqs[j]   = dum[i+5][3]
-        resid_rho_eqs[j]   = dum[i+6][3]
-        resid_k_eqs[j]     = dum[i+8][3]
-        resid_w_eqs[j]     = dum[i+9][3]
+        i  =i0+ tmp_lines + (n_solver-1)*nlines
+        resid_mom_eqs[j]   = tmp[i+5][3]
+        resid_rho_eqs[j]   = tmp[i+6][3]
+        resid_k_eqs[j]     = tmp[i+8][3]
+        resid_w_eqs[j]     = tmp[i+9][3]
         if(trans==1):
-           resid_gamma_eqs[j]     = dum[i+10][3]
+           resid_gamma_eqs[j]     = tmp[i+10][3]
 
     return it,resid_mom_eqs,resid_rho_eqs,resid_k_eqs,resid_w_eqs,resid_gamma_eqs
 
