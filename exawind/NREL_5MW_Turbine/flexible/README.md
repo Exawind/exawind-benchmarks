@@ -27,11 +27,11 @@ A near-neutral convective boundary layer precursor was run to feed the domain fo
 - Hub-height streamwise velocity: 11.4 m/s
 - Hub-height flow direction: ~240.0 degrees
 
-<img src="../../../amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw/results/avgmetmast_0600.png" alt="10-Minute Average Virtual Met-mast Precursor Results" style="width:800px; background-color: #ffffff;"/>
+![avgmetmest60](../../../amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw/results/avgmetmast_0600.png)
 
 ## CFD Mesh
 
-<img src="figures_and_scripts/split_mesh_layout.png" alt="Mesh layout" style="width:800px; background-color: #ffffff;"/>
+![meshpicture](figures_and_scripts/split_mesh_layout.png)
 
 **Total number of cells: 155,363,046**
 
@@ -48,7 +48,11 @@ Off-body (AMR-Wind) mesh was generated using the built-in capability of AMR-Wind
 
 ## Results
 
-<img src="figures_and_scripts/openfast_summary.png" alt="Summary of OpenFAST Results" style="width:800px; background-color: #ffffff;"/>
+#### Timeseries results from OpenFAST
+
+The plots below show timeseries of some key quantities as reported by OpenFAST (which in this simulation is acting as the structural and controller model). 
+
+![openfastresults](figures_and_scripts/openfast_summary.png)
 
 #### Mean values over time period: 60s to 180s 
 
@@ -78,10 +82,10 @@ This benchmark was run at Sandia National Laboratories on a machine comprised of
 
 ## Quick Exawind Simulation Guide
 #### Step 0: Run the ABL precursor in AMR-Wind
-This simulation is driven by an ABL precursor, run in AMR-Wind, with recorded boundary planes, initial conditions, and average temperature.
+This simulation is driven by an ABL precursor, run in AMR-Wind, with recorded boundary planes, initial conditions, and average temperature. (See case linked above)
 #### Step 1: Develop and decompose overset mesh
 It is necessary to develop a near-body mesh surrounding the blade surface in Nalu-Wind using external tools. This
-mesh should be in the Exodus II format and decomposed to approximately 20K cells per core available to Nalu-Wind.
+mesh should be in the Exodus II format and decomposed to approximately 20K cells per core available to Nalu-Wind. (Current mesh provided via dvc/github assets) 
 #### Step 2: Run the OpenFAST precursor for 5760 OpenFAST timesteps (approximately 1 rotation)
 ``srun -n 1 openfastcpp inp.yaml``
 #### Step 3: Run the full Exawind suite
