@@ -108,7 +108,7 @@
 0.0          		  ! WE_Gamma			- Adaption gain of the wind speed estimator algorithm [m/rad]
 97.0                ! WE_GearboxRatio	- Gearbox ratio [>=1],  [-]
 43702538.05700     ! WE_Jtot			- Total drivetrain inertia, including blades, hub and casted generator inertia to LSS, [kg m^2]
-1.225               ! WE_RhoAir			- Air density, [kg m^-3]
+1.0               ! WE_RhoAir			- Air density, [kg m^-3]
 "Cp_Ct_Cq.NREL5MW.txt"      ! PerfFileName      - File containing rotor performance tables (Cp,Ct,Cq) (absolute path or relative to this file)
 36      26          ! PerfTableSize     - Size of rotor performance tables, first number refers to number of blade pitch angles, second number referse to number of tip-speed ratios
 60                  ! WE_FOPoles_N      - Number of first-order system poles used in EKF
