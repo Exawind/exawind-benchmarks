@@ -15,12 +15,12 @@ set_uniform_x_blade_forces: False
 x_blade_force: 0.0
 super_controller: False
 Turbine0:
-  turb_id: 0
-  FAST_input_filename: "5MW_Land_BD_DLL_WTurb/5MW_Land_BD_DLL_WTurb.fst"
+  turb_id: 1
+  FAST_input_filename: "5MW_Land_BD_DLL_WTurb_T1/5MW_Land_BD_DLL_WTurb.fst"
   sim_type: ext-loads
   #restart_filename: "Turbine0"
-  turbine_base_pos: [1800, 1800, 0]
-  turbine_hub_pos: [1795, 1800, 90]
+  turbine_hub_pos: [1595, 1000, 90]
+  turbine_base_pos: [1600, 1000, 0]
   num_force_pts_blade: 50
   num_force_pts_tower: 12
   az_blend_mean: 18.84955592
