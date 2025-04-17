@@ -25,7 +25,3 @@ Turbine0:
   num_force_pts_tower: 12
   az_blend_mean: 18.84955592
   az_blend_delta: 1.570796327
-  vel_mean: 11.4
-  wind_dir: 240.0
-  z_ref: 90.0
-  shear_exp: 0.0
