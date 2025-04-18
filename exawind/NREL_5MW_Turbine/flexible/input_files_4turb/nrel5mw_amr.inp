@@ -11,6 +11,7 @@ io.plot_file                             = out/plt
 io.check_file                            = rst/chk
 io.restart_file                          = /kfs3/scratch/lcheung/precursors/exawind-benchmarks/Neutral_ABL/chk30000
 io.KE_int                                = -1
+io.derived_outputs                       = q_criterion mag_vorticity
 
 incflo.use_godunov                       = true
 incflo.godunov_type                      = weno_z
