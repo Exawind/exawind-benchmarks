@@ -4,7 +4,8 @@
 #SBATCH -o %x.o%j
 #SBATCH --account=hfm
 #SBATCH --time=48:00:00
-#SBATCH --nodes=60
+#SBATCH --nodes=32
+#SBATCH --reservation=exawind-movie
 
 set -e
 cmd() {
@@ -19,4 +20,4 @@ cmd "spack load exawind"
 cmd "export MPICH_OFI_SKIP_NIC_SYMMETRY_TEST=1"
 cmd "export MPICH_GPU_SUPPORT_ENABLED=0"
 
-cmd "srun -n 4320 exawind --awind 3888 --nwind 432  nrel5mw.yaml  > nrel5mw.log 2>&1"
+cmd "srun -n 2432 exawind --awind 128 --nwind 2304 nrel5mw.yaml > nrel5mw.log 2>&1"
