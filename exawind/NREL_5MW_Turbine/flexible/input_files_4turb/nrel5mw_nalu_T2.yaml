@@ -209,14 +209,14 @@ realms:
       - blade3-HEX
     motion:
       - type: translation
-        displacement: [795, 800, 90]
+        displacement: [1237.523196, 1766.238402, 90]
         
   - name: turbine_tower_placement
     mesh_parts:
       - tower-fluid-HEX
     motion:
       - type: translation
-        displacement: [800, 800, 0]
+        displacement: [1237.523196, 1766.238402, 0]
         
   openfast_fsi:
     n_turbines_glob: 1
@@ -229,8 +229,8 @@ realms:
     dt_FAST: 0.0008608815426997245
     Turbine0:
       turb_id: 2
-      turbine_hub_pos: [795, 800, 90]
-      turbine_base_pos: [800, 800, 0]
+      turbine_hub_pos: [1237.523196, 1766.238402, 90]
+      turbine_base_pos: [1237.523196, 1766.238402, 0]
       restart_filename: "5MW_Land_BD_DLL_WTurb_T2/5MW_Land_BD_DLL_WTurb.5760"
       sim_type: "ext-loads"
       tower_parts:
@@ -310,7 +310,7 @@ realms:
     physics: surface_force_and_moment
     output_file_name: forcesBlades_T2.dat
     frequency: 4
-    parameters: [795.669873, 797.5, 90]
+    parameters: [1233.19306898, 1763.738402, 90]
     target_name:
     - blade1
     - blade2
@@ -319,7 +319,7 @@ realms:
     physics: surface_force_and_moment
     output_file_name: forcesTower_T2.dat
     frequency: 1
-    parameters: [800, 800, 0]
+    parameters: [1237.523196, 1766.238402, 0]
     target_name:
     - tower
 
