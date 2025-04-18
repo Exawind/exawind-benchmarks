@@ -4,12 +4,10 @@
 #SBATCH -o %x.o%j
 #SBATCH --account=hfm
 #SBATCH --reservation=exawind-movie
-#SBATCH -p gpu-h100s
 #SBATCH --time=48:00:00
 #SBATCH --nodes=32
 #SBATCH --gpus=128
 #SBATCH --gpus-per-node=4
-#SBATCH --ntasks-per-node=128
 #SBATCH --exclusive
 #SBATCH --mem=0
 
