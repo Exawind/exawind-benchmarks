@@ -505,14 +505,19 @@ sideplane2_.turb3_sideplane2.offset_vector = -0.49999999999999994 0.866025403784
 sideplane2_.turb3_sideplane2.offsets     = 0.0 -252.0
 
 #---- extra params ----
+io.line_plot_int                         = 1
+CoriolisForcing.turn_off_vertical_force  = True
 ABL.enable_hybrid_rl_mode                = true
+
 amr.max_grid_size                        = 128
 amr.blocking_factor                      = 32
+
 
 diffusion.mg_rtol                        = 1e-06
 diffusion.mg_atol                        = 1e-10
 temperature_diffusion.mg_rtol            = 1e-06
 temperature_diffusion.mg_atol            = 1e-10
+
 nodal_proj.mg_rtol                       = 1e-06
 nodal_proj.mg_atol                       = 1e-10
 mac_proj.mg_rtol                         = 1e-06
