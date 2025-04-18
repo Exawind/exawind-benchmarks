@@ -10,7 +10,6 @@ incflo.verbose                           = 0
 io.plot_file                             = out/plt
 io.check_file                            = rst/chk
 io.restart_file                          = /kfs3/scratch/lcheung/precursors/exawind-benchmarks/Neutral_ABL/chk30000
-io.KE_int                                = -1
 io.derived_outputs                       = q_criterion mag_vorticity
 
 incflo.use_godunov                       = true
@@ -505,8 +504,6 @@ sideplane2_.turb3_sideplane2.offset_vector = -0.49999999999999994 0.866025403784
 sideplane2_.turb3_sideplane2.offsets     = 0.0 -252.0
 
 #---- extra params ----
-io.line_plot_int                         = 1
-CoriolisForcing.turn_off_vertical_force  = True
 ABL.enable_hybrid_rl_mode                = true
 
 amr.max_grid_size                        = 128
