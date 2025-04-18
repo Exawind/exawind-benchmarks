@@ -1,11 +1,15 @@
 #!/bin/bash
 
-#SBATCH -J precursor
+#SBATCH -J hybrid
 #SBATCH -o %x.o%j
 #SBATCH --account=hfm
+#SBATCH --reservation=exawind-movie
 #SBATCH --time=48:00:00
 #SBATCH --nodes=32
-#SBATCH --reservation=exawind-movie
+#SBATCH --ntasks-per-node=128
+#SBATCH --gpus=128
+#SBATCH --exclusive
+#SBATCH --mem=0
 
 set -e
 cmd() {
