@@ -224,6 +224,7 @@ turbdomain_.output_frequency             = 25
 turbdomain_.fields                       = velocity temperature tke
 
 #---- sample defs ----
+metmast_.labels                          = virtualmast
 turbdomain_.labels                       = Farm_turbdomain
 rotorplaneUP_.labels                     = turb0_rotorplaneUP turb1_rotorplaneUP turb2_rotorplaneUP turb3_rotorplaneUP
 rotorplaneDN_.labels                     = turb0_rotorplaneDN turb1_rotorplaneDN turb2_rotorplaneDN turb3_rotorplaneDN
@@ -235,6 +236,10 @@ turb153_.labels                          = turb0_turb153 turb1_turb153 turb2_tur
 turb216_.labels                          = turb0_turb216 turb1_turb216 turb2_turb216 turb3_turb216
 sideplane1_.labels                       = turb0_sideplane1 turb1_sideplane1 turb2_sideplane1 turb3_sideplane1
 sideplane2_.labels                       = turb0_sideplane2 turb1_sideplane2 turb2_sideplane2 turb3_sideplane2
+metmast_.virtualmast.type                = LineSampler
+metmast_.virtualmast.num_points          = 20
+metmast_.virtualmast.start               = 1489.523196, 1329.761598 10.0
+metmast_.virtualmast.end                 = 1489.523196, 1329.761598 200.0
 turbdomain_.Farm_turbdomain.type         = PlaneSampler
 turbdomain_.Farm_turbdomain.num_points   = 321 321
 turbdomain_.Farm_turbdomain.origin       = 0.0001 0.0001 90.0
