@@ -176,10 +176,10 @@ tagging.turb3_level_3_zone.turb3_level_3_zone.yaxis = -125.99999999999999 218.23
 tagging.turb3_level_3_zone.turb3_level_3_zone.zaxis = 0.0 0.0 189.0
 
 #---- postprocessing defs ----
-incflo.post_processing                   = metmast_ rotorplaneUP_ rotorplaneDN_ nearwake_ turbsw_ turbhh_ turb027_ turb153_ turb216_ sideplane1_ sideplane2_ XYdomain_027_ XYdomain_090_ XYdomain_153_ turbdomain_
-metmast_.type                            = Sampling
-metmast_.output_frequency                = 1
-metmast_.fields                          = velocity temperature tke
+incflo.post_processing                   = turbdomain_ rotorplaneUP_ rotorplaneDN_ nearwake_ turbsw_ turbhh_ turb027_ turb153_ turb216_ sideplane1_ sideplane2_
+turbdomain_.type                         = Sampling
+turbdomain_.output_frequency             = 50
+turbdomain_.fields                       = velocity temperature tke
 rotorplaneUP_.type                       = Sampling
 rotorplaneUP_.output_frequency           = 50
 rotorplaneUP_.fields                     = velocity temperature tke
@@ -210,21 +210,8 @@ sideplane1_.fields                       = velocity temperature tke
 sideplane2_.type                         = Sampling
 sideplane2_.output_frequency             = 50
 sideplane2_.fields                       = velocity temperature tke
-XYdomain_027_.type                       = Sampling
-XYdomain_027_.output_frequency           = 50
-XYdomain_027_.fields                     = velocity temperature tke
-XYdomain_090_.type                       = Sampling
-XYdomain_090_.output_frequency           = 50
-XYdomain_090_.fields                     = velocity temperature tke
-XYdomain_153_.type                       = Sampling
-XYdomain_153_.output_frequency           = 50
-XYdomain_153_.fields                     = velocity temperature tke
-turbdomain_.type                         = Sampling
-turbdomain_.output_frequency             = 25
-turbdomain_.fields                       = velocity temperature tke
 
 #---- sample defs ----
-metmast_.labels                          = virtualmast
 turbdomain_.labels                       = Farm_turbdomain
 rotorplaneUP_.labels                     = turb0_rotorplaneUP turb1_rotorplaneUP turb2_rotorplaneUP turb3_rotorplaneUP
 rotorplaneDN_.labels                     = turb0_rotorplaneDN turb1_rotorplaneDN turb2_rotorplaneDN turb3_rotorplaneDN
@@ -236,10 +223,6 @@ turb153_.labels                          = turb0_turb153 turb1_turb153 turb2_tur
 turb216_.labels                          = turb0_turb216 turb1_turb216 turb2_turb216 turb3_turb216
 sideplane1_.labels                       = turb0_sideplane1 turb1_sideplane1 turb2_sideplane1 turb3_sideplane1
 sideplane2_.labels                       = turb0_sideplane2 turb1_sideplane2 turb2_sideplane2 turb3_sideplane2
-metmast_.virtualmast.type                = LineSampler
-metmast_.virtualmast.num_points          = 20
-metmast_.virtualmast.start               = 1489.523196, 1329.761598 10.0
-metmast_.virtualmast.end                 = 1489.523196, 1329.761598 200.0
 turbdomain_.Farm_turbdomain.type         = PlaneSampler
 turbdomain_.Farm_turbdomain.num_points   = 321 321
 turbdomain_.Farm_turbdomain.origin       = 0.0001 0.0001 90.0
