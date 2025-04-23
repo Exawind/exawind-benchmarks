@@ -31,9 +31,11 @@ cmd "spack load exawind"
 
 cmd "python3 ${HOME}/exawind/source/exawind-cases/tools/reorder_file.py ${SLURM_JOB_NUM_NODES}"
 cmd "mv exawind.reorder_file frontier_exawind.reorder_file"
-AWIND_RANKS=$((${SLURM_JOB_NUM_NODES}*8))
-NWIND_RANKS=$((${SLURM_JOB_NUM_NODES}*48))
-TOTAL_RANKS=$((${SLURM_JOB_NUM_NODES}*56))
+AWIND_RANK_PER_NODE=8
+NWIND_RANK_PER_NODE=48
+AWIND_RANKS=$((${SLURM_JOB_NUM_NODES}*${AWIND_RANK_PER_NODE}))
+NWIND_RANKS=$((${SLURM_JOB_NUM_NODES}*${NWIND_RANK_PER_NODE}))
+TOTAL_RANKS=$((${SLURM_JOB_NUM_NODES}*(${AWIND_RANK_PER_NODE}+${NWIND_RANK_PER_NODE})))
 
 cmd "export MPICH_RANK_REORDER_METHOD=3"
 cmd "export MPICH_RANK_REORDER_FILE=frontier_exawind.reorder_file"
