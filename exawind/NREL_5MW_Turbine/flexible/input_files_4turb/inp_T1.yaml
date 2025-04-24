@@ -19,7 +19,7 @@ Turbine0:
   FAST_input_filename: "5MW_Land_BD_DLL_WTurb_T1/5MW_Land_BD_DLL_WTurb.fst"
   sim_type: ext-loads
   #restart_filename: "Turbine0"
-  turbine_hub_pos: [2362.476804, 1833.761598, 90]
+  turbine_hub_pos: [2357.476804, 1833.761598, 90]
   turbine_base_pos: [2362.476804, 1833.761598, 0]
   num_force_pts_blade: 50
   num_force_pts_tower: 12

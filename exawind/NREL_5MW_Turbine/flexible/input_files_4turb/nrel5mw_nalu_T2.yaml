@@ -209,7 +209,7 @@ realms:
       - blade3-HEX
     motion:
       - type: translation
-        displacement: [1237.523196, 1766.238402, 90]
+        displacement: [1232.523196, 1766.238402, 90]
         
   - name: turbine_tower_placement
     mesh_parts:
@@ -229,7 +229,7 @@ realms:
     dt_FAST: 0.0008608815426997245
     Turbine0:
       turb_id: 2
-      turbine_hub_pos: [1237.523196, 1766.238402, 90]
+      turbine_hub_pos: [1232.523196, 1766.238402, 90]
       turbine_base_pos: [1237.523196, 1766.238402, 0]
       restart_filename: "5MW_Land_BD_DLL_WTurb_T2/5MW_Land_BD_DLL_WTurb.5760"
       sim_type: "ext-loads"
