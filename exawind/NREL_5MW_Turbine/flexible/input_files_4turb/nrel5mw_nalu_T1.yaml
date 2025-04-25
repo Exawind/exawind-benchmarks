@@ -168,7 +168,7 @@ realms:
   - overset_boundary_condition: bc_overset
     overset_connectivity_type: tioga
     overset_user_data:
-      mesh_tag_offset: 1
+      mesh_tag_offset: 4
       tioga_options:
         symmetry_direction: 3
       mesh_group:

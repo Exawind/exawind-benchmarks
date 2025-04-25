@@ -3,12 +3,10 @@
 #SBATCH -J hybrid
 #SBATCH -o %x.o%j
 #SBATCH --account=CFD162
-#SBATCH --time=48:00:00
+#SBATCH --time=24:00:00
 #SBATCH --nodes=32
 #SBATCH -S 0
 #SBATCH --partition=extended
-
-#SBATCH --time=00:30:00
 
 set -e
 cmd() {
@@ -39,10 +37,11 @@ cmd "srun -n 1 openfastcpp inp_T2.yaml > precursor_T2.log 2>&1"
 cmd "srun -n 1 openfastcpp inp_T3.yaml > precursor_T3.log 2>&1"
 
 STK_BALANCE_RANKS=$((${SLURM_JOB_NUM_NODES}*${NWIND_RANK_PER_NODE}/${NWIND_SOLVERS}))
+STK_BALANCE_NODES=$((${STK_BALANCE_RANKS}/64))
 MESH_FILE="../mesh/split_tower_and_blades.exo"
 cmd "rm -f ${MESH_FILE}.*"
 cmd "rm -f split_tower_and_blades.1_to_${STK_BALANCE_RANKS}.log"
-cmd "srun -N${SLURM_JOB_NUM_NODES} -n${STK_BALANCE_RANKS} stk_balance.exe ${MESH_FILE} --decomp-method=parmetis"
+cmd "srun -N${STK_BALANCE_NODES} -n${STK_BALANCE_RANKS} stk_balance.exe ${MESH_FILE} --decomp-method=parmetis"
 
 cmd "python3 ${HOME}/exawind/source/exawind-cases/tools/reorder_file.py ${SLURM_JOB_NUM_NODES}"
 cmd "mv exawind.reorder_file frontier_exawind.reorder_file"
