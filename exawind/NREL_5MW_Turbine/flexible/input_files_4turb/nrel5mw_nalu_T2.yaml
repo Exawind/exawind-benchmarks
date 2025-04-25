@@ -349,7 +349,7 @@ realms:
   sideset_writers:
   - name: boundary_output
     output_data_base_name: blades/blades_T2.exo
-    output_frequency: 1400
+    output_frequency: 1440
     target_name: [blade1, blade2, blade3]
     output_variables:
     - pressure
