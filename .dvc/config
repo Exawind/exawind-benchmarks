@@ -1,4 +1,2 @@
-[core]
-    remote = kestrel
-['remote "kestrel"']
-    url = ssh://gvijayak@kl3.hpc.nrel.gov:/projects/hfm/exawind-benchmark-meshes
+['remote "amazon"']
+    url = http://exawind-datasets.s3.amazonaws.com/data/
