@@ -1,2 +1,4 @@
+[core]
+    remote = amazon
 ['remote "amazon"']
     url = http://exawind-datasets.s3.amazonaws.com/data/
