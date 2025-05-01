@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 #SBATCH -J hybrid
 #SBATCH -o %x.o%j
@@ -15,21 +15,40 @@ cmd() {
   eval "$@"
 }
 
-RST_FNAME="nrel5mw_1.yaml"
+ORIG_NUM="1"
+NEW_NUM=$((${ORIG_NUM}+1))
+# cmd "cp timings.dat timings_${ORIG_NUM}.dat"
+cmd "cp turb_00_rst.nc turb_00_rst_${ORIG_NUM}.nc"
+cmd "cp turb_01_rst.nc turb_01_rst_${ORIG_NUM}.nc"
+cmd "cp turb_02_rst.nc turb_02_rst_${ORIG_NUM}.nc"
+cmd "cp turb_03_rst.nc turb_03_rst_${ORIG_NUM}.nc"
+# FNAME="nrel5mw_${ORIG_NUM}.yaml"
+RST_FNAME="nrel5mw_${NEW_NUM}.yaml"
 
-cmd "module unload PrgEnv-cray"
-cmd "module load PrgEnv-gnu/8.6.0"
-cmd "module load miniforge3/23.11.0-0"
-source activate /ccs/proj/cfd162/lcheung/condaenv/frontier2
-AW_FRONTEND="/ccs/home/marchdf/exawind/source/amr-wind-frontend"
-CHKPITER=$(ls -1rt 5MW_Land_BD_DLL_WTurb_T0/5MW_Land_BD_DLL_WTurb.*.chkp | tail -n 1 | awk -F '.' '{print $2}')
-cmd "python ${AW_FRONTEND}/utilities/restartExaWind.py nrel5mw.yaml --chkpiter ${CHKPITER} -o ${RST_FNAME} -v --additer 0"
-cmd "module unload PrgEnv-gnu/8.6.0"
-cmd "module unload miniforge3/23.11.0-0"
+# cmd "module purge"
+# cmd "module load PrgEnv-gnu/8.6.0"
+# cmd "module load cray-python"
+# cmd "module load miniforge3/23.11.0-0"
+# cmd "source activate /ccs/proj/cfd162/lcheung/condaenv/frontier2"
+# cmd "which python"
+# AW_FRONTEND="/ccs/home/marchdf/exawind/source/amr-wind-frontend"
+# CHKPITER=$(ls -1rt 5MW_Land_BD_DLL_WTurb_T0/5MW_Land_BD_DLL_WTurb.*.chkp | tail -n 1 | awk -F '.' '{print $2}')
+# cmd "python ${AW_FRONTEND}/utilities/restartExaWind.py ${FNAME} --chkpiter ${CHKPITER} -o ${RST_FNAME} -v --additer 0"
 
+cmd "module purge"
 cmd "module load PrgEnv-gnu-amd/8.6.0"
 cmd "module load amd-mixed/6.1.3"
 cmd "module load cray-python"
+cmd "module load cray-mpich/8.1.31"
+cmd "module load craype-x86-trento"
+cmd "module load libfabric/1.22.0"
+cmd "module load craype-network-ofi"
+cmd "module load xpmem/2.10.6-1.2_gfaa90a94be64"
+cmd "module load cray-pmi/6.1.15"
+cmd "module load cray-dsmml/0.3.0"
+cmd "module load cray-libsci/24.11.0"
+cmd "module load lfs-wrapper/0.0.1"
+
 cmd "export FI_MR_CACHE_MONITOR=memhooks"
 cmd "export FI_CXI_RX_MATCH_MODE=software"
 cmd "export MPICH_SMP_SINGLE_COPY_MODE=NONE"

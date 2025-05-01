@@ -2,13 +2,13 @@
 time.stop_time                           = -1.0                # Max (simulated) time to evolve [s]
 time.max_step                            = -1
 time.fixed_dt                            = 0.003443526170799   # Fixed timestep size (in seconds). If negative, then time.cfl is used
-time.plot_interval                       = 1440
-time.checkpoint_interval                 = 1440
+time.plot_interval                       = 180
+time.checkpoint_interval                 = 180
 time.checkpoint_start                    = 30000
 incflo.physics                           = ABL                 # List of physics models to include in simulation.
 incflo.verbose                           = 0
-io.plot_file                             = out/plt
-io.check_file                            = rst/chk
+io.plot_file                             = aw-out/plt
+io.check_file                            = aw-rst/chk
 io.restart_file                          = /kfs3/scratch/lcheung/precursors/exawind-benchmarks/Neutral_ABL/chk30000
 io.derived_outputs                       = q_criterion mag_vorticity
 
