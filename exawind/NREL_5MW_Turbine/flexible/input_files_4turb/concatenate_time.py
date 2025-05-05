@@ -47,16 +47,17 @@ def concat_exodus_time(files, output):
 
 
 def main():
-    timestep_files = {}
+    for sideset in ["blades", "tower"]:
+        timestep_files = {}
 
-    for dir in sorted(glob("blades*/")):
-        for f in sorted(glob(os.path.join(dir, "blades_T*.exo"))):
-            key = os.path.basename(f)
-            timestep_files.setdefault(key, []).append(f)
+        for dir in sorted(glob(f"{sideset}*/")):
+            for f in sorted(glob(os.path.join(dir, f"{sideset}_T*.exo"))):
+                key = os.path.basename(f)
+                timestep_files.setdefault(key, []).append(f)
 
-    for name, files in timestep_files.items():
-        output = f"{name}_all.exo"
-        concat_exodus_time(files, output)
+        for name, files in timestep_files.items():
+            output = f"{name}_all.exo"
+            concat_exodus_time(files, output)
 
 
 if __name__ == "__main__":

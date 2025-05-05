@@ -30,3 +30,21 @@ for dir in blades*/; do
 
   cd ..
 done
+
+for dir in tower*/; do
+  echo "Entering $dir"
+  cd "$dir" || exit 1
+
+  for tx in "${turbines[@]}"; do
+    if compgen -G "tower_${tx}.exo.*.*" > /dev/null; then
+      if [ ! -f "tower_${tx}.exo" ]; then
+        echo "  Running epu on tower_${tx}"
+        epu --auto "tower_${tx}.exo"
+      else
+        echo "  tower_${tx}.exo already exists, skipping epu"
+      fi
+    fi
+  done
+
+  cd ..
+done
