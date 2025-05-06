@@ -58,45 +58,74 @@ def main():
 
     args = parser.parse_args()
 
-    case_list = ['nrel5mw_rigid_abl_noopenfast2']
-    force_file_names = ['forces01.dat']
+    case_list = ['rigid_abl_splitmsh_nate2']
+    force_file_names = ['forcesBlades.dat']
     case_lab = ['NREL 5MW Rigid']
 
-    omega = 1.25663706
+    omega = 1.26710903694788
     diffn = 60000
     rotaxis = [0.862729916,0.498097349,-0.087155742]
 
     matplotlib.rcParams['font.size'] = 16
 
-    fig = plt.figure(constrained_layout=True,figsize=(13,4))
+    fig = plt.figure(constrained_layout=True,figsize=(12,4))
     subfigs = fig.subfigures(nrows=1, ncols=1)
-    ax = subfigs.subplots(nrows=1, ncols=2)
+    ax = subfigs.subplots(nrows=1, ncols=3)
 
     for i,c in enumerate(case_list):
 
         print('Processing: ',c)
 
-        fullpath = os.path.join(args.directory,c,force_file_names[i])
-        print(fullpath)
+        this_data = []
 
-        this_data = pd.read_csv(fullpath,sep='\s+',skipinitialspace=True)
+        for j in range(len(force_file_names)):
+            fullpath = os.path.join(args.directory,c,force_file_names[j])
+            print(fullpath)
 
-        this_data['Thrust'] = (this_data['Fpx']*rotaxis[0] + this_data['Fpx']*rotaxis[1])/1000.0
+            this_data.append(pd.read_csv(fullpath,sep='\s+',skipinitialspace=True))
 
-        ax[0].plot(this_data['Time'], this_data['Thrust'], label=case_lab[i])
-        #plt.axhline(y = ofpower, color = 'k', linestyle = ':')
+        yawangle = 30.0*np.pi/180.0
+        tiltangle = 5.0*np.pi/180.0
+
+
+        all_data = pd.concat(this_data, ignore_index=True)
+
+
+        all_data['fx'] = all_data['Fpx']+all_data['Fvx']
+        all_data['fy'] = all_data['Fpy']+all_data['Fvy']
+        all_data['fz'] = all_data['Fpz']+all_data['Fvz']
+
+        all_data['frot30x'] = all_data['fx']*np.cos(-yawangle)-all_data['fy']*np.sin(-yawangle)
+        all_data['frot30y'] = all_data['fx']*np.sin(-yawangle)+all_data['fy']*np.cos(-yawangle)
+        all_data['frot30z'] = all_data['fz']       
+
+        all_data['mrot30x'] = all_data['Mtx']*np.cos(-yawangle)-all_data['Mty']*np.sin(-yawangle)
+        all_data['mrot30y'] = all_data['Mtx']*np.sin(-yawangle)+all_data['Mty']*np.cos(-yawangle)
+        all_data['mrot30z'] = all_data['Mtz']
+
+        all_data['Torque'] = (all_data['mrot30x']*np.cos(-tiltangle)+all_data['mrot30z']*np.sin(-tiltangle))/1000
+        all_data['Thrust'] = (all_data['frot30x']*np.cos(-tiltangle)+all_data['frot30z']*np.sin(-tiltangle))/1000
+
+        all_data['Power'] = all_data['Torque']*omega*0.944
+
+        ax[0].plot(all_data['Time'], all_data['Thrust'], label=case_lab[i])
         ax[0].set_xlabel("Time [s]")
         ax[0].set_ylabel("Thrust [kN]")
-        ax[0].set_ylim([150,900])
-        #ax.set_xlim([0,30])
-        #ax[0].legend()
 
-        ax[1].plot(this_data['Time'], this_data['Mtx']/1000.0, label="x-dir Moment")
-        ax[1].plot(this_data['Time'], this_data['Mty']/1000.0, label="y-dir Moment")
-        ax[1].plot(this_data['Time'], this_data['Mtz']/1000.0, label="z-dir Moment")
+        ax[1].plot(all_data['Time'], all_data['Torque'], label=case_lab[i])
         ax[1].set_xlabel("Time [s]")
-        ax[1].set_ylabel("Moment [kN-m]")
-        ax[1].legend()
+        ax[1].set_ylabel("Torque [kN-m]")
+
+        ax[2].plot(all_data['Time'], all_data['Power'], label=case_lab[i])
+        ax[2].set_xlabel("Time [s]")
+        ax[2].set_ylabel("Power [kW]")
+
+    mean_data = all_data[all_data['Time']>30.0].mean()
+
+    print('Mean Power: ',mean_data.Power,'kW')
+    print('Mean Thrust: ',mean_data.Thrust,'kN')
+    print('Mean Torque: ',mean_data.Torque,'kN-m')
+
 
     plt.savefig('rigid_output.png')
     plt.close()
