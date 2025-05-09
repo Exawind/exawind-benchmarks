@@ -7,7 +7,6 @@
 #SBATCH --nodes=32
 #SBATCH -S 0
 #SBATCH --partition=extended
-#SBATCH -d afterany:3395835 # 00 -> 01
 
 set -e
 cmd() {
@@ -15,9 +14,9 @@ cmd() {
   eval "$@"
 }
 
-ORIG_NUM="1"
+ORIG_NUM="8"
 NEW_NUM=$((${ORIG_NUM}+1))
-# cmd "cp timings.dat timings_${ORIG_NUM}.dat"
+cmd "cp timings.dat timings_${ORIG_NUM}.dat"
 cmd "cp turb_00_rst.nc turb_00_rst_${ORIG_NUM}.nc"
 cmd "cp turb_01_rst.nc turb_01_rst_${ORIG_NUM}.nc"
 cmd "cp turb_02_rst.nc turb_02_rst_${ORIG_NUM}.nc"

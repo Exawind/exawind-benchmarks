@@ -11,66 +11,66 @@ hypre_config:
 
 linear_solvers:
   # solver for the momentum
-  - name: solve_mom
-    type: hypre
-    method: hypre_gmres
-    preconditioner: boomerAMG
-    tolerance: 1e-5
-    max_iterations: 1000
-    kspace: 1000
-    sync_alg: 1
-    output_level: 0
-    write_matrix_files: no
+- name: solve_mom
+  type: hypre
+  method: hypre_gmres
+  preconditioner: boomerAMG
+  tolerance: 1e-5
+  max_iterations: 1000
+  kspace: 1000
+  sync_alg: 1
+  output_level: 0
+  write_matrix_files: no
     #write_preassembly_matrix_files: yes
-    recompute_preconditioner_frequency: 1
-    reuse_linear_system: yes
-    simple_hypre_matrix_assemble: yes
-    dump_hypre_matrix_stats: no
-    segregated_solver: yes
-    hypre_cfg_file: hypre_file.yaml
-    hypre_cfg_node: hypre_simple_precon
+  recompute_preconditioner_frequency: 1
+  reuse_linear_system: yes
+  simple_hypre_matrix_assemble: yes
+  dump_hypre_matrix_stats: no
+  segregated_solver: yes
+  hypre_cfg_file: hypre_file.yaml
+  hypre_cfg_node: hypre_simple_precon
 
   # solver for the scalars TKE, SDR
-  - name: solve_scalar
-    type: hypre
-    method: hypre_gmres
-    preconditioner: boomerAMG
-    tolerance: 1e-5
-    max_iterations: 1000
-    kspace: 1000
-    sync_alg: 1
-    output_level: 0
-    write_matrix_files: no
+- name: solve_scalar
+  type: hypre
+  method: hypre_gmres
+  preconditioner: boomerAMG
+  tolerance: 1e-5
+  max_iterations: 1000
+  kspace: 1000
+  sync_alg: 1
+  output_level: 0
+  write_matrix_files: no
     #write_preassembly_matrix_files: yes
-    recompute_preconditioner_frequency: 1
-    reuse_linear_system: yes
-    simple_hypre_matrix_assemble: yes
-    dump_hypre_matrix_stats: no
-    hypre_cfg_file: hypre_file.yaml
-    hypre_cfg_node: hypre_simple_precon
+  recompute_preconditioner_frequency: 1
+  reuse_linear_system: yes
+  simple_hypre_matrix_assemble: yes
+  dump_hypre_matrix_stats: no
+  hypre_cfg_file: hypre_file.yaml
+  hypre_cfg_node: hypre_simple_precon
 
   # solver for the pressure
-  - name: solve_elliptic
-    type: hypre
-    method: hypre_gmres
-    preconditioner: boomerAMG
-    tolerance: 1e-5
-    max_iterations: 1000
-    kspace: 1000
-    sync_alg: 1
-    output_level: 0
-    write_matrix_files: no
+- name: solve_elliptic
+  type: hypre
+  method: hypre_gmres
+  preconditioner: boomerAMG
+  tolerance: 1e-5
+  max_iterations: 1000
+  kspace: 1000
+  sync_alg: 1
+  output_level: 0
+  write_matrix_files: no
     #write_preassembly_matrix_files: yes
-    recompute_preconditioner_frequency: 1
-    reuse_linear_system: yes
-    simple_hypre_matrix_assemble: yes
-    dump_hypre_matrix_stats: no
-    hypre_cfg_file: hypre_file.yaml
-    hypre_cfg_node: hypre_elliptic
+  recompute_preconditioner_frequency: 1
+  reuse_linear_system: yes
+  simple_hypre_matrix_assemble: yes
+  dump_hypre_matrix_stats: no
+  hypre_cfg_file: hypre_file.yaml
+  hypre_cfg_node: hypre_elliptic
 
 realms:
 - name: realm_1
-  mesh: /lustre/orion/cfd162/proj-shared/marchdf/exawind/source/exawind-benchmarks/exawind/NREL_5MW_Turbine/flexible/mesh/split_tower_and_blades.exo
+  mesh: rst6/nrel5mw_T3.rst
   #automatic_decomposition_type: rcb
   #rebalance_mesh: yes
   #stk_rebalance_method: parmetis
@@ -108,24 +108,24 @@ realms:
         convergence_tolerance: 1e-8
 
   initial_conditions:
-    - constant: ic_1
-      target_name:
-        - blade1-HEX
-        - blade2-HEX
-        - blade3-HEX
-        - tower-fluid-HEX
-      value:
-        pressure: 0.0
-        velocity: [9.8726896031426, 5.7, 0.0]
-        turbulent_ke: 1.0
-        specific_dissipation_rate: 687.25
+  - constant: ic_1
+    target_name:
+    - blade1-HEX
+    - blade2-HEX
+    - blade3-HEX
+    - tower-fluid-HEX
+    value:
+      pressure: 0.0
+      velocity: [9.8726896031426, 5.7, 0.0]
+      turbulent_ke: 1.0
+      specific_dissipation_rate: 687.25
 
   material_properties:
     target_name:
-      - blade1-HEX
-      - blade2-HEX
-      - blade3-HEX
-      - tower-fluid-HEX
+    - blade1-HEX
+    - blade2-HEX
+    - blade3-HEX
+    - tower-fluid-HEX
 
     specifications:
     - name: density
@@ -168,86 +168,69 @@ realms:
   - overset_boundary_condition: bc_overset
     overset_connectivity_type: tioga
     overset_user_data:
-      mesh_tag_offset: 0
+      mesh_tag_offset: 12
       tioga_options:
         symmetry_direction: 3
       mesh_group:
       - overset_name: ovst-blade1
         mesh_parts:
-          - blade1-HEX
-        wall_parts: 
-          - blade1 
+        - blade1-HEX
+        wall_parts:
+        - blade1
         ovset_parts:
-          - outerbcblade1block
+        - outerbcblade1block
       - overset_name: ovst-blade2
         mesh_parts:
-          - blade2-HEX
-        wall_parts: 
-          - blade2 
+        - blade2-HEX
+        wall_parts:
+        - blade2
         ovset_parts:
-          - outerbcblade2block
+        - outerbcblade2block
       - overset_name: ovst-blade3
         mesh_parts:
-          - blade3-HEX
-        wall_parts: 
-          - blade3 
+        - blade3-HEX
+        wall_parts:
+        - blade3
         ovset_parts:
-          - outerbcblade3block
+        - outerbcblade3block
       - overset_name: ovst-tower
         mesh_parts:
-          - tower-fluid-HEX
-        wall_parts: 
-          - tower-wall
+        - tower-fluid-HEX
+        wall_parts:
+        - tower-wall
         ovset_parts:
-          - tower-overset
+        - tower-overset
 
-  mesh_transformation:
-  - name: turbine_rotor_placement
-    mesh_parts:
-      - blade1-HEX
-      - blade2-HEX
-      - blade3-HEX
-    motion:
-      - type: translation
-        displacement: [1484.523196, 1329.761598, 90]
-        
-  - name: turbine_tower_placement
-    mesh_parts:
-      - tower-fluid-HEX
-    motion:
-      - type: translation
-        displacement: [1489.523196, 1329.761598, 0]
-        
   openfast_fsi:
     n_turbines_glob: 1
-    dry_run:  False
-    debug:    False
+    dry_run: false
+    debug: false
     sim_start: trueRestart #/trueRestart/restartDriverInitFAST
-    t_start: 4.958677685950414
+    t_start: 141.94214876033058
     t_max: 600.55
     n_checkpoint: 720
     dt_FAST: 0.0008608815426997245
     Turbine0:
-      turb_id: 0
-      turbine_hub_pos: [1484.523196, 1329.761598, 90]
-      turbine_base_pos: [1489.523196, 1329.761598, 0]
-      restart_filename: "5MW_Land_BD_DLL_WTurb_T0/5MW_Land_BD_DLL_WTurb.5760"
-      sim_type: "ext-loads"
+      turb_id: 3
+      turbine_hub_pos: [2105.476804, 2270.238402, 90]
+      turbine_base_pos: [2110.476804, 2270.238402, 0]
+      restart_filename: 5MW_Land_BD_DLL_WTurb_T3/5MW_Land_BD_DLL_WTurb.164880
+      sim_type: ext-loads
       tower_parts:
-        - tower-fluid-HEX
+      - tower-fluid-HEX
       tower_boundary_parts:
-        - tower-wall
+      - tower-wall
       blade_parts:
-        - ["blade1-HEX"]
-        - ["blade2-HEX"]
-        - ["blade3-HEX"]
+      - [blade1-HEX]
+      - [blade2-HEX]
+      - [blade3-HEX]
       blade_boundary_parts:
-        - ["blade1"]
-        - ["blade2"]
-        - ["blade3"]
+      - [blade1]
+      - [blade2]
+      - [blade3]
       az_blend_mean: 18.84955592
       az_blend_delta: 1.570796327
-      
+
       deflection_ramping:
         enable_temporal_ramping: true
         enable_theta_ramping: true
@@ -257,7 +240,7 @@ realms:
         temporal_ramp_end: 0.5
         theta_ramp_span: 30.0 # degrees
         zero_theta_ramp_angle: 58.0
-    
+
 
   solution_options:
     name: myOptions
@@ -308,20 +291,20 @@ realms:
   post_processing:
   - type: surface
     physics: surface_force_and_moment
-    output_file_name: forcesBlades_T0.dat
+    output_file_name: forcesBlades_T3_7.dat
     frequency: 4
-    parameters: [1485.19306898, 1327.261598, 90]
+    parameters: [2106.14667698, 2267.738402, 90]
     target_name:
     - blade1
     - blade2
     - blade3
   - type: surface
     physics: surface_force_and_moment
-    output_file_name: forcesTower_T0.dat
-    frequency: 1
-    parameters: [1489.523196, 1329.761598, 0]
+    output_file_name: forcesTower_T3_7.dat
+    frequency: 4
+    parameters: [2110.476804, 2270.238402, 0]
     target_name:
-    - tower
+    - tower-wall
 
   turbulence_averaging:
     time_filter_interval: 100000.0
@@ -330,10 +313,10 @@ realms:
 
     - name: one
       target_name:
-        - blade1-HEX
-        - blade2-HEX
-        - blade3-HEX
-        - tower-fluid-HEX
+      - blade1-HEX
+      - blade2-HEX
+      - blade3-HEX
+      - tower-fluid-HEX
 
       reynolds_averaged_variables:
       - velocity
@@ -342,13 +325,14 @@ realms:
       compute_vorticity: yes
 
   restart:
-    restart_data_base_name: rst/nrel5mw_T0.rst
+    restart_data_base_name: rst7/nrel5mw_T3.rst
     restart_frequency: 180
     restart_start: 0
 
+    restart_time: 136.98347107436004
   sideset_writers:
   - name: boundary_output
-    output_data_base_name: blades/blades_T0.exo
+    output_data_base_name: blades7/blades_T3.exo
     output_frequency: 180
     target_name: [blade1, blade2, blade3]
     output_variables:
@@ -357,9 +341,19 @@ realms:
     - viscous_force
     - tau_wall
     - mesh_displacement
+  - name: tower_boundary_output
+    output_data_base_name: tower7/tower_T3.exo
+    output_frequency: 180
+    target_name: [tower-wall]
+    output_variables:
+    - pressure
+    - pressure_force
+    - viscous_force
+    - tau_wall
+    - mesh_displacement
 
   output:
-    output_data_base_name: out/nrel5mw_T0.e
+    output_data_base_name: out7/nrel5mw_T3.e
     output_frequency: 180
     output_node_set: no
     output_variables:
@@ -381,10 +375,11 @@ realms:
     - element_courant
     - dual_nodal_volume
 
+  automatic_decomposition_type: None
 Time_Integrators:
 - StandardTimeIntegrator:
     name: ti_1
-    start_time: 0
+    start_time: 136.98347107436004
     time_step: 0.003443526170799
     termination_step_count: 200000000
     time_stepping_type: fixed

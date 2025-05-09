@@ -70,7 +70,7 @@ linear_solvers:
 
 realms:
 - name: realm_1
-  mesh: /pscratch/ndeveld/hfm-2025-q1/mesh/combine_split/split_tower_and_blades.exo
+  mesh: /lustre/orion/cfd162/proj-shared/marchdf/exawind/source/exawind-benchmarks/exawind/NREL_5MW_Turbine/flexible/mesh/split_tower_and_blades.exo
   #automatic_decomposition_type: rcb
   #rebalance_mesh: yes
   #stk_rebalance_method: parmetis

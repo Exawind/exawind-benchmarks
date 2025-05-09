@@ -9,7 +9,7 @@ incflo.physics                           = ABL                 # List of physics
 incflo.verbose                           = 0
 io.plot_file                             = aw-out/plt
 io.check_file                            = aw-rst/chk
-io.restart_file                          = /kfs3/scratch/lcheung/precursors/exawind-benchmarks/Neutral_ABL/chk30000
+io.restart_file                          = /lustre/orion/cfd162/world-shared/lcheung/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw/runfiles/chk30000
 io.derived_outputs                       = q_criterion mag_vorticity
 
 incflo.use_godunov                       = true
@@ -52,7 +52,7 @@ ABL.stats_output_frequency               = 1
 ABL.stats_output_format                  = netcdf
 ABL.tendency_forcing                     = false
 ABL.bndry_io_mode                        = 1
-ABL.bndry_file                           = /kfs3/scratch/lcheung/precursors/exawind-benchmarks/Neutral_ABL/bndry_file
+ABL.bndry_file                           = /lustre/orion/cfd162/world-shared/lcheung/HFM/exawind-benchmarks/amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw/runfiles/bndry_file
 ABL.bndry_planes                         = xlo ylo
 ABL.bndry_output_start_time              = 15000.0
 ABL.bndry_var_names                      = velocity temperature tke
