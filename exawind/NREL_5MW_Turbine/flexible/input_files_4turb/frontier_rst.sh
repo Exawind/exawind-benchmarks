@@ -14,13 +14,13 @@ cmd() {
   eval "$@"
 }
 
-ORIG_NUM="8"
+ORIG_NUM="9"
 NEW_NUM=$((${ORIG_NUM}+1))
-cmd "cp timings.dat timings_${ORIG_NUM}.dat"
-cmd "cp turb_00_rst.nc turb_00_rst_${ORIG_NUM}.nc"
-cmd "cp turb_01_rst.nc turb_01_rst_${ORIG_NUM}.nc"
-cmd "cp turb_02_rst.nc turb_02_rst_${ORIG_NUM}.nc"
-cmd "cp turb_03_rst.nc turb_03_rst_${ORIG_NUM}.nc"
+# cmd "cp timings.dat timings_${ORIG_NUM}.dat"
+# cmd "cp turb_00_rst.nc turb_00_rst_${ORIG_NUM}.nc"
+# cmd "cp turb_01_rst.nc turb_01_rst_${ORIG_NUM}.nc"
+# cmd "cp turb_02_rst.nc turb_02_rst_${ORIG_NUM}.nc"
+# cmd "cp turb_03_rst.nc turb_03_rst_${ORIG_NUM}.nc"
 # FNAME="nrel5mw_${ORIG_NUM}.yaml"
 RST_FNAME="nrel5mw_${NEW_NUM}.yaml"
 
@@ -48,7 +48,7 @@ cmd "module load cray-dsmml/0.3.0"
 cmd "module load cray-libsci/24.11.0"
 cmd "module load lfs-wrapper/0.0.1"
 
-cmd "export FI_MR_CACHE_MONITOR=memhooks"
+# cmd "export FI_MR_CACHE_MONITOR=memhooks"
 cmd "export FI_CXI_RX_MATCH_MODE=software"
 cmd "export MPICH_SMP_SINGLE_COPY_MODE=NONE"
 cmd "export MPICH_GPU_SUPPORT_ENABLED=0"
