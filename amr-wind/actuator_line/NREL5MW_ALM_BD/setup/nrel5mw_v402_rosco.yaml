@@ -55,6 +55,8 @@ modelparams:
     kp_total: 48
   BDBldFile(1)_BldFile:
     station_total: 48
+  DISCONFile:
+    WE_RhoAir: 1.0
 
 
 # Write the turbine yamlfile
