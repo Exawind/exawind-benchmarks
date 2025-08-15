@@ -4,7 +4,7 @@ time.max_step                            = -1
 time.fixed_dt                            = 0.003443526170799   # Fixed timestep size (in seconds). If negative, then time.cfl is used
 time.plot_interval                       = 1440               
 time.checkpoint_interval                 = 1440               
-time.checkpoint_start                    = 0               
+time.checkpoint_start                    = 30000               
 incflo.physics                           = ABL                 # List of physics models to include in simulation.
 incflo.verbose                           = 0                   
 io.plot_file                             = out/plt  
@@ -228,8 +228,8 @@ io.line_plot_int                         = 1
 CoriolisForcing.turn_off_vertical_force  = True                
 ABL.enable_hybrid_rl_mode                = true   
 
-amr.max_grid_size                        = 128                 
-amr.blocking_factor                      = 32                  
+amr.max_grid_size                        = 64                 
+amr.blocking_factor                      = 16                  
 
             
 diffusion.mg_rtol                        = 1e-06               
@@ -246,11 +246,12 @@ nodal_proj.max_coarsening_level          = 0
 nodal_proj.num_pre_smooth                = 10                  
 nodal_proj.num_post_smooth               = 10                  
 nodal_proj.bottom_rtol                   = 1.0e-9              
-nodal_proj.bottom_atol                   = 1.0e-12             
+nodal_proj.bottom_atol                   = 1.0e-12
+nodal_proj.bottom_verbose                = 1             
 mac_proj.verbose                         = 0                   
 mac_proj.max_coarsening_level            = 0                   
 mac_proj.do_nsolve                       = true                
-mac_proj.bottom_verbose                  = 0                   
+mac_proj.bottom_verbose                  = 1                   
 mac_proj.bottom_rtol                     = 1.0e-11             
 mac_proj.bottom_atol                     = 1.0e-12             
 mac_proj.num_pre_smooth                  = 10                  

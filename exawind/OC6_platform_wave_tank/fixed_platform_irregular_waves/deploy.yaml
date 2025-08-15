@@ -1,0 +1,9 @@
+# Location where files should exist
+destdir: ../../../.website_src/exawind/OC6_platform_wave_tank/fixed_platform_irregular_waves
+
+# Define the valid file types to copy over (optional)
+validtypes: ['.html', '.md', '.ipynb', '.png', '.jpg', '.rst', '.mp4',] 
+
+# Markdown files to parse and copy files
+mdfiles:
+  - README.md

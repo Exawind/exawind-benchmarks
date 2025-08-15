@@ -1,0 +1,1 @@
+/projects/aue/hpc/builds/x86_64/rhel8/ba17d7f2/intel-2023.2.0/install/linux-rhel8-x86_64/gcc-10.3.0/intel-oneapi-compilers-2023.2.0-v3dnk52/compiler/2023.2.0/linux/bin/ifx -fPIC  -DIMPLICIT_DLLEXPORT -O3 -shared -nofor-main -Wl,-soname,DISCON.so -o DISCON.so CMakeFiles/DISCON.dir/DISCON.F90.o 

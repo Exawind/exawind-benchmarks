@@ -15,7 +15,7 @@ Here the optional argument `BENCHMARKDIR` is the location where you'd like the b
 
 The first part of the ABL simulation will allow the turbulence to initialize and the boundary layer profile to develop.  The input file for this initial simulation is given by [convective_abl.inp](https://github.com/Exawind/exawind-benchmarks/tree/main/amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw/input_files/convective_abl.inp), and will last for 15,000 seconds.
     
-To launch this case, navigate to the right diretory and create a submission script:
+To launch this case, navigate to the right directory and create a submission script:
     
 ```bash
 $ cd BENCHMARKDIR/amr-wind/atmospheric_boundary_layer/convective_abl_nrel5mw/input_files

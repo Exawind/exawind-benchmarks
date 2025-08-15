@@ -69,9 +69,8 @@ linear_solvers:
     hypre_cfg_node: hypre_elliptic
 
 realms:
-
 - name: realm_1
-  mesh: /pscratch/ndeveld/hfm-2025-q1/mesh/nrel5mw_672/tower_and_blades.exo
+  mesh: /pscratch/ndeveld/hfm-2025-q1/mesh/combine_split/split_tower_and_blades.exo
   #automatic_decomposition_type: rcb
   #rebalance_mesh: yes
   #stk_rebalance_method: parmetis
@@ -119,7 +118,7 @@ realms:
         pressure: 0.0
         velocity: [9.8726896031426, 5.7, 0.0]
         turbulent_ke: 1.0
-        specific_dissipation_rate: 250.0
+        specific_dissipation_rate: 687.25
 
   material_properties:
     target_name:
@@ -173,19 +172,33 @@ realms:
       tioga_options:
         symmetry_direction: 3
       mesh_group:
-      - overset_name: Turbine
+      - overset_name: ovst-blade1
         mesh_parts:
           - blade1-HEX
-          - blade2-HEX
-          - blade3-HEX
-          - tower-fluid-HEX
         wall_parts: 
           - blade1 
-          - blade2
-          - blade3
+        ovset_parts:
+          - outerbcblade1block
+      - overset_name: ovst-blade2
+        mesh_parts:
+          - blade2-HEX
+        wall_parts: 
+          - blade2 
+        ovset_parts:
+          - outerbcblade2block
+      - overset_name: ovst-blade3
+        mesh_parts:
+          - blade3-HEX
+        wall_parts: 
+          - blade3 
+        ovset_parts:
+          - outerbcblade3block
+      - overset_name: ovst-tower
+        mesh_parts:
+          - tower-fluid-HEX
+        wall_parts: 
           - tower-wall
         ovset_parts:
-          - outerBC
           - tower-overset
 
   mesh_transformation:
@@ -196,10 +209,10 @@ realms:
       - blade3-HEX
     motion:
       #tilt done in original mesh location of [0, 0, 0]
-      - type: rotation
-        angle: 5.0
-        axis: [0.0, 1.0, 0.0]
-        centroid: [0.0, 0.0, 0.0]
+      # - type: rotation
+      #   angle: 5.0
+      #   axis: [0.0, 1.0, 0.0]
+      #   centroid: [0.0, 0.0, 0.0]
       # then translated to the hub_ref_position as computed by openfast
       - type: translation
         displacement: [1795, 1800, 90]
@@ -272,7 +285,7 @@ realms:
         specific_dissipation_rate: 1.0
 
     - upw_factor:                          # Used Lines 200 and 202 of MomentumEdgeSolverAlg.C as "hoUpwind"
-        velocity: 0.0                      # uIpL[d] = vel.get(nodeL, d) + duL[d] * hoUpwind * limitL[d] * density_upwinding_factor;
+        velocity: 1.0                      # uIpL[d] = vel.get(nodeL, d) + duL[d] * hoUpwind * limitL[d] * density_upwinding_factor;
         turbulent_ke: 0.0                  # 0.0 eliminates upwind grad contribution
         specific_dissipation_rate: 0.0
 
@@ -295,14 +308,14 @@ realms:
     - relaxation_factor:
         velocity: 0.7
         pressure: 0.3
-        turbulent_ke: 0.7
-        specific_dissipation_rate: 0.7
+        turbulent_ke: 0.5
+        specific_dissipation_rate: 0.5
 
   post_processing:
   - type: surface
     physics: surface_force_and_moment
     output_file_name: forcesBlades.dat
-    frequency: 1
+    frequency: 4
     parameters: [1795.669873, 1797.5, 90]
     target_name:
     - blade1
@@ -335,13 +348,12 @@ realms:
       compute_vorticity: yes
 
   restart:
-    restart_data_base_name: rst01/nrel5mw.rst
+    restart_data_base_name: rst/nrel5mw.rst
     restart_frequency: 1440
     restart_start: 0
-    #restart_time: 119.2493
 
   output:
-    output_data_base_name: out01/nrel5mw.e
+    output_data_base_name: out/nrel5mw.e
     output_frequency: 1440
     output_node_set: no
     output_variables:

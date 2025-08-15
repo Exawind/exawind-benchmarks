@@ -61,22 +61,33 @@ def get_of_time_mean(ofdata,ts,tend):
     of_data_slice = ofdata.loc[thistest]
     mean_data = of_data_slice.mean()
 
-    return mean_data
+    return pd.DataFrame(mean_data)
 
 def main():
 
 
-    casename='nrel5mw-fsi-abl-bench2-final'
+    casename='origmesh-fsi-withtower-abl-rosco-final2'
     ofdata = read_openfast_output('/pscratch/ndeveld/hfm-2025-q1/'+casename+'/5MW_Land_BD_DLL_WTurb','5MW_Land_BD_DLL_WTurb.out', 0.0, 0.02)
     #print(list(ofdata.columns))
     
-    data_output_cols = ['Time','GenPwr','GenTq','RotSpeed','RotThrust','B1RootMxr','B1RootMyr','B1TipTDxr','BldPitch1']
+    data_output_cols = ['Time','GenPwr','RotTorq','RotSpeed','RotThrust','B1RootMxr','B1RootMyr','B1TipTDxr','BldPitch1']
+
+    print('Time',ofdata.Time.iloc[-1])
 
     timeseries_out = ofdata[data_output_cols]
-    meanout = get_of_time_mean(timeseries_out,65.0,125.0)
+    meanout = get_of_time_mean(timeseries_out,60.0,180.0)
+    meanout = meanout.reset_index()
+    print(meanout.index)
+    meanout.columns=['variable','value']
+    print(meanout)
 
     timeseries_out.to_csv('../performance/timeseries_openfast.csv',index=None)
-    meanout.to_csv('../performance/mean_openfast_65_125.csv')
+    meanout.to_csv('../performance/mean_openfast_60_180.csv',index=None)
+
+    almdata_in = pd.read_csv('/pscratch/ndeveld/hfm-2025-q1/exawind-benchmarks-04072025/amr-wind/actuator_line/NREL5MW_ALM_BD/results/OpenFAST_v402_out/NREL5MW.csv')
+    almdata = almdata_in[(almdata_in.Time < 180.0)]
+
+    
 
     ##############################################
     # Plot summary
@@ -85,8 +96,8 @@ def main():
     plt.rcParams.update({'font.size': 18})
 
     fig, ax = plt.subplots(4,2,figsize=(12,9))
-    ax[0,0].plot(ofdata.Time,ofdata.GenPwr)
-    ax[0,1].plot(ofdata.Time,ofdata.GenTq)
+    ax[0,0].plot(ofdata.Time,ofdata.GenPwr/1000.0)
+    ax[0,1].plot(ofdata.Time,ofdata.RotTorq)
     ax[1,0].plot(ofdata.Time,ofdata.RotSpeed)
     ax[1,1].plot(ofdata.Time,ofdata.B1TipTDxr)
     ax[2,0].plot(ofdata.Time,ofdata.B1RootMxr)
@@ -94,8 +105,9 @@ def main():
     ax[3,0].plot(ofdata.Time,ofdata.RotThrust)
     ax[3,1].plot(ofdata.Time,ofdata.BldPitch1)
 
-    ax[0,0].set_title('GenPwr (kW)')
-    ax[0,1].set_title('GenTq (kN-m)')
+
+    ax[0,0].set_title('GenPwr (MW)')
+    ax[0,1].set_title('RotTorq (kN-m)')
     ax[1,0].set_title('RotSpeed (rpm)')
     ax[1,1].set_title('B1TipTDxr (m)')
     ax[2,0].set_title('B1RootMxr (N-m)')
@@ -109,8 +121,8 @@ def main():
     # Plot spanwise forces
     ##############################################
     
-    timestart = 65.0
-    timeend = 85.0
+    timestart = 45.0
+    timeend = 160.0
 
     oftimedata_start = get_closest_row(ofdata,'Time',timestart)
     oftimedata_end = get_closest_row(ofdata,'Time',timeend)

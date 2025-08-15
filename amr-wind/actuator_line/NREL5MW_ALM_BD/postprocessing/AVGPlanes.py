@@ -101,7 +101,7 @@ for x in [1,2,3,4,5,6,7,8,9,10]:
 # In[5]:
 
 
-RUNDIR='/gpfs/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO/'
+RUNDIR='/tscratch/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO'
 RESULTSDIR='../results/'
 
 
@@ -145,7 +145,7 @@ avgworkflow:
       cbar_nticks: 15
       xscalefunc: "lambda x: (x-504.0)/126.0"
       yscalefunc: "lambda y: (y-252.0)/126.0"
-      figsize: [12, 3]
+      figsize: [12, 4]
       savefile: '../results/images/turbineHH_AVG_300_900.png'
       plotturbines:
       - basexyz: [0.0, 0.0, 0]

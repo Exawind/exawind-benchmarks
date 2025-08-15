@@ -90,7 +90,7 @@ bliststr  = '[Time, '+', '.join(blist)+']'
 
 
 # Get the blade stations
-rundir = '/gpfs/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO/'
+rundir = '/tscratch/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO'
 bladefile = rundir+'/T0_NREL5MW_v402_ROSCO/openfast/5MW_Baseline/NRELOffshrBsline5MW_AeroDyn_blade.dat'
 bladedat  = np.genfromtxt(bladefile, skip_header=6, skip_footer=2)
 

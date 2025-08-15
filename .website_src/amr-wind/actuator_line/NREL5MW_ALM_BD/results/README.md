@@ -23,13 +23,7 @@ The time-history and time-averaged turbine performance is extracted and calculat
 
 |BldPitch1    |RotSpeed    |RotThrust  |RotTorq       |GenPwr|
 |---          | ----       |---        |---           |--- |
-|1.152 deg    |11.701 rpm  |597.303 kN |3111.925 kN-m |3621.650 kW|
-
-<!-- OLD RESULTS FROM DISCON.DLL --
-|BldPitch1|RotSpeed|RotThrust|RotTorq |GenPwr|
-|---      | ----   |---      |---     |--- |
-|0.480    |11.819  |679.398  |3799.127|4460.008|
--->
+|2.118 deg    |11.600 rpm  |552.984 kN |2971.832 kN-m |3425.5444 kW|
 
 The full time history of the turbine power, rotor thrust, rotor speed, blade pitch, and rotor torque are also shown here:
 

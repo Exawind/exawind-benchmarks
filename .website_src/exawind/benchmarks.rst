@@ -7,3 +7,4 @@ ExaWind Hybrid Solver Benchmarks
    nrel_phase_vi
    nrel_5mw
    pazywing
+   oc6_platform

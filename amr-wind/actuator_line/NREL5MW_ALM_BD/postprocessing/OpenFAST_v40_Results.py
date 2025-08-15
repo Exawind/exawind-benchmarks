@@ -57,7 +57,7 @@ def stringReplaceDict(s, dreplace):
 #rundir='/gpfs/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv400'
 #RESULTSDIR='../results/OpenFAST_v40_out'
 
-replacedict={'RUNDIR':'/gpfs/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO/',
+replacedict={'RUNDIR':'/tscratch/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO',
              'RESULTSDIR':'../results/OpenFAST_v402_out',
              'RESULTSOLDDIR':'../results/OpenFAST_out'
             }
