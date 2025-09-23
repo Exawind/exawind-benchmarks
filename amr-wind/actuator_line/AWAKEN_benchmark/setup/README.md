@@ -4,7 +4,9 @@
 
 - [Prerequisites](#prerequisites)
 - [Preparing the measurement data](#preparing-the-measurement-data)
-
+- [Set up the ABL precursor run]()
+- [Compare statistics from the ABL precursor]()
+- [Set up the wind farm run]()
 
 ## Prerequisites
 
@@ -22,6 +24,18 @@ Phase2_Data/A1_profiling_lidar_10min.nc
 Phase2_Data/A1_scanning_lidar_10min.nc
 Phase2_Data/B_ASSIST.nc
 ```
+
+In addition, download the [AMR-Wind front end](https://github.com/Exawind/amr-wind-frontend) tool.
+
+The AMR-Wind front end tool has useful utilities which can be used for setting up the OpenFAST turbine model and postprocessing results, and will be required in the set up steps below.  It is available on github and can be downloaded via
+
+	```bash
+	$ git clone --recursive git@github.com:Exawind/amr-wind-frontend.git AMRWINDFEDIR
+	```
+
+    where `AMRWINDFEDIR` is the location you'd like the tool to be
+    located.  For the basic use of front end tool, the usual python 3
+    libraries (numpy, scipy, pandas, etc.) are required.
 
 ## Preparing the measurement data
 
@@ -44,6 +58,12 @@ ds_temperature = xr.open_dataset('Phase2_Data/B_ASSIST.nc')
 
 ## Set up the ABL precursor run
 
+Use the notebook [MMC_BM3_BigPrecursor.ipynb](MMC_BM3_BigPrecursor.ipynb).
 
 ## Compare statistics from the ABL precursor
 
+Use the notebook [MMC_BM3_BigPrecursor_ABLStats.ipynb](MMC_BM3_BigPrecursor_ABLStats.ipynb).
+
+## Set up the wind farm run
+
+Use the notebook [Prod1_Phase3.ipynb](Prod1_Phase3.ipynb).

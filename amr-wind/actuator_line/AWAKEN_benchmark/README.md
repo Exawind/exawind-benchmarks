@@ -20,7 +20,7 @@ The size of the computational domain was 24km x 17.6km x 0.8 km, with a backgrou
 
 ![domain](setup/KP_Domain_lidar.png)
 
-Running this simulation requires setting up a precursor ABL calculation to match the measured inflow, and then adding the turbines to the actual wind farm simulation itself.  The precursor ABL calculation is done using a meso/microscale coupling (MMC) approach which uses a direct data assimilation method to incorporate measured wind speed and temperature profiles into the simulation forcing.  The forcing terms and boundary data is then used in the wind farm simulation itself.  In the setup documentation page, we describe how the measurement data is processed, the MMC precursor is created, and the wind farm simulation is set up.
+Running this simulation requires setting up a precursor ABL calculation to match the measured inflow, and then adding the turbines to the actual wind farm simulation itself.  The precursor ABL calculation is done using a meso/microscale coupling (MMC) approach which uses a direct data assimilation method to incorporate measured wind speed and temperature profiles into the simulation forcing.  The forcing terms and boundary data is then used in the wind farm simulation itself.  In the [setup documentation](setup/README.md) page, we describe how the measurement data is processed, the MMC precursor is created, and the wind farm simulation is set up.
 
 ## Code performance
 
