@@ -133,14 +133,14 @@ f = io.StringIO(stringReplaceDict(yamlstring, replacedict))
 yamldict = Loader(f, **loaderkwargs)
 
 
-# In[ ]:
+# In[9]:
 
 
 # Run the driver
 ppeng.driver(yamldict, verbose=True)
 
 
-# In[ ]:
+# In[10]:
 
 
 d = makeSecBladeDF(replacedict['RESULTSDIR']+'/NREL5MW_SECLOADS_mean.csv', bladedat[:,0], blistdict)
@@ -149,7 +149,7 @@ pddf = pd.DataFrame(d).to_csv(replacedict['RESULTSDIR']+'/NREL5MW_SECLOADS_mean_
 
 # ## Plot the blade loading
 
-# In[ ]:
+# In[11]:
 
 
 yamlstring="""
@@ -201,14 +201,14 @@ f = io.StringIO(stringReplaceDict(yamlstring, replacedict))
 yamldict = Loader(f, **loaderkwargs)
 
 
-# In[ ]:
+# In[12]:
 
 
 # Run the driver
 ppeng.driver(yamldict, verbose=True)
 
 
-# In[ ]:
+# In[13]:
 
 
 # Write out the notebook to a python script

@@ -94,7 +94,6 @@ ABL.theta_amplitude                      = 0.8
 ABL.cutoff_height                        = 50.0                
 time.plot_interval                       = 10000               
 io.plot_file                             = plt                 
-io.KE_int                                = -1                  
 
 #---- tagging defs ----
 tagging.labels                           = T0_level_0_zone T0_level_1_zone T0_level_2_zone T0_level_3_zone
