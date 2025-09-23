@@ -29,9 +29,9 @@ In addition, download the [AMR-Wind front end](https://github.com/Exawind/amr-wi
 
 The AMR-Wind front end tool has useful utilities which can be used for setting up the OpenFAST turbine model and postprocessing results, and will be required in the set up steps below.  It is available on github and can be downloaded via
 
-	```bash
-	$ git clone --recursive git@github.com:Exawind/amr-wind-frontend.git AMRWINDFEDIR
-	```
+```bash
+$ git clone --recursive git@github.com:Exawind/amr-wind-frontend.git AMRWINDFEDIR
+```
 
 where `AMRWINDFEDIR` is the location you'd like the tool to be located.  For the basic use of front end tool, the usual python 3 libraries (numpy, scipy, pandas, etc.) are required.
 
@@ -137,7 +137,29 @@ print(case.writeAMRWindInput(rundir+'/'+amrfilename))
 
 ## Compare statistics from the ABL precursor
 
-Use the notebook [MMC_BM3_BigPrecursor_ABLStats.ipynb](MMC_BM3_BigPrecursor_ABLStats.ipynb).
+After the precursor is run, the horizontally averaged statistics of the ABL can be compared against the lidar measurements.   For this, use the notebook [MMC_BM3_BigPrecursor_ABLStats.ipynb](MMC_BM3_BigPrecursor_ABLStats.ipynb).
+
+In this notebook, the horizontally averaged statistics from the AMR-Wind ABL statistics file are first time-averaged over the correct time periods to compare against the lidar data.  Make sure that this run location
+
+```python
+rundir = '/tscratch/lcheung/AWAKEN/Benchmark1/Phase3/MMC/MMC_BM3_BigPrecursor'
+```
+
+and this ABL statistics file are set correctly
+
+```python
+case.ABLpostpro_loadnetcdffile(rundir+'/post_processing/abl_statistics00000.nc')
+```
+
+After time-averaging, you should see that the horizontally averaged profiles matched the merged lidar profiles very well:
+
+![](MMC_BM3_BigPrecursor_ABLStats1.png)
+
+This is not a surprise, as the direct assimilation approach should enforce this in the LES simulation.  However, the resulting TKE is not constrained, and when comapred against the scanning lidar 10 min averages, the results are quite comparable:
+
+![](MMC_BM3_BigPrecursor_ABLStats2.png)
+
+Note that this is a comparison of the _horizontally_-averaged TKE profiles across the entire computational domain against the single point measurement from the scanning lidar.  Later on in the wind farm simulation, we will compare the point TKE results against the scanning lidar measurements, which will be a more fair comparison.
 
 ## Set up the wind farm run
 
