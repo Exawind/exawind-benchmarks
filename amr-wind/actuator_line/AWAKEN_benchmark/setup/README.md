@@ -133,7 +133,7 @@ In the last step, the input file for the precursor run is generated and written 
 ```python
 # Write the input file
 print(case.writeAMRWindInput(rundir+'/'+amrfilename))
-``
+```
 
 ## Compare statistics from the ABL precursor
 
