@@ -15,3 +15,9 @@ for x in amrwindfedirs: sys.path.insert(1, x)
 
 ## OpenFAST turbine results
 
+Use [Extract_OF_Results.ipynb](Extract_OF_Results.ipynb)
+
+## Averaged lidar results
+
+Use [AVG_Lidar.ipynb](AVG_Lidar.ipynb)
+
