@@ -163,4 +163,65 @@ Note that this is a comparison of the _horizontally_-averaged TKE profiles acros
 
 ## Set up the wind farm run
 
-Use the notebook [Prod1_Phase3.ipynb](Prod1_Phase3.ipynb).
+After the precursor ABL is run, we can use it to set up the wind farm run with all of the King Plains turbines in place.   The notebook [Prod1_Phase3.ipynb](Prod1_Phase3.ipynb) will generate the input files and set up the OpenFAST turbines based on the precursor ABL run.
+
+A few parameters in the notebook may need to be changed depending on computational setup.   In cell 4, the run directory and the name of the wind farm input file is specified:
+
+```python
+inputfile = 'FarmRun3_01.inp'
+rundir = 'BM3_FarmRunProd1_runA'
+```
+
+The location of the precursor directory and the precursor input file is specified in cell 6:
+
+```python
+precursordir  = '/tscratch/lcheung/AWAKEN/Benchmark1/Phase3/MMC/MMC_BM3_BigPrecursor'
+precursorsetup= precursordir+'/abl_HPP_MMC.inp'
+```
+
+Once those things are specified, the notebook makes the necessary modifications to the boundary conditions and forcing terms to switch from a periodic precursor run to a wind farm run.  This occurs in cell 10:
+
+```python
+case.boundaryplane_restart(bndryfiles=bndryfiles, 
+                           forcingdict=forcingdict, 
+                           inflowplanes=inflowplanes, 
+                           checkpointdir=chkdir,
+                           autoset_BodyForcing=False,
+                           autoset_MMCForcing=False,
+                           autoset_MMCTendencyForcing=True,
+                           autooutflow=False,
+                           massinflowBC='mass_inflow_outflow',
+                           verbose=True)
+```
+
+Note that this command creates the tendency forcing file `tendencyforcing.nc` which is used to drive the wind farm simulation.
+
+In the remaining sections of the notebook, the King Plains turbines are situated in the same 24km x 17.6km x 0.8 km domain as the precusor.
+
+![domain lidar](KP_Domain_lidar.png)
+
+Two additional levels of mesh refinement are included, so the 10m background resolution is refined to 2.5m around each turbine rotor.
+
+![domain refinement](KP_Domain_refinement.png)
+
+Lastly, the sampling planes are added to the simulation, capturing both the wakes from the farm as whole and individual turbine wakes and inflow.
+
+![sample planes](KP_Domain_sampleplanes.png)
+
+Note that in cell 36, the wind farm simulation inputs are validated 
+
+```python
+v=case.validate();
+```
+
+After running through a number of checks, you should see the final results of the validation, with no warnings or failures.
+
+```
+Results: 
+ 885 PASS
+ 0 SKIP
+ 0 FAIL
+ 0 WARN
+```
+
+In the final step, the input file for the simulation is written out, and is included in the github repo as [FarmRun3_01.inp](../input_files/FarmRun3_01.inp).
