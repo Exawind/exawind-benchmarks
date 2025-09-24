@@ -26,5 +26,11 @@ Running this simulation requires setting up a precursor ABL calculation to match
 
 ## Postprocessing
 
+Full details of the postprocessing methods used in the benchmark simulation are provided in the [**postprocessing documentation**](postprocessing/README.md).
+
+A number of scripts and notebooks are provided which should extract the 
+- turbine performance time history
+- virtual lidar measurements
+
 ## Results
 
