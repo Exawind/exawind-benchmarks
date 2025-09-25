@@ -1,0 +1,7 @@
+
+# CSV file should have columns with
+# name, x, y, type, yaw, hubheight, options
+turb0, 1489.523196, 1329.761598, NREL5MW_junk, 240.000000, ,
+turb1, 2362.476804, 1833.761598, NREL5MW_junk, 240.000000, ,
+turb2, 1237.523196, 1766.238402, NREL5MW_junk, 240.000000, ,
+turb3, 2110.476804, 2270.238402, NREL5MW_junk, 240.000000, ,
