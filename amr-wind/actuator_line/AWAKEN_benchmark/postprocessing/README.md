@@ -82,3 +82,11 @@ filelist: &nclist [RUNDIRA/post_processing/lidar_14400.nc, RUNDIR_A1/post_proces
 ```
 
 
+## Averaged hub-height planes
+
+The notebook [AVG_HH_Planes.ipynb](AVG_HH_Planes.ipynb) computes the time-averaged hub-height planes from the King Plains wind farm.  Currently it computes the 10-min averages at specific times, although this can be changed by modifying the `tavg` field:
+
+```yaml
+	tavg: [8400, 9000]
+```
+
