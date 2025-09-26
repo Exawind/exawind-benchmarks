@@ -34,3 +34,4 @@ A number of scripts and notebooks are provided which should extract the
 
 ## Results
 
+Full details are provided in [**results documentation**](results/README.md).
