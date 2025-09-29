@@ -31,7 +31,7 @@ The input files for this case are located in the [input_files](https://github.co
 - Surface roughness: 0.05 m
 - Surface temperature flux: 0.0 K-m/s
 - Reference temperature: 290 K 
-- Domain size: 5120m x 5120m x 1920m 
+- Domain size: 2560m x 2560m x 896m
 - Mesh size: 512 x 512 x 184 (C-Grid)
 - Total mesh size: 48234496 cells
 - Timestep: $\Delta t$ = 0.5s
