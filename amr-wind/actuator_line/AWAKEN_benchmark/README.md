@@ -24,6 +24,19 @@ Running this simulation requires setting up a precursor ABL calculation to match
 
 ## Code performance
 
+Full details provided in [**performance documentation**](performance/README.md).
+
+The job was run on an HPC cluster using 48 nodes/5376 CPU's in multiple segments.  The first segment for 2500 seconds used these resources:
+
+| Parameter       | Value |
+|---              |---  |
+| Number of nodes | 48   |
+| Number of CPUs  | 5376 |
+| Wall-time       | 55.5 hours|
+| CPU-hours       | 298368.0    | 
+
+
+
 ## Postprocessing
 
 Full details of the postprocessing methods used in the benchmark simulation are provided in the [**postprocessing documentation**](postprocessing/README.md).
