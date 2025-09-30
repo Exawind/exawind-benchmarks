@@ -90,3 +90,6 @@ The notebook [AVG_HH_Planes.ipynb](AVG_HH_Planes.ipynb) computes the time-averag
 	tavg: [8400, 9000]
 ```
 
+An example of the averaged horizontal hub-height planes is shown here:
+![AVG horizontal velocity](../results/images/KP_HH_AVG_Uh_09000.png)
+
