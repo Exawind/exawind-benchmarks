@@ -1,18 +1,18 @@
-time.stop_time               =   2000     # Max (simulated) time to evolve
+time.stop_time               =   200000     # Max (simulated) time to evolve
 time.max_step                =   -10    # Max number of time steps
 
 time.initial_dt       =   0.005        # Use this constant dt if > 0
 time.max_dt           =   0.01
 time.min_dt           =   1e-8
 time.fixed_dt         =   -0.003
-time.cfl              =   0.65         # CFL factor
+time.cfl              =   0.95         # CFL factor
 time.plot_interval            =  20       # Steps between plot files
 time.checkpoint_interval      = 500
 time.use_force_cfl    = false
 incflo.do_initial_proj = 0
 incflo.initial_iterations = 0
 
-io.outputs = density vof velocity p gp reference_pressure ow_velocity ow_vof
+io.outputs = density vof velocity p gp reference_pressure ow_velocity ow_vof levelset
 io.int_outputs = iblank_cell iblank_node mask_node mask_cell
 
 incflo.use_godunov = 1
@@ -27,15 +27,16 @@ transport.viscosity_fluid2=1e-5
 incflo.physics = MultiPhase OceanWaves 
 OceanWaves.label = Wave1
 OceanWaves.Wave1.type = W2AWaves
-OceanWaves.Wave1.HOS_modes_filename = /scratch/mpolimen/modes_HOS_NWT/modes_HOS_SWENSE.dat
+OceanWaves.Wave1.HOS_modes_filename = modes_HOS_SWENSE.dat
 OceanWaves.Wave1.HOS_simulation_is_ocean = false
 OceanWaves.Wave1.HOS_domain_offset_x = -16
-OceanWaves.Wave1.number_interp_points_in_z = 50
-OceanWaves.Wave1.interp_spacing_at_surface = 0.02
-OceanWaves.Wave1.number_interp_above_surface = 3
+OceanWaves.Wave1.number_interp_points_in_z = 120
+OceanWaves.Wave1.interp_spacing_at_surface = 0.01
+OceanWaves.Wave1.number_interp_above_surface = 25
 
 # Depth comes from model basin dimensions
 OceanWaves.Wave1.water_depth=3.6
+# Wavelength calculated to be about 4.5m
 OceanWaves.Wave1.relax_zone_gen_length=4.5
 OceanWaves.Wave1.numerical_beach_length=4.5
 OceanWaves.Wave1.numerical_beach_length_factor=2.0
@@ -43,13 +44,16 @@ OceanWaves.Wave1.zero_sea_level=0.0
 OceanWaves.Wave1.initialize_wave_field=true
 MultiPhase.density_fluid1=1000.
 MultiPhase.density_fluid2=1.
+MultiPhase.initialize_pressure=true
 ICNS.source_terms = GravityForcing
+Overset.verbose = 2
 
 ICNS.use_perturb_pressure = true
 ICNS.reconstruct_true_pressure = true
 VOF.replace_masked = true
 
-nodal_proj.max_coarsening_level = 2
+nodal_proj.max_coarsening_level = 1
+nodal_proj.bottom_atol = -1
 mac_proj.bottom_solver = hypre
 
 amr.n_cell              = 160 32 80
