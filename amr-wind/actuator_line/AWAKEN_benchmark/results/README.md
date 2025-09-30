@@ -28,3 +28,11 @@ The comparison of the turbine power is shown in [Compare_Power_SCADA_AMRWind.ipy
 
 ![KP row power comparison](images/KP_AVG_Power_Row_Comparison.png)
 
+
+## Averaged hub-height wind field.
+
+The time-averaged horizontal velocity at the hub-height for King Plains is shown below:
+![AVG Uh 9000](images/KP_HH_AVG_Uh_09000.png)
+![AVG Uh 10800](images/KP_HH_AVG_Uh_10800.png)
+![AVG Uh 12000](images/KP_HH_AVG_Uh_12000.png)
+![AVG Uh 14000](images/KP_HH_AVG_Uh_14000.png)

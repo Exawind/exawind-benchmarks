@@ -44,7 +44,9 @@ Full details of the postprocessing methods used in the benchmark simulation are 
 A number of scripts and notebooks are provided which should extract the 
 - turbine performance time history
 - virtual lidar measurements
+- time averaged hub-height velocity field
+- instantaneous velocity field
 
 ## Results
 
-Full details are provided in [**results documentation**](results/README.md).
+Full details of the results and comparisons with measured data are provided in [**results documentation**](results/README.md).
