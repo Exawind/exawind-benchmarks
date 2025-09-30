@@ -47,6 +47,8 @@ A number of scripts and notebooks are provided which should extract the
 - time averaged hub-height velocity field
 - instantaneous velocity field
 
+![King Plains animation](results/images/KP_z090hh.gif)
+
 ## Results
 
 Full details of the results and comparisons with measured data are provided in [**results documentation**](results/README.md).
