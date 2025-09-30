@@ -23,7 +23,7 @@ The time-history and time-averaged turbine performance is extracted and calculat
 
 |BldPitch1    |RotSpeed    |RotThrust  |RotTorq       |Electrical Power|
 |---          | ----       |---        |---           |--- |
-|0.000 deg    |12.100 rpm  |668.802 kN |3240.191 kN-m |3875.757 kW  |
+|0.000 deg    |12.100 rpm  |696.604 kN |3535.028 kN-m |4228.427 kW  |
 
 Note that the electrical power was calculated using this formula
 

@@ -94,7 +94,6 @@ ABL.theta_amplitude                      = 0.8
 ABL.cutoff_height                        = 50.0                
 time.plot_interval                       = 10000               
 io.plot_file                             = plt                 
-io.KE_int                                = -1                  
 
 #---- tagging defs ----
 tagging.labels                           = T0_level_0_zone T0_level_1_zone T0_level_2_zone T0_level_3_zone
@@ -280,6 +279,7 @@ XYdomain_153_.Farm_XYdomain153.axis2     = 0.0 5119.9998 0.0
 XYdomain_153_.Farm_XYdomain153.offset_vector = 0.0 0.0 0.0         
 
 #---- extra params ----
+io.KE_int                                = -1                  
 io.line_plot_int                         = 1                   
 CoriolisForcing.turn_off_vertical_force  = True                
 #== END AMR-WIND INPUT ==

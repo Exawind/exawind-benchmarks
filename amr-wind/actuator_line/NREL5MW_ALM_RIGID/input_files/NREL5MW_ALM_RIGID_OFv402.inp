@@ -94,7 +94,6 @@ ABL.theta_amplitude                      = 0.8
 ABL.cutoff_height                        = 50.0                
 time.plot_interval                       = 10000               
 io.plot_file                             = plt                 
-io.KE_int                                = -1                  
 
 #---- tagging defs ----
 tagging.labels                           = T0_level_0_zone T0_level_1_zone T0_level_2_zone T0_level_3_zone
@@ -140,8 +139,8 @@ Actuator.T0.rotor_diameter               = 126.0
 Actuator.T0.hub_height                   = 90.0                
 Actuator.T0.num_points_blade             = 25                  
 Actuator.T0.num_points_tower             = 11                  
-Actuator.T0.epsilon                      = 1.5 1.5 1.5         
-Actuator.T0.epsilon_tower                = 1.5 1.5 1.5         
+Actuator.T0.epsilon                      = 2.0 2.0 2.0         
+Actuator.T0.epsilon_tower                = 2.0 2.0 2.0         
 Actuator.T0.openfast_start_time          = 0.0                 
 Actuator.T0.openfast_stop_time           = 3000.0              
 Actuator.T0.fllc                         = false               
@@ -303,6 +302,7 @@ XYdomain_153_.Farm_XYdomain153.axis2     = 0.0 5119.9998 0.0
 XYdomain_153_.Farm_XYdomain153.offset_vector = 0.0 0.0 0.0         
 
 #---- extra params ----
+io.KE_int                                = -1                  
 io.line_plot_int                         = 1                   
 CoriolisForcing.turn_off_vertical_force  = True                
 #== END AMR-WIND INPUT ==
