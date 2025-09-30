@@ -10,7 +10,7 @@
 
 ## Prerequisites
 
-The measured data from the AWAKEN benchmark problem should be downloaded and unpacked before running the ABL simulation.  Specifically required are the A1 profiling and scanning lidar data, and the site B ASSIST temperature profiles avaiable at the pages: 
+The measured data from the AWAKEN benchmark problem should be downloaded and unpacked before running the ABL simulation.  Specifically required are the A1 profiling and scanning lidar data, and the site B ASSIST temperature profiles available at the pages: 
 
 - https://awaken-benchmark.readthedocs.io/en/latest/phase1.html
 - https://awaken-benchmark.readthedocs.io/en/latest/phase2.html
@@ -155,7 +155,7 @@ After time-averaging, you should see that the horizontally averaged profiles mat
 
 ![](MMC_BM3_BigPrecursor_ABLStats1.png)
 
-This is not a surprise, as the direct assimilation approach should enforce this in the LES simulation.  However, the resulting TKE is not constrained, and when comapred against the scanning lidar 10 min averages, the results are quite comparable:
+This is not a surprise, as the direct assimilation approach should enforce this in the LES simulation.  However, the resulting TKE is not constrained, and when compared against the scanning lidar 10 min averages, the results are quite comparable:
 
 ![](MMC_BM3_BigPrecursor_ABLStats2.png)
 
