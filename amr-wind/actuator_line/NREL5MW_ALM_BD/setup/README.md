@@ -181,6 +181,7 @@ The following changes need to be made to the default NREL5MW model.  These chang
 |Parameter | Value | Comment |
 |---       | ---   | ---     |
 | Wake_Mod | 0     | Required when coupling OpenFAST with AMR-Wind|
+| UA_Mod   | 0     | Turn off unsteady aerodynamics model|
 
 Some of these changes are necessary when coupling OpenFAST with AMR-Wind, and many of these parameters are chosen to maintain consistency with the blade-resolved version of the NREL5MW run.  
 
@@ -197,7 +198,7 @@ False                  TIDrag      - Include the drag term in the tangential-ind
 100                    MaxIter     - Maximum number of iteration steps (-) [unused when Wake_Mod=0]
 ```
 
-and the default Beddoes-Leishman parameters are used here:
+Note that with `UA_Mod=0`, these unsteady aerodynamics model settings are not used:
 
 ```
 ======  Unsteady Airfoil Aerodynamics Options  ====================================================
