@@ -46,11 +46,12 @@ modelparams:
     YawDOF:   False
   ServoFile:
     # THIS ROSCO PATH NEEDS TO BE EDITED!
-    DLL_FileName: PLEASEEDITTHIS
-    #DLL_FileName: /projects/wind_uq/lcheung/amrwind-frontend/turbines/OpenFAST_NREL2p8-127_AWAKEN/libdiscon.so
+    #DLL_FileName: PLEASEEDITTHIS
+    DLL_FileName: /projects/wind_uq/lcheung/amrwind-frontend/turbines/OpenFAST_NREL2p8-127_AWAKEN/libdiscon.so
     Ptch_Cntrl: 1
   AeroFile:
     Wake_Mod: 0
+    UA_Mod: 0
   BDBldFile(1):
     kp_total: 48
   BDBldFile(1)_BldFile:
@@ -73,8 +74,8 @@ turbines:
     Actuator_hub_height:          90
     Actuator_num_points_blade:    25
     Actuator_num_points_tower:    11
-    Actuator_epsilon:             [1.50, 1.50, 1.50]
-    Actuator_epsilon_tower:       [1.50, 1.50, 1.50]
+    Actuator_epsilon:             [2.00, 2.00, 2.00]
+    Actuator_epsilon_tower:       [2.00, 2.00, 2.00]
     Actuator_openfast_start_time: 0.0
     Actuator_openfast_stop_time:  2000.0
     Actuator_nacelle_drag_coeff:  0.0
