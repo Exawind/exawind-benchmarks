@@ -54,18 +54,18 @@ The plots below show timeseries of some key quantities as reported by OpenFAST (
 
 ![openfastresults](figures_and_scripts/openfast_summary.png)
 
-### Mean values over time period: 60s to 180s 
+### Mean values over time period: 40s to 420s 
 
 | variable | value |
 | -------- | ------- |
-|Generator Power|4165.49 kW|
-|Rotor Aero Torque|3509.12 kN-m|
-|Rotor Speed|12.0 rpm|
-|Rotor Thrust|643.58 kN|
-|B1 Root Flap Moment (x)|8.300869e+05 N-m|
-|B1 Root Edge Moment (y)|7.869930e+06 N-m|
-|B1 Tip Deflection x-direction|4.24 m|
-|B1 Pitch|2.07 degrees|
+|Generator Power|3828.24 kW|
+|Rotor Aero Torque|3251.03 kN-m|
+|Rotor Speed|11.9 rpm|
+|Rotor Thrust|586.0 kN|
+|B1 Root Flap Moment (x)|6.408283e+05 N-m|
+|B1 Root Edge Moment (y)|7.142217e+06 N-m|
+|B1 Tip Deflection x-direction|3.82 m|
+|B1 Pitch|3.1 degrees|
 
 
 ## Simulation Timings

@@ -66,7 +66,7 @@ def get_of_time_mean(ofdata,ts,tend):
 def main():
 
 
-    casename='origmesh-fsi-withtower-abl-rosco-final2'
+    casename='benchfinal_fsi_abl_splitmesh_nrel5mw'
     ofdata = read_openfast_output('/pscratch/ndeveld/hfm-2025-q1/'+casename+'/5MW_Land_BD_DLL_WTurb','5MW_Land_BD_DLL_WTurb.out', 0.0, 0.02)
     #print(list(ofdata.columns))
     
@@ -75,17 +75,17 @@ def main():
     print('Time',ofdata.Time.iloc[-1])
 
     timeseries_out = ofdata[data_output_cols]
-    meanout = get_of_time_mean(timeseries_out,60.0,180.0)
+    meanout = get_of_time_mean(timeseries_out,40.0,420.0)
     meanout = meanout.reset_index()
     print(meanout.index)
     meanout.columns=['variable','value']
     print(meanout)
 
     timeseries_out.to_csv('../performance/timeseries_openfast.csv',index=None)
-    meanout.to_csv('../performance/mean_openfast_60_180.csv',index=None)
+    meanout.to_csv('../performance/mean_openfast_40_420.csv',index=None)
 
-    almdata_in = pd.read_csv('/pscratch/ndeveld/hfm-2025-q1/exawind-benchmarks-04072025/amr-wind/actuator_line/NREL5MW_ALM_BD/results/OpenFAST_v402_out/NREL5MW.csv')
-    almdata = almdata_in[(almdata_in.Time < 180.0)]
+    almdata_in = pd.read_csv('/pscratch/ndeveld/hfm-2025-q1/exawind-benchmarks-11032025/amr-wind/actuator_line/NREL5MW_ALM_BD/results/OpenFAST_v402_out/NREL5MW.csv')
+    almdata = almdata_in[(almdata_in.Time < 420.0)]
 
     
 

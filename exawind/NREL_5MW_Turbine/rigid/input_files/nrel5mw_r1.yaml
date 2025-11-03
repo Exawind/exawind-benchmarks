@@ -2,7 +2,7 @@
 exawind:
   nalu_wind_inp:
     - nrel5mw_nalu_r1.yaml
-  amr_wind_inp: nrel5mw_amr_refined_r1.inp
+  amr_wind_inp: nrel5mw_amr_r1.inp
   num_timesteps: 1440000
   nonlinear_iterations: 1
 

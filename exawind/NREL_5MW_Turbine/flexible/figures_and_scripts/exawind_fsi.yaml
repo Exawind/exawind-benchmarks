@@ -1,0 +1,80 @@
+common:
+  plot_out_dir: /pscratch/ndeveld/hfm-2025-q1/exawind-benchmarks-11032025/exawind/NREL_5MW_Turbine/flexible/figures_and_scripts
+  plot_x_bounds: [0.0,420.0]
+  plot_spanwise_forces: true
+  plot_prefix: fsi
+
+cases:
+  - label: CFD 
+    directory: /pscratch/ndeveld/hfm-2025-q1/benchfinal_fsi_abl_splitmesh_nrel5mw
+    type: exawind   # exawind,alm,or openfast
+    fsi: true
+    rotor_speed_rpm: 12.1
+    generator_eff: 0.944
+    yaw_deg: 30.0
+    tilt_deg: 5.0
+    cone_deg: 2.5
+    openfast_dt_out: 0.0034 # Only for fsi cases
+    tip_radius: 63.0
+    hub_radius: 1.5
+    startup_time: 4.958677685950414
+    force_file_relpaths: [run_257878/forcesBlades.dat,run_274418/forcesBlades.dat,forcesBlades.dat]
+    openfast_outfile_path: /pscratch/ndeveld/hfm-2025-q1/benchfinal_fsi_abl_splitmesh_nrel5mw/5MW_Land_BD_DLL_WTurb/5MW_Land_BD_DLL_WTurb.out
+    spanwise_time: 203.305785123936
+    paraview_spanwise_file: /home/ndeveld/paraview/benchfinal_rigid_abl_splitmesh_nrel5mw_pressure_force_n50.csv
+
+  - label: ALM 
+    directory: /pscratch/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO.redo
+    type: alm   # exawind,alm,or openfast
+    fsi: true
+    rotor_speed_rpm: 12.1
+    generator_eff: 0.944
+    yaw_deg: 30.0
+    tilt_deg: 5.0
+    cone_deg: 2.5
+    openfast_dt_out: 0.0172
+    tip_radius: 63.0
+    hub_radius: 1.5
+    startup_time: 0.0
+    force_file_relpaths: []
+    openfast_outfile_path: /pscratch/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO.redo/T0_NREL5MW_v402_ROSCO/openfast-cpp/5MW_Land_DLL_WTurb_cpp/5MW_Land_DLL_WTurb_cpp.out
+    aerodyn_bladefile_path: /pscratch/lcheung/HFM/exawind-benchmarks/NREL5MW_ALM_BD_OFv402_ROSCO.redo/T0_NREL5MW_v402_ROSCO/openfast/5MW_Baseline/NRELOffshrBsline5MW_AeroDyn_blade.dat
+    spanwise_time: 203.305785123936
+
+  - label: OpenFAST 
+    directory: /pscratch/ndeveld/hfm-2025-q1/openfast-tests-turbsim/T0_NREL5MW_v402_ROSCO
+    type: openfast   # exawind,alm,or openfast
+    fsi: true
+    rotor_speed_rpm: 12.1
+    generator_eff: 0.944
+    yaw_deg: 0.0
+    tilt_deg: 5.0
+    cone_deg: 2.5
+    openfast_dt_out: 0.0215
+    tip_radius: 63.0
+    hub_radius: 1.5
+    startup_time: 0.0
+    force_file_relpaths: []
+    openfast_outfile_path: /pscratch/ndeveld/hfm-2025-q1/openfast-tests-turbsim/T0_NREL5MW_v402_ROSCO/openfast-cpp/5MW_Land_DLL_WTurb_cpp/5MW_Land_DLL_WTurb_cpp.out
+    aerodyn_bladefile_path: /pscratch/ndeveld/hfm-2025-q1/openfast-tests-turbsim/T0_NREL5MW_v402_ROSCO/openfast/5MW_Baseline/NRELOffshrBsline5MW_AeroDyn_blade.dat
+    spanwise_time: 203.305785123936
+
+qoi:  # Will be calculated if not available in .out file
+  - label: Generator Power
+    openfast_varname: GenPwr
+    units: kW
+  - label: Rotor Torque
+    openfast_varname: RotTorq
+    units: kN-m
+  - label: Rotor Thrust
+    openfast_varname: RotThrust
+    units: kN-m
+  - label: Rotor Speed
+    openfast_varname: RotSpeed
+    units: rpm
+  # - label: Blade Pitch
+  #   openfast_varname: BldPitch1
+  #   units: deg
+  - label: Tip Deflection
+    openfast_varname: B1TipTDxr
+    units: m
