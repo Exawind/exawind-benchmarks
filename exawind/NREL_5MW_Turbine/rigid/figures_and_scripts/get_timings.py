@@ -117,13 +117,18 @@ def processline(inputline):
 def main():
 
     casedir = '/pscratch/ndeveld/hfm-2025-q1'
-    casename = 'nrel5mw_rigid_abl_noopenfast2'
+    casename = 'rigid_abl_splitmsh_nate2'
     casepath = os.path.join(casedir,casename)
+
+    plotdir = os.path.join(casepath,'plots')
 
     exlogfile = casepath+"/log"
     amrlogfile = casepath+"/nrel5mw_amr.log"
     nalulogfile = casepath+"/nrel5mw_nalu.log"
+    prefix = 'rign2'
 
+    #cmd="grep '^Exawind::Total' "+exlogfile+" | awk '{print $3}' > "+casepath+"/exatimestep.dat"
+    #result = sp.run(cmd, shell=True, capture_output=True, text=True)
 
     cmd="grep '^Exawind::Total' "+exlogfile+" | awk '{print $3}'"
     result = sp.run(cmd, shell=True, capture_output=True, text=True)
@@ -137,9 +142,30 @@ def main():
     result = sp.run(cmd, shell=True, capture_output=True, text=True)
     amr_timesteps = [float(x) for x in result.stdout.replace('\n',' ').split()]
 
+    cmd="grep '^  MAC_projection ' "+amrlogfile+" | awk '{print $2}'"
+    result = sp.run(cmd, shell=True, capture_output=True, text=True)
+    amr_mac= [float(x) for x in result.stdout.replace('\n',' ').split()]
+
+    cmd="grep '^  Nodal_projection ' "+amrlogfile+" | awk '{print $2}'"
+    result = sp.run(cmd, shell=True, capture_output=True, text=True)
+    amr_nodal= [float(x) for x in result.stdout.replace('\n',' ').split()]
+
+    cmd="grep '^        MomentumEQS ' "+nalulogfile+" | awk '{print $2}'"
+    result = sp.run(cmd, shell=True, capture_output=True, text=True)
+    nalu_mom= [float(x) for x in result.stdout.replace('\n',' ').split()]
+
+    cmd="grep '^        ContinuityEQS ' "+nalulogfile+" | awk '{print $2}'"
+    result = sp.run(cmd, shell=True, capture_output=True, text=True)
+    nalu_cont= [float(x) for x in result.stdout.replace('\n',' ').split()]
+
 
     #tsdata = pd.read_csv(casepath+'/avgtimestep.dat',header=None)
     ts = range(len(total_timesteps))
+    nts = range(len(nalu_timesteps))
+    ats = range(len(amr_timesteps))
+    amrts = range(len(amr_mac)) 
+    naluts = range(len(nalu_mom))
+    conts =  range(len(nalu_cont))
 
     print('Mean timestep',np.mean(total_timesteps))
 
@@ -168,14 +194,23 @@ def main():
 
     print('Mean Timestep per cell',np.mean(total_timesteps)/(amr_cells+nalu_cells))
 
+    cs = 5  # Plot the 5th occurence of continuity iters
+    ms = 4  # Plot the 4th occurence of momentum iters
+
+    nmd_filt = np.array(nalu_mom)[0::ms].copy()
+    ncd_filt = np.array(nalu_cont)[0::cs].copy()
+    nmts_filt = np.arange(len(nmd_filt))
+    ncts_filt = np.arange(len(ncd_filt))
+    
+    # Plot main exawind
     plt.rcParams.update({'font.size': 18})
 
     fig, ax = plt.subplots(1,3,figsize=(13,4))
     ax[0].scatter(ts,total_timesteps,s=0.3)
     ax[0].set_title('Exawind')
-    ax[1].scatter(ts,nalu_timesteps,s=0.3)
+    ax[1].scatter(nts,nalu_timesteps,s=0.3)
     ax[1].set_title('Nalu-Wind')
-    ax[2].scatter(ts,amr_timesteps,s=0.3)
+    ax[2].scatter(ats,amr_timesteps,s=0.3)
     ax[2].set_title('AMR-Wind')
 
     for i in range(3):
@@ -185,6 +220,30 @@ def main():
 
     fig.tight_layout()
     fig.savefig('timepertimestep.png')
+
+    # Plot AMR
+    plt.rcParams.update({'font.size': 18})
+
+    in_min = min(len(amrts),len(amr_nodal))-1
+
+    fig, ax = plt.subplots(1,2,figsize=(13,4))
+    ax[0].scatter(amrts[0:in_min],amr_mac[0:in_min],s=0.3,label="AMR MAC Projection")
+    ax[0].scatter(amrts[0:in_min],amr_nodal[0:in_min],s=0.3,label="AMR Nodal Projection")
+    ax[0].set_title('AMR-Wind')
+
+    ax[1].scatter(nmts_filt,nmd_filt,s=0.3,label="Nalu Momentum")
+    ax[1].scatter(ncts_filt,ncd_filt,s=0.3,label="Nalu Continuity")
+    ax[1].set_title('Nalu-Wind')
+
+    for i in range(2):
+        ax[i].set_ylabel('N')
+        ax[i].set_xlabel('Timestep')
+        ax[i].legend()
+        ax[i].set_ylim([0,50])
+
+    fig.tight_layout()
+    fig.savefig('iters.png')
+
 
     
 

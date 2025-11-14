@@ -1,5 +1,5 @@
 # Location where files should exist
-destdir: ../../.website_src/exawind/nrel5mw/rigid
+destdir: ../../../.website_src/exawind/nrel5mw/rigid
 # Define the valid file types to copy over (optional)
 validtypes: ['.html', '.md', '.ipynb', '.png', '.jpg', '.rst', ] 
 
