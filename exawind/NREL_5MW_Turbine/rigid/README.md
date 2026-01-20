@@ -54,7 +54,9 @@ Off-body (AMR-Wind) mesh was generated using the built-in capability of AMR-Wind
 
 ## Results
 
-<img src="figures_and_scripts/rigid_output.png" alt="Force and Moment Output" style="width:800px; background-color: #ffffff;"/>
+<img src="figures_and_scripts/rigid_constant_exawind_summary.png" alt="Force and Moment Output" style="width:800px; background-color: #ffffff;"/>
+
+<img src="figures_and_scripts/rigid_constant_exawind_spanwise.png" alt="Force and Moment Output" style="width:800px; background-color: #ffffff;"/>
 
 
 ## Simulation Timings

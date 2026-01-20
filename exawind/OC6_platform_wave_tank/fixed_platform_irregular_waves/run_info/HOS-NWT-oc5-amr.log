@@ -1,0 +1,78 @@
+Initializing AMReX (25.05-22-gd3798de0bd81)...
+MPI initialized with 252 MPI processes
+MPI initialized with thread support level 0
+AMReX (25.05-22-gd3798de0bd81) initialized
+==============================================================================
+                AMR-Wind (https://github.com/exawind/amr-wind)
+
+  AMR-Wind version :: v3.4.1-56-gdffb82ca
+  AMR-Wind Git SHA :: dffb82ca4342482711e42a6a066d2730feb3160b
+  AMReX version    :: 25.05-22-gd3798de0bd81
+
+  Exec. time       :: Wed Jun 25 22:10:38 2025
+  Build time       :: Jun  2 2025 16:35:55
+  C++ compiler     :: IntelLLVM 2023.2.0
+
+  MPI              :: ON    (Num. ranks = 252)
+  GPU              :: OFF
+  OpenMP           :: OFF
+
+  Enabled third-party libraries: 
+    NetCDF    4.9.2
+    HYPRE     2.32.0
+
+           This software is released under the BSD 3-clause license.           
+ See https://github.com/Exawind/amr-wind/blob/development/LICENSE for details. 
+------------------------------------------------------------------------------
+
+
+Initializing AMR-Wind.
+
+Initializing boundary conditions for velocity_mueff
+Initializing boundary conditions for velocity
+Initializing boundary conditions for density
+Initializing boundary conditions for p
+Initializing boundary conditions for velocity_src_term
+Initializing boundary conditions for gp
+Creating PDESystem instance: ICNS-Godunov
+Creating TransportModel instance: TwoPhaseTransport
+Initializing boundary conditions for vof_mueff
+Initializing boundary conditions for levelset
+Initializing boundary conditions for interface_curvature
+Initializing boundary conditions for vof
+Initializing boundary conditions for density
+Initializing boundary conditions for vof_src_term
+Creating PDESystem instance: VOF-Godunov
+Initializing boundary conditions for levelset
+Creating Physics instance: MultiPhase
+Initializing boundary conditions for ow_levelset
+Initializing boundary conditions for ow_vof
+Initializing boundary conditions for ow_velocity
+Creating Physics instance: OceanWaves
+Creating TurbulenceModel instance: Laminar-TwoPhaseTransport
+Creating RefinementCriteria instance: GeometryRefinement
+Creating GeometryType instance: cylinder
+Creating GeometryType instance: box
+Creating OversetManager instance: TIOGA
+Initializing I/O manager
+Creating OceanWaveModel instance: W2AWaves
+OceanWaves: Initializing Waves2AMR profile at time 0, step 0
+OceanWaves: Waves2AMR parameters from HOS-NWT file: 
+    nx 256  dx 0.1098039216  Lx 28
+    ny 1  dy 4  Ly 4
+    nz 64  depth 3.6
+    output time interval 0.007071085624  nominal last time 1777.741637
+OceanWaves: Waves2AMR height vector for interpolation: 
+    start 0.245  end -3.6  num points 120
+    initial dz 0.01  first two grown dz 0.01012120431 0.01036655102  final dz 0.1256767577
+    interp spacing reaches double that of surface at -0.433876359
+Initializing boundary conditions for w2a_levelset
+Initializing boundary conditions for w2a_velocity
+Creating mesh... done
+Grid summary: 
+  Level 0   400 grids  409600 cells  100 % of domain
+            smallest grid: 16 x 8 x 8  biggest grid: 16 x 8 x 8
+  Level 1   416 grids  753664 cells  23 % of domain
+            smallest grid: 8 x 16 x 8  biggest grid: 16 x 16 x 8
+  Level 2   477 grids  3287040 cells  12.5390625 % of domain
+            smallest grid: 16 x 16 x 8  biggest grid: 32 x 16 x 16
